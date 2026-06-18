@@ -51,7 +51,7 @@ const ingredients = [
     { id: 'quinoa', name: 'Quinoa', icon: '🌾', cat: 'grains' },
     // SPICES
     { id: 'salt', name: 'Salt', icon: '🧂', cat: 'spices' },
-    { id: 'pepper_spice', name: 'Pepper', icon: '🌶️', cat: 'spices' },
+    { id: 'pepper_spice', name: 'Black Pepper', icon: '🌶️', cat: 'spices' },
     { id: 'chili', name: 'Chili', icon: '🌶️', cat: 'spices' },
     { id: 'cumin', name: 'Cumin', icon: '🌿', cat: 'spices' },
     { id: 'basil', name: 'Basil', icon: '🌿', cat: 'spices' },
@@ -171,14 +171,14 @@ const recipes = [
     // ===== MORE MEALS =====
     { id: 41, name: 'Pancakes', type: 'meal', cuisine: 'American', time: 20, difficulty: 'Easy', calories: 350, tags: ['breakfast', 'sweet', 'comfort'], icon: '🥞', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Milk', amount: '1 cup'}, {name: 'Egg', amount: '1'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Butter', amount: '2 tbsp'}], substitutions: [], steps: ['Mix flour and sugar in a bowl.', 'Add milk and egg, mix until smooth.', 'Heat butter in pan over medium.', 'Pour 1/4 cup batter per pancake.', 'Cook until bubbles form, flip.', 'Cook other side until golden.', 'Serve with syrup.'] },
     { id: 42, name: 'Waffles', type: 'meal', cuisine: 'American', time: 25, difficulty: 'Easy', calories: 400, tags: ['breakfast', 'sweet'], icon: '🧇', ingredients: [{name: 'Flour', amount: '1.5 cups'}, {name: 'Milk', amount: '1 cup'}, {name: 'Egg', amount: '2'}, {name: 'Butter', amount: '4 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}], substitutions: [], steps: ['Mix dry ingredients.', 'Add wet ingredients, stir until combined.', 'Pour batter into hot waffle iron.', 'Cook until golden and crisp.', 'Serve with butter and syrup.'] },
-    { id: 43, name: 'Bacon & Eggs', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 380, tags: ['breakfast', 'high protein', 'quick'], icon: '🥓', ingredients: [{name: 'Egg', amount: '2'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Cook bacon in pan until crispy.', 'Remove bacon, keep some fat.', 'Fry eggs in bacon fat.', 'Season with salt.', 'Serve with bacon strips.'] },
-    { id: 44, name: 'BLT Sandwich', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 320, tags: ['quick', 'lunch'], icon: '🥪', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Lettuce', amount: '2 leaves'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Toast bread slices.', 'Spread mayo if desired.', 'Layer lettuce and sliced tomato.', 'Add bacon strips.', 'Close sandwich, cut diagonal.'] },
+    { id: 43, name: 'Bacon & Eggs', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 380, tags: ['breakfast', 'high protein', 'quick'], icon: '🥓', ingredients: [{name: 'Egg', amount: '2'}, {name: 'Bacon', amount: '4 strips'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Cook bacon in pan until crispy.', 'Remove bacon, keep some fat.', 'Fry eggs in bacon fat.', 'Season with salt.', 'Serve with bacon strips.'] },
+    { id: 44, name: 'BLT Sandwich', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 320, tags: ['quick', 'lunch'], icon: '🥪', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Bacon', amount: '4 strips'}, {name: 'Lettuce', amount: '2 leaves'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Toast bread slices.', 'Spread mayo if desired.', 'Layer lettuce and sliced tomato.', 'Add bacon strips.', 'Close sandwich, cut diagonal.'] },
     { id: 45, name: 'Caesar Salad', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 250, tags: ['healthy', 'salad', 'quick'], icon: '🥗', ingredients: [{name: 'Lettuce', amount: '1 head'}, {name: 'Cheese', amount: '1/4 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Lemon', amount: '1'}], substitutions: [], steps: ['Chop lettuce into bite-sized pieces.', 'Make dressing: mix garlic, lemon, olive oil.', 'Toss lettuce with dressing.', 'Top with parmesan shavings.', 'Add croutons if available.'] },
     { id: 46, name: 'Club Sandwich', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 450, tags: ['high protein', 'lunch'], icon: '🥪', ingredients: [{name: 'Bread', amount: '3 slices'}, {name: 'Chicken', amount: '100g'}, {name: 'Bacon', amount: '2 strips'}, {name: 'Lettuce', amount: '2 leaves'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Toast bread slices.', 'Cook bacon until crispy.', 'Layer chicken, bacon, lettuce, tomato.', 'Stack layers with bread between.', 'Cut into quarters, secure with toothpicks.'] },
     { id: 47, name: 'Grilled Cheese & Tomato Soup', type: 'meal', cuisine: 'American', time: 25, difficulty: 'Easy', calories: 480, tags: ['comfort food', 'vegetarian'], icon: '🍲', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Cheese', amount: '2 slices'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Tomato', amount: '4'}, {name: 'Garlic', amount: '2 cloves'}], substitutions: [], steps: ['Make grilled cheese sandwich.', 'Blend tomatoes with garlic.', 'Simmer tomato soup 10 minutes.', 'Season soup with salt and pepper.', 'Serve soup with sandwich.'] },
     { id: 48, name: 'Egg Salad Sandwich', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 320, tags: ['quick', 'lunch', 'vegetarian'], icon: '🥪', ingredients: [{name: 'Egg', amount: '4'}, {name: 'Bread', amount: '2 slices'}, {name: 'Onion', amount: '2 tbsp'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Boil eggs, cool, and chop.', 'Mix eggs with mayo and onion.', 'Season with salt and pepper.', 'Spread on bread.', 'Close and serve.'] },
     { id: 49, name: 'Philly Cheesesteak', type: 'meal', cuisine: 'American', time: 25, difficulty: 'Medium', calories: 520, tags: ['high protein', 'comfort food'], icon: '🥖', ingredients: [{name: 'Beef', amount: '200g'}, {name: 'Cheese', amount: '2 slices'}, {name: 'Onion', amount: '1'}, {name: 'Pepper', amount: '1'}, {name: 'Bread', amount: '1 hoagie'}], substitutions: [], steps: ['Slice beef thinly.', 'Sauté onions and peppers.', 'Cook beef with vegetables.', 'Melt cheese on top.', 'Spoon into hoagie roll.'] },
-    { id: 50, name: 'Hot Dogs', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 350, tags: ['quick', 'kid friendly'], icon: '🌭', ingredients: [{name: 'Bread', amount: '2 hot dog buns'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Boil or grill hot dogs.', 'Place in buns.', 'Add mustard and ketchup.', 'Top with onions if desired.'] },
+    { id: 50, name: 'Hot Dogs', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 350, tags: ['quick', 'kid friendly'], icon: '🌭', ingredients: [{name: 'Bread', amount: '2 hot dog buns'}, {name: 'Beef', amount: '2 hot dogs'}, {name: 'Onion', amount: '1/4'}], substitutions: [], steps: ['Boil or grill hot dogs.', 'Place in buns.', 'Add mustard and ketchup.', 'Top with onions if desired.'] },
 
     // ===== MORE ITALIAN =====
     { id: 51, name: 'Carbonara', type: 'meal', cuisine: 'Italian', time: 25, difficulty: 'Medium', calories: 550, tags: ['classic', 'creamy'], icon: '🍝', ingredients: [{name: 'Pasta', amount: '250g'}, {name: 'Egg', amount: '2'}, {name: 'Cheese', amount: '1/2 cup'}, {name: 'Bacon', amount: '100g'}, {name: 'Garlic', amount: '2 cloves'}], substitutions: [{from: 'Bacon', to: 'Pancetta'}], steps: ['Cook pasta al dente.', 'Fry bacon until crispy.', 'Mix eggs with cheese.', 'Toss hot pasta with egg mixture off heat.', 'Add bacon, serve immediately.'] },
@@ -189,7 +189,7 @@ const recipes = [
     { id: 56, name: 'Pizza Toast', type: 'meal', cuisine: 'Italian', time: 10, difficulty: 'Easy', calories: 280, tags: ['quick', 'kid friendly'], icon: '🍕', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Cheese', amount: '1/2 cup'}, {name: 'Tomato Sauce', amount: '2 tbsp'}, {name: 'Oregano', amount: 'pinch'}], substitutions: [], steps: ['Toast bread lightly.', 'Spread tomato sauce.', 'Top with cheese.', 'Broil until cheese melts.', 'Sprinkle oregano, serve.'] },
 
     // ===== MORE CHINESE =====
-    { id: 57, name: 'Sweet & Sour Pork', type: 'meal', cuisine: 'Chinese', time: 35, difficulty: 'Medium', calories: 480, tags: ['sweet', 'tangy', 'classic'], icon: '🥡', ingredients: [{name: 'Beef', amount: '200g'}, {name: 'Pepper', amount: '2'}, {name: 'Onion', amount: '1'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}], substitutions: [], steps: ['Cut pork into chunks.', 'Fry until golden, set aside.', 'Sauté peppers and onion.', 'Make sauce: soy sauce, vinegar, sugar.', 'Add pork to sauce, toss.'] },
+    { id: 57, name: 'Sweet & Sour Pork', type: 'meal', cuisine: 'Chinese', time: 35, difficulty: 'Medium', calories: 480, tags: ['sweet', 'tangy', 'classic'], icon: '🥡', ingredients: [{name: 'Pork', amount: '200g'}, {name: 'Pepper', amount: '2'}, {name: 'Onion', amount: '1'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}], substitutions: [], steps: ['Cut pork into chunks.', 'Fry until golden, set aside.', 'Sauté peppers and onion.', 'Make sauce: soy sauce, vinegar, sugar.', 'Add pork to sauce, toss.'] },
     { id: 58, name: 'Kung Pao Chicken', type: 'meal', cuisine: 'Chinese', time: 30, difficulty: 'Medium', calories: 420, tags: ['spicy', 'high protein'], icon: '🌶️', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Peanuts', amount: '1/4 cup'}, {name: 'Chili', amount: '2 tbsp'}, {name: 'Soy Sauce', amount: '2 tbsp'}, {name: 'Garlic', amount: '3 cloves'}], substitutions: [], steps: ['Cut chicken into cubes.', 'Stir fry chicken until cooked.', 'Add garlic and chili.', 'Add soy sauce and sugar.', 'Toss with peanuts.', 'Serve over rice.'] },
     { id: 59, name: 'Dumplings', type: 'meal', cuisine: 'Chinese', time: 45, difficulty: 'Hard', calories: 350, tags: ['traditional', 'fun'], icon: '🥟', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Beef', amount: '200g'}, {name: 'Cabbage', amount: '1 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Make dough, let rest.', 'Mix filling ingredients.', 'Roll dough into circles.', 'Fill and fold dumplings.', 'Steam 15 minutes or boil.', 'Serve with dipping sauce.'] },
     { id: 60, name: 'Chow Mein', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Easy', calories: 400, tags: ['quick', 'noodles'], icon: '🍜', ingredients: [{name: 'Noodles', amount: '250g'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Onion', amount: '1'}, {name: 'Cabbage', amount: '1 cup'}, {name: 'Garlic', amount: '2 cloves'}], substitutions: [], steps: ['Cook noodles.', 'Stir fry vegetables.', 'Add noodles and soy sauce.', 'Toss everything together.', 'Serve hot.'] },
@@ -247,6 +247,7 @@ const recipes = [
 let currentServings = 2;
 let favorites = JSON.parse(localStorage.getItem('mealGenieFav') || '[]');
 let selectedIngredients = [];
+let activeRecipeId = null;
 let leftoverMode = false;
 let selectedCuisine = 'Any';
 let generatedRecipes = JSON.parse(localStorage.getItem('mealGenieGenerated') || '[]');
@@ -374,57 +375,8 @@ const translations = {
         paused: "کھانے کا رہنما روک دیا گیا۔ کبھی بھی 'next' کہیں جاری کرنے کے لیے!",
         repeatStep: 'اقدام {num}: {text}',
         cookingComplete: "ہو گیا! آپ کا کھانا تیار ہے! 🍽️"
-    },
-        appTitle: 'میل جنی',
-        searchIng: 'اجناس تلاش کریں...',
-        cuisine: 'کھانا',
-        any: 'کوئی',
-        useLeftovers: 'بچا ہوا کھانا',
-        viewAll: 'تمام ترکیبیں دیکھیں',
-        selected: 'منتخب',
-        ingredients: 'اجناس',
-        recipes: 'ترکیبیں',
-        browse: 'دیکھیں',
-        whatCooking: 'ہم کیا پکا رہے ہیں؟',
-        selectIng: 'ترکیبیں دریافت کرنے کے لیے اجناس چنیں',
-        meals: 'کھانے',
-        drinks: 'پینے کی چیزیں',
-        sauces: 'ساس',
-        desserts: 'مٹھائی',
-        needIdeas: 'مزید خیال چاہیے؟',
-        generateMeal: 'کھانا بنائیں',
-        generateDrink: 'پینے کی چیز بنائیں',
-        generateSauce: 'ساس بنائیں',
-        generateDessert: 'مٹھائی بنائیں',
-        servings: 'کھانے کی تعداد',
-        missing: 'گم ہے',
-        allHave: 'آپ کے پاس سارے اجناس ہیں!',
-        steps: 'اقدام',
-        substitutions: 'متبادل',
-        noSubs: 'کوئی متبادل نہیں',
-        saveRecipe: 'ترکیب محفوظ کریں',
-        saved: 'محفوظ',
-        back: 'واپس',
-        course: 'قسم',
-        community: 'برادری',
-        share: 'شیئر',
-        bug: 'بگ',
-        chat: 'چیٹ',
-        postTitle: 'عنوان...',
-        postContent: 'اپنی ترکیب شیئر کریں، بگ رپورٹ کریں، یا صرف ہیلو کہیں!',
-        post: 'پوسٹ',
-        settings: 'ترتیبات',
-        bgColor: 'پس منظر کا رنگ',
-        apiKey: 'AI API کی (OpenRouter)',
-        apiHint: 'openrouter.ai سے مفت API کی لیں',
-        cookingAssistant: 'کھانے کا معاون',
-        voicePowered: 'آواز سے چلنے والا',
-        askCooking: 'کھانے کے بارے میں پوچھیں...',
-        hiCooking: "ہیلو! میں آپ کا کھانے کا معاون ہوں۔ میں آپ کو قدم بقدم پکانے میں مدد کر سکتا ہوں۔",
-        tryQuestion: 'آزمائیں: "سکریمڈ انگ کیسے بنائیں؟"',
-        thinking: 'سوچ رہا ہوں...'
     }
-;
+};
 let currentLang = localStorage.getItem('mealGenieLang') || 'en';
 
 function toggleLangMenu() {
@@ -463,8 +415,9 @@ function applyLanguage() {
     document.querySelector('.logo-text').textContent = t.appTitle;
     document.getElementById('ingSearch').placeholder = t.searchIng;
     document.querySelector('.filter-label').textContent = t.cuisine;
-    document.getElementById('leftoverBtn').textContent = t.useLeftovers;
-    document.getElementById('viewAllBtn')?.setAttribute('onclick', `showAllMeals('${t.viewAll}')`);
+    document.getElementById('leftoverBtn').textContent = '🔄 ' + t.useLeftovers;
+    const viewAllBtn = document.getElementById('viewAllBtn');
+    if (viewAllBtn) viewAllBtn.textContent = '📖 ' + t.viewAll;
     document.getElementById('navIngredients').querySelector('.nav-item-label').textContent = t.ingredients;
     document.getElementById('navResults').querySelector('.nav-item-label').textContent = t.recipes;
     document.getElementById('navAll').querySelector('.nav-item-label').textContent = t.browse;
@@ -508,7 +461,7 @@ function addChatbotMessage(text, isUser = false) {
     const container = document.getElementById('chatbotMessages');
     const msg = document.createElement('div');
     msg.className = isUser ? 'chat-msg-user' : 'chat-msg-bot';
-    msg.innerHTML = `<p>${text}</p>`;
+    msg.innerHTML = `<p>${escapeHtml(text)}</p>`;
     container.appendChild(msg);
     container.scrollTop = container.scrollHeight;
     
@@ -788,47 +741,40 @@ function speakText(text) {
     
     window.speechSynthesis.speak(utterance);
 }
-    
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recognition = new SpeechRecognition();
-    recognition.lang = 'en-US';
-    recognition.interimResults = false;
-    recognition.maxAlternatives = 1;
-    
-    document.getElementById('voiceBtn').classList.add('recording');
-    
-    recognition.onresult = (event) => {
-        const transcript = event.results[0][0].transcript;
-        document.getElementById('chatbotInput').value = transcript;
-        sendChatbotMessage();
-        document.getElementById('voiceBtn').classList.remove('recording');
-    };
-    
-    recognition.onerror = () => {
-        document.getElementById('voiceBtn').classList.remove('recording');
-        addChatbotMessage("Voice input failed. Please try again or type your question.");
-    };
-    
-    recognition.start();
-
 
 // ===== RECIPE MATCHING =====
+function getIngredientById(id) {
+    return ingredients.find(i => i.id === id);
+}
+
+function getIngredientByName(name) {
+    const normalized = name.toLowerCase();
+    return ingredients.find(i => i.name.toLowerCase() === normalized);
+}
+
+function isRecipeIngredientSelected(recipeIngredientName) {
+    const ing = getIngredientByName(recipeIngredientName);
+    if (ing) return selectedIngredients.includes(ing.id);
+    return selectedIngredients.includes(recipeIngredientName.toLowerCase());
+}
+
+function recipeMatchesSelection(recipe) {
+    const matchCount = recipe.ingredients.filter(i => isRecipeIngredientSelected(i.name)).length;
+    if (matchCount === 0) return false;
+    const coverage = matchCount / recipe.ingredients.length;
+    if (recipe.ingredients.length <= 3) return true;
+    return matchCount >= 2 || coverage >= 0.34;
+}
+
 function getMatchingRecipes() {
     if (selectedIngredients.length === 0) return [];
     
     return recipes.filter(r => {
-        const hasMatch = r.ingredients.some(i => 
-            selectedIngredients.includes(i.name.toLowerCase())
-        );
         const cuisineMatch = selectedCuisine === 'Any' || r.cuisine === selectedCuisine;
-        return hasMatch && cuisineMatch;
+        return cuisineMatch && recipeMatchesSelection(r);
     }).sort((a, b) => {
-        const aMatch = a.ingredients.filter(i => 
-            selectedIngredients.includes(i.name.toLowerCase())
-        ).length;
-        const bMatch = b.ingredients.filter(i => 
-            selectedIngredients.includes(i.name.toLowerCase())
-        ).length;
+        const aMatch = a.ingredients.filter(i => isRecipeIngredientSelected(i.name)).length;
+        const bMatch = b.ingredients.filter(i => isRecipeIngredientSelected(i.name)).length;
         const aCoverage = aMatch / a.ingredients.length;
         const bCoverage = bMatch / b.ingredients.length;
         
@@ -848,9 +794,7 @@ function hasStrongMatch() {
     if (matching.length === 0) return false;
     
     const best = matching[0];
-    const matchCount = best.ingredients.filter(i => 
-        selectedIngredients.includes(i.name.toLowerCase())
-    ).length;
+    const matchCount = best.ingredients.filter(i => isRecipeIngredientSelected(i.name)).length;
     const coverage = matchCount / best.ingredients.length;
     
     return coverage >= 0.5 || matchCount >= 2;
@@ -933,7 +877,32 @@ const stepTemplates = {
 };
 
 function capitalize(str) {
+    if (!str) return '';
     return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function scaleAmount(amount, multiplier) {
+    if (multiplier === 1) return amount;
+    const trimmed = String(amount).trim();
+    const numMatch = trimmed.match(/^([\d./]+)\s*(.*)$/);
+    if (!numMatch) return amount;
+    let value;
+    if (numMatch[1].includes('/')) {
+        const [a, b] = numMatch[1].split('/').map(Number);
+        value = a / b;
+    } else {
+        value = parseFloat(numMatch[1]);
+    }
+    if (isNaN(value)) return amount;
+    const scaled = value * multiplier;
+    const formatted = Number.isInteger(scaled) ? scaled : Math.round(scaled * 100) / 100;
+    return numMatch[2] ? `${formatted} ${numMatch[2]}` : String(formatted);
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
 }
 
 function generateAIRecipe(type = 'meal') {
@@ -945,8 +914,10 @@ function generateAIRecipe(type = 'meal') {
     const templates = recipeTemplates[type];
     const template = templates[Math.floor(Math.random() * templates.length)];
     
-    const ing1 = selectedIngredients[0] ? capitalize(selectedIngredients[0]) : 'Mixed';
-    const ing2 = selectedIngredients[1] ? capitalize(selectedIngredients[1]) : 'Veggies';
+    const ing1Obj = getIngredientById(selectedIngredients[0]);
+    const ing2Obj = getIngredientById(selectedIngredients[1]);
+    const ing1 = ing1Obj ? ing1Obj.name : 'Mixed';
+    const ing2 = ing2Obj ? ing2Obj.name : 'Veggies';
     
     let name = template.name.replace('{ing1}', ing1).replace('{ing2}', ing2);
     
@@ -989,7 +960,7 @@ function generateAnotherAI(type = 'meal') {
 }
 
 // ===== DISPLAY FUNCTIONS =====
-function updateResults() {
+function updateResults(autoShowRecipe = true) {
     const matching = getMatchingRecipes();
     const meals = getMatchingByType('meal');
     const drinks = getMatchingByType('drink');
@@ -1061,7 +1032,7 @@ function updateResults() {
         }
     }
     
-    if (!hasMatch && selectedIngredients.length > 0 && strongMatch) {
+    if (!hasMatch && selectedIngredients.length > 0 && !strongMatch) {
         html = `
             <div class="no-match-msg">
                 <p>No exact matches found, but you can:</p>
@@ -1080,9 +1051,14 @@ function updateResults() {
     }
     
     document.getElementById('resultsContainer').innerHTML = html;
-    
-    if (matching.length > 0) {
-        showRecipe(matching[0].id);
+
+    if (matching.length > 0 && currentMobileView === 'results' && autoShowRecipe) {
+        const recipeId = activeRecipeId && matching.some(r => r.id === activeRecipeId)
+            ? activeRecipeId
+            : matching[0].id;
+        if (!activeRecipeId || !document.getElementById('recipeView').classList.contains('show')) {
+            showRecipe(recipeId);
+        }
     }
 }
 
@@ -1120,19 +1096,21 @@ function generateAndShow(type) {
 function showRecipe(id) {
     const recipe = recipes.find(r => r.id === id) || generatedRecipes.find(r => r.id === id);
     if (!recipe) return;
-    
+
+    activeRecipeId = id;
+    currentMobileView = 'recipe';
+    showRecipeMobile();
+
     document.getElementById('emptyState').style.display = 'none';
+    document.getElementById('recipeView').classList.add('show');
     document.getElementById('recipeView').style.display = 'block';
-    document.getElementById('resultsContainer').style.display = 'block';
     
     document.getElementById('heroIcon').textContent = recipe.icon;
     document.getElementById('cuisineBadge').textContent = recipe.cuisine;
     document.getElementById('recipeName').textContent = recipe.name;
     
     const heroMeta = document.getElementById('heroMeta');
-    const matchCount = recipe.ingredients.filter(i => 
-        selectedIngredients.includes(i.name.toLowerCase())
-    ).length;
+    const matchCount = recipe.ingredients.filter(i => isRecipeIngredientSelected(i.name)).length;
     const leftoverBadge = leftoverMode && !recipe.isGenerated ? 
         `<span class="leftover-badge">🔄 ${matchCount}/${recipe.ingredients.length} ingredients</span>` : '';
     
@@ -1147,13 +1125,13 @@ function showRecipe(id) {
     const ingredientsDisplay = document.getElementById('ingredientsDisplay');
     ingredientsDisplay.innerHTML = recipe.ingredients.map(ing => `
         <div class="ing-row">
-            <span class="ing-text">${ing.name}</span>
-            <span class="ing-qty">${ing.amount}</span>
+            <span class="ing-text">${escapeHtml(ing.name)}</span>
+            <span class="ing-qty">${escapeHtml(scaleAmount(ing.amount, multiplier))}</span>
         </div>
     `).join('');
     
     const missing = recipe.ingredients.filter(ing => 
-        !selectedIngredients.includes(ing.name.toLowerCase()) && !recipe.isGenerated
+        !isRecipeIngredientSelected(ing.name) && !recipe.isGenerated
     );
     const missingList = document.getElementById('missingList');
     if (missing.length === 0 && !recipe.isGenerated) {
@@ -1201,6 +1179,8 @@ function showRecipe(id) {
     saveBtn.onclick = () => toggleFav(recipe.id);
     
     if (recipe.isGenerated) {
+        const existingMoreBtn = document.querySelector('.generate-more-btn');
+        if (existingMoreBtn) existingMoreBtn.remove();
         const moreBtn = document.createElement('button');
         moreBtn.className = 'generate-more-btn';
         moreBtn.textContent = '✨ Generate Another Idea';
@@ -1212,6 +1192,7 @@ function showRecipe(id) {
     }
     
     document.getElementById('rightPanel').scrollTop = 0;
+    document.getElementById('recipeView').scrollIntoView({ block: 'start' });
 }
 
 function toggleFav(id) {
@@ -1231,6 +1212,7 @@ function toggleFav(id) {
 function setServings(n) {
     currentServings = n;
     document.querySelectorAll('.serv-btn').forEach((b, i) => b.classList.toggle('active', i === n - 1));
+    if (activeRecipeId) showRecipe(activeRecipeId);
 }
 
 function updateSelectedTags() {
@@ -1345,22 +1327,17 @@ let selectedCuisineFilter = 'all';
 let selectedTypeFilter = 'all';
 
 function showAllMeals() {
-    document.getElementById('searchSection').style.display = 'none';
-    document.getElementById('cuisineFilterBar').style.display = 'none';
-    document.getElementById('ingredientsGrid').style.display = 'none';
-    document.getElementById('bottomActions').style.display = 'none';
-    document.getElementById('rightPanel').classList.remove('show');
-    document.getElementById('resultsContainer').classList.remove('show');
-    document.getElementById('allMealsView').classList.add('show');
-    document.getElementById('recipeView').classList.remove('show');
-    currentMobileView = 'browse';
-    updateNavItems('navAll');
-    renderAllMealsView();
+    showAllMealsMobile();
 }
 
 function backFromAll() {
+    document.getElementById('allMealsView').classList.remove('show');
     document.getElementById('allMealsView').style.display = 'none';
-    updateResults();
+    if (selectedIngredients.length > 0) {
+        showResults();
+    } else {
+        showIngredients();
+    }
 }
 
 function filterCuisine(cuisine) {
@@ -1374,7 +1351,7 @@ function filterType(type) {
 }
 
 function renderAllMealsView() {
-    const allCuisines = ['all', 'Italian', 'Mexican', 'Indian', 'Chinese', 'Mediterranean', 'American'];
+    const allCuisines = ['all', 'Italian', 'Mexican', 'Indian', 'Chinese', 'Japanese', 'Mediterranean', 'American', 'Fusion', 'French'];
     const allTypes = [
         { id: 'all', name: '🍽️ All', icon: '🍽️' },
         { id: 'meal', name: '🍽️ Meals', icon: '🍽️' },
@@ -1464,8 +1441,8 @@ function renderBlogPosts() {
                     <span class="post-type ${post.type}">${post.type === 'share' ? '📝 Share' : post.type === 'bug' ? '🐛 Bug' : '💬 Hangout'}</span>
                     <span class="post-date">${new Date(post.date).toLocaleDateString()}</span>
                 </div>
-                <h4 class="post-title">${post.title}</h4>
-                <p class="post-content">${post.content}</p>
+                <h4 class="post-title">${escapeHtml(post.title)}</h4>
+                <p class="post-content">${escapeHtml(post.content)}</p>
             </div>
         `).join('');
     }
@@ -1496,20 +1473,97 @@ function submitBlogPost(type) {
     renderBlogPosts();
 }
 
+function setBlogTab(type, tabIndex) {
+    document.getElementById('postType').value = type;
+    document.querySelectorAll('.blog-tab').forEach((tab, i) => {
+        tab.classList.toggle('active', i === tabIndex);
+    });
+}
+
 function openShareRecipe() {
-    document.getElementById('postType').value = 'share';
-    document.getElementById('postType').textContent = '📝 Share Recipe';
+    setBlogTab('share', 0);
 }
 
 function openReportBug() {
-    document.getElementById('postType').value = 'bug';
-    document.getElementById('postType').textContent = '🐛 Report Bug';
+    setBlogTab('bug', 1);
 }
 
 function openHangout() {
-    document.getElementById('postType').value = 'hangout';
-    document.getElementById('postType').textContent = '💬 Hangout';
+    setBlogTab('hangout', 2);
 }
+
+// ===== DELUXE =====
+function isDeluxeUnlocked() {
+    const status = localStorage.getItem('mealGenieDeluxe');
+    return status === 'true' || status === 'trial';
+}
+
+function updateDeluxeUI() {
+    const unlocked = isDeluxeUnlocked();
+    const locked = document.getElementById('deluxeLocked');
+    const payment = document.getElementById('deluxePayment');
+    const unlockedView = document.getElementById('deluxeUnlocked');
+    if (locked) locked.style.display = unlocked ? 'none' : 'block';
+    if (payment) payment.style.display = 'none';
+    if (unlockedView) unlockedView.style.display = unlocked ? 'block' : 'none';
+}
+
+function toggleDeluxe() {
+    const panel = document.getElementById('deluxePanel');
+    panel.classList.toggle('open');
+    if (panel.classList.contains('open')) {
+        updateDeluxeUI();
+        document.getElementById('blogPanel').classList.remove('open');
+        document.getElementById('settingsPanel').classList.remove('open');
+        document.getElementById('chatbotPanel').classList.remove('open');
+    }
+}
+
+function startFreeTrial() {
+    localStorage.setItem('mealGenieDeluxe', 'trial');
+    updateDeluxeUI();
+    alert('Deluxe free trial started! Enjoy premium features.');
+}
+
+function showDeluxePayment() {
+    document.getElementById('deluxeLocked').style.display = 'none';
+    document.getElementById('deluxePayment').style.display = 'block';
+}
+
+function showDeluxeLocked() {
+    document.getElementById('deluxeLocked').style.display = 'block';
+    document.getElementById('deluxePayment').style.display = 'none';
+}
+
+function processDeluxePayment() {
+    const card = document.getElementById('cardNumber')?.value.trim();
+    if (!card || card.length < 12) {
+        alert('Please enter a valid card number.');
+        return;
+    }
+    localStorage.setItem('mealGenieDeluxe', 'true');
+    updateDeluxeUI();
+    alert('Deluxe unlocked! Welcome to the premium experience.');
+}
+
+function openDeluxeFeature(featureName) {
+    if (!isDeluxeUnlocked()) {
+        alert('Unlock Deluxe to use this feature.');
+        return;
+    }
+    alert(`${featureName} is coming soon in a future update.`);
+}
+
+function openSmartInventory() { openDeluxeFeature('Smart Inventory'); }
+function openImageRecognition() { openDeluxeFeature('Image Recognition'); }
+function openCustomRecipe() { openDeluxeFeature('Custom Recipe Creator'); }
+function openAllergyScanner() { openDeluxeFeature('Allergy Scanner'); }
+function openHealthMode() { openDeluxeFeature('Health Mode'); }
+function openNutritionalDeepDive() { openDeluxeFeature('Nutrition Deep Dive'); }
+function openRecipeScaling() { openDeluxeFeature('Recipe Scaling'); }
+function openDietaryFilters() { openDeluxeFeature('Dietary Filters'); }
+function openShoppingList() { openDeluxeFeature('Shopping List'); }
+function openCookMode() { openDeluxeFeature('Cook Mode'); }
 
 // ===== SETTINGS =====
 function toggleSettings() {
@@ -1545,7 +1599,22 @@ function showFavorites() {
         alert('You have no saved recipes yet!');
         return;
     }
-    alert(`Your saved recipes:\n\n${saved.map(r => '• ' + r.icon + ' ' + r.name).join('\n')}`);
+    if (saved.length === 1) {
+        showRecipe(saved[0].id);
+        return;
+    }
+    document.getElementById('emptyState').style.display = 'none';
+    document.getElementById('allMealsView').classList.remove('show');
+    document.getElementById('allMealsView').style.display = 'none';
+    document.getElementById('recipeView').classList.remove('show');
+    document.getElementById('recipeView').style.display = 'none';
+    document.getElementById('resultsContainer').innerHTML = renderSection('❤️ Saved Recipes', saved);
+    document.getElementById('resultsContainer').classList.add('show');
+    document.getElementById('resultsContainer').style.display = 'block';
+    currentMobileView = 'results';
+    document.getElementById('leftPanel').style.display = 'none';
+    document.getElementById('rightPanel').style.display = 'block';
+    updateNavItems('navResults');
 }
 
 function updateFavCount() {
@@ -1557,11 +1626,8 @@ let currentMobileView = 'ingredients';
 
 function showIngredients() {
     currentMobileView = 'ingredients';
-    document.getElementById('searchSection').style.display = 'block';
-    document.getElementById('cuisineFilterBar').style.display = 'block';
-    document.getElementById('ingredientsGrid').style.display = 'grid';
-    document.getElementById('bottomActions').style.display = 'flex';
-    document.getElementById('rightPanel').classList.remove('show');
+    document.getElementById('leftPanel').style.display = 'flex';
+    document.getElementById('rightPanel').style.display = 'none';
     document.getElementById('resultsContainer').classList.remove('show');
     document.getElementById('allMealsView').classList.remove('show');
     document.getElementById('recipeView').classList.remove('show');
@@ -1571,21 +1637,22 @@ function showIngredients() {
 
 function showResults() {
     currentMobileView = 'results';
+    activeRecipeId = null;
     const matching = getMatchingRecipes();
-    if (matching.length > 0 || selectedIngredients.length > 0) {
-        document.getElementById('searchSection').style.display = 'none';
-        document.getElementById('cuisineFilterBar').style.display = 'none';
-        document.getElementById('ingredientsGrid').style.display = 'none';
-        document.getElementById('bottomActions').style.display = 'none';
-        document.getElementById('rightPanel').classList.remove('show');
-        document.getElementById('resultsContainer').classList.add('show');
-        document.getElementById('allMealsView').classList.remove('show');
-        document.getElementById('recipeView').classList.remove('show');
-        updateNavItems('navResults');
-        document.getElementById('mainContent').scrollTop = 0;
-    } else {
+    if (matching.length === 0 && selectedIngredients.length === 0) {
         alert('Please select some ingredients first!');
+        return;
     }
+
+    document.getElementById('leftPanel').style.display = 'none';
+    document.getElementById('rightPanel').style.display = 'block';
+    document.getElementById('resultsContainer').classList.add('show');
+    document.getElementById('allMealsView').classList.remove('show');
+    document.getElementById('recipeView').classList.remove('show');
+    updateNavItems('navResults');
+    updateResults();
+    document.getElementById('mainContent').scrollTop = 0;
+    document.getElementById('rightPanel').scrollTop = 0;
 }
 
 function updateNavItems(activeId) {
@@ -1596,86 +1663,55 @@ function updateNavItems(activeId) {
     if (active) active.classList.add('active');
 }
 
-function isMobile() {
-    return window.innerWidth < 768;
-}
+function applyMobileLayout() {
+    document.getElementById('bottomNav').style.display = 'flex';
 
-function checkMobileLayout() {
-    if (isMobile()) {
-        document.getElementById('rightPanel').style.display = 'none';
-        document.getElementById('bottomNav').style.display = 'flex';
-        if (currentMobileView === 'ingredients') {
-            showIngredients();
-        } else if (currentMobileView === 'results') {
-            showResults();
-        } else if (currentMobileView === 'recipe') {
-            showRecipeMobile();
-        } else if (currentMobileView === 'browse') {
-            showAllMealsMobile();
-        }
-    } else {
-        document.getElementById('rightPanel').style.display = 'flex';
-        document.getElementById('bottomNav').style.display = 'none';
-        document.getElementById('searchSection').style.display = 'block';
-        document.getElementById('cuisineFilterBar').style.display = 'block';
-        document.getElementById('ingredientsGrid').style.display = 'grid';
-        document.getElementById('bottomActions').style.display = 'flex';
+    if (currentMobileView === 'ingredients') {
+        showIngredients();
+    } else if (currentMobileView === 'results') {
+        showResults();
+    } else if (currentMobileView === 'recipe') {
+        showRecipeMobile();
+    } else if (currentMobileView === 'browse') {
+        showAllMealsMobile();
     }
 }
 
 function showRecipeMobile() {
     currentMobileView = 'recipe';
-    document.getElementById('searchSection').style.display = 'none';
-    document.getElementById('cuisineFilterBar').style.display = 'none';
-    document.getElementById('ingredientsGrid').style.display = 'none';
-    document.getElementById('bottomActions').style.display = 'none';
+    document.getElementById('leftPanel').style.display = 'none';
+    document.getElementById('rightPanel').style.display = 'block';
+    document.getElementById('resultsContainer').classList.remove('show');
     document.getElementById('resultsContainer').style.display = 'none';
+    document.getElementById('allMealsView').classList.remove('show');
     document.getElementById('allMealsView').style.display = 'none';
+    document.getElementById('recipeView').classList.add('show');
     document.getElementById('recipeView').style.display = 'block';
     document.getElementById('mainContent').scrollTop = 0;
+    document.getElementById('rightPanel').scrollTop = 0;
 }
 
 function showAllMealsMobile() {
     currentMobileView = 'browse';
-    document.getElementById('searchSection').style.display = 'none';
-    document.getElementById('cuisineFilterBar').style.display = 'none';
-    document.getElementById('ingredientsGrid').style.display = 'none';
-    document.getElementById('bottomActions').style.display = 'none';
+    document.getElementById('leftPanel').style.display = 'none';
+    document.getElementById('rightPanel').style.display = 'block';
+    document.getElementById('resultsContainer').classList.remove('show');
     document.getElementById('resultsContainer').style.display = 'none';
+    document.getElementById('recipeView').classList.remove('show');
     document.getElementById('recipeView').style.display = 'none';
+    document.getElementById('allMealsView').classList.add('show');
     document.getElementById('allMealsView').style.display = 'block';
+    renderAllMealsView();
     updateNavItems('navAll');
     document.getElementById('mainContent').scrollTop = 0;
+    document.getElementById('rightPanel').scrollTop = 0;
 }
 
-function openRecipe(recipe) {
-    if (isMobile()) {
-        showRecipeMobile();
+function backFromRecipe() {
+    if (selectedIngredients.length > 0) {
+        showResults();
     } else {
-        document.getElementById('emptyState').style.display = 'none';
-        document.getElementById('resultsContainer').style.display = 'none';
-        document.getElementById('allMealsView').style.display = 'none';
-        document.getElementById('recipeView').style.display = 'block';
-    }
-}
-
-function goBackFromRecipe() {
-    if (isMobile()) {
-        if (selectedIngredients.length > 0) {
-            showResults();
-        } else {
-            showIngredients();
-        }
-    }
-}
-
-function goBackFromBrowse() {
-    if (isMobile()) {
-        if (selectedIngredients.length > 0) {
-            showResults();
-        } else {
-            showIngredients();
-        }
+        showIngredients();
     }
 }
 
@@ -1685,8 +1721,9 @@ window.addEventListener('DOMContentLoaded', () => {
     loadBgColor();
     updateResults();
     updateFavCount();
-    checkMobileLayout();
+    applyMobileLayout();
     applyLanguage();
+    updateDeluxeUI();
     document.getElementById('muteBtn').textContent = voiceMuted ? '🔇' : '🔊';
     
     // Close panels when clicking outside
@@ -1694,9 +1731,13 @@ window.addEventListener('DOMContentLoaded', () => {
         const blogPanel = document.getElementById('blogPanel');
         const settingsPanel = document.getElementById('settingsPanel');
         const langPanel = document.getElementById('langPanel');
+        const chatbotPanel = document.getElementById('chatbotPanel');
+        const deluxePanel = document.getElementById('deluxePanel');
         const blogBtn = document.querySelector('.blog-btn');
         const settingsBtn = document.querySelector('.settings-btn');
         const langBtn = document.querySelector('.lang-btn');
+        const chatbotBtn = document.querySelector('.chatbot-btn');
+        const deluxeBtn = document.querySelector('.deluxe-btn');
         
         if (blogPanel.classList.contains('open') && 
             !blogPanel.contains(e.target) && 
@@ -1715,8 +1756,20 @@ window.addEventListener('DOMContentLoaded', () => {
             !langBtn.contains(e.target)) {
             langPanel.classList.remove('open');
         }
+
+        if (chatbotPanel.classList.contains('open') &&
+            !chatbotPanel.contains(e.target) &&
+            chatbotBtn && !chatbotBtn.contains(e.target)) {
+            chatbotPanel.classList.remove('open');
+        }
+
+        if (deluxePanel.classList.contains('open') &&
+            !deluxePanel.contains(e.target) &&
+            deluxeBtn && !deluxeBtn.contains(e.target)) {
+            deluxePanel.classList.remove('open');
+        }
     });
     
     // Handle resize for mobile/desktop
-    window.addEventListener('resize', checkMobileLayout);
+    window.addEventListener('resize', applyMobileLayout);
 });

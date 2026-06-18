@@ -23,7 +23,7 @@
         .settings-section-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 12px; }
     </style>
 </head>
-<body>
+<body class="mobile-app">
     
 
     <div class="app">
@@ -34,10 +34,10 @@
                 <span class="logo-text">Meal Genie</span>
             </div>
             <div class="header-actions">
-                <button class="deluxe-btn" onclick="toggleDeluxe()" aria-label="Deluxe">⭐ Deluxe</button>
+                <button class="deluxe-btn" onclick="toggleDeluxe()" aria-label="Deluxe">⭐</button>
                 <button class="blog-btn" onclick="toggleBlog()" aria-label="Community">💬</button>
                 <button class="header-btn" onclick="showFavorites()" aria-label="Favorites">
-                    ❤️ <span id="favCount">0</span>
+                    ❤️<span id="favCount">0</span>
                 </button>
                 <button class="settings-btn" onclick="toggleSettings()" aria-label="Settings">🎨</button>
                 <button class="lang-btn" onclick="toggleLangMenu()" aria-label="Language">🌐</button>
@@ -147,7 +147,7 @@
                     
                     <div class="deluxe-trial">
                         <span class="trial-badge">🎁 FREE TRIAL</span>
-                        <span class="trial-text">Try all Deluxe features free until June 5, 2026!</span>
+                        <span class="trial-text">Try all Deluxe features free for 30 days!</span>
                     </div>
                     
                     <ul class="deluxe-features">
@@ -241,95 +241,95 @@
 
         <!-- Main Content -->
         <main class="main-content" id="mainContent">
-            <!-- Search Section -->
-            <div class="search-section" id="searchSection">
-                <div class="panel-search">
-                    <input type="text" id="ingSearch" placeholder="Search ingredients..." oninput="filterIngredients()">
-                </div>
-            </div>
-
-            <!-- Cuisine Filter -->
-            <div class="cuisine-filter-bar" id="cuisineFilterBar">
-                <span class="filter-label">Cuisine</span>
-                <div class="cuisine-chips">
-                    <button class="cuisine-chip active" data-cuisine="Any" onclick="setCuisine('Any')">🌍 Any</button>
-                    <button class="cuisine-chip" data-cuisine="Italian" onclick="setCuisine('Italian')">🍝 Italian</button>
-                    <button class="cuisine-chip" data-cuisine="Mexican" onclick="setCuisine('Mexican')">🌮 Mexican</button>
-                    <button class="cuisine-chip" data-cuisine="Indian" onclick="setCuisine('Indian')">🍛 Indian</button>
-                    <button class="cuisine-chip" data-cuisine="Chinese" onclick="setCuisine('Chinese')">🥡 Chinese</button>
-                    <button class="cuisine-chip" data-cuisine="Mediterranean" onclick="setCuisine('Mediterranean')">🥙 Med</button>
-                    <button class="cuisine-chip" data-cuisine="American" onclick="setCuisine('American')">🍔 American</button>
-                    <button class="cuisine-chip" data-cuisine="Fusion" onclick="setCuisine('Fusion')">✨ Fusion</button>
-                </div>
-            </div>
-
-            <!-- Ingredients Grid -->
-            <div class="ingredients-grid" id="ingredientsGrid"></div>
-
-            <!-- Bottom Actions -->
-            <div class="bottom-actions" id="bottomActions">
-                <div class="quick-actions">
-                    <button class="quick-btn" id="leftoverBtn" onclick="toggleLeftoverMode()">
-                        🔄 Use Leftovers
-                    </button>
-                    <button class="view-all-btn" onclick="showAllMeals()">
-                        📖 View All Recipes
-                    </button>
-                </div>
-                <div class="selected-row">
-                    <span id="selectedCount">0 selected</span>
-                </div>
-            </div>
-
-            <!-- Results Container (Mobile) -->
-            <div class="results-container" id="resultsContainer"></div>
-            <div class="all-meals-view" id="allMealsView">
-                <div id="cuisineGroups"></div>
-            </div>
-            <div class="recipe-view" id="recipeView">
-                <button class="back-btn" onclick="backFromRecipe()">← Back</button>
-                <div class="recipe-hero">
-                    <div class="recipe-hero-icon" id="heroIcon">🍳</div>
-                    <div class="recipe-name" id="recipeName">Recipe Name</div>
-                    <div class="recipe-badge" id="cuisineBadge">American</div>
-                    <div class="recipe-meta" id="heroMeta"></div>
-                </div>
-                <div class="servings-section">
-                    <span>Servings:</span>
-                    <div class="serv-buttons">
-                        <button class="serv-btn" onclick="setServings(1)">1</button>
-                        <button class="serv-btn active" onclick="setServings(2)">2</button>
-                        <button class="serv-btn" onclick="setServings(3)">3</button>
-                        <button class="serv-btn" onclick="setServings(4)">4</button>
+            <!-- Left Panel: Ingredients -->
+            <div class="left-panel" id="leftPanel">
+                <div class="search-section" id="searchSection">
+                    <div class="panel-search">
+                        <input type="text" id="ingSearch" placeholder="Search ingredients..." oninput="filterIngredients()">
                     </div>
                 </div>
-                <div class="section">
-                    <h3>Ingredients</h3>
-                    <div class="ingredients-list" id="ingredientsDisplay"></div>
+
+                <div class="cuisine-filter-bar" id="cuisineFilterBar">
+                    <span class="filter-label">Cuisine</span>
+                    <div class="cuisine-chips">
+                        <button class="cuisine-chip active" data-cuisine="Any" onclick="setCuisine('Any')">🌍 Any</button>
+                        <button class="cuisine-chip" data-cuisine="Italian" onclick="setCuisine('Italian')">🍝 Italian</button>
+                        <button class="cuisine-chip" data-cuisine="Mexican" onclick="setCuisine('Mexican')">🌮 Mexican</button>
+                        <button class="cuisine-chip" data-cuisine="Indian" onclick="setCuisine('Indian')">🍛 Indian</button>
+                        <button class="cuisine-chip" data-cuisine="Chinese" onclick="setCuisine('Chinese')">🥡 Chinese</button>
+                        <button class="cuisine-chip" data-cuisine="Mediterranean" onclick="setCuisine('Mediterranean')">🥙 Med</button>
+                        <button class="cuisine-chip" data-cuisine="American" onclick="setCuisine('American')">🍔 American</button>
+                        <button class="cuisine-chip" data-cuisine="Fusion" onclick="setCuisine('Fusion')">✨ Fusion</button>
+                    </div>
                 </div>
-                <div class="section">
-                    <h3>You May Need</h3>
-                    <div class="missing-list" id="missingList"></div>
+
+                <div class="ingredients-grid" id="ingredientsGrid"></div>
+
+                <div class="bottom-actions" id="bottomActions">
+                    <div class="quick-actions">
+                        <button class="quick-btn" id="leftoverBtn" onclick="toggleLeftoverMode()">
+                            🔄 Use Leftovers
+                        </button>
+                        <button class="view-all-btn" id="viewAllBtn" onclick="showAllMeals()">
+                            📖 View All Recipes
+                        </button>
+                    </div>
+                    <div class="selected-row">
+                        <span id="selectedCount">0 selected</span>
+                    </div>
                 </div>
-                <div class="section">
-                    <h3>Steps</h3>
-                    <div class="steps-list" id="stepsList"></div>
-                </div>
-                <div class="section">
-                    <h3>Substitutions</h3>
-                    <div class="subs-list" id="subsList"></div>
-                </div>
-                <div class="tags-bar" id="tagsBar"></div>
-                <button class="fav-btn" id="favBtn" onclick="">🤍 Save Recipe</button>
             </div>
 
-            <!-- Right Panel (Desktop Only) -->
+            <!-- Right Panel: Results & Recipes -->
             <div class="right-panel" id="rightPanel">
                 <div class="empty-state" id="emptyState">
                     <div class="empty-icon">👨‍🍳</div>
                     <h2>What are we cooking?</h2>
                     <p>Select ingredients to discover recipes</p>
                     <div class="selected-tags" id="selectedTags"></div>
+                </div>
+
+                <div class="results-container" id="resultsContainer"></div>
+
+                <div class="all-meals-view" id="allMealsView">
+                    <div id="cuisineGroups"></div>
+                </div>
+
+                <div class="recipe-view" id="recipeView">
+                    <button class="back-btn" onclick="backFromRecipe()">← Back</button>
+                    <div class="recipe-hero">
+                        <div class="recipe-hero-icon" id="heroIcon">🍳</div>
+                        <div class="recipe-name" id="recipeName">Recipe Name</div>
+                        <div class="recipe-badge" id="cuisineBadge">American</div>
+                        <div class="recipe-meta" id="heroMeta"></div>
+                    </div>
+                    <div class="servings-section">
+                        <span>Servings:</span>
+                        <div class="serv-buttons">
+                            <button class="serv-btn" onclick="setServings(1)">1</button>
+                            <button class="serv-btn active" onclick="setServings(2)">2</button>
+                            <button class="serv-btn" onclick="setServings(3)">3</button>
+                            <button class="serv-btn" onclick="setServings(4)">4</button>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <h3>Ingredients</h3>
+                        <div class="ingredients-list" id="ingredientsDisplay"></div>
+                    </div>
+                    <div class="section">
+                        <h3>You May Need</h3>
+                        <div class="missing-list" id="missingList"></div>
+                    </div>
+                    <div class="section">
+                        <h3>Steps</h3>
+                        <div class="steps-list" id="stepsList"></div>
+                    </div>
+                    <div class="section">
+                        <h3>Substitutions</h3>
+                        <div class="subs-list" id="subsList"></div>
+                    </div>
+                    <div class="tags-bar" id="tagsBar"></div>
+                    <button class="fav-btn" id="favBtn" onclick="">🤍 Save Recipe</button>
                 </div>
             </div>
         </main>
