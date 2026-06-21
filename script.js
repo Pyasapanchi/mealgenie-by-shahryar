@@ -723,23 +723,56 @@ function startVoiceInput() {
     recognition.start();
 }
 
-function speakText(text) {
-    if (!('speechSynthesis' in window)) return;
+function speakText(text, options = {}) {
+    if (!('speechSynthesis' in window) || voiceMuted) return;
     
     window.speechSynthesis.cancel();
     
     const utterance = new SpeechSynthesisUtterance(text);
     
-    // Set language for speech
     const langMap = {
         'en': 'en-US', 'ur': 'ur-PK', 'ar': 'ar-SA', 'hi': 'hi-IN',
         'es': 'es-ES', 'fr': 'fr-FR', 'de': 'de-DE', 'tr': 'tr-TR', 'zh': 'zh-CN'
     };
     utterance.lang = langMap[currentLang] || 'en-US';
-    utterance.rate = 0.9;
-    utterance.pitch = 1;
+    utterance.rate = options.rate ?? 0.92;
+    utterance.pitch = options.pitch ?? 1.05;
+    
+    const voice = getBestVoice(utterance.lang);
+    if (voice) utterance.voice = voice;
     
     window.speechSynthesis.speak(utterance);
+    return utterance;
+}
+
+let voicesLoaded = false;
+function loadVoices() {
+    if (!('speechSynthesis' in window)) return;
+    const voices = window.speechSynthesis.getVoices();
+    if (voices.length) voicesLoaded = true;
+}
+
+if ('speechSynthesis' in window) {
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+function getBestVoice(preferredLang) {
+    const voices = window.speechSynthesis.getVoices();
+    if (!voices.length) return null;
+    const langPrefix = (preferredLang || 'en-US').split('-')[0];
+    const preferredNames = [
+        'Google UK English Female', 'Google US English', 'Microsoft Zira',
+        'Microsoft Jenny', 'Samantha', 'Karen', 'Daniel', 'Moira', 'Tessa',
+        'Google UK English Male', 'Microsoft David'
+    ];
+    for (const name of preferredNames) {
+        const match = voices.find(v => v.name.includes(name));
+        if (match) return match;
+    }
+    const localMatch = voices.find(v => v.lang.startsWith(langPrefix) && v.localService);
+    if (localMatch) return localMatch;
+    return voices.find(v => v.lang.startsWith(langPrefix)) || voices[0];
 }
 
 // ===== RECIPE MATCHING =====
@@ -1122,6 +1155,7 @@ function showRecipe(id) {
         ${leftoverBadge}
     `;
     
+    const multiplier = currentServings / 2;
     const ingredientsDisplay = document.getElementById('ingredientsDisplay');
     ingredientsDisplay.innerHTML = recipe.ingredients.map(ing => `
         <div class="ing-row">
@@ -1147,7 +1181,6 @@ function showRecipe(id) {
         `).join('');
     }
     
-    const multiplier = currentServings / 2;
     const stepsList = document.getElementById('stepsList');
     stepsList.innerHTML = recipe.steps.map((step, i) => `
         <div class="step-item">
@@ -1492,78 +1525,597 @@ function openHangout() {
     setBlogTab('hangout', 2);
 }
 
-// ===== DELUXE =====
-function isDeluxeUnlocked() {
-    const status = localStorage.getItem('mealGenieDeluxe');
-    return status === 'true' || status === 'trial';
+// ===== FRIDGE SCAN =====
+const fridgeState = {
+    step: 1,
+    detectedIds: [],
+    imageData: null,
+    prefs: { mood: 'comfort', budget: 'budget', usage: 'solo', servings: '2' },
+    menu: null,
+    stream: null
+};
+
+function loadFridgeInventory() {
+    try {
+        const saved = JSON.parse(localStorage.getItem('mealGenieFridge') || '[]');
+        if (Array.isArray(saved)) fridgeState.detectedIds = saved;
+    } catch (_) { fridgeState.detectedIds = []; }
 }
 
-function updateDeluxeUI() {
-    const unlocked = isDeluxeUnlocked();
-    const locked = document.getElementById('deluxeLocked');
-    const payment = document.getElementById('deluxePayment');
-    const unlockedView = document.getElementById('deluxeUnlocked');
-    if (locked) locked.style.display = unlocked ? 'none' : 'block';
-    if (payment) payment.style.display = 'none';
-    if (unlockedView) unlockedView.style.display = unlocked ? 'block' : 'none';
+function saveFridgeInventory() {
+    localStorage.setItem('mealGenieFridge', JSON.stringify(fridgeState.detectedIds));
 }
 
-function toggleDeluxe() {
-    const panel = document.getElementById('deluxePanel');
+function toggleFridge() {
+    const panel = document.getElementById('fridgePanel');
     panel.classList.toggle('open');
     if (panel.classList.contains('open')) {
-        updateDeluxeUI();
-        document.getElementById('blogPanel').classList.remove('open');
-        document.getElementById('settingsPanel').classList.remove('open');
-        document.getElementById('chatbotPanel').classList.remove('open');
+        closeOverlayPanels('fridge');
+        loadFridgeInventory();
+        renderFridgeDetected();
+        goFridgeStep(fridgeState.step || 1);
+    } else {
+        stopFridgeCamera();
     }
 }
 
-function startFreeTrial() {
-    localStorage.setItem('mealGenieDeluxe', 'trial');
-    updateDeluxeUI();
-    alert('Deluxe free trial started! Enjoy premium features.');
+function closeOverlayPanels(except) {
+    const map = {
+        blog: ['blogPanel', '.blog-btn'],
+        settings: ['settingsPanel', '.settings-btn'],
+        lang: ['langPanel', '.lang-btn'],
+        chatbot: ['chatbotPanel', null],
+        fridge: ['fridgePanel', '.fridge-btn']
+    };
+    Object.entries(map).forEach(([key, [id]]) => {
+        if (key === except) return;
+        document.getElementById(id)?.classList.remove('open');
+    });
 }
 
-function showDeluxePayment() {
-    document.getElementById('deluxeLocked').style.display = 'none';
-    document.getElementById('deluxePayment').style.display = 'block';
+function goFridgeStep(n) {
+    fridgeState.step = n;
+    document.querySelectorAll('.fridge-step').forEach(el => el.classList.remove('active'));
+    const stepEl = document.getElementById(['', 'fridgeStepScan', 'fridgeStepPrefs', 'fridgeStepResults'][n]);
+    if (stepEl) stepEl.classList.add('active');
+    const label = document.getElementById('fridgeStepLabel');
+    if (label) label.textContent = `${n} / 3`;
 }
 
-function showDeluxeLocked() {
-    document.getElementById('deluxeLocked').style.display = 'block';
-    document.getElementById('deluxePayment').style.display = 'none';
+function setFridgePref(key, val, btn) {
+    fridgeState.prefs[key] = val;
+    const parent = btn.closest('.fridge-chips');
+    if (parent) {
+        parent.querySelectorAll('.fridge-chip').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+    }
 }
 
-function processDeluxePayment() {
-    const card = document.getElementById('cardNumber')?.value.trim();
-    if (!card || card.length < 12) {
-        alert('Please enter a valid card number.');
+async function openFridgeCamera() {
+    stopFridgeCamera();
+    const video = document.getElementById('fridgeVideo');
+    const preview = document.getElementById('fridgePreview');
+    try {
+        fridgeState.stream = await navigator.mediaDevices.getUserMedia({
+            video: { facingMode: 'environment' }, audio: false
+        });
+        video.srcObject = fridgeState.stream;
+        video.hidden = false;
+        preview.hidden = true;
+        await video.play();
+        document.getElementById('fridgeScanBtn').disabled = false;
+    } catch (_) {
+        alert('Camera access denied. Upload a photo of your fridge instead.');
+    }
+}
+
+function stopFridgeCamera() {
+    if (fridgeState.stream) {
+        fridgeState.stream.getTracks().forEach(t => t.stop());
+        fridgeState.stream = null;
+    }
+    const video = document.getElementById('fridgeVideo');
+    if (video) {
+        video.srcObject = null;
+        video.hidden = true;
+    }
+}
+
+function captureFridgeFrame() {
+    const video = document.getElementById('fridgeVideo');
+    if (!video.srcObject || video.readyState < 2) return null;
+    const canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext('2d').drawImage(video, 0, 0);
+    return canvas.toDataURL('image/jpeg', 0.85);
+}
+
+function handleFridgeFile(input) {
+    const file = input.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+        fridgeState.imageData = reader.result;
+        const preview = document.getElementById('fridgePreview');
+        const video = document.getElementById('fridgeVideo');
+        preview.src = reader.result;
+        preview.hidden = false;
+        video.hidden = true;
+        stopFridgeCamera();
+        document.getElementById('fridgeScanBtn').disabled = false;
+    };
+    reader.readAsDataURL(file);
+}
+
+function simulateFridgeDetection() {
+    const common = ['chicken', 'egg', 'onion', 'tomato', 'garlic', 'rice', 'milk', 'cheese', 'potato', 'carrot', 'pepper', 'yogurt', 'butter', 'bread'];
+    const shuffled = common.sort(() => Math.random() - 0.5);
+    const count = 4 + Math.floor(Math.random() * 4);
+    return shuffled.slice(0, count).map(id => {
+        const ing = getIngredientById(id);
+        return ing ? ing.id : id;
+    }).filter(Boolean);
+}
+
+async function scanFridgeImage() {
+    const ring = document.getElementById('fridgeScanRing');
+    const btn = document.getElementById('fridgeScanBtn');
+    if (!fridgeState.imageData) {
+        fridgeState.imageData = captureFridgeFrame();
+    }
+    if (!fridgeState.imageData) {
+        alert('Take or upload a fridge photo first.');
         return;
     }
-    localStorage.setItem('mealGenieDeluxe', 'true');
-    updateDeluxeUI();
-    alert('Deluxe unlocked! Welcome to the premium experience.');
+    ring?.classList.add('scanning');
+    btn.disabled = true;
+    btn.textContent = '🔍 Scanning...';
+
+    try {
+        const detected = await detectFridgeIngredients(fridgeState.imageData);
+        fridgeState.detectedIds = detected.length ? detected : simulateFridgeDetection();
+        saveFridgeInventory();
+        renderFridgeDetected();
+        document.getElementById('fridgeNextPrefs').disabled = false;
+    } catch (_) {
+        fridgeState.detectedIds = simulateFridgeDetection();
+        saveFridgeInventory();
+        renderFridgeDetected();
+        document.getElementById('fridgeNextPrefs').disabled = false;
+    } finally {
+        ring?.classList.remove('scanning');
+        btn.disabled = false;
+        btn.textContent = '✨ Scan Fridge';
+        stopFridgeCamera();
+    }
 }
 
-function openDeluxeFeature(featureName) {
-    if (!isDeluxeUnlocked()) {
-        alert('Unlock Deluxe to use this feature.');
+async function detectFridgeIngredients(imageData) {
+    const apiKey = getOpenRouterKey();
+    const catalogNames = ingredients.map(i => i.name).slice(0, 80).join(', ');
+    if (!apiKey) return simulateFridgeDetection();
+
+    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + apiKey,
+            'HTTP-Referer': window.location.href,
+            'X-Title': 'MealGenie Fridge Scan'
+        },
+        body: JSON.stringify({
+            model: 'google/gemini-2.0-flash-001',
+            messages: [{
+                role: 'user',
+                content: [
+                    { type: 'text', text: `You see a fridge photo. List visible food ingredients ONLY from this catalog when possible: ${catalogNames}. Return JSON array of lowercase ingredient id strings matching catalog ids (use hyphens like bell-pepper). No markdown.` },
+                    { type: 'image_url', image_url: { url: imageData } }
+                ]
+            }],
+            max_tokens: 300
+        })
+    });
+    if (!response.ok) throw new Error('vision failed');
+    const data = await response.json();
+    const raw = data.choices?.[0]?.message?.content || '[]';
+    const match = raw.match(/\[[\s\S]*\]/);
+    if (!match) return simulateFridgeDetection();
+    const parsed = JSON.parse(match[0]);
+    return parsed.filter(id => getIngredientById(id)).slice(0, 12);
+}
+
+function renderFridgeDetected() {
+    const wrap = document.getElementById('fridgeDetected');
+    if (!wrap) return;
+    if (!fridgeState.detectedIds.length) {
+        wrap.innerHTML = '<p class="fridge-detected-hint">Detected items appear here — tap to confirm.</p>';
         return;
     }
-    alert(`${featureName} is coming soon in a future update.`);
+    wrap.innerHTML = `
+        <p class="fridge-detected-title">✅ ${fridgeState.detectedIds.length} items detected</p>
+        <div class="fridge-detected-chips">
+            ${fridgeState.detectedIds.map(id => {
+                const ing = getIngredientById(id);
+                return ing ? `<button class="fridge-ing-chip selected" onclick="toggleFridgeIng('${id}', this)">${ing.icon} ${escapeHtml(ing.name)}</button>` : '';
+            }).join('')}
+        </div>
+        <p class="fridge-detected-hint">Tap to remove wrong items. Add more from kitchen below.</p>
+        <div class="fridge-add-grid">
+            ${ingredients.slice(0, 16).map(ing => `
+                <button class="fridge-add-chip ${fridgeState.detectedIds.includes(ing.id) ? 'on' : ''}" onclick="toggleFridgeIng('${ing.id}')">${ing.icon}</button>
+            `).join('')}
+        </div>
+    `;
 }
 
-function openSmartInventory() { openDeluxeFeature('Smart Inventory'); }
-function openImageRecognition() { openDeluxeFeature('Image Recognition'); }
-function openCustomRecipe() { openDeluxeFeature('Custom Recipe Creator'); }
-function openAllergyScanner() { openDeluxeFeature('Allergy Scanner'); }
-function openHealthMode() { openDeluxeFeature('Health Mode'); }
-function openNutritionalDeepDive() { openDeluxeFeature('Nutrition Deep Dive'); }
-function openRecipeScaling() { openDeluxeFeature('Recipe Scaling'); }
-function openDietaryFilters() { openDeluxeFeature('Dietary Filters'); }
-function openShoppingList() { openDeluxeFeature('Shopping List'); }
-function openCookMode() { openDeluxeFeature('Cook Mode'); }
+function toggleFridgeIng(id, btn) {
+    const idx = fridgeState.detectedIds.indexOf(id);
+    if (idx >= 0) fridgeState.detectedIds.splice(idx, 1);
+    else fridgeState.detectedIds.push(id);
+    saveFridgeInventory();
+    renderFridgeDetected();
+    document.getElementById('fridgeNextPrefs').disabled = fridgeState.detectedIds.length === 0;
+}
+
+function youtubeSearchUrl(query) {
+    return `https://www.youtube.com/results?search_query=${encodeURIComponent(query + ' authentic recipe')}`;
+}
+
+function getFridgeRecipeMatches() {
+    const ids = fridgeState.detectedIds;
+    return [...recipes, ...generatedRecipes]
+        .filter(r => r.type === 'meal' || r.type === 'drink' || r.type === 'sauce')
+        .map(r => {
+            const matchCount = r.ingredients.filter(i => {
+                const ing = getIngredientByName(i.name);
+                return ing && ids.includes(ing.id);
+            }).length;
+            return { recipe: r, matchCount, ratio: matchCount / Math.max(r.ingredients.length, 1) };
+        })
+        .filter(x => x.matchCount > 0)
+        .sort((a, b) => b.ratio - a.ratio || b.matchCount - a.matchCount)
+        .slice(0, 6);
+}
+
+async function generateFridgeMenu() {
+    const results = document.getElementById('fridgeResults');
+    results.innerHTML = '<div class="fridge-loading">🧊 Building your custom menu...</div>';
+    goFridgeStep(3);
+
+    const matches = getFridgeRecipeMatches();
+    const names = fridgeState.detectedIds.map(id => getIngredientById(id)?.name).filter(Boolean);
+    const prefs = fridgeState.prefs;
+
+    let aiMenu = null;
+    if (getOpenRouterKey()) {
+        aiMenu = await fetchFridgeMenuAI(names, prefs, matches);
+    }
+    if (!aiMenu) {
+        aiMenu = buildLocalFridgeMenu(matches, names, prefs);
+    }
+    fridgeState.menu = aiMenu;
+    renderFridgeResults(aiMenu);
+}
+
+function buildLocalFridgeMenu(matches, names, prefs) {
+    const meal = matches.find(m => m.recipe.type === 'meal')?.recipe || matches[0]?.recipe;
+    const drink = matches.find(m => m.recipe.type === 'drink')?.recipe;
+    const sauce = matches.find(m => m.recipe.type === 'sauce')?.recipe;
+    return {
+        meal: meal ? { name: meal.name, id: meal.id, tip: `Uses your ${names.slice(0, 3).join(', ')}` } : { name: 'Fridge Stir Fry', id: null, tip: 'Quick pan fry with what you have' },
+        drink: drink ? { name: drink.name, id: drink.id } : { name: 'Fresh Fruit Smoothie', id: null },
+        sauce: sauce ? { name: sauce.name, id: sauce.id } : null,
+        mood: prefs.mood,
+        budget: prefs.budget,
+        youtube: meal ? youtubeSearchUrl(meal.name) : youtubeSearchUrl('easy fridge leftovers')
+    };
+}
+
+async function fetchFridgeMenuAI(names, prefs, matches) {
+    try {
+        const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + getOpenRouterKey(),
+                'HTTP-Referer': window.location.href,
+                'X-Title': 'MealGenie Fridge Menu'
+            },
+            body: JSON.stringify({
+                model: 'anthropic/claude-3-haiku',
+                messages: [{
+                    role: 'user',
+                    content: `User fridge: ${names.join(', ')}. Mood: ${prefs.mood}, budget: ${prefs.budget}, usage: ${prefs.usage}, servings: ${prefs.servings}. Suggest meal, drink, optional sauce. JSON only: {"meal":{"name":"","tip":""},"drink":{"name":""},"sauce":{"name":""}|null,"youtubeQuery":""}`
+                }],
+                max_tokens: 400
+            })
+        });
+        if (!response.ok) return null;
+        const data = await response.json();
+        const raw = data.choices?.[0]?.message?.content || '';
+        const match = raw.match(/\{[\s\S]*\}/);
+        if (!match) return null;
+        const parsed = JSON.parse(match[0]);
+        const dbMeal = matches.find(m => m.recipe.type === 'meal')?.recipe;
+        return {
+            meal: { name: parsed.meal?.name || dbMeal?.name || 'Chef Special', id: dbMeal?.id || null, tip: parsed.meal?.tip || '' },
+            drink: { name: parsed.drink?.name || 'House Drink', id: matches.find(m => m.recipe.type === 'drink')?.recipe?.id || null },
+            sauce: parsed.sauce ? { name: parsed.sauce.name || parsed.sauce, id: matches.find(m => m.recipe.type === 'sauce')?.recipe?.id || null } : null,
+            mood: prefs.mood,
+            budget: prefs.budget,
+            youtube: youtubeSearchUrl(parsed.youtubeQuery || parsed.meal?.name || 'authentic cooking')
+        };
+    } catch (_) {
+        return null;
+    }
+}
+
+function renderFridgeResults(menu) {
+    const results = document.getElementById('fridgeResults');
+    results.innerHTML = `
+        <div class="fridge-menu-card">
+            <h4>🍽️ Your Menu</h4>
+            <p class="fridge-menu-meta">${menu.mood} · ${menu.budget} budget</p>
+            <div class="fridge-menu-item main">
+                <span>🍳</span>
+                <div>
+                    <strong>${escapeHtml(menu.meal.name)}</strong>
+                    <p>${escapeHtml(menu.meal.tip || 'Matched from your fridge')}</p>
+                    ${menu.meal.id ? `<button class="fridge-link-btn" onclick="openFridgeRecipe(${menu.meal.id})">View Recipe</button>` : ''}
+                </div>
+            </div>
+            <div class="fridge-menu-item">
+                <span>🥤</span>
+                <div>
+                    <strong>${escapeHtml(menu.drink.name)}</strong>
+                    ${menu.drink.id ? `<button class="fridge-link-btn" onclick="openFridgeRecipe(${menu.drink.id})">View Recipe</button>` : ''}
+                </div>
+            </div>
+            ${menu.sauce ? `
+            <div class="fridge-menu-item">
+                <span>🫙</span>
+                <div><strong>${escapeHtml(menu.sauce.name)}</strong></div>
+            </div>` : ''}
+            <a class="fridge-yt-btn" href="${menu.youtube}" target="_blank" rel="noopener">▶️ Watch authentic chefs on YouTube</a>
+        </div>
+        <div class="fridge-matches">
+            <h4>📋 Also matches your fridge</h4>
+            ${getFridgeRecipeMatches().map(m => `
+                <button class="fridge-match-row" onclick="openFridgeRecipe(${m.recipe.id})">
+                    <span>${m.recipe.icon}</span>
+                    <span>${escapeHtml(m.recipe.name)}</span>
+                    <span class="fridge-match-pct">${Math.round(m.ratio * 100)}%</span>
+                </button>
+            `).join('')}
+        </div>
+    `;
+}
+
+function openFridgeRecipe(id) {
+    toggleFridge();
+    showRecipe(id);
+}
+
+function applyFridgeToKitchen() {
+    selectedIngredients = [...fridgeState.detectedIds];
+    renderIngredients();
+    updateResults();
+    toggleFridge();
+    showResults();
+}
+
+// ===== LIVE COOKING MENTOR =====
+const liveAssistantState = {
+    active: false,
+    recipe: null,
+    stepIndex: 0,
+    listening: false,
+    recognition: null
+};
+
+function startLiveAssistant() {
+    const allRecipes = [...recipes, ...generatedRecipes];
+    const recipe = allRecipes.find(r => r.id === activeRecipeId);
+    if (!recipe) {
+        alert('Open a recipe first, then start Live Mentor.');
+        return;
+    }
+    liveAssistantState.recipe = recipe;
+    liveAssistantState.stepIndex = 0;
+    liveAssistantState.active = true;
+
+    document.getElementById('liveAssistant').classList.add('open');
+    document.getElementById('liveRecipeName').textContent = recipe.name;
+    document.getElementById('liveTranscript').innerHTML = '';
+    updateLiveStepUI();
+    liveMentorSpeak(`Hey chef! I'm your robotic mentor for ${recipe.name}. I'll guide you step by step. Say next when you're ready, or tap the microphone if you need help.`);
+}
+
+function stopLiveAssistant() {
+    liveAssistantState.active = false;
+    liveAssistantState.listening = false;
+    stopLiveListen();
+    window.speechSynthesis?.cancel();
+    document.getElementById('liveAssistant')?.classList.remove('open');
+    document.getElementById('liveMicBtn')?.classList.remove('listening');
+}
+
+function updateLiveStepUI() {
+    const recipe = liveAssistantState.recipe;
+    if (!recipe) return;
+    const total = recipe.steps.length;
+    const idx = liveAssistantState.stepIndex;
+    const stepText = recipe.steps[idx] || 'All steps complete — great job, chef!';
+
+    document.getElementById('liveStepNum').textContent = Math.min(idx + 1, total);
+    document.getElementById('liveStepText').textContent = stepText;
+    document.getElementById('liveStepCount').textContent = `Step ${Math.min(idx + 1, total)} / ${total}`;
+    document.getElementById('liveProgressBar').style.width = `${total ? (idx / total) * 100 : 100}%`;
+
+    document.querySelectorAll('#stepsList .step-item').forEach((el, i) => {
+        el.classList.remove('live-current', 'live-done');
+        if (i < idx) el.classList.add('live-done');
+        if (i === idx && idx < total) el.classList.add('live-current');
+    });
+}
+
+function liveMentorSpeak(text) {
+    appendLiveTranscript('mentor', text);
+    speakText(text, { rate: 0.88, pitch: 1.08 });
+}
+
+function appendLiveTranscript(role, text) {
+    const box = document.getElementById('liveTranscript');
+    if (!box) return;
+    const div = document.createElement('div');
+    div.className = role === 'user' ? 'live-msg-user' : 'live-msg-mentor';
+    div.textContent = text;
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+}
+
+function liveMentorNext() {
+    const recipe = liveAssistantState.recipe;
+    if (!recipe) return;
+    if (liveAssistantState.stepIndex >= recipe.steps.length) {
+        liveMentorSpeak("You nailed it! Plate up and enjoy. I'm proud of you, chef.");
+        return;
+    }
+    const step = recipe.steps[liveAssistantState.stepIndex];
+    const num = liveAssistantState.stepIndex + 1;
+    liveMentorSpeak(`Step ${num}. ${step}`);
+    liveAssistantState.stepIndex++;
+    updateLiveStepUI();
+}
+
+function liveMentorPrev() {
+    if (liveAssistantState.stepIndex > 0) {
+        liveAssistantState.stepIndex--;
+        updateLiveStepUI();
+        const step = liveAssistantState.recipe.steps[liveAssistantState.stepIndex];
+        liveMentorSpeak(`Going back. Step ${liveAssistantState.stepIndex + 1}. ${step}`);
+    }
+}
+
+function liveMentorAskHelp() {
+    liveMentorListen(true);
+    liveMentorSpeak("Tell me what happened — burned, too salty, wrong step? I'm listening.");
+}
+
+function liveMentorListen(forceHelp) {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+        const msg = prompt('Voice not supported. Type what went wrong:');
+        if (msg) processLiveMentorInput(msg, !!forceHelp);
+        return;
+    }
+    if (liveAssistantState.listening) {
+        stopLiveListen();
+        return;
+    }
+    liveAssistantState.recognition = new SpeechRecognition();
+    liveAssistantState.recognition.lang = 'en-US';
+    liveAssistantState.recognition.interimResults = false;
+    liveAssistantState.listening = true;
+    document.getElementById('liveMicBtn').classList.add('listening');
+
+    liveAssistantState.recognition.onresult = (e) => {
+        const text = e.results[0][0].transcript;
+        processLiveMentorInput(text, !!forceHelp);
+    };
+    liveAssistantState.recognition.onend = () => stopLiveListen();
+    liveAssistantState.recognition.onerror = () => stopLiveListen();
+    liveAssistantState.recognition.start();
+}
+
+function stopLiveListen() {
+    liveAssistantState.listening = false;
+    document.getElementById('liveMicBtn')?.classList.remove('listening');
+    try { liveAssistantState.recognition?.stop(); } catch (_) {}
+}
+
+async function processLiveMentorInput(text, isHelp) {
+    appendLiveTranscript('user', text);
+    const lower = text.toLowerCase();
+    if (!isHelp) {
+        if (lower.includes('next') || lower.includes('done') || lower.includes('ready')) {
+            liveMentorNext();
+            return;
+        }
+        if (lower.includes('back') || lower.includes('previous') || lower.includes('repeat')) {
+            if (lower.includes('repeat')) {
+                const idx = Math.max(0, liveAssistantState.stepIndex - 1);
+                const step = liveAssistantState.recipe.steps[idx];
+                liveMentorSpeak(`Repeating. ${step}`);
+            } else {
+                liveMentorPrev();
+            }
+            return;
+        }
+    }
+    const mistakeHints = ['burn', 'salt', 'wrong', 'mistake', 'help', 'stuck', 'overcook', 'raw', 'watery', 'dry'];
+    const isMistake = isHelp || mistakeHints.some(h => lower.includes(h));
+    if (isMistake) {
+        await liveMentorFix(text);
+    } else {
+        liveMentorSpeak("Got it. Say next when you're ready for the following step, or tap help if something goes wrong.");
+    }
+}
+
+async function liveMentorFix(problem) {
+    const recipe = liveAssistantState.recipe;
+    const stepIdx = Math.max(0, liveAssistantState.stepIndex - 1);
+    const currentStep = recipe?.steps[stepIdx] || '';
+    liveMentorSpeak('Analyzing... hang on chef.');
+
+    const localFix = getLocalMentorFix(problem, currentStep);
+    if (localFix && !getOpenRouterKey()) {
+        liveMentorSpeak(localFix);
+        return;
+    }
+    if (getOpenRouterKey()) {
+        try {
+            const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + getOpenRouterKey(),
+                    'HTTP-Referer': window.location.href,
+                    'X-Title': 'MealGenie Live Mentor'
+                },
+                body: JSON.stringify({
+                    model: 'anthropic/claude-3-haiku',
+                    messages: [{
+                        role: 'system',
+                        content: 'You are a friendly robotic cooking mentor. User made a mistake. Give 2-3 short actionable fixes. Be encouraging, not robotic-stiff. Max 3 sentences.'
+                    }, {
+                        role: 'user',
+                        content: `Recipe: ${recipe.name}. Current step: ${currentStep}. Problem: ${problem}`
+                    }],
+                    max_tokens: 200
+                })
+            });
+            if (response.ok) {
+                const data = await response.json();
+                liveMentorSpeak(data.choices[0].message.content.trim());
+                return;
+            }
+        } catch (_) {}
+    }
+    liveMentorSpeak(localFix || "No worries chef — taste, adjust seasoning, and lower the heat. You’ve got this!");
+}
+
+function getLocalMentorFix(problem, step) {
+    const p = problem.toLowerCase();
+    if (p.includes('burn') || p.includes('burnt')) return "Turn off the heat now. If only the bottom burned, transfer to a new pan without scraping the char. Add a splash of liquid and continue gently.";
+    if (p.includes('salt')) return "Dilute with unsalted liquid — water, stock, or cream. Add acid like lemon to balance. Serve with plain rice or bread on the side.";
+    if (p.includes('raw') || p.includes('undercook')) return "Keep cooking on medium heat until done. Cover the pan to trap steam — that speeds things up without burning.";
+    if (p.includes('watery') || p.includes('soggy')) return "Simmer uncovered to reduce liquid, or mix a teaspoon of cornstarch with cold water and stir in.";
+    if (p.includes('dry')) return "Add butter, olive oil, or a splash of broth. Cover briefly so moisture returns.";
+    if (step) return `For this step: take your time with "${step.slice(0, 60)}...". Lower heat, re-read amounts, and adjust as you go.`;
+    return null;
+}
 
 // ===== SETTINGS =====
 function toggleSettings() {
@@ -1723,7 +2275,7 @@ window.addEventListener('DOMContentLoaded', () => {
     updateFavCount();
     applyMobileLayout();
     applyLanguage();
-    updateDeluxeUI();
+    loadFridgeInventory();
     document.getElementById('muteBtn').textContent = voiceMuted ? '🔇' : '🔊';
     
     // Close panels when clicking outside
@@ -1731,13 +2283,11 @@ window.addEventListener('DOMContentLoaded', () => {
         const blogPanel = document.getElementById('blogPanel');
         const settingsPanel = document.getElementById('settingsPanel');
         const langPanel = document.getElementById('langPanel');
-        const chatbotPanel = document.getElementById('chatbotPanel');
-        const deluxePanel = document.getElementById('deluxePanel');
+        const fridgePanel = document.getElementById('fridgePanel');
         const blogBtn = document.querySelector('.blog-btn');
         const settingsBtn = document.querySelector('.settings-btn');
         const langBtn = document.querySelector('.lang-btn');
-        const chatbotBtn = document.querySelector('.chatbot-btn');
-        const deluxeBtn = document.querySelector('.deluxe-btn');
+        const fridgeBtn = document.querySelector('.fridge-btn');
         
         if (blogPanel.classList.contains('open') && 
             !blogPanel.contains(e.target) && 
@@ -1757,16 +2307,11 @@ window.addEventListener('DOMContentLoaded', () => {
             langPanel.classList.remove('open');
         }
 
-        if (chatbotPanel.classList.contains('open') &&
-            !chatbotPanel.contains(e.target) &&
-            chatbotBtn && !chatbotBtn.contains(e.target)) {
-            chatbotPanel.classList.remove('open');
-        }
-
-        if (deluxePanel.classList.contains('open') &&
-            !deluxePanel.contains(e.target) &&
-            deluxeBtn && !deluxeBtn.contains(e.target)) {
-            deluxePanel.classList.remove('open');
+        if (fridgePanel?.classList.contains('open') &&
+            !fridgePanel.contains(e.target) &&
+            fridgeBtn && !fridgeBtn.contains(e.target)) {
+            fridgePanel.classList.remove('open');
+            stopFridgeCamera();
         }
     });
     

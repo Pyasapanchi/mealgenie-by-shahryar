@@ -34,14 +34,13 @@
                 <span class="logo-text">Meal Genie</span>
             </div>
             <div class="header-actions">
-                <button class="deluxe-btn" onclick="toggleDeluxe()" aria-label="Deluxe">⭐</button>
+                <button class="fridge-btn" onclick="toggleFridge()" aria-label="Fridge Scan">🧊</button>
                 <button class="blog-btn" onclick="toggleBlog()" aria-label="Community">💬</button>
                 <button class="header-btn" onclick="showFavorites()" aria-label="Favorites">
                     ❤️<span id="favCount">0</span>
                 </button>
                 <button class="settings-btn" onclick="toggleSettings()" aria-label="Settings">🎨</button>
                 <button class="lang-btn" onclick="toggleLangMenu()" aria-label="Language">🌐</button>
-                <button class="chatbot-btn" onclick="toggleChatbot()" aria-label="Chat">🎙️</button>
             </div>
         </header>
 
@@ -128,115 +127,112 @@
             </div>
         </div>
 
-        <!-- Deluxe Panel -->
-        <div class="deluxe-panel" id="deluxePanel">
-            <div class="deluxe-panel-header">
-                <h3 class="deluxe-title">⭐ Deluxe</h3>
-                <button class="deluxe-panel-close" onclick="toggleDeluxe()">✕</button>
+        <!-- Fridge Scan Panel -->
+        <div class="fridge-panel" id="fridgePanel">
+            <div class="fridge-panel-header">
+                <button class="fridge-panel-close" onclick="toggleFridge()">✕</button>
+                <h3 class="fridge-title">🧊 Fridge Scan</h3>
+                <span class="fridge-step-label" id="fridgeStepLabel">1 / 3</span>
             </div>
-            <div class="deluxe-content" id="deluxeContent">
-                <div class="deluxe-locked" id="deluxeLocked">
-                    <div class="deluxe-icon">👑</div>
-                    <h2>Unlock Deluxe</h2>
-                    <p>Get premium features and take your cooking to the next level!</p>
-                    
-                    <div class="deluxe-price">
-                        <span class="price-amount">$10</span>
-                        <span class="price-note">(3000 PKR)</span>
-                    </div>
-                    
-                    <div class="deluxe-trial">
-                        <span class="trial-badge">🎁 FREE TRIAL</span>
-                        <span class="trial-text">Try all Deluxe features free for 30 days!</span>
-                    </div>
-                    
-                    <ul class="deluxe-features">
-                        <li>🎙️ Voice Cooking Assistant</li>
-                        <li>💬 AI Chatbot (Included)</li>
-                        <li>📸 Image Recognition</li>
-                        <li>🏠 Smart Inventory</li>
-                        <li>✍️ Custom Recipe Creator</li>
-                        <li>🔍 Deep Allergy Scanner</li>
-                        <li>❤️ Health Condition Mode</li>
-                        <li>📊 Nutritional Deep Dive</li>
-                        <li>⚠️ Ingredient Safety</li>
-                        <li>📏 Recipe Scaling</li>
-                        <li>🥗 Dietary Filters</li>
-                        <li>🛒 Shopping List</li>
-                        <li>📱 Cook Mode</li>
-                        <li>📦 Meal Prep Plans</li>
-                    </ul>
-                    
-                    <button class="deluxe-try-btn" onclick="startFreeTrial()">Start Free Trial</button>
-                    <button class="deluxe-subscribe-btn" onclick="showDeluxePayment()">Subscribe Now - $10</button>
-                    
-                    <p class="deluxe-note">One-time payment, lifetime access</p>
+
+            <div class="fridge-step active" id="fridgeStepScan">
+                <p class="fridge-intro">Snap your fridge — AI detects ingredients, matches authentic recipes &amp; chef videos.</p>
+                <div class="fridge-camera-wrap">
+                    <video id="fridgeVideo" class="fridge-video" playsinline muted></video>
+                    <img id="fridgePreview" class="fridge-preview" alt="Fridge preview" hidden>
+                    <div class="fridge-scan-ring" id="fridgeScanRing"></div>
                 </div>
-                
-                <div class="deluxe-payment" id="deluxePayment" style="display:none;">
-                    <h3>💳 Payment</h3>
-                    <p>Enter your card details to unlock Deluxe</p>
-                    
-                    <div class="payment-form">
-                        <input type="text" id="cardNumber" placeholder="Card Number (1234 5678 9012 3456)" maxlength="19">
-                        <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5">
-                        <input type="text" id="cardCvv" placeholder="CVV" maxlength="4">
-                        <input type="text" id="cardName" placeholder="Name on Card">
-                    </div>
-                    
-                    <button class="deluxe-pay-btn" onclick="processDeluxePayment()">Pay $10 (3000 PKR)</button>
-                    <button class="deluxe-back-btn" onclick="showDeluxeLocked()">← Back</button>
+                <div class="fridge-scan-actions">
+                    <button class="fridge-action-btn primary" onclick="openFridgeCamera()">📷 Open Camera</button>
+                    <label class="fridge-action-btn">
+                        🖼️ Upload Photo
+                        <input type="file" id="fridgeFileInput" accept="image/*" capture="environment" hidden onchange="handleFridgeFile(this)">
+                    </label>
                 </div>
-                
-                <div class="deluxe-unlocked" id="deluxeUnlocked" style="display:none;">
-                    <div class="deluxe-check">✅</div>
-                    <h2>Deluxe Unlocked!</h2>
-                    <p>Welcome to the Deluxe experience!</p>
-                    
-                    <div class="deluxe-quick-actions">
-                        <button class="deluxe-feature-btn" onclick="openSmartInventory()">
-                            <span class="icon">🏠</span>
-                            Smart Inventory
-                        </button>
-                        <button class="deluxe-feature-btn" onclick="openImageRecognition()">
-                            <span class="icon">📸</span>
-                            Image Recognition
-                        </button>
-                        <button class="deluxe-feature-btn" onclick="openCustomRecipe()">
-                            <span class="icon">✍️</span>
-                            Custom Recipe
-                        </button>
-                        <button class="deluxe-feature-btn" onclick="openAllergyScanner()">
-                            <span class="icon">🔍</span>
-                            Allergy Scanner
-                        </button>
-                        <button class="deluxe-feature-btn" onclick="openHealthMode()">
-                            <span class="icon">❤️</span>
-                            Health Mode
-                        </button>
-                        <button class="deluxe-feature-btn" onclick="openNutritionalDeepDive()">
-                            <span class="icon">📊</span>
-                            Nutrition Deep Dive
-                        </button>
-                        <button class="deluxe-feature-btn" onclick="openRecipeScaling()">
-                            <span class="icon">📏</span>
-                            Recipe Scaling
-                        </button>
-                        <button class="deluxe-feature-btn" onclick="openDietaryFilters()">
-                            <span class="icon">🥗</span>
-                            Dietary Filters
-                        </button>
-                        <button class="deluxe-feature-btn" onclick="openShoppingList()">
-                            <span class="icon">🛒</span>
-                            Shopping List
-                        </button>
-                        <button class="deluxe-feature-btn" onclick="openCookMode()">
-                            <span class="icon">📱</span>
-                            Cook Mode
-                        </button>
+                <button class="fridge-action-btn scan" id="fridgeScanBtn" onclick="scanFridgeImage()" disabled>✨ Scan Fridge</button>
+                <div class="fridge-detected" id="fridgeDetected">
+                    <p class="fridge-detected-hint">Detected items appear here — tap to confirm.</p>
+                </div>
+                <button class="fridge-action-btn primary" id="fridgeNextPrefs" onclick="goFridgeStep(2)" disabled>Next: Customize →</button>
+            </div>
+
+            <div class="fridge-step" id="fridgeStepPrefs">
+                <p class="fridge-intro">Set your vibe — we'll pick meals, drinks &amp; sauces that fit.</p>
+                <div class="fridge-pref-block">
+                    <span class="fridge-pref-label">😊 Mood</span>
+                    <div class="fridge-chips" id="fridgeMoodChips">
+                        <button class="fridge-chip active" data-val="comfort" onclick="setFridgePref('mood','comfort',this)">🛋️ Comfort</button>
+                        <button class="fridge-chip" data-val="healthy" onclick="setFridgePref('mood','healthy',this)">💪 Healthy</button>
+                        <button class="fridge-chip" data-val="quick" onclick="setFridgePref('mood','quick',this)">⚡ Quick</button>
+                        <button class="fridge-chip" data-val="cozy" onclick="setFridgePref('mood','cozy',this)">☕ Cozy</button>
+                        <button class="fridge-chip" data-val="adventurous" onclick="setFridgePref('mood','adventurous',this)">🌍 Adventurous</button>
                     </div>
+                </div>
+                <div class="fridge-pref-block">
+                    <span class="fridge-pref-label">💰 Budget</span>
+                    <div class="fridge-chips" id="fridgeBudgetChips">
+                        <button class="fridge-chip active" data-val="budget" onclick="setFridgePref('budget','budget',this)">💵 Budget</button>
+                        <button class="fridge-chip" data-val="moderate" onclick="setFridgePref('budget','moderate',this)">💳 Moderate</button>
+                        <button class="fridge-chip" data-val="any" onclick="setFridgePref('budget','any',this)">✨ Any</button>
+                    </div>
+                </div>
+                <div class="fridge-pref-block">
+                    <span class="fridge-pref-label">👥 Usage</span>
+                    <div class="fridge-chips" id="fridgeUsageChips">
+                        <button class="fridge-chip active" data-val="solo" onclick="setFridgePref('usage','solo',this)">1️⃣ Solo</button>
+                        <button class="fridge-chip" data-val="couple" onclick="setFridgePref('usage','couple',this)">👫 Couple</button>
+                        <button class="fridge-chip" data-val="family" onclick="setFridgePref('usage','family',this)">👨‍👩‍👧 Family</button>
+                        <button class="fridge-chip" data-val="prep" onclick="setFridgePref('usage','prep',this)">📦 Meal Prep</button>
+                    </div>
+                </div>
+                <div class="fridge-pref-block">
+                    <span class="fridge-pref-label">🍽️ Servings</span>
+                    <div class="fridge-chips">
+                        <button class="fridge-chip" data-val="1" onclick="setFridgePref('servings','1',this)">1</button>
+                        <button class="fridge-chip active" data-val="2" onclick="setFridgePref('servings','2',this)">2</button>
+                        <button class="fridge-chip" data-val="4" onclick="setFridgePref('servings','4',this)">4</button>
+                        <button class="fridge-chip" data-val="6" onclick="setFridgePref('servings','6',this)">6</button>
+                    </div>
+                </div>
+                <button class="fridge-action-btn" onclick="goFridgeStep(1)">← Back</button>
+                <button class="fridge-action-btn primary" onclick="generateFridgeMenu()">🍳 Generate My Menu</button>
+            </div>
+
+            <div class="fridge-step" id="fridgeStepResults">
+                <div id="fridgeResults"></div>
+                <button class="fridge-action-btn" onclick="goFridgeStep(2)">← Customize Again</button>
+                <button class="fridge-action-btn primary" onclick="applyFridgeToKitchen()">✅ Use in Kitchen</button>
+            </div>
+        </div>
+
+        <!-- Live Cooking Mentor (fullscreen) -->
+        <div class="live-assistant" id="liveAssistant">
+            <div class="live-assistant-header">
+                <button class="live-close" onclick="stopLiveAssistant()">✕</button>
+                <div class="live-avatar-wrap">
+                    <div class="live-avatar" id="liveAvatar">🤖</div>
+                    <div class="live-pulse"></div>
+                </div>
+                <div>
+                    <h3 class="live-title">Chef Mentor</h3>
+                    <p class="live-subtitle" id="liveRecipeName">Live cooking guide</p>
                 </div>
             </div>
+            <div class="live-progress-wrap">
+                <div class="live-progress-track"><div class="live-progress-bar" id="liveProgressBar"></div></div>
+                <span class="live-step-count" id="liveStepCount">Step 0 / 0</span>
+            </div>
+            <div class="live-current-step" id="liveCurrentStep">
+                <span class="live-step-num" id="liveStepNum">1</span>
+                <p id="liveStepText">Ready when you are, chef.</p>
+            </div>
+            <div class="live-transcript" id="liveTranscript"></div>
+            <div class="live-controls">
+                <button class="live-ctrl-btn" onclick="liveMentorPrev()" title="Previous">⏮️</button>
+                <button class="live-ctrl-btn big" id="liveMicBtn" onclick="liveMentorListen()" title="Talk to mentor">🎤</button>
+                <button class="live-ctrl-btn" onclick="liveMentorNext()" title="Next step">⏭️</button>
+            </div>
+            <button class="live-ctrl-btn wide" onclick="liveMentorAskHelp()">🆘 I made a mistake / need help</button>
         </div>
 
         <!-- Main Content -->
@@ -329,6 +325,7 @@
                         <div class="subs-list" id="subsList"></div>
                     </div>
                     <div class="tags-bar" id="tagsBar"></div>
+                    <button class="live-mentor-btn" id="liveMentorBtn" onclick="startLiveAssistant()">🤖 Start Live Mentor</button>
                     <button class="fav-btn" id="favBtn" onclick="">🤍 Save Recipe</button>
                 </div>
             </div>

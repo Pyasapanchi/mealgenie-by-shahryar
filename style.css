@@ -252,7 +252,7 @@ body.mobile-app .app {
 
 .header-actions::-webkit-scrollbar { display: none; }
 
-body.mobile-app .deluxe-btn {
+body.mobile-app .fridge-btn {
     padding: 10px 12px;
     min-width: 44px;
     font-size: 18px;
@@ -260,8 +260,7 @@ body.mobile-app .deluxe-btn {
 
 body.mobile-app .blog-btn,
 body.mobile-app .settings-btn,
-body.mobile-app .lang-btn,
-body.mobile-app .chatbot-btn {
+body.mobile-app .lang-btn {
     padding: 10px 12px;
     min-width: 44px;
     font-size: 18px;
@@ -295,6 +294,25 @@ body.mobile-app .header-btn {
     cursor: pointer;
     min-height: 44px;
     transition: all 0.2s;
+}
+
+.fridge-btn {
+    padding: 8px 14px;
+    background: linear-gradient(135deg, #06B6D4, #0891B2);
+    border: none;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    min-height: 40px;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(6, 182, 212, 0.35);
+}
+
+.fridge-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.45);
 }
 
 .deluxe-btn {
@@ -2633,7 +2651,7 @@ body.mobile-app .result-grid {
     body.mobile-app .settings-panel,
     body.mobile-app .lang-panel,
     body.mobile-app .chatbot-panel,
-    body.mobile-app .deluxe-panel {
+    body.mobile-app .fridge-panel {
         top: 0 !important;
         left: 50% !important;
         right: auto !important;
@@ -2656,12 +2674,577 @@ body.mobile-app .result-grid {
     body.mobile-app .settings-panel-close,
     body.mobile-app .lang-panel-close,
     body.mobile-app .chatbot-close,
-    body.mobile-app .deluxe-panel-close {
+    body.mobile-app .fridge-panel-close {
         display: flex !important;
     }
 
     body.mobile-app .ai-buttons {
         grid-template-columns: repeat(2, 1fr) !important;
     }
+}
+
+/* ===== FRIDGE SCAN ===== */
+.fridge-panel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 250;
+    background: var(--card);
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.fridge-panel.open {
+    display: flex;
+}
+
+.fridge-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #ECFEFF, #CFFAFE);
+}
+
+.fridge-panel-close {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: var(--bg);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.fridge-title {
+    flex: 1;
+    margin: 0;
+    font-size: 18px;
+}
+
+.fridge-step-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0891B2;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+.fridge-step {
+    display: none;
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+}
+
+.fridge-step.active {
+    display: block;
+}
+
+.fridge-intro {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.fridge-camera-wrap {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #0f172a;
+    aspect-ratio: 4/3;
+    margin-bottom: 12px;
+}
+
+.fridge-video,
+.fridge-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.fridge-scan-ring {
+    position: absolute;
+    inset: 12px;
+    border: 2px dashed rgba(6, 182, 212, 0.5);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.fridge-scan-ring.scanning {
+    animation: fridgePulse 1.2s ease infinite;
+    border-color: #22d3ee;
+}
+
+@keyframes fridgePulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(0.98); }
+}
+
+.fridge-scan-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.fridge-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--bg);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.fridge-action-btn.primary {
+    background: linear-gradient(135deg, #06B6D4, #0891B2);
+    color: white;
+    border: none;
+}
+
+.fridge-action-btn.scan {
+    width: 100%;
+    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+    color: white;
+    border: none;
+}
+
+.fridge-action-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.fridge-detected-title {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.fridge-detected-hint {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.fridge-detected-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.fridge-ing-chip {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 2px solid #06B6D4;
+    background: #ECFEFF;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.fridge-add-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.fridge-add-chip {
+    aspect-ratio: 1;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.fridge-add-chip.on {
+    border-color: #06B6D4;
+    background: #ECFEFF;
+}
+
+.fridge-pref-block {
+    margin-bottom: 18px;
+}
+
+.fridge-pref-label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.fridge-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.fridge-chip {
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.fridge-chip.active {
+    background: #0891B2;
+    color: white;
+    border-color: #0891B2;
+}
+
+.fridge-loading {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 16px;
+}
+
+.fridge-menu-card {
+    background: linear-gradient(135deg, #F0FDFA, #ECFEFF);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.fridge-menu-card h4 {
+    margin: 0 0 4px;
+}
+
+.fridge-menu-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.fridge-menu-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.fridge-menu-item.main {
+    border-top: none;
+}
+
+.fridge-menu-item span:first-child {
+    font-size: 24px;
+}
+
+.fridge-menu-item p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.fridge-link-btn {
+    margin-top: 6px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #0891B2;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.fridge-yt-btn {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    padding: 12px;
+    background: #DC2626;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.fridge-matches h4 {
+    margin-bottom: 10px;
+}
+
+.fridge-match-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg);
+    cursor: pointer;
+    text-align: left;
+}
+
+.fridge-match-row span:first-child {
+    font-size: 22px;
+}
+
+.fridge-match-row span:nth-child(2) {
+    flex: 1;
+    font-weight: 600;
+}
+
+.fridge-match-pct {
+    font-size: 12px;
+    color: #0891B2;
+    font-weight: 700;
+}
+
+/* ===== LIVE MENTOR ===== */
+.live-mentor-btn {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #6366F1, #4F46E5);
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+}
+
+.live-assistant {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    flex-direction: column;
+    padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
+}
+
+.live-assistant.open {
+    display: flex;
+}
+
+.live-assistant-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0 16px;
+}
+
+.live-close {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.live-avatar-wrap {
+    position: relative;
+    width: 56px;
+    height: 56px;
+}
+
+.live-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366F1, #A855F7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    position: relative;
+    z-index: 2;
+}
+
+.live-pulse {
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid #818CF8;
+    animation: livePulse 2s ease infinite;
+}
+
+@keyframes livePulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.15); opacity: 0; }
+}
+
+.live-title {
+    margin: 0;
+    font-size: 18px;
+}
+
+.live-subtitle {
+    margin: 2px 0 0;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.live-progress-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.live-progress-track {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.live-progress-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 3px;
+    transition: width 0.3s;
+    background: linear-gradient(90deg, #6366F1, #A855F7);
+}
+
+.live-step-count {
+    font-size: 12px;
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
+.live-current-step {
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.live-step-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #6366F1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+#liveStepText {
+    margin: 4px 0 0;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.live-transcript {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 12px;
+    padding: 8px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.2);
+    min-height: 80px;
+    max-height: 28vh;
+}
+
+.live-msg-mentor,
+.live-msg-user {
+    padding: 8px 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.live-msg-mentor {
+    background: rgba(99, 102, 241, 0.25);
+    border-left: 3px solid #818CF8;
+}
+
+.live-msg-user {
+    background: rgba(255,255,255,0.1);
+    text-align: right;
+}
+
+.live-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.live-ctrl-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.live-ctrl-btn.big {
+    width: 72px;
+    height: 72px;
+    font-size: 28px;
+    background: linear-gradient(135deg, #6366F1, #4F46E5);
+}
+
+.live-ctrl-btn.big.listening {
+    animation: micPulse 1s ease infinite;
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+}
+
+@keyframes micPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); }
+    50% { box-shadow: 0 0 0 12px rgba(239, 68, 68, 0); }
+}
+
+.live-ctrl-btn.wide {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.step-item.live-current {
+    border-left: 4px solid #6366F1;
+    background: rgba(99, 102, 241, 0.08);
+}
+
+.step-item.live-done {
+    opacity: 0.55;
+}
+
+body.mobile-app .live-assistant {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 430px;
+    width: 100%;
 }
 
