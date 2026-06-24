@@ -260,7 +260,8 @@ body.mobile-app .fridge-btn {
 
 body.mobile-app .blog-btn,
 body.mobile-app .settings-btn,
-body.mobile-app .lang-btn {
+body.mobile-app .lang-btn,
+body.mobile-app .chatbot-btn {
     padding: 10px 12px;
     min-width: 44px;
     font-size: 18px;

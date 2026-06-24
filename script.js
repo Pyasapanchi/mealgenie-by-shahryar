@@ -1,246 +1,246 @@
-// ===== DATA =====
+﻿// ===== DATA =====
 const ingredients = [
     // PROTEINS
-    { id: 'chicken', name: 'Chicken', icon: '🍗', cat: 'proteins' },
-    { id: 'beef', name: 'Beef', icon: '🥩', cat: 'proteins' },
-    { id: 'pork', name: 'Pork', icon: '🥓', cat: 'proteins' },
-    { id: 'fish', name: 'Fish', icon: '🐟', cat: 'proteins' },
-    { id: 'shrimp', name: 'Shrimp', icon: '🦐', cat: 'proteins' },
-    { id: 'egg', name: 'Egg', icon: '🥚', cat: 'proteins' },
-    { id: 'tofu', name: 'Tofu', icon: '🧈', cat: 'proteins' },
-    { id: 'turkey', name: 'Turkey', icon: '🦃', cat: 'proteins' },
-    { id: 'lamb', name: 'Lamb', icon: '🍖', cat: 'proteins' },
-    { id: 'bacon', name: 'Bacon', icon: '🥓', cat: 'proteins' },
+    { id: 'chicken', name: 'Chicken', icon: '≡ƒìù', cat: 'proteins' },
+    { id: 'beef', name: 'Beef', icon: '≡ƒÑ⌐', cat: 'proteins' },
+    { id: 'pork', name: 'Pork', icon: '≡ƒÑô', cat: 'proteins' },
+    { id: 'fish', name: 'Fish', icon: '≡ƒÉƒ', cat: 'proteins' },
+    { id: 'shrimp', name: 'Shrimp', icon: '≡ƒªÉ', cat: 'proteins' },
+    { id: 'egg', name: 'Egg', icon: '≡ƒÑÜ', cat: 'proteins' },
+    { id: 'tofu', name: 'Tofu', icon: '≡ƒºê', cat: 'proteins' },
+    { id: 'turkey', name: 'Turkey', icon: '≡ƒªâ', cat: 'proteins' },
+    { id: 'lamb', name: 'Lamb', icon: '≡ƒìû', cat: 'proteins' },
+    { id: 'bacon', name: 'Bacon', icon: '≡ƒÑô', cat: 'proteins' },
     // VEGETABLES
-    { id: 'tomato', name: 'Tomato', icon: '🍅', cat: 'vegetables' },
-    { id: 'onion', name: 'Onion', icon: '🧅', cat: 'vegetables' },
-    { id: 'garlic', name: 'Garlic', icon: '🧄', cat: 'vegetables' },
-    { id: 'potato', name: 'Potato', icon: '🥔', cat: 'vegetables' },
-    { id: 'carrot', name: 'Carrot', icon: '🥕', cat: 'vegetables' },
-    { id: 'pepper', name: 'Pepper', icon: '🫑', cat: 'vegetables' },
-    { id: 'spinach', name: 'Spinach', icon: '🥬', cat: 'vegetables' },
-    { id: 'mushroom', name: 'Mushroom', icon: '🍄', cat: 'vegetables' },
-    { id: 'corn', name: 'Corn', icon: '🌽', cat: 'vegetables' },
-    { id: 'broccoli', name: 'Broccoli', icon: '🥦', cat: 'vegetables' },
-    { id: 'zucchini', name: 'Zucchini', icon: '🥒', cat: 'vegetables' },
-    { id: 'cucumber', name: 'Cucumber', icon: '🥒', cat: 'vegetables' },
-    { id: 'lettuce', name: 'Lettuce', icon: '🥬', cat: 'vegetables' },
-    { id: 'celery', name: 'Celery', icon: '🥬', cat: 'vegetables' },
-    { id: 'peas', name: 'Peas', icon: '🫛', cat: 'vegetables' },
-    { id: 'cabbage', name: 'Cabbage', icon: '🥬', cat: 'vegetables' },
-    { id: 'avocado', name: 'Avocado', icon: '🥑', cat: 'vegetables' },
-    { id: 'cauliflower', name: 'Cauliflower', icon: '🥦', cat: 'vegetables' },
-    { id: 'apple', name: 'Apple', icon: '🍎', cat: 'vegetables' },
+    { id: 'tomato', name: 'Tomato', icon: '≡ƒìà', cat: 'vegetables' },
+    { id: 'onion', name: 'Onion', icon: '≡ƒºà', cat: 'vegetables' },
+    { id: 'garlic', name: 'Garlic', icon: '≡ƒºä', cat: 'vegetables' },
+    { id: 'potato', name: 'Potato', icon: '≡ƒÑö', cat: 'vegetables' },
+    { id: 'carrot', name: 'Carrot', icon: '≡ƒÑò', cat: 'vegetables' },
+    { id: 'pepper', name: 'Pepper', icon: '≡ƒ½æ', cat: 'vegetables' },
+    { id: 'spinach', name: 'Spinach', icon: '≡ƒÑ¼', cat: 'vegetables' },
+    { id: 'mushroom', name: 'Mushroom', icon: '≡ƒìä', cat: 'vegetables' },
+    { id: 'corn', name: 'Corn', icon: '≡ƒî╜', cat: 'vegetables' },
+    { id: 'broccoli', name: 'Broccoli', icon: '≡ƒÑª', cat: 'vegetables' },
+    { id: 'zucchini', name: 'Zucchini', icon: '≡ƒÑÆ', cat: 'vegetables' },
+    { id: 'cucumber', name: 'Cucumber', icon: '≡ƒÑÆ', cat: 'vegetables' },
+    { id: 'lettuce', name: 'Lettuce', icon: '≡ƒÑ¼', cat: 'vegetables' },
+    { id: 'celery', name: 'Celery', icon: '≡ƒÑ¼', cat: 'vegetables' },
+    { id: 'peas', name: 'Peas', icon: '≡ƒ½¢', cat: 'vegetables' },
+    { id: 'cabbage', name: 'Cabbage', icon: '≡ƒÑ¼', cat: 'vegetables' },
+    { id: 'avocado', name: 'Avocado', icon: '≡ƒÑæ', cat: 'vegetables' },
+    { id: 'cauliflower', name: 'Cauliflower', icon: '≡ƒÑª', cat: 'vegetables' },
+    { id: 'apple', name: 'Apple', icon: '≡ƒìÄ', cat: 'vegetables' },
     // DAIRY
-    { id: 'cheese', name: 'Cheese', icon: '🧀', cat: 'dairy' },
-    { id: 'milk', name: 'Milk', icon: '🥛', cat: 'dairy' },
-    { id: 'butter', name: 'Butter', icon: '🧈', cat: 'dairy' },
-    { id: 'cream', name: 'Cream', icon: '🥛', cat: 'dairy' },
-    { id: 'yogurt', name: 'Yogurt', icon: '🥛', cat: 'dairy' },
-    { id: 'parmesan', name: 'Parmesan', icon: '🧀', cat: 'dairy' },
-    { id: 'mozzarella', name: 'Mozzarella', icon: '🧀', cat: 'dairy' },
-    { id: 'feta', name: 'Feta', icon: '🧀', cat: 'dairy' },
+    { id: 'cheese', name: 'Cheese', icon: '≡ƒºÇ', cat: 'dairy' },
+    { id: 'milk', name: 'Milk', icon: '≡ƒÑ¢', cat: 'dairy' },
+    { id: 'butter', name: 'Butter', icon: '≡ƒºê', cat: 'dairy' },
+    { id: 'cream', name: 'Cream', icon: '≡ƒÑ¢', cat: 'dairy' },
+    { id: 'yogurt', name: 'Yogurt', icon: '≡ƒÑ¢', cat: 'dairy' },
+    { id: 'parmesan', name: 'Parmesan', icon: '≡ƒºÇ', cat: 'dairy' },
+    { id: 'mozzarella', name: 'Mozzarella', icon: '≡ƒºÇ', cat: 'dairy' },
+    { id: 'feta', name: 'Feta', icon: '≡ƒºÇ', cat: 'dairy' },
     // GRAINS
-    { id: 'bread', name: 'Bread', icon: '🍞', cat: 'grains' },
-    { id: 'rice', name: 'Rice', icon: '🍚', cat: 'grains' },
-    { id: 'pasta', name: 'Pasta', icon: '🍝', cat: 'grains' },
-    { id: 'flour', name: 'Flour', icon: '🌾', cat: 'grains' },
-    { id: 'noodles', name: 'Noodles', icon: '🍜', cat: 'grains' },
-    { id: 'tortilla', name: 'Tortilla', icon: '🫓', cat: 'grains' },
-    { id: 'couscous', name: 'Couscous', icon: '🍚', cat: 'grains' },
-    { id: 'quinoa', name: 'Quinoa', icon: '🌾', cat: 'grains' },
+    { id: 'bread', name: 'Bread', icon: '≡ƒì₧', cat: 'grains' },
+    { id: 'rice', name: 'Rice', icon: '≡ƒìÜ', cat: 'grains' },
+    { id: 'pasta', name: 'Pasta', icon: '≡ƒì¥', cat: 'grains' },
+    { id: 'flour', name: 'Flour', icon: '≡ƒî╛', cat: 'grains' },
+    { id: 'noodles', name: 'Noodles', icon: '≡ƒì£', cat: 'grains' },
+    { id: 'tortilla', name: 'Tortilla', icon: '≡ƒ½ô', cat: 'grains' },
+    { id: 'couscous', name: 'Couscous', icon: '≡ƒìÜ', cat: 'grains' },
+    { id: 'quinoa', name: 'Quinoa', icon: '≡ƒî╛', cat: 'grains' },
     // SPICES
-    { id: 'salt', name: 'Salt', icon: '🧂', cat: 'spices' },
-    { id: 'pepper_spice', name: 'Black Pepper', icon: '🌶️', cat: 'spices' },
-    { id: 'chili', name: 'Chili', icon: '🌶️', cat: 'spices' },
-    { id: 'cumin', name: 'Cumin', icon: '🌿', cat: 'spices' },
-    { id: 'basil', name: 'Basil', icon: '🌿', cat: 'spices' },
-    { id: 'oregano', name: 'Oregano', icon: '🌿', cat: 'spices' },
-    { id: 'paprika', name: 'Paprika', icon: '🌶️', cat: 'spices' },
-    { id: 'turmeric', name: 'Turmeric', icon: '🌿', cat: 'spices' },
-    { id: 'cinnamon', name: 'Cinnamon', icon: '🌿', cat: 'spices' },
-    { id: 'ginger', name: 'Ginger', icon: '🌿', cat: 'spices' },
+    { id: 'salt', name: 'Salt', icon: '≡ƒºé', cat: 'spices' },
+    { id: 'pepper_spice', name: 'Black Pepper', icon: '≡ƒî╢∩╕Å', cat: 'spices' },
+    { id: 'chili', name: 'Chili', icon: '≡ƒî╢∩╕Å', cat: 'spices' },
+    { id: 'cumin', name: 'Cumin', icon: '≡ƒî┐', cat: 'spices' },
+    { id: 'basil', name: 'Basil', icon: '≡ƒî┐', cat: 'spices' },
+    { id: 'oregano', name: 'Oregano', icon: '≡ƒî┐', cat: 'spices' },
+    { id: 'paprika', name: 'Paprika', icon: '≡ƒî╢∩╕Å', cat: 'spices' },
+    { id: 'turmeric', name: 'Turmeric', icon: '≡ƒî┐', cat: 'spices' },
+    { id: 'cinnamon', name: 'Cinnamon', icon: '≡ƒî┐', cat: 'spices' },
+    { id: 'ginger', name: 'Ginger', icon: '≡ƒî┐', cat: 'spices' },
     // PANTRY
-    { id: 'olive_oil', name: 'Olive Oil', icon: '🫒', cat: 'pantry' },
-    { id: 'soy_sauce', name: 'Soy Sauce', icon: '🥫', cat: 'pantry' },
-    { id: 'sugar', name: 'Sugar', icon: '🍬', cat: 'pantry' },
-    { id: 'honey', name: 'Honey', icon: '🍯', cat: 'pantry' },
-    { id: 'beans', name: 'Beans', icon: '🫘', cat: 'pantry' },
-    { id: 'chickpeas', name: 'Chickpeas', icon: '🫘', cat: 'pantry' },
-    { id: 'lentils', name: 'Lentils', icon: '🫘', cat: 'pantry' },
-    { id: 'lemon', name: 'Lemon', icon: '🍋', cat: 'pantry' },
-    { id: 'lime', name: 'Lime', icon: '🍋', cat: 'pantry' },
-    { id: 'tomato_sauce', name: 'Tomato Sauce', icon: '🥫', cat: 'pantry' },
-    { id: 'broth', name: 'Broth', icon: '🍲', cat: 'pantry' },
-    { id: 'vinegar', name: 'Vinegar', icon: '🍶', cat: 'pantry' },
-    { id: 'pine_nuts', name: 'Pine Nuts', icon: '🌰', cat: 'pantry' },
-    { id: 'water', name: 'Water', icon: '💧', cat: 'pantry' },
-    { id: 'mint', name: 'Mint', icon: '🌿', cat: 'pantry' },
-    { id: 'vanilla', name: 'Vanilla', icon: '🌿', cat: 'pantry' },
-    { id: 'cocoa', name: 'Cocoa', icon: '🍫', cat: 'pantry' },
-    { id: 'chocolate', name: 'Chocolate', icon: '🍫', cat: 'pantry' },
-    { id: 'walnuts', name: 'Walnuts', icon: '🌰', cat: 'pantry' },
-    { id: 'peanuts', name: 'Peanuts', icon: '🥜', cat: 'pantry' },
+    { id: 'olive_oil', name: 'Olive Oil', icon: '≡ƒ½Æ', cat: 'pantry' },
+    { id: 'soy_sauce', name: 'Soy Sauce', icon: '≡ƒÑ½', cat: 'pantry' },
+    { id: 'sugar', name: 'Sugar', icon: '≡ƒì¼', cat: 'pantry' },
+    { id: 'honey', name: 'Honey', icon: '≡ƒì»', cat: 'pantry' },
+    { id: 'beans', name: 'Beans', icon: '≡ƒ½ÿ', cat: 'pantry' },
+    { id: 'chickpeas', name: 'Chickpeas', icon: '≡ƒ½ÿ', cat: 'pantry' },
+    { id: 'lentils', name: 'Lentils', icon: '≡ƒ½ÿ', cat: 'pantry' },
+    { id: 'lemon', name: 'Lemon', icon: '≡ƒìï', cat: 'pantry' },
+    { id: 'lime', name: 'Lime', icon: '≡ƒìï', cat: 'pantry' },
+    { id: 'tomato_sauce', name: 'Tomato Sauce', icon: '≡ƒÑ½', cat: 'pantry' },
+    { id: 'broth', name: 'Broth', icon: '≡ƒì▓', cat: 'pantry' },
+    { id: 'vinegar', name: 'Vinegar', icon: '≡ƒì╢', cat: 'pantry' },
+    { id: 'pine_nuts', name: 'Pine Nuts', icon: '≡ƒî░', cat: 'pantry' },
+    { id: 'water', name: 'Water', icon: '≡ƒÆº', cat: 'pantry' },
+    { id: 'mint', name: 'Mint', icon: '≡ƒî┐', cat: 'pantry' },
+    { id: 'vanilla', name: 'Vanilla', icon: '≡ƒî┐', cat: 'pantry' },
+    { id: 'cocoa', name: 'Cocoa', icon: '≡ƒì½', cat: 'pantry' },
+    { id: 'chocolate', name: 'Chocolate', icon: '≡ƒì½', cat: 'pantry' },
+    { id: 'walnuts', name: 'Walnuts', icon: '≡ƒî░', cat: 'pantry' },
+    { id: 'peanuts', name: 'Peanuts', icon: '≡ƒÑ£', cat: 'pantry' },
 ];
 
 const cuisines = ['Any', 'Italian', 'Mexican', 'Indian', 'Chinese', 'Japanese', 'Mediterranean', 'American', 'Fusion'];
 
 const recipes = [
     // ===== MEALS =====
-    { id: 1, name: 'Grilled Cheese', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 350, tags: ['quick', 'comfort food', 'vegetarian'], icon: '🧀', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Cheese', amount: '2 slices'}, {name: 'Butter', amount: '1 tbsp'}], substitutions: [{from: 'Butter', to: 'Mayonnaise'}], steps: ['Butter one side of each bread slice.', 'Heat a non-stick pan over medium heat.', 'Place bread butter-side down in the pan.', 'Layer cheese slices on top.', 'Place second bread on top, butter-side up.', 'Cook 3-4 minutes until golden brown.', 'Flip carefully and cook other side 3 minutes.', 'Slice diagonally and serve hot.'] },
-    { id: 2, name: 'Scrambled Eggs', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 220, tags: ['quick', 'breakfast', 'high protein'], icon: '🍳', ingredients: [{name: 'Egg', amount: '3'}, {name: 'Butter', amount: '1 tbsp'}, {name: 'Salt', amount: 'pinch'}], substitutions: [{from: 'Butter', to: 'Olive oil'}], steps: ['Crack eggs into a bowl.', 'Add salt, whisk until combined.', 'Heat butter in pan over medium-low heat.', 'Pour in egg mixture.', 'Let set 20 seconds, then gently stir.', 'Continue stirring slowly, forming soft curds.', 'Remove while slightly underdone.', 'Serve immediately while creamy.'] },
-    { id: 3, name: 'Cheese Toast', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 280, tags: ['quick', 'vegetarian'], icon: '🍞', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Cheese', amount: '2 slices'}, {name: 'Butter', amount: '1 tbsp'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Butter one side of each bread slice.', 'Place bread butter-side down in pan.', 'Top with cheese slices.', 'Add sliced tomatoes on cheese.', 'Cover with second bread slice.', 'Cook over medium heat 3-4 minutes.', 'Flip and cook until golden.', 'Cut and serve hot.'] },
-    { id: 4, name: 'Tuna Salad', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 180, tags: ['quick', 'healthy', 'seafood'], icon: '🥗', ingredients: [{name: 'Fish', amount: '1 can'}, {name: 'Egg', amount: '2'}, {name: 'Onion', amount: '1/4'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Drain tuna and place in a bowl.', 'Hard boil eggs, then chop.', 'Dice onion finely.', 'Mix tuna, eggs, onion, and mayo.', 'Season with salt.', 'Serve on bread or lettuce.'] },
-    { id: 5, name: 'Beef Burger', type: 'meal', cuisine: 'American', time: 25, difficulty: 'Medium', calories: 550, tags: ['comfort food', 'high protein'], icon: '🍔', ingredients: [{name: 'Beef', amount: '200g'}, {name: 'Bread', amount: '1 bun'}, {name: 'Tomato', amount: '1'}, {name: 'Onion', amount: '1/2'}, {name: 'Cheese', amount: '1 slice'}], substitutions: [], steps: ['Form beef into a patty.', 'Season with salt and pepper.', 'Grill or pan-fry 4 minutes per side.', 'Add cheese in last minute to melt.', 'Slice tomato and onion.', 'Assemble burger with all toppings.'] },
-    { id: 6, name: 'Omelette', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 280, tags: ['quick', 'breakfast', 'high protein'], icon: '🍳', ingredients: [{name: 'Egg', amount: '3'}, {name: 'Cheese', amount: '1/4 cup'}, {name: 'Butter', amount: '1 tbsp'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Whisk eggs with salt.', 'Melt butter in pan over medium.', 'Pour eggs and let set.', 'Add cheese on one half.', 'Fold omelette in half.', 'Slide onto plate and serve.'] },
-    { id: 7, name: 'Chicken Sandwich', type: 'meal', cuisine: 'American', time: 20, difficulty: 'Easy', calories: 380, tags: ['quick', 'high protein'], icon: '🥪', ingredients: [{name: 'Chicken', amount: '150g'}, {name: 'Bread', amount: '2 slices'}, {name: 'Lettuce', amount: '2 leaves'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Season chicken with salt and pepper.', 'Pan-fry chicken 5-6 minutes per side.', 'Let rest, then slice.', 'Toast bread lightly.', 'Add lettuce, tomato, and chicken.', 'Close sandwich and serve.'] },
-    { id: 8, name: 'French Toast', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 320, tags: ['quick', 'breakfast', 'sweet'], icon: '🍞', ingredients: [{name: 'Egg', amount: '2'}, {name: 'Milk', amount: '1/4 cup'}, {name: 'Bread', amount: '2 slices'}, {name: 'Sugar', amount: '1 tbsp'}, {name: 'Butter', amount: '1 tbsp'}], substitutions: [], steps: ['Whisk egg, milk, and sugar in a bowl.', 'Dip bread slices in egg mixture.', 'Melt butter in pan over medium.', 'Cook bread 2-3 minutes per side.', 'Serve with honey or syrup.'] },
+    { id: 1, name: 'Grilled Cheese', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 350, tags: ['quick', 'comfort food', 'vegetarian'], icon: '≡ƒºÇ', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Cheese', amount: '2 slices'}, {name: 'Butter', amount: '1 tbsp'}], substitutions: [{from: 'Butter', to: 'Mayonnaise'}], steps: ['Butter one side of each bread slice.', 'Heat a non-stick pan over medium heat.', 'Place bread butter-side down in the pan.', 'Layer cheese slices on top.', 'Place second bread on top, butter-side up.', 'Cook 3-4 minutes until golden brown.', 'Flip carefully and cook other side 3 minutes.', 'Slice diagonally and serve hot.'] },
+    { id: 2, name: 'Scrambled Eggs', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 220, tags: ['quick', 'breakfast', 'high protein'], icon: '≡ƒì│', ingredients: [{name: 'Egg', amount: '3'}, {name: 'Butter', amount: '1 tbsp'}, {name: 'Salt', amount: 'pinch'}], substitutions: [{from: 'Butter', to: 'Olive oil'}], steps: ['Crack eggs into a bowl.', 'Add salt, whisk until combined.', 'Heat butter in pan over medium-low heat.', 'Pour in egg mixture.', 'Let set 20 seconds, then gently stir.', 'Continue stirring slowly, forming soft curds.', 'Remove while slightly underdone.', 'Serve immediately while creamy.'] },
+    { id: 3, name: 'Cheese Toast', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 280, tags: ['quick', 'vegetarian'], icon: '≡ƒì₧', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Cheese', amount: '2 slices'}, {name: 'Butter', amount: '1 tbsp'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Butter one side of each bread slice.', 'Place bread butter-side down in pan.', 'Top with cheese slices.', 'Add sliced tomatoes on cheese.', 'Cover with second bread slice.', 'Cook over medium heat 3-4 minutes.', 'Flip and cook until golden.', 'Cut and serve hot.'] },
+    { id: 4, name: 'Tuna Salad', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 180, tags: ['quick', 'healthy', 'seafood'], icon: '≡ƒÑù', ingredients: [{name: 'Fish', amount: '1 can'}, {name: 'Egg', amount: '2'}, {name: 'Onion', amount: '1/4'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Drain tuna and place in a bowl.', 'Hard boil eggs, then chop.', 'Dice onion finely.', 'Mix tuna, eggs, onion, and mayo.', 'Season with salt.', 'Serve on bread or lettuce.'] },
+    { id: 5, name: 'Beef Burger', type: 'meal', cuisine: 'American', time: 25, difficulty: 'Medium', calories: 550, tags: ['comfort food', 'high protein'], icon: '≡ƒìö', ingredients: [{name: 'Beef', amount: '200g'}, {name: 'Bread', amount: '1 bun'}, {name: 'Tomato', amount: '1'}, {name: 'Onion', amount: '1/2'}, {name: 'Cheese', amount: '1 slice'}], substitutions: [], steps: ['Form beef into a patty.', 'Season with salt and pepper.', 'Grill or pan-fry 4 minutes per side.', 'Add cheese in last minute to melt.', 'Slice tomato and onion.', 'Assemble burger with all toppings.'] },
+    { id: 6, name: 'Omelette', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 280, tags: ['quick', 'breakfast', 'high protein'], icon: '≡ƒì│', ingredients: [{name: 'Egg', amount: '3'}, {name: 'Cheese', amount: '1/4 cup'}, {name: 'Butter', amount: '1 tbsp'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Whisk eggs with salt.', 'Melt butter in pan over medium.', 'Pour eggs and let set.', 'Add cheese on one half.', 'Fold omelette in half.', 'Slide onto plate and serve.'] },
+    { id: 7, name: 'Chicken Sandwich', type: 'meal', cuisine: 'American', time: 20, difficulty: 'Easy', calories: 380, tags: ['quick', 'high protein'], icon: '≡ƒÑ¬', ingredients: [{name: 'Chicken', amount: '150g'}, {name: 'Bread', amount: '2 slices'}, {name: 'Lettuce', amount: '2 leaves'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Season chicken with salt and pepper.', 'Pan-fry chicken 5-6 minutes per side.', 'Let rest, then slice.', 'Toast bread lightly.', 'Add lettuce, tomato, and chicken.', 'Close sandwich and serve.'] },
+    { id: 8, name: 'French Toast', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 320, tags: ['quick', 'breakfast', 'sweet'], icon: '≡ƒì₧', ingredients: [{name: 'Egg', amount: '2'}, {name: 'Milk', amount: '1/4 cup'}, {name: 'Bread', amount: '2 slices'}, {name: 'Sugar', amount: '1 tbsp'}, {name: 'Butter', amount: '1 tbsp'}], substitutions: [], steps: ['Whisk egg, milk, and sugar in a bowl.', 'Dip bread slices in egg mixture.', 'Melt butter in pan over medium.', 'Cook bread 2-3 minutes per side.', 'Serve with honey or syrup.'] },
 
     // Italian Meals
-    { id: 9, name: 'Pasta Aglio Olio', type: 'meal', cuisine: 'Italian', time: 20, difficulty: 'Easy', calories: 420, tags: ['quick', 'vegetarian'], icon: '🍝', ingredients: [{name: 'Pasta', amount: '200g'}, {name: 'Garlic', amount: '6 cloves'}, {name: 'Olive Oil', amount: '1/3 cup'}, {name: 'Chili', amount: '1 tsp'}], substitutions: [], steps: ['Boil large pot of salted water.', 'Cook pasta according to package.', 'Slice garlic thinly.', 'Heat olive oil in pan over medium.', 'Add garlic and chili, sauté until golden.', 'Reserve 1 cup pasta water, drain.', 'Add pasta to pan with garlic oil.', 'Toss well, adding pasta water as needed.'] },
-    { id: 10, name: 'Tomato Pasta', type: 'meal', cuisine: 'Italian', time: 30, difficulty: 'Easy', calories: 480, tags: ['comfort food', 'vegetarian'], icon: '🍝', ingredients: [{name: 'Pasta', amount: '250g'}, {name: 'Tomato', amount: '4'}, {name: 'Cream', amount: '1/2 cup'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Basil', amount: '1/4 cup'}], substitutions: [{from: 'Cream', to: 'Coconut milk'}], steps: ['Boil pasta in salted water.', 'Blanch tomatoes, peel, chop.', 'Heat olive oil, sauté garlic.', 'Add tomatoes, cook 10 minutes.', 'Stir in cream, simmer 5 minutes.', 'Drain pasta, add to sauce.', 'Toss with fresh basil.', 'Serve immediately.'] },
-    { id: 11, name: 'Chicken Pasta', type: 'meal', cuisine: 'Italian', time: 35, difficulty: 'Medium', calories: 620, tags: ['high protein', 'comfort food'], icon: '🍗', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Pasta', amount: '300g'}, {name: 'Cream', amount: '1 cup'}, {name: 'Parmesan', amount: '1/2 cup'}, {name: 'Spinach', amount: '2 cups'}], substitutions: [{from: 'Cream', to: 'Evaporated milk'}], steps: ['Season chicken with salt and pepper.', 'Cook pasta in salted water.', 'Heat oil, cook chicken 6 min/side.', 'Remove chicken, slice when rested.', 'Sauté garlic in same pan 1 minute.', 'Add cream, bring to simmer.', 'Stir in parmesan until melted.', 'Add spinach, cook until wilted.', 'Toss pasta with sauce, top with chicken.'] },
-    { id: 12, name: 'Caprese Salad', type: 'meal', cuisine: 'Italian', time: 10, difficulty: 'Easy', calories: 280, tags: ['quick', 'vegetarian', 'no-cook'], icon: '🥗', ingredients: [{name: 'Tomato', amount: '3 large'}, {name: 'Mozzarella', amount: '250g'}, {name: 'Basil', amount: '1 bunch'}, {name: 'Olive Oil', amount: '3 tbsp'}], substitutions: [], steps: ['Slice tomatoes into 1/4 inch rounds.', 'Slice mozzarella similarly.', 'Arrange alternating tomato and cheese on plate.', 'Tuck basil leaves between slices.', 'Drizzle generously with olive oil.', 'Season with salt and pepper.', 'Serve at room temperature.'] },
-    { id: 13, name: 'Spaghetti Marinara', type: 'meal', cuisine: 'Italian', time: 25, difficulty: 'Easy', calories: 380, tags: ['quick', 'vegetarian'], icon: '🍝', ingredients: [{name: 'Pasta', amount: '250g'}, {name: 'Tomato', amount: '6'}, {name: 'Garlic', amount: '4 cloves'}, {name: 'Basil', amount: '1/4 cup'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Blend tomatoes or crush them.', 'Heat olive oil, sauté garlic.', 'Add tomatoes and simmer 15 minutes.', 'Cook pasta according to package.', 'Add basil to sauce.', 'Drain pasta, toss with sauce.', 'Serve with parmesan.'] },
-    { id: 14, name: 'Chicken Parmesan', type: 'meal', cuisine: 'Italian', time: 35, difficulty: 'Medium', calories: 550, tags: ['high protein', 'comfort food'], icon: '🍗', ingredients: [{name: 'Chicken', amount: '2 pieces'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Tomato Sauce', amount: '1 cup'}, {name: 'Pasta', amount: '200g'}, {name: 'Parmesan', amount: '1/4 cup'}], substitutions: [], steps: ['Pound chicken thin, season.', 'Bread and pan-fry until golden.', 'Top with cheese, melt.', 'Cook pasta in salted water.', 'Warm tomato sauce.', 'Serve chicken over pasta with sauce.'] },
-    { id: 15, name: 'Feta Pasta', type: 'meal', cuisine: 'Italian', time: 25, difficulty: 'Easy', calories: 450, tags: ['quick', 'vegetarian'], icon: '🍝', ingredients: [{name: 'Pasta', amount: '250g'}, {name: 'Feta', amount: '200g'}, {name: 'Tomato', amount: '3'}, {name: 'Olive Oil', amount: '3 tbsp'}, {name: 'Basil', amount: '1/4 cup'}], substitutions: [], steps: ['Halve tomatoes, place in baking dish.', 'Crumble feta on top, drizzle oil.', 'Bake at 400°F for 25 minutes.', 'Meanwhile cook pasta.', 'Mix roasted tomatoes with pasta.', 'Top with fresh basil.'] },
-    { id: 16, name: 'Minestrone Soup', type: 'meal', cuisine: 'Italian', time: 40, difficulty: 'Medium', calories: 220, tags: ['healthy', 'vegetarian', 'soup'], icon: '🍲', ingredients: [{name: 'Tomato', amount: '2'}, {name: 'Carrot', amount: '2'}, {name: 'Potato', amount: '1'}, {name: 'Beans', amount: '1 can'}, {name: 'Pasta', amount: '100g'}, {name: 'Broth', amount: '4 cups'}], substitutions: [], steps: ['Dice all vegetables.', 'Sauté onion, garlic, carrot, celery.', 'Add tomatoes and broth.', 'Simmer 20 minutes.', 'Add beans and potato.', 'Add pasta, cook 10 more minutes.', 'Season and serve with parmesan.'] },
+    { id: 9, name: 'Pasta Aglio Olio', type: 'meal', cuisine: 'Italian', time: 20, difficulty: 'Easy', calories: 420, tags: ['quick', 'vegetarian'], icon: '≡ƒì¥', ingredients: [{name: 'Pasta', amount: '200g'}, {name: 'Garlic', amount: '6 cloves'}, {name: 'Olive Oil', amount: '1/3 cup'}, {name: 'Chili', amount: '1 tsp'}], substitutions: [], steps: ['Boil large pot of salted water.', 'Cook pasta according to package.', 'Slice garlic thinly.', 'Heat olive oil in pan over medium.', 'Add garlic and chili, saut├⌐ until golden.', 'Reserve 1 cup pasta water, drain.', 'Add pasta to pan with garlic oil.', 'Toss well, adding pasta water as needed.'] },
+    { id: 10, name: 'Tomato Pasta', type: 'meal', cuisine: 'Italian', time: 30, difficulty: 'Easy', calories: 480, tags: ['comfort food', 'vegetarian'], icon: '≡ƒì¥', ingredients: [{name: 'Pasta', amount: '250g'}, {name: 'Tomato', amount: '4'}, {name: 'Cream', amount: '1/2 cup'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Basil', amount: '1/4 cup'}], substitutions: [{from: 'Cream', to: 'Coconut milk'}], steps: ['Boil pasta in salted water.', 'Blanch tomatoes, peel, chop.', 'Heat olive oil, saut├⌐ garlic.', 'Add tomatoes, cook 10 minutes.', 'Stir in cream, simmer 5 minutes.', 'Drain pasta, add to sauce.', 'Toss with fresh basil.', 'Serve immediately.'] },
+    { id: 11, name: 'Chicken Pasta', type: 'meal', cuisine: 'Italian', time: 35, difficulty: 'Medium', calories: 620, tags: ['high protein', 'comfort food'], icon: '≡ƒìù', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Pasta', amount: '300g'}, {name: 'Cream', amount: '1 cup'}, {name: 'Parmesan', amount: '1/2 cup'}, {name: 'Spinach', amount: '2 cups'}], substitutions: [{from: 'Cream', to: 'Evaporated milk'}], steps: ['Season chicken with salt and pepper.', 'Cook pasta in salted water.', 'Heat oil, cook chicken 6 min/side.', 'Remove chicken, slice when rested.', 'Saut├⌐ garlic in same pan 1 minute.', 'Add cream, bring to simmer.', 'Stir in parmesan until melted.', 'Add spinach, cook until wilted.', 'Toss pasta with sauce, top with chicken.'] },
+    { id: 12, name: 'Caprese Salad', type: 'meal', cuisine: 'Italian', time: 10, difficulty: 'Easy', calories: 280, tags: ['quick', 'vegetarian', 'no-cook'], icon: '≡ƒÑù', ingredients: [{name: 'Tomato', amount: '3 large'}, {name: 'Mozzarella', amount: '250g'}, {name: 'Basil', amount: '1 bunch'}, {name: 'Olive Oil', amount: '3 tbsp'}], substitutions: [], steps: ['Slice tomatoes into 1/4 inch rounds.', 'Slice mozzarella similarly.', 'Arrange alternating tomato and cheese on plate.', 'Tuck basil leaves between slices.', 'Drizzle generously with olive oil.', 'Season with salt and pepper.', 'Serve at room temperature.'] },
+    { id: 13, name: 'Spaghetti Marinara', type: 'meal', cuisine: 'Italian', time: 25, difficulty: 'Easy', calories: 380, tags: ['quick', 'vegetarian'], icon: '≡ƒì¥', ingredients: [{name: 'Pasta', amount: '250g'}, {name: 'Tomato', amount: '6'}, {name: 'Garlic', amount: '4 cloves'}, {name: 'Basil', amount: '1/4 cup'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Blend tomatoes or crush them.', 'Heat olive oil, saut├⌐ garlic.', 'Add tomatoes and simmer 15 minutes.', 'Cook pasta according to package.', 'Add basil to sauce.', 'Drain pasta, toss with sauce.', 'Serve with parmesan.'] },
+    { id: 14, name: 'Chicken Parmesan', type: 'meal', cuisine: 'Italian', time: 35, difficulty: 'Medium', calories: 550, tags: ['high protein', 'comfort food'], icon: '≡ƒìù', ingredients: [{name: 'Chicken', amount: '2 pieces'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Tomato Sauce', amount: '1 cup'}, {name: 'Pasta', amount: '200g'}, {name: 'Parmesan', amount: '1/4 cup'}], substitutions: [], steps: ['Pound chicken thin, season.', 'Bread and pan-fry until golden.', 'Top with cheese, melt.', 'Cook pasta in salted water.', 'Warm tomato sauce.', 'Serve chicken over pasta with sauce.'] },
+    { id: 15, name: 'Feta Pasta', type: 'meal', cuisine: 'Italian', time: 25, difficulty: 'Easy', calories: 450, tags: ['quick', 'vegetarian'], icon: '≡ƒì¥', ingredients: [{name: 'Pasta', amount: '250g'}, {name: 'Feta', amount: '200g'}, {name: 'Tomato', amount: '3'}, {name: 'Olive Oil', amount: '3 tbsp'}, {name: 'Basil', amount: '1/4 cup'}], substitutions: [], steps: ['Halve tomatoes, place in baking dish.', 'Crumble feta on top, drizzle oil.', 'Bake at 400┬░F for 25 minutes.', 'Meanwhile cook pasta.', 'Mix roasted tomatoes with pasta.', 'Top with fresh basil.'] },
+    { id: 16, name: 'Minestrone Soup', type: 'meal', cuisine: 'Italian', time: 40, difficulty: 'Medium', calories: 220, tags: ['healthy', 'vegetarian', 'soup'], icon: '≡ƒì▓', ingredients: [{name: 'Tomato', amount: '2'}, {name: 'Carrot', amount: '2'}, {name: 'Potato', amount: '1'}, {name: 'Beans', amount: '1 can'}, {name: 'Pasta', amount: '100g'}, {name: 'Broth', amount: '4 cups'}], substitutions: [], steps: ['Dice all vegetables.', 'Saut├⌐ onion, garlic, carrot, celery.', 'Add tomatoes and broth.', 'Simmer 20 minutes.', 'Add beans and potato.', 'Add pasta, cook 10 more minutes.', 'Season and serve with parmesan.'] },
 
     // Chinese Meals
-    { id: 17, name: 'Chicken Stir Fry', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Medium', calories: 380, tags: ['high protein', 'quick'], icon: '🥡', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Broccoli', amount: '1 cup'}, {name: 'Pepper', amount: '1'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Soy Sauce', amount: '3 tbsp'}], substitutions: [{from: 'Soy Sauce', to: 'Tamari'}], steps: ['Cut chicken into bite-sized pieces.', 'Chop broccoli into florets.', 'Mince garlic.', 'Heat oil in wok over high heat.', 'Add chicken, cook 5-6 minutes.', 'Remove chicken, set aside.', 'Add garlic, stir 30 seconds.', 'Add vegetables, stir fry 3 minutes.', 'Return chicken, add soy sauce, toss.'] },
-    { id: 18, name: 'Fried Rice', type: 'meal', cuisine: 'Chinese', time: 20, difficulty: 'Medium', calories: 420, tags: ['quick', 'high protein'], icon: '🍚', ingredients: [{name: 'Rice', amount: '2 cups'}, {name: 'Egg', amount: '2'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Carrot', amount: '1'}, {name: 'Peas', amount: '1/2 cup'}], substitutions: [{from: 'Rice', to: 'Cauliflower rice'}], steps: ['Use day-old cold rice.', 'Dice carrots small.', 'Beat eggs, scramble quickly, set aside.', 'Heat oil in wok over high.', 'Add carrot, stir fry 2 min.', 'Add rice, break up clumps.', 'Add peas and soy sauce, toss.', 'Return eggs, mix well and serve.'] },
-    { id: 19, name: 'Veggie Stir Fry', type: 'meal', cuisine: 'Chinese', time: 20, difficulty: 'Easy', calories: 180, tags: ['quick', 'vegetarian', 'healthy'], icon: '🥬', ingredients: [{name: 'Broccoli', amount: '1 cup'}, {name: 'Carrot', amount: '2'}, {name: 'Pepper', amount: '2'}, {name: 'Mushroom', amount: '1 cup'}, {name: 'Soy Sauce', amount: '3 tbsp'}], substitutions: [], steps: ['Cut vegetables into bite-sized pieces.', 'Mix soy sauce with splash of water.', 'Heat wok over high heat.', 'Add garlic, stir 30 seconds.', 'Add carrots and broccoli, stir fry 3 min.', 'Add peppers and mushrooms.', 'Stir fry another 3 minutes.', 'Pour in soy sauce mixture.', 'Toss well and serve over rice.'] },
-    { id: 20, name: 'Shrimp Fried Rice', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Medium', calories: 450, tags: ['high protein', 'seafood'], icon: '🍤', ingredients: [{name: 'Rice', amount: '2 cups'}, {name: 'Shrimp', amount: '200g'}, {name: 'Egg', amount: '2'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Peas', amount: '1/2 cup'}], substitutions: [{from: 'Shrimp', to: 'Chicken'}], steps: ['Use day-old cold rice.', 'Peel and devein shrimp.', 'Beat eggs, scramble in hot wok, set aside.', 'Add more oil, stir fry shrimp 2 minutes.', 'Remove shrimp.', 'Stir fry garlic 30 seconds.', 'Add rice, break up clumps.', 'Add peas, soy sauce, and shrimp.', 'Add eggs back, toss and serve.'] },
-    { id: 21, name: 'Mapo Tofu', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Medium', calories: 280, tags: ['vegetarian', 'spicy'], icon: '🥢', ingredients: [{name: 'Tofu', amount: '400g'}, {name: 'Soy Sauce', amount: '2 tbsp'}, {name: 'Chili', amount: '1 tbsp'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Press tofu, cut into cubes.', 'Mince garlic and ginger.', 'Heat oil in wok.', 'Add garlic, ginger, and chili.', 'Add tofu cubes carefully.', 'Pour in soy sauce.', 'Simmer 5 minutes.', 'Serve with rice.'] },
-    { id: 22, name: 'Egg Drop Soup', type: 'meal', cuisine: 'Chinese', time: 15, difficulty: 'Easy', calories: 120, tags: ['quick', 'light', 'soup'], icon: '🍳', ingredients: [{name: 'Egg', amount: '3'}, {name: 'Broth', amount: '4 cups'}, {name: 'Corn', amount: '1/2 cup'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Bring broth to boil.', 'Add corn, simmer 3 minutes.', 'Beat eggs in a bowl.', 'Slowly pour eggs into broth while stirring.', 'Season with salt.', 'Serve immediately.'] },
-    { id: 23, name: 'Beef Broccoli', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Medium', calories: 420, tags: ['high protein', 'quick'], icon: '🥦', ingredients: [{name: 'Beef', amount: '300g'}, {name: 'Broccoli', amount: '2 cups'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Slice beef thinly.', 'Marinate beef with soy sauce 10 min.', 'Cut broccoli into florets.', 'Stir fry beef 2-3 minutes, set aside.', 'Stir fry garlic and ginger.', 'Add broccoli, cook 3 minutes.', 'Return beef, toss together.', 'Serve with rice.'] },
-    { id: 24, name: 'Lo Mein', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Easy', calories: 380, tags: ['quick', 'vegetarian'], icon: '🍜', ingredients: [{name: 'Noodles', amount: '250g'}, {name: 'Carrot', amount: '1'}, {name: 'Broccoli', amount: '1 cup'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Garlic', amount: '3 cloves'}], substitutions: [], steps: ['Cook noodles according to package.', 'Slice vegetables.', 'Heat oil in wok.', 'Stir fry garlic 30 seconds.', 'Add vegetables, cook 3-4 minutes.', 'Add noodles and soy sauce.', 'Toss well to combine.', 'Serve hot.'] },
+    { id: 17, name: 'Chicken Stir Fry', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Medium', calories: 380, tags: ['high protein', 'quick'], icon: '≡ƒÑí', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Broccoli', amount: '1 cup'}, {name: 'Pepper', amount: '1'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Soy Sauce', amount: '3 tbsp'}], substitutions: [{from: 'Soy Sauce', to: 'Tamari'}], steps: ['Cut chicken into bite-sized pieces.', 'Chop broccoli into florets.', 'Mince garlic.', 'Heat oil in wok over high heat.', 'Add chicken, cook 5-6 minutes.', 'Remove chicken, set aside.', 'Add garlic, stir 30 seconds.', 'Add vegetables, stir fry 3 minutes.', 'Return chicken, add soy sauce, toss.'] },
+    { id: 18, name: 'Fried Rice', type: 'meal', cuisine: 'Chinese', time: 20, difficulty: 'Medium', calories: 420, tags: ['quick', 'high protein'], icon: '≡ƒìÜ', ingredients: [{name: 'Rice', amount: '2 cups'}, {name: 'Egg', amount: '2'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Carrot', amount: '1'}, {name: 'Peas', amount: '1/2 cup'}], substitutions: [{from: 'Rice', to: 'Cauliflower rice'}], steps: ['Use day-old cold rice.', 'Dice carrots small.', 'Beat eggs, scramble quickly, set aside.', 'Heat oil in wok over high.', 'Add carrot, stir fry 2 min.', 'Add rice, break up clumps.', 'Add peas and soy sauce, toss.', 'Return eggs, mix well and serve.'] },
+    { id: 19, name: 'Veggie Stir Fry', type: 'meal', cuisine: 'Chinese', time: 20, difficulty: 'Easy', calories: 180, tags: ['quick', 'vegetarian', 'healthy'], icon: '≡ƒÑ¼', ingredients: [{name: 'Broccoli', amount: '1 cup'}, {name: 'Carrot', amount: '2'}, {name: 'Pepper', amount: '2'}, {name: 'Mushroom', amount: '1 cup'}, {name: 'Soy Sauce', amount: '3 tbsp'}], substitutions: [], steps: ['Cut vegetables into bite-sized pieces.', 'Mix soy sauce with splash of water.', 'Heat wok over high heat.', 'Add garlic, stir 30 seconds.', 'Add carrots and broccoli, stir fry 3 min.', 'Add peppers and mushrooms.', 'Stir fry another 3 minutes.', 'Pour in soy sauce mixture.', 'Toss well and serve over rice.'] },
+    { id: 20, name: 'Shrimp Fried Rice', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Medium', calories: 450, tags: ['high protein', 'seafood'], icon: '≡ƒìñ', ingredients: [{name: 'Rice', amount: '2 cups'}, {name: 'Shrimp', amount: '200g'}, {name: 'Egg', amount: '2'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Peas', amount: '1/2 cup'}], substitutions: [{from: 'Shrimp', to: 'Chicken'}], steps: ['Use day-old cold rice.', 'Peel and devein shrimp.', 'Beat eggs, scramble in hot wok, set aside.', 'Add more oil, stir fry shrimp 2 minutes.', 'Remove shrimp.', 'Stir fry garlic 30 seconds.', 'Add rice, break up clumps.', 'Add peas, soy sauce, and shrimp.', 'Add eggs back, toss and serve.'] },
+    { id: 21, name: 'Mapo Tofu', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Medium', calories: 280, tags: ['vegetarian', 'spicy'], icon: '≡ƒÑó', ingredients: [{name: 'Tofu', amount: '400g'}, {name: 'Soy Sauce', amount: '2 tbsp'}, {name: 'Chili', amount: '1 tbsp'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Press tofu, cut into cubes.', 'Mince garlic and ginger.', 'Heat oil in wok.', 'Add garlic, ginger, and chili.', 'Add tofu cubes carefully.', 'Pour in soy sauce.', 'Simmer 5 minutes.', 'Serve with rice.'] },
+    { id: 22, name: 'Egg Drop Soup', type: 'meal', cuisine: 'Chinese', time: 15, difficulty: 'Easy', calories: 120, tags: ['quick', 'light', 'soup'], icon: '≡ƒì│', ingredients: [{name: 'Egg', amount: '3'}, {name: 'Broth', amount: '4 cups'}, {name: 'Corn', amount: '1/2 cup'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Bring broth to boil.', 'Add corn, simmer 3 minutes.', 'Beat eggs in a bowl.', 'Slowly pour eggs into broth while stirring.', 'Season with salt.', 'Serve immediately.'] },
+    { id: 23, name: 'Beef Broccoli', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Medium', calories: 420, tags: ['high protein', 'quick'], icon: '≡ƒÑª', ingredients: [{name: 'Beef', amount: '300g'}, {name: 'Broccoli', amount: '2 cups'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Slice beef thinly.', 'Marinate beef with soy sauce 10 min.', 'Cut broccoli into florets.', 'Stir fry beef 2-3 minutes, set aside.', 'Stir fry garlic and ginger.', 'Add broccoli, cook 3 minutes.', 'Return beef, toss together.', 'Serve with rice.'] },
+    { id: 24, name: 'Lo Mein', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Easy', calories: 380, tags: ['quick', 'vegetarian'], icon: '≡ƒì£', ingredients: [{name: 'Noodles', amount: '250g'}, {name: 'Carrot', amount: '1'}, {name: 'Broccoli', amount: '1 cup'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Garlic', amount: '3 cloves'}], substitutions: [], steps: ['Cook noodles according to package.', 'Slice vegetables.', 'Heat oil in wok.', 'Stir fry garlic 30 seconds.', 'Add vegetables, cook 3-4 minutes.', 'Add noodles and soy sauce.', 'Toss well to combine.', 'Serve hot.'] },
 
     // Mexican Meals
-    { id: 25, name: 'Quesadilla', type: 'meal', cuisine: 'Mexican', time: 15, difficulty: 'Easy', calories: 380, tags: ['quick', 'vegetarian'], icon: '🌮', ingredients: [{name: 'Tortilla', amount: '2'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Pepper', amount: '1'}, {name: 'Onion', amount: '1/2'}], substitutions: [], steps: ['Slice peppers and onion thinly.', 'Heat pan over medium heat.', 'Place tortilla in pan.', 'Sprinkle cheese over tortilla.', 'Add peppers and onions.', 'Top with second tortilla.', 'Cook 3 minutes until golden.', 'Flip carefully, cook other side.', 'Cut into wedges and serve.'] },
-    { id: 26, name: 'Bean Burrito', type: 'meal', cuisine: 'Mexican', time: 15, difficulty: 'Easy', calories: 450, tags: ['quick', 'vegetarian', 'high protein'], icon: '🌯', ingredients: [{name: 'Tortilla', amount: '2 large'}, {name: 'Beans', amount: '1 can'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Rice', amount: '1 cup'}], substitutions: [{from: 'Beans', to: 'Black beans'}], steps: ['Heat beans in saucepan with spices.', 'Warm tortillas in dry pan.', 'Spread beans down center of tortilla.', 'Add cooked rice on top.', 'Sprinkle cheese over everything.', 'Fold sides in, then roll up tightly.', 'Optional: grill seam-side down until crispy.'] },
-    { id: 27, name: 'Chicken Tacos', type: 'meal', cuisine: 'Mexican', time: 20, difficulty: 'Easy', calories: 320, tags: ['quick', 'high protein'], icon: '🌮', ingredients: [{name: 'Chicken', amount: '250g'}, {name: 'Tortilla', amount: '4 small'}, {name: 'Onion', amount: '1/2'}, {name: 'Lime', amount: '1'}], substitutions: [], steps: ['Season chicken with cumin and salt.', 'Grill or pan-fry 5-6 minutes per side.', 'Let rest, then slice.', 'Warm tortillas.', 'Dice onion.', 'Assemble tacos with chicken and onion.', 'Squeeze lime juice on top.'] },
-    { id: 28, name: 'Mexican Rice', type: 'meal', cuisine: 'Mexican', time: 25, difficulty: 'Easy', calories: 280, tags: ['side dish', 'vegetarian'], icon: '🍚', ingredients: [{name: 'Rice', amount: '1 cup'}, {name: 'Tomato', amount: '2'}, {name: 'Onion', amount: '1/4'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Broth', amount: '2 cups'}], substitutions: [], steps: ['Toast rice in oil until golden.', 'Blend tomatoes with some broth.', 'Sauté onion and garlic.', 'Add tomato mixture and remaining broth.', 'Simmer covered 15-20 minutes.', 'Season with salt.', 'Serve as side dish.'] },
-    { id: 29, name: 'Veggie Nachos', type: 'meal', cuisine: 'Mexican', time: 15, difficulty: 'Easy', calories: 420, tags: ['quick', 'vegetarian', 'snack'], icon: '🧀', ingredients: [{name: 'Tortilla', amount: '4'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Beans', amount: '1/2 can'}, {name: 'Pepper', amount: '1'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Cut tortillas into triangles.', 'Bake at 375°F until crispy.', 'Melt cheese on chips.', 'Add warmed beans.', 'Top with diced peppers and tomatoes.', 'Serve with lime.'] },
-    { id: 30, name: 'Chicken Enchiladas', type: 'meal', cuisine: 'Mexican', time: 35, difficulty: 'Medium', calories: 480, tags: ['high protein', 'comfort food'], icon: '🌯', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Tortilla', amount: '6'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Tomato Sauce', amount: '1 cup'}, {name: 'Onion', amount: '1/2'}], substitutions: [], steps: ['Cook and shred chicken.', 'Mix chicken with sautéed onion.', 'Warm tortillas.', 'Fill tortillas with chicken, roll up.', 'Place seam-side down in dish.', 'Top with tomato sauce and cheese.', 'Bake at 375°F for 20 minutes.'] },
+    { id: 25, name: 'Quesadilla', type: 'meal', cuisine: 'Mexican', time: 15, difficulty: 'Easy', calories: 380, tags: ['quick', 'vegetarian'], icon: '≡ƒî«', ingredients: [{name: 'Tortilla', amount: '2'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Pepper', amount: '1'}, {name: 'Onion', amount: '1/2'}], substitutions: [], steps: ['Slice peppers and onion thinly.', 'Heat pan over medium heat.', 'Place tortilla in pan.', 'Sprinkle cheese over tortilla.', 'Add peppers and onions.', 'Top with second tortilla.', 'Cook 3 minutes until golden.', 'Flip carefully, cook other side.', 'Cut into wedges and serve.'] },
+    { id: 26, name: 'Bean Burrito', type: 'meal', cuisine: 'Mexican', time: 15, difficulty: 'Easy', calories: 450, tags: ['quick', 'vegetarian', 'high protein'], icon: '≡ƒî»', ingredients: [{name: 'Tortilla', amount: '2 large'}, {name: 'Beans', amount: '1 can'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Rice', amount: '1 cup'}], substitutions: [{from: 'Beans', to: 'Black beans'}], steps: ['Heat beans in saucepan with spices.', 'Warm tortillas in dry pan.', 'Spread beans down center of tortilla.', 'Add cooked rice on top.', 'Sprinkle cheese over everything.', 'Fold sides in, then roll up tightly.', 'Optional: grill seam-side down until crispy.'] },
+    { id: 27, name: 'Chicken Tacos', type: 'meal', cuisine: 'Mexican', time: 20, difficulty: 'Easy', calories: 320, tags: ['quick', 'high protein'], icon: '≡ƒî«', ingredients: [{name: 'Chicken', amount: '250g'}, {name: 'Tortilla', amount: '4 small'}, {name: 'Onion', amount: '1/2'}, {name: 'Lime', amount: '1'}], substitutions: [], steps: ['Season chicken with cumin and salt.', 'Grill or pan-fry 5-6 minutes per side.', 'Let rest, then slice.', 'Warm tortillas.', 'Dice onion.', 'Assemble tacos with chicken and onion.', 'Squeeze lime juice on top.'] },
+    { id: 28, name: 'Mexican Rice', type: 'meal', cuisine: 'Mexican', time: 25, difficulty: 'Easy', calories: 280, tags: ['side dish', 'vegetarian'], icon: '≡ƒìÜ', ingredients: [{name: 'Rice', amount: '1 cup'}, {name: 'Tomato', amount: '2'}, {name: 'Onion', amount: '1/4'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Broth', amount: '2 cups'}], substitutions: [], steps: ['Toast rice in oil until golden.', 'Blend tomatoes with some broth.', 'Saut├⌐ onion and garlic.', 'Add tomato mixture and remaining broth.', 'Simmer covered 15-20 minutes.', 'Season with salt.', 'Serve as side dish.'] },
+    { id: 29, name: 'Veggie Nachos', type: 'meal', cuisine: 'Mexican', time: 15, difficulty: 'Easy', calories: 420, tags: ['quick', 'vegetarian', 'snack'], icon: '≡ƒºÇ', ingredients: [{name: 'Tortilla', amount: '4'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Beans', amount: '1/2 can'}, {name: 'Pepper', amount: '1'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Cut tortillas into triangles.', 'Bake at 375┬░F until crispy.', 'Melt cheese on chips.', 'Add warmed beans.', 'Top with diced peppers and tomatoes.', 'Serve with lime.'] },
+    { id: 30, name: 'Chicken Enchiladas', type: 'meal', cuisine: 'Mexican', time: 35, difficulty: 'Medium', calories: 480, tags: ['high protein', 'comfort food'], icon: '≡ƒî»', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Tortilla', amount: '6'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Tomato Sauce', amount: '1 cup'}, {name: 'Onion', amount: '1/2'}], substitutions: [], steps: ['Cook and shred chicken.', 'Mix chicken with saut├⌐ed onion.', 'Warm tortillas.', 'Fill tortillas with chicken, roll up.', 'Place seam-side down in dish.', 'Top with tomato sauce and cheese.', 'Bake at 375┬░F for 20 minutes.'] },
 
     // Mediterranean Meals
-    { id: 31, name: 'Garlic Butter Shrimp', type: 'meal', cuisine: 'Mediterranean', time: 15, difficulty: 'Easy', calories: 320, tags: ['quick', 'high protein', 'seafood'], icon: '🦐', ingredients: [{name: 'Shrimp', amount: '500g'}, {name: 'Butter', amount: '4 tbsp'}, {name: 'Garlic', amount: '6 cloves'}, {name: 'Lemon', amount: '1'}, {name: 'Chili', amount: '1/2 tsp'}], substitutions: [{from: 'Butter', to: 'Ghee'}], steps: ['Pat shrimp dry with paper towels.', 'Mince garlic finely.', 'Heat butter in large pan over medium-high.', 'Add garlic and chili, cook 30 seconds.', 'Add shrimp in single layer.', 'Cook 2 minutes per side until pink.', 'Squeeze lemon juice over shrimp.', 'Serve immediately.'] },
-    { id: 32, name: 'Greek Salad', type: 'meal', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 220, tags: ['quick', 'vegetarian', 'healthy'], icon: '🥗', ingredients: [{name: 'Cucumber', amount: '1'}, {name: 'Tomato', amount: '2'}, {name: 'Feta', amount: '150g'}, {name: 'Onion', amount: '1/2'}, {name: 'Olive Oil', amount: '3 tbsp'}], substitutions: [], steps: ['Dice cucumber and tomatoes.', 'Slice onion thinly.', 'Combine in a bowl.', 'Crumble feta on top.', 'Drizzle with olive oil.', 'Season with oregano and salt.', 'Toss gently and serve.'] },
-    { id: 33, name: 'Falafel', type: 'meal', cuisine: 'Mediterranean', time: 30, difficulty: 'Medium', calories: 350, tags: ['vegetarian', 'high protein'], icon: '🧆', ingredients: [{name: 'Chickpeas', amount: '1 can'}, {name: 'Onion', amount: '1/2'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Flour', amount: '2 tbsp'}], substitutions: [], steps: ['Blend chickpeas with onion, garlic, parsley.', 'Season with cumin and salt.', 'Add flour to bind.', 'Form into small patties.', 'Pan-fry in oil until golden.', 'Or bake at 375°F for 25 minutes.', 'Serve in pita with veggies.'] },
-    { id: 34, name: 'Hummus', type: 'meal', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 180, tags: ['quick', 'vegetarian', 'dip'], icon: '🫘', ingredients: [{name: 'Chickpeas', amount: '1 can'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Lemon', amount: '1'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Drain chickpeas.', 'Blend chickpeas with garlic, lemon juice.', 'Drizzle in olive oil while blending.', 'Season with salt.', 'Serve with bread or veggies.'] },
-    { id: 35, name: 'Shawarma', type: 'meal', cuisine: 'Mediterranean', time: 30, difficulty: 'Medium', calories: 450, tags: ['high protein', 'wraps'], icon: '🥙', ingredients: [{name: 'Chicken', amount: '400g'}, {name: 'Yogurt', amount: '1/4 cup'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Lime', amount: '1'}, {name: 'Tortilla', amount: '4'}], substitutions: [], steps: ['Slice chicken thinly.', 'Marinate in yogurt, garlic, spices.', 'Pan-fry or bake until cooked.', 'Warm tortillas.', 'Fill with chicken and veggies.', 'Drizzle with garlic sauce.', 'Roll and serve.'] },
-    { id: 36, name: 'Tabbouleh', type: 'meal', cuisine: 'Mediterranean', time: 20, difficulty: 'Easy', calories: 180, tags: ['vegetarian', 'healthy', 'salad'], icon: '🥗', ingredients: [{name: 'Couscous', amount: '1 cup'}, {name: 'Tomato', amount: '2'}, {name: 'Cucumber', amount: '1'}, {name: 'Lemon', amount: '1'}], substitutions: [], steps: ['Prepare couscous according to package.', 'Dice tomatoes and cucumber finely.', 'Chop parsley generously.', 'Mix cooled couscous with veggies.', 'Add lemon juice and olive oil.', 'Season with salt.', 'Serve as side or wrap.'] },
+    { id: 31, name: 'Garlic Butter Shrimp', type: 'meal', cuisine: 'Mediterranean', time: 15, difficulty: 'Easy', calories: 320, tags: ['quick', 'high protein', 'seafood'], icon: '≡ƒªÉ', ingredients: [{name: 'Shrimp', amount: '500g'}, {name: 'Butter', amount: '4 tbsp'}, {name: 'Garlic', amount: '6 cloves'}, {name: 'Lemon', amount: '1'}, {name: 'Chili', amount: '1/2 tsp'}], substitutions: [{from: 'Butter', to: 'Ghee'}], steps: ['Pat shrimp dry with paper towels.', 'Mince garlic finely.', 'Heat butter in large pan over medium-high.', 'Add garlic and chili, cook 30 seconds.', 'Add shrimp in single layer.', 'Cook 2 minutes per side until pink.', 'Squeeze lemon juice over shrimp.', 'Serve immediately.'] },
+    { id: 32, name: 'Greek Salad', type: 'meal', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 220, tags: ['quick', 'vegetarian', 'healthy'], icon: '≡ƒÑù', ingredients: [{name: 'Cucumber', amount: '1'}, {name: 'Tomato', amount: '2'}, {name: 'Feta', amount: '150g'}, {name: 'Onion', amount: '1/2'}, {name: 'Olive Oil', amount: '3 tbsp'}], substitutions: [], steps: ['Dice cucumber and tomatoes.', 'Slice onion thinly.', 'Combine in a bowl.', 'Crumble feta on top.', 'Drizzle with olive oil.', 'Season with oregano and salt.', 'Toss gently and serve.'] },
+    { id: 33, name: 'Falafel', type: 'meal', cuisine: 'Mediterranean', time: 30, difficulty: 'Medium', calories: 350, tags: ['vegetarian', 'high protein'], icon: '≡ƒºå', ingredients: [{name: 'Chickpeas', amount: '1 can'}, {name: 'Onion', amount: '1/2'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Flour', amount: '2 tbsp'}], substitutions: [], steps: ['Blend chickpeas with onion, garlic, parsley.', 'Season with cumin and salt.', 'Add flour to bind.', 'Form into small patties.', 'Pan-fry in oil until golden.', 'Or bake at 375┬░F for 25 minutes.', 'Serve in pita with veggies.'] },
+    { id: 34, name: 'Hummus', type: 'meal', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 180, tags: ['quick', 'vegetarian', 'dip'], icon: '≡ƒ½ÿ', ingredients: [{name: 'Chickpeas', amount: '1 can'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Lemon', amount: '1'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Drain chickpeas.', 'Blend chickpeas with garlic, lemon juice.', 'Drizzle in olive oil while blending.', 'Season with salt.', 'Serve with bread or veggies.'] },
+    { id: 35, name: 'Shawarma', type: 'meal', cuisine: 'Mediterranean', time: 30, difficulty: 'Medium', calories: 450, tags: ['high protein', 'wraps'], icon: '≡ƒÑÖ', ingredients: [{name: 'Chicken', amount: '400g'}, {name: 'Yogurt', amount: '1/4 cup'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Lime', amount: '1'}, {name: 'Tortilla', amount: '4'}], substitutions: [], steps: ['Slice chicken thinly.', 'Marinate in yogurt, garlic, spices.', 'Pan-fry or bake until cooked.', 'Warm tortillas.', 'Fill with chicken and veggies.', 'Drizzle with garlic sauce.', 'Roll and serve.'] },
+    { id: 36, name: 'Tabbouleh', type: 'meal', cuisine: 'Mediterranean', time: 20, difficulty: 'Easy', calories: 180, tags: ['vegetarian', 'healthy', 'salad'], icon: '≡ƒÑù', ingredients: [{name: 'Couscous', amount: '1 cup'}, {name: 'Tomato', amount: '2'}, {name: 'Cucumber', amount: '1'}, {name: 'Lemon', amount: '1'}], substitutions: [], steps: ['Prepare couscous according to package.', 'Dice tomatoes and cucumber finely.', 'Chop parsley generously.', 'Mix cooled couscous with veggies.', 'Add lemon juice and olive oil.', 'Season with salt.', 'Serve as side or wrap.'] },
 
     // Indian Meals
-    { id: 37, name: 'Chicken Curry', type: 'meal', cuisine: 'Indian', time: 40, difficulty: 'Medium', calories: 420, tags: ['high protein', 'spicy', 'comfort food'], icon: '🍛', ingredients: [{name: 'Chicken', amount: '500g'}, {name: 'Tomato', amount: '3'}, {name: 'Onion', amount: '1'}, {name: 'Garlic', amount: '4 cloves'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Turmeric', amount: '1 tsp'}, {name: 'Cumin', amount: '1 tsp'}], substitutions: [], steps: ['Cut chicken into pieces.', 'Sauté onion until golden.', 'Add garlic and ginger.', 'Add spices, cook 1 minute.', 'Add tomatoes, cook until soft.', 'Add chicken, coat with sauce.', 'Add water, simmer 25 minutes.', 'Serve with rice or bread.'] },
-    { id: 38, name: 'Vegetable Biryani', type: 'meal', cuisine: 'Indian', time: 45, difficulty: 'Medium', calories: 380, tags: ['vegetarian', 'rice', 'flavorful'], icon: '🍚', ingredients: [{name: 'Rice', amount: '2 cups'}, {name: 'Carrot', amount: '2'}, {name: 'Potato', amount: '1'}, {name: 'Peas', amount: '1/2 cup'}, {name: 'Onion', amount: '1'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Turmeric', amount: '1 tsp'}], substitutions: [], steps: ['Soak rice for 30 minutes.', 'Sauté onion, ginger, garlic.', 'Add veggies, turmeric, cumin.', 'Add rice, toast slightly.', 'Add water, bring to boil.', 'Lower heat, cook covered 15 min.', 'Let rest 5 minutes, fluff.', 'Serve with raita.'] },
-    { id: 39, name: 'Dal Tadka', type: 'meal', cuisine: 'Indian', time: 30, difficulty: 'Easy', calories: 280, tags: ['vegetarian', 'high protein', 'healthy'], icon: '🫘', ingredients: [{name: 'Lentils', amount: '1 cup'}, {name: 'Tomato', amount: '2'}, {name: 'Onion', amount: '1'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Cumin', amount: '1 tsp'}, {name: 'Turmeric', amount: '1/2 tsp'}], substitutions: [], steps: ['Wash lentils.', 'Boil lentils with turmeric until soft.', 'Sauté onion, garlic until golden.', 'Add cumin, cook 1 minute.', 'Add tomatoes, cook until soft.', 'Pour tempering over dal.', 'Season with salt.', 'Serve with rice or bread.'] },
-    { id: 40, name: 'Tandoori Chicken', type: 'meal', cuisine: 'Indian', time: 40, difficulty: 'Medium', calories: 380, tags: ['high protein', 'grilled', 'spicy'], icon: '🍗', ingredients: [{name: 'Chicken', amount: '500g'}, {name: 'Yogurt', amount: '1 cup'}, {name: 'Garlic', amount: '4 cloves'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Paprika', amount: '1 tbsp'}, {name: 'Turmeric', amount: '1 tsp'}], substitutions: [], steps: ['Score chicken deeply.', 'Mix yogurt with spices and ginger garlic.', 'Marinate chicken overnight or 2 hours.', 'Grill or bake at 400°F for 30 min.', 'Turn halfway through.', 'Serve with mint chutney.', 'Enjoy with naan bread.'] },
+    { id: 37, name: 'Chicken Curry', type: 'meal', cuisine: 'Indian', time: 40, difficulty: 'Medium', calories: 420, tags: ['high protein', 'spicy', 'comfort food'], icon: '≡ƒì¢', ingredients: [{name: 'Chicken', amount: '500g'}, {name: 'Tomato', amount: '3'}, {name: 'Onion', amount: '1'}, {name: 'Garlic', amount: '4 cloves'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Turmeric', amount: '1 tsp'}, {name: 'Cumin', amount: '1 tsp'}], substitutions: [], steps: ['Cut chicken into pieces.', 'Saut├⌐ onion until golden.', 'Add garlic and ginger.', 'Add spices, cook 1 minute.', 'Add tomatoes, cook until soft.', 'Add chicken, coat with sauce.', 'Add water, simmer 25 minutes.', 'Serve with rice or bread.'] },
+    { id: 38, name: 'Vegetable Biryani', type: 'meal', cuisine: 'Indian', time: 45, difficulty: 'Medium', calories: 380, tags: ['vegetarian', 'rice', 'flavorful'], icon: '≡ƒìÜ', ingredients: [{name: 'Rice', amount: '2 cups'}, {name: 'Carrot', amount: '2'}, {name: 'Potato', amount: '1'}, {name: 'Peas', amount: '1/2 cup'}, {name: 'Onion', amount: '1'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Turmeric', amount: '1 tsp'}], substitutions: [], steps: ['Soak rice for 30 minutes.', 'Saut├⌐ onion, ginger, garlic.', 'Add veggies, turmeric, cumin.', 'Add rice, toast slightly.', 'Add water, bring to boil.', 'Lower heat, cook covered 15 min.', 'Let rest 5 minutes, fluff.', 'Serve with raita.'] },
+    { id: 39, name: 'Dal Tadka', type: 'meal', cuisine: 'Indian', time: 30, difficulty: 'Easy', calories: 280, tags: ['vegetarian', 'high protein', 'healthy'], icon: '≡ƒ½ÿ', ingredients: [{name: 'Lentils', amount: '1 cup'}, {name: 'Tomato', amount: '2'}, {name: 'Onion', amount: '1'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Cumin', amount: '1 tsp'}, {name: 'Turmeric', amount: '1/2 tsp'}], substitutions: [], steps: ['Wash lentils.', 'Boil lentils with turmeric until soft.', 'Saut├⌐ onion, garlic until golden.', 'Add cumin, cook 1 minute.', 'Add tomatoes, cook until soft.', 'Pour tempering over dal.', 'Season with salt.', 'Serve with rice or bread.'] },
+    { id: 40, name: 'Tandoori Chicken', type: 'meal', cuisine: 'Indian', time: 40, difficulty: 'Medium', calories: 380, tags: ['high protein', 'grilled', 'spicy'], icon: '≡ƒìù', ingredients: [{name: 'Chicken', amount: '500g'}, {name: 'Yogurt', amount: '1 cup'}, {name: 'Garlic', amount: '4 cloves'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Paprika', amount: '1 tbsp'}, {name: 'Turmeric', amount: '1 tsp'}], substitutions: [], steps: ['Score chicken deeply.', 'Mix yogurt with spices and ginger garlic.', 'Marinate chicken overnight or 2 hours.', 'Grill or bake at 400┬░F for 30 min.', 'Turn halfway through.', 'Serve with mint chutney.', 'Enjoy with naan bread.'] },
 
     // ===== DRINKS =====
-    { id: 101, name: 'Fresh Lemonade', type: 'drink', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 120, tags: ['refreshing', 'quick', 'summer'], icon: '🍋', ingredients: [{name: 'Lemon', amount: '3'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Water', amount: '4 cups'}], substitutions: [{from: 'Sugar', to: 'Honey'}], steps: ['Squeeze lemons to get juice.', 'Dissolve sugar in 1 cup warm water.', 'Mix lemon juice with remaining cold water.', 'Add sugar water to taste.', 'Serve over ice.', 'Garnish with mint if desired.'] },
-    { id: 102, name: 'Mango Smoothie', type: 'drink', cuisine: 'Fusion', time: 5, difficulty: 'Easy', calories: 180, tags: ['quick', 'healthy', 'tropical'], icon: '🥭', ingredients: [{name: 'Milk', amount: '1 cup'}, {name: 'Sugar', amount: '1 tbsp'}, {name: 'Honey', amount: '1 tbsp'}], substitutions: [], steps: ['Add all ingredients to blender.', 'Blend until smooth.', 'Add ice if desired.', 'Pour and serve immediately.'] },
-    { id: 103, name: 'Hot Chocolate', type: 'drink', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 220, tags: ['comfort', 'warm', 'sweet'], icon: '☕', ingredients: [{name: 'Milk', amount: '2 cups'}, {name: 'Cocoa', amount: '2 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Butter', amount: '1 tbsp'}], substitutions: [{from: 'Cocoa', to: 'Chocolate chips'}], steps: ['Heat milk in saucepan until steaming.', 'Whisk in cocoa and sugar until dissolved.', 'Add butter and stir.', 'Pour into mug.', 'Top with marshmallows if desired.'] },
-    { id: 104, name: 'Mint Lemonade', type: 'drink', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 140, tags: ['refreshing', 'summer', 'herbal'], icon: '🌿', ingredients: [{name: 'Lemon', amount: '4'}, {name: 'Mint', amount: '1 bunch'}, {name: 'Sugar', amount: '1/3 cup'}, {name: 'Water', amount: '6 cups'}], substitutions: [], steps: ['Make simple syrup: dissolve sugar in 1 cup warm water.', 'Crush mint leaves gently.', 'Squeeze lemons for juice.', 'Combine all ingredients.', 'Refrigerate 1 hour.', 'Serve over ice.', 'Garnish with mint.'] },
-    { id: 105, name: 'Golden Milk', type: 'drink', cuisine: 'Indian', time: 10, difficulty: 'Easy', calories: 150, tags: ['warming', 'healthy', 'spiced'], icon: '🥛', ingredients: [{name: 'Milk', amount: '2 cups'}, {name: 'Turmeric', amount: '1 tsp'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Honey', amount: '1 tbsp'}, {name: 'Cinnamon', amount: '1/2 tsp'}], substitutions: [], steps: ['Heat milk in saucepan.', 'Grate fresh ginger.', 'Add turmeric, ginger, and cinnamon.', 'Simmer 5 minutes.', 'Strain if desired.', 'Sweeten with honey.', 'Serve warm.'] },
-    { id: 106, name: 'Iced Tea', type: 'drink', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 80, tags: ['refreshing', 'summer', 'classic'], icon: '🧊', ingredients: [{name: 'Sugar', amount: '1/4 cup'}, {name: 'Lemon', amount: '1'}, {name: 'Water', amount: '6 cups'}], substitutions: [], steps: ['Boil 2 cups water.', 'Steep tea bags 5 minutes.', 'Remove tea bags.', 'Add sugar while hot.', 'Add remaining cold water.', 'Add lemon juice.', 'Refrigerate or serve over ice.'] },
-    { id: 107, name: 'Yogurt Lassi', type: 'drink', cuisine: 'Indian', time: 5, difficulty: 'Easy', calories: 160, tags: ['cooling', 'digestive', 'creamy'], icon: '🥛', ingredients: [{name: 'Yogurt', amount: '1 cup'}, {name: 'Milk', amount: '1/2 cup'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Mint', amount: 'few leaves'}], substitutions: [{from: 'Sugar', to: 'Honey'}], steps: ['Blend yogurt and milk until smooth.', 'Add sugar and blend again.', 'Pour into glass.', 'Garnish with mint.', 'Serve chilled.'] },
-    { id: 108, name: 'Watermelon Agua Fresca', type: 'drink', cuisine: 'Mexican', time: 10, difficulty: 'Easy', calories: 90, tags: ['refreshing', 'summer', 'hydrating'], icon: '🍉', ingredients: [{name: 'Sugar', amount: '1/4 cup'}, {name: 'Lime', amount: '2'}, {name: 'Water', amount: '4 cups'}], substitutions: [], steps: ['Blend watermelon until smooth.', 'Strain if desired.', 'Add water and lime juice.', 'Sweeten to taste.', 'Serve over ice.', 'Garnish with mint.'] },
+    { id: 101, name: 'Fresh Lemonade', type: 'drink', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 120, tags: ['refreshing', 'quick', 'summer'], icon: '≡ƒìï', ingredients: [{name: 'Lemon', amount: '3'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Water', amount: '4 cups'}], substitutions: [{from: 'Sugar', to: 'Honey'}], steps: ['Squeeze lemons to get juice.', 'Dissolve sugar in 1 cup warm water.', 'Mix lemon juice with remaining cold water.', 'Add sugar water to taste.', 'Serve over ice.', 'Garnish with mint if desired.'] },
+    { id: 102, name: 'Mango Smoothie', type: 'drink', cuisine: 'Fusion', time: 5, difficulty: 'Easy', calories: 180, tags: ['quick', 'healthy', 'tropical'], icon: '≡ƒÑ¡', ingredients: [{name: 'Milk', amount: '1 cup'}, {name: 'Sugar', amount: '1 tbsp'}, {name: 'Honey', amount: '1 tbsp'}], substitutions: [], steps: ['Add all ingredients to blender.', 'Blend until smooth.', 'Add ice if desired.', 'Pour and serve immediately.'] },
+    { id: 103, name: 'Hot Chocolate', type: 'drink', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 220, tags: ['comfort', 'warm', 'sweet'], icon: 'Γÿò', ingredients: [{name: 'Milk', amount: '2 cups'}, {name: 'Cocoa', amount: '2 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Butter', amount: '1 tbsp'}], substitutions: [{from: 'Cocoa', to: 'Chocolate chips'}], steps: ['Heat milk in saucepan until steaming.', 'Whisk in cocoa and sugar until dissolved.', 'Add butter and stir.', 'Pour into mug.', 'Top with marshmallows if desired.'] },
+    { id: 104, name: 'Mint Lemonade', type: 'drink', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 140, tags: ['refreshing', 'summer', 'herbal'], icon: '≡ƒî┐', ingredients: [{name: 'Lemon', amount: '4'}, {name: 'Mint', amount: '1 bunch'}, {name: 'Sugar', amount: '1/3 cup'}, {name: 'Water', amount: '6 cups'}], substitutions: [], steps: ['Make simple syrup: dissolve sugar in 1 cup warm water.', 'Crush mint leaves gently.', 'Squeeze lemons for juice.', 'Combine all ingredients.', 'Refrigerate 1 hour.', 'Serve over ice.', 'Garnish with mint.'] },
+    { id: 105, name: 'Golden Milk', type: 'drink', cuisine: 'Indian', time: 10, difficulty: 'Easy', calories: 150, tags: ['warming', 'healthy', 'spiced'], icon: '≡ƒÑ¢', ingredients: [{name: 'Milk', amount: '2 cups'}, {name: 'Turmeric', amount: '1 tsp'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Honey', amount: '1 tbsp'}, {name: 'Cinnamon', amount: '1/2 tsp'}], substitutions: [], steps: ['Heat milk in saucepan.', 'Grate fresh ginger.', 'Add turmeric, ginger, and cinnamon.', 'Simmer 5 minutes.', 'Strain if desired.', 'Sweeten with honey.', 'Serve warm.'] },
+    { id: 106, name: 'Iced Tea', type: 'drink', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 80, tags: ['refreshing', 'summer', 'classic'], icon: '≡ƒºè', ingredients: [{name: 'Sugar', amount: '1/4 cup'}, {name: 'Lemon', amount: '1'}, {name: 'Water', amount: '6 cups'}], substitutions: [], steps: ['Boil 2 cups water.', 'Steep tea bags 5 minutes.', 'Remove tea bags.', 'Add sugar while hot.', 'Add remaining cold water.', 'Add lemon juice.', 'Refrigerate or serve over ice.'] },
+    { id: 107, name: 'Yogurt Lassi', type: 'drink', cuisine: 'Indian', time: 5, difficulty: 'Easy', calories: 160, tags: ['cooling', 'digestive', 'creamy'], icon: '≡ƒÑ¢', ingredients: [{name: 'Yogurt', amount: '1 cup'}, {name: 'Milk', amount: '1/2 cup'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Mint', amount: 'few leaves'}], substitutions: [{from: 'Sugar', to: 'Honey'}], steps: ['Blend yogurt and milk until smooth.', 'Add sugar and blend again.', 'Pour into glass.', 'Garnish with mint.', 'Serve chilled.'] },
+    { id: 108, name: 'Watermelon Agua Fresca', type: 'drink', cuisine: 'Mexican', time: 10, difficulty: 'Easy', calories: 90, tags: ['refreshing', 'summer', 'hydrating'], icon: '≡ƒìë', ingredients: [{name: 'Sugar', amount: '1/4 cup'}, {name: 'Lime', amount: '2'}, {name: 'Water', amount: '4 cups'}], substitutions: [], steps: ['Blend watermelon until smooth.', 'Strain if desired.', 'Add water and lime juice.', 'Sweeten to taste.', 'Serve over ice.', 'Garnish with mint.'] },
 
     // ===== SAUCES =====
-    { id: 201, name: 'Pasta Sauce', type: 'sauce', cuisine: 'Italian', time: 30, difficulty: 'Easy', calories: 120, tags: ['classic', 'versatile', 'tomato'], icon: '🍅', ingredients: [{name: 'Tomato', amount: '6'}, {name: 'Garlic', amount: '4 cloves'}, {name: 'Onion', amount: '1'}, {name: 'Olive Oil', amount: '3 tbsp'}, {name: 'Basil', amount: '1/4 cup'}], substitutions: [], steps: ['Dice tomatoes.', 'Sauté onion and garlic in olive oil.', 'Add tomatoes.', 'Simmer 20 minutes.', 'Add basil.', 'Season with salt and pepper.', 'Use immediately or store.'] },
-    { id: 202, name: 'Garlic Sauce', type: 'sauce', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 80, tags: ['garlic', 'creamy', 'dipping'], icon: '🧄', ingredients: [{name: 'Garlic', amount: '6 cloves'}, {name: 'Yogurt', amount: '1 cup'}, {name: 'Lemon', amount: '1'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Crush garlic cloves.', 'Mix with yogurt.', 'Add lemon juice.', 'Drizzle olive oil while whisking.', 'Season with salt.', 'Refrigerate 30 minutes before serving.'] },
-    { id: 203, name: 'Teriyaki Sauce', type: 'sauce', cuisine: 'Japanese', time: 15, difficulty: 'Easy', calories: 90, tags: ['umami', 'savory', 'glaze'], icon: '🥫', ingredients: [{name: 'Soy Sauce', amount: '1/4 cup'}, {name: 'Honey', amount: '2 tbsp'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Combine soy sauce and honey in pan.', 'Add minced garlic and ginger.', 'Simmer over low heat 5 minutes.', 'Thicken with cornstarch slurry if desired.', 'Use as marinade or glaze.'] },
-    { id: 204, name: 'Salsa', type: 'sauce', cuisine: 'Mexican', time: 15, difficulty: 'Easy', calories: 40, tags: ['fresh', 'spicy', 'zesty'], icon: '🌶️', ingredients: [{name: 'Tomato', amount: '4'}, {name: 'Onion', amount: '1/2'}, {name: 'Lime', amount: '1'}, {name: 'Chili', amount: '1'}, {name: 'Cilantro', amount: '1/4 cup'}], substitutions: [{from: 'Chili', to: 'Pepper'}], steps: ['Dice tomatoes finely.', 'Chop onion and cilantro.', 'Mix together.', 'Add lime juice.', 'Season with salt.', 'Let sit 10 minutes for flavors to meld.'] },
-    { id: 205, name: 'Tahini Sauce', type: 'sauce', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 110, tags: ['sesame', 'creamy', 'nutty'], icon: '🫘', ingredients: [{name: 'Chickpeas', amount: '1/4 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Lemon', amount: '1'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Blend tahini, chickpeas, and garlic.', 'Add lemon juice.', 'Thin with water to desired consistency.', 'Season with salt.', 'Drizzle with olive oil.'] },
-    { id: 206, name: 'Curry Sauce', type: 'sauce', cuisine: 'Indian', time: 25, difficulty: 'Medium', calories: 100, tags: ['spiced', 'aromatic', 'rich'], icon: '🍛', ingredients: [{name: 'Tomato', amount: '3'}, {name: 'Onion', amount: '1'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Turmeric', amount: '1 tsp'}, {name: 'Cumin', amount: '1 tsp'}], substitutions: [], steps: ['Sauté onion until golden.', 'Add garlic and ginger.', 'Add spices, cook 1 minute.', 'Add tomatoes, cook until soft.', 'Blend until smooth.', 'Simmer 10 minutes.', 'Season to taste.'] },
-    { id: 207, name: 'Chimichurri', type: 'sauce', cuisine: 'Mediterranean', time: 15, difficulty: 'Easy', calories: 90, tags: ['herby', 'fresh', 'tangy'], icon: '🌿', ingredients: [{name: 'Garlic', amount: '4 cloves'}, {name: 'Olive Oil', amount: '1/2 cup'}, {name: 'Vinegar', amount: '2 tbsp'}, {name: 'Mint', amount: '1/4 cup'}], substitutions: [], steps: ['Finely chop garlic and herbs.', 'Mix in olive oil and vinegar.', 'Season with salt and pepper.', 'Let sit 30 minutes.', 'Serve with grilled meats.'] },
-    { id: 208, name: 'Soy Ginger Glaze', type: 'sauce', cuisine: 'Chinese', time: 15, difficulty: 'Easy', calories: 70, tags: ['savory', 'sweet', 'sticky'], icon: '🥫', ingredients: [{name: 'Soy Sauce', amount: '1/4 cup'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Honey', amount: '2 tbsp'}, {name: 'Garlic', amount: '2 cloves'}], substitutions: [], steps: ['Grate ginger and mince garlic.', 'Combine all ingredients in pan.', 'Simmer over medium heat.', 'Reduce by half.', 'Use as glaze or dipping sauce.'] },
+    { id: 201, name: 'Pasta Sauce', type: 'sauce', cuisine: 'Italian', time: 30, difficulty: 'Easy', calories: 120, tags: ['classic', 'versatile', 'tomato'], icon: '≡ƒìà', ingredients: [{name: 'Tomato', amount: '6'}, {name: 'Garlic', amount: '4 cloves'}, {name: 'Onion', amount: '1'}, {name: 'Olive Oil', amount: '3 tbsp'}, {name: 'Basil', amount: '1/4 cup'}], substitutions: [], steps: ['Dice tomatoes.', 'Saut├⌐ onion and garlic in olive oil.', 'Add tomatoes.', 'Simmer 20 minutes.', 'Add basil.', 'Season with salt and pepper.', 'Use immediately or store.'] },
+    { id: 202, name: 'Garlic Sauce', type: 'sauce', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 80, tags: ['garlic', 'creamy', 'dipping'], icon: '≡ƒºä', ingredients: [{name: 'Garlic', amount: '6 cloves'}, {name: 'Yogurt', amount: '1 cup'}, {name: 'Lemon', amount: '1'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Crush garlic cloves.', 'Mix with yogurt.', 'Add lemon juice.', 'Drizzle olive oil while whisking.', 'Season with salt.', 'Refrigerate 30 minutes before serving.'] },
+    { id: 203, name: 'Teriyaki Sauce', type: 'sauce', cuisine: 'Japanese', time: 15, difficulty: 'Easy', calories: 90, tags: ['umami', 'savory', 'glaze'], icon: '≡ƒÑ½', ingredients: [{name: 'Soy Sauce', amount: '1/4 cup'}, {name: 'Honey', amount: '2 tbsp'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Combine soy sauce and honey in pan.', 'Add minced garlic and ginger.', 'Simmer over low heat 5 minutes.', 'Thicken with cornstarch slurry if desired.', 'Use as marinade or glaze.'] },
+    { id: 204, name: 'Salsa', type: 'sauce', cuisine: 'Mexican', time: 15, difficulty: 'Easy', calories: 40, tags: ['fresh', 'spicy', 'zesty'], icon: '≡ƒî╢∩╕Å', ingredients: [{name: 'Tomato', amount: '4'}, {name: 'Onion', amount: '1/2'}, {name: 'Lime', amount: '1'}, {name: 'Chili', amount: '1'}, {name: 'Cilantro', amount: '1/4 cup'}], substitutions: [{from: 'Chili', to: 'Pepper'}], steps: ['Dice tomatoes finely.', 'Chop onion and cilantro.', 'Mix together.', 'Add lime juice.', 'Season with salt.', 'Let sit 10 minutes for flavors to meld.'] },
+    { id: 205, name: 'Tahini Sauce', type: 'sauce', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 110, tags: ['sesame', 'creamy', 'nutty'], icon: '≡ƒ½ÿ', ingredients: [{name: 'Chickpeas', amount: '1/4 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Lemon', amount: '1'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Blend tahini, chickpeas, and garlic.', 'Add lemon juice.', 'Thin with water to desired consistency.', 'Season with salt.', 'Drizzle with olive oil.'] },
+    { id: 206, name: 'Curry Sauce', type: 'sauce', cuisine: 'Indian', time: 25, difficulty: 'Medium', calories: 100, tags: ['spiced', 'aromatic', 'rich'], icon: '≡ƒì¢', ingredients: [{name: 'Tomato', amount: '3'}, {name: 'Onion', amount: '1'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Turmeric', amount: '1 tsp'}, {name: 'Cumin', amount: '1 tsp'}], substitutions: [], steps: ['Saut├⌐ onion until golden.', 'Add garlic and ginger.', 'Add spices, cook 1 minute.', 'Add tomatoes, cook until soft.', 'Blend until smooth.', 'Simmer 10 minutes.', 'Season to taste.'] },
+    { id: 207, name: 'Chimichurri', type: 'sauce', cuisine: 'Mediterranean', time: 15, difficulty: 'Easy', calories: 90, tags: ['herby', 'fresh', 'tangy'], icon: '≡ƒî┐', ingredients: [{name: 'Garlic', amount: '4 cloves'}, {name: 'Olive Oil', amount: '1/2 cup'}, {name: 'Vinegar', amount: '2 tbsp'}, {name: 'Mint', amount: '1/4 cup'}], substitutions: [], steps: ['Finely chop garlic and herbs.', 'Mix in olive oil and vinegar.', 'Season with salt and pepper.', 'Let sit 30 minutes.', 'Serve with grilled meats.'] },
+    { id: 208, name: 'Soy Ginger Glaze', type: 'sauce', cuisine: 'Chinese', time: 15, difficulty: 'Easy', calories: 70, tags: ['savory', 'sweet', 'sticky'], icon: '≡ƒÑ½', ingredients: [{name: 'Soy Sauce', amount: '1/4 cup'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Honey', amount: '2 tbsp'}, {name: 'Garlic', amount: '2 cloves'}], substitutions: [], steps: ['Grate ginger and mince garlic.', 'Combine all ingredients in pan.', 'Simmer over medium heat.', 'Reduce by half.', 'Use as glaze or dipping sauce.'] },
 
     // ===== DESSERTS =====
-    { id: 301, name: 'Rice Pudding', type: 'dessert', cuisine: 'American', time: 40, difficulty: 'Easy', calories: 280, tags: ['creamy', 'comfort', 'sweet'], icon: '🍮', ingredients: [{name: 'Rice', amount: '1 cup'}, {name: 'Milk', amount: '4 cups'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Cinnamon', amount: '1/2 tsp'}], substitutions: [], steps: ['Combine rice and milk in pot.', 'Bring to boil, reduce heat.', 'Simmer 35-40 minutes, stirring often.', 'Add sugar and butter.', 'Sprinkle with cinnamon.', 'Serve warm or chilled.'] },
-    { id: 302, name: 'Flan', type: 'dessert', cuisine: 'Mexican', time: 60, difficulty: 'Medium', calories: 250, tags: ['creamy', 'caramel', 'elegant'], icon: '🍮', ingredients: [{name: 'Milk', amount: '2 cups'}, {name: 'Sugar', amount: '1/2 cup'}, {name: 'Egg', amount: '3'}, {name: 'Vanilla', amount: '1 tsp'}], substitutions: [], steps: ['Make caramel: melt sugar until golden.', 'Pour into baking dish.', 'Blend milk, eggs, sugar, and vanilla.', 'Pour over caramel.', 'Bake in water bath at 350°F for 50 min.', 'Chill overnight.', 'Invert to serve.'] },
-    { id: 303, name: 'Fruit Salad', type: 'dessert', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 120, tags: ['fresh', 'healthy', 'colorful'], icon: '🍓', ingredients: [{name: 'Lemon', amount: '1'}, {name: 'Honey', amount: '2 tbsp'}], substitutions: [{from: 'Honey', to: 'Sugar'}], steps: ['Cut fresh fruits of choice.', 'Combine in large bowl.', 'Mix lemon juice and honey.', 'Drizzle over fruit.', 'Toss gently.', 'Refrigerate 30 minutes before serving.'] },
-    { id: 304, name: 'Banana Smoothie Bowl', type: 'dessert', cuisine: 'Fusion', time: 10, difficulty: 'Easy', calories: 220, tags: ['healthy', 'quick', 'tropical'], icon: '🍌', ingredients: [{name: 'Milk', amount: '1/2 cup'}, {name: 'Honey', amount: '1 tbsp'}, {name: 'Cinnamon', amount: 'pinch'}], substitutions: [], steps: ['Freeze banana slices.', 'Blend banana with milk until thick.', 'Pour into bowl.', 'Top with cinnamon.', 'Drizzle with honey.'] },
-    { id: 305, name: 'Cinnamon Sugar Toast', type: 'dessert', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 280, tags: ['quick', 'sweet', 'comfort'], icon: '🍞', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Cinnamon', amount: '1 tsp'}], substitutions: [], steps: ['Toast bread lightly.', 'Butter generously.', 'Mix sugar and cinnamon.', 'Sprinkle over buttered toast.', 'Broil 1 minute until bubbly.', 'Serve immediately.'] },
-    { id: 306, name: 'Mango Lassi', type: 'dessert', cuisine: 'Indian', time: 5, difficulty: 'Easy', calories: 200, tags: ['sweet', 'creamy', 'tropical'], icon: '🥭', ingredients: [{name: 'Yogurt', amount: '1 cup'}, {name: 'Milk', amount: '1/2 cup'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Honey', amount: '1 tbsp'}], substitutions: [], steps: ['Blend yogurt and mango.', 'Add milk to thin.', 'Sweeten to taste.', 'Blend until smooth.', 'Serve chilled.'] },
-    { id: 307, name: 'Chocolate Fondue', type: 'dessert', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 320, tags: ['indulgent', 'fun', 'sharing'], icon: '🍫', ingredients: [{name: 'Butter', amount: '2 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Milk', amount: '1/4 cup'}, {name: 'Cocoa', amount: '3 tbsp'}], substitutions: [], steps: ['Melt butter in pot.', 'Add cocoa and sugar.', 'Stir in milk gradually.', 'Heat until smooth and glossy.', 'Transfer to fondue pot.', 'Serve with fruit and bread for dipping.'] },
-    { id: 308, name: 'Honey Cake', type: 'dessert', cuisine: 'Mediterranean', time: 45, difficulty: 'Medium', calories: 340, tags: ['sweet', 'moist', 'aromatic'], icon: '🍯', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Honey', amount: '1/2 cup'}, {name: 'Egg', amount: '2'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Cinnamon', amount: '1 tsp'}], substitutions: [], steps: ['Mix flour, sugar, and cinnamon.', 'Add eggs and honey.', 'Mix until smooth batter forms.', 'Pour into greased pan.', 'Bake at 350°F for 35-40 minutes.', 'Cool before slicing.'] },
+    { id: 301, name: 'Rice Pudding', type: 'dessert', cuisine: 'American', time: 40, difficulty: 'Easy', calories: 280, tags: ['creamy', 'comfort', 'sweet'], icon: '≡ƒì«', ingredients: [{name: 'Rice', amount: '1 cup'}, {name: 'Milk', amount: '4 cups'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Cinnamon', amount: '1/2 tsp'}], substitutions: [], steps: ['Combine rice and milk in pot.', 'Bring to boil, reduce heat.', 'Simmer 35-40 minutes, stirring often.', 'Add sugar and butter.', 'Sprinkle with cinnamon.', 'Serve warm or chilled.'] },
+    { id: 302, name: 'Flan', type: 'dessert', cuisine: 'Mexican', time: 60, difficulty: 'Medium', calories: 250, tags: ['creamy', 'caramel', 'elegant'], icon: '≡ƒì«', ingredients: [{name: 'Milk', amount: '2 cups'}, {name: 'Sugar', amount: '1/2 cup'}, {name: 'Egg', amount: '3'}, {name: 'Vanilla', amount: '1 tsp'}], substitutions: [], steps: ['Make caramel: melt sugar until golden.', 'Pour into baking dish.', 'Blend milk, eggs, sugar, and vanilla.', 'Pour over caramel.', 'Bake in water bath at 350┬░F for 50 min.', 'Chill overnight.', 'Invert to serve.'] },
+    { id: 303, name: 'Fruit Salad', type: 'dessert', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 120, tags: ['fresh', 'healthy', 'colorful'], icon: '≡ƒìô', ingredients: [{name: 'Lemon', amount: '1'}, {name: 'Honey', amount: '2 tbsp'}], substitutions: [{from: 'Honey', to: 'Sugar'}], steps: ['Cut fresh fruits of choice.', 'Combine in large bowl.', 'Mix lemon juice and honey.', 'Drizzle over fruit.', 'Toss gently.', 'Refrigerate 30 minutes before serving.'] },
+    { id: 304, name: 'Banana Smoothie Bowl', type: 'dessert', cuisine: 'Fusion', time: 10, difficulty: 'Easy', calories: 220, tags: ['healthy', 'quick', 'tropical'], icon: '≡ƒìî', ingredients: [{name: 'Milk', amount: '1/2 cup'}, {name: 'Honey', amount: '1 tbsp'}, {name: 'Cinnamon', amount: 'pinch'}], substitutions: [], steps: ['Freeze banana slices.', 'Blend banana with milk until thick.', 'Pour into bowl.', 'Top with cinnamon.', 'Drizzle with honey.'] },
+    { id: 305, name: 'Cinnamon Sugar Toast', type: 'dessert', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 280, tags: ['quick', 'sweet', 'comfort'], icon: '≡ƒì₧', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Cinnamon', amount: '1 tsp'}], substitutions: [], steps: ['Toast bread lightly.', 'Butter generously.', 'Mix sugar and cinnamon.', 'Sprinkle over buttered toast.', 'Broil 1 minute until bubbly.', 'Serve immediately.'] },
+    { id: 306, name: 'Mango Lassi', type: 'dessert', cuisine: 'Indian', time: 5, difficulty: 'Easy', calories: 200, tags: ['sweet', 'creamy', 'tropical'], icon: '≡ƒÑ¡', ingredients: [{name: 'Yogurt', amount: '1 cup'}, {name: 'Milk', amount: '1/2 cup'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Honey', amount: '1 tbsp'}], substitutions: [], steps: ['Blend yogurt and mango.', 'Add milk to thin.', 'Sweeten to taste.', 'Blend until smooth.', 'Serve chilled.'] },
+    { id: 307, name: 'Chocolate Fondue', type: 'dessert', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 320, tags: ['indulgent', 'fun', 'sharing'], icon: '≡ƒì½', ingredients: [{name: 'Butter', amount: '2 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Milk', amount: '1/4 cup'}, {name: 'Cocoa', amount: '3 tbsp'}], substitutions: [], steps: ['Melt butter in pot.', 'Add cocoa and sugar.', 'Stir in milk gradually.', 'Heat until smooth and glossy.', 'Transfer to fondue pot.', 'Serve with fruit and bread for dipping.'] },
+    { id: 308, name: 'Honey Cake', type: 'dessert', cuisine: 'Mediterranean', time: 45, difficulty: 'Medium', calories: 340, tags: ['sweet', 'moist', 'aromatic'], icon: '≡ƒì»', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Honey', amount: '1/2 cup'}, {name: 'Egg', amount: '2'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Cinnamon', amount: '1 tsp'}], substitutions: [], steps: ['Mix flour, sugar, and cinnamon.', 'Add eggs and honey.', 'Mix until smooth batter forms.', 'Pour into greased pan.', 'Bake at 350┬░F for 35-40 minutes.', 'Cool before slicing.'] },
 
     // ===== MORE MEALS =====
-    { id: 41, name: 'Pancakes', type: 'meal', cuisine: 'American', time: 20, difficulty: 'Easy', calories: 350, tags: ['breakfast', 'sweet', 'comfort'], icon: '🥞', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Milk', amount: '1 cup'}, {name: 'Egg', amount: '1'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Butter', amount: '2 tbsp'}], substitutions: [], steps: ['Mix flour and sugar in a bowl.', 'Add milk and egg, mix until smooth.', 'Heat butter in pan over medium.', 'Pour 1/4 cup batter per pancake.', 'Cook until bubbles form, flip.', 'Cook other side until golden.', 'Serve with syrup.'] },
-    { id: 42, name: 'Waffles', type: 'meal', cuisine: 'American', time: 25, difficulty: 'Easy', calories: 400, tags: ['breakfast', 'sweet'], icon: '🧇', ingredients: [{name: 'Flour', amount: '1.5 cups'}, {name: 'Milk', amount: '1 cup'}, {name: 'Egg', amount: '2'}, {name: 'Butter', amount: '4 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}], substitutions: [], steps: ['Mix dry ingredients.', 'Add wet ingredients, stir until combined.', 'Pour batter into hot waffle iron.', 'Cook until golden and crisp.', 'Serve with butter and syrup.'] },
-    { id: 43, name: 'Bacon & Eggs', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 380, tags: ['breakfast', 'high protein', 'quick'], icon: '🥓', ingredients: [{name: 'Egg', amount: '2'}, {name: 'Bacon', amount: '4 strips'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Cook bacon in pan until crispy.', 'Remove bacon, keep some fat.', 'Fry eggs in bacon fat.', 'Season with salt.', 'Serve with bacon strips.'] },
-    { id: 44, name: 'BLT Sandwich', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 320, tags: ['quick', 'lunch'], icon: '🥪', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Bacon', amount: '4 strips'}, {name: 'Lettuce', amount: '2 leaves'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Toast bread slices.', 'Spread mayo if desired.', 'Layer lettuce and sliced tomato.', 'Add bacon strips.', 'Close sandwich, cut diagonal.'] },
-    { id: 45, name: 'Caesar Salad', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 250, tags: ['healthy', 'salad', 'quick'], icon: '🥗', ingredients: [{name: 'Lettuce', amount: '1 head'}, {name: 'Cheese', amount: '1/4 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Lemon', amount: '1'}], substitutions: [], steps: ['Chop lettuce into bite-sized pieces.', 'Make dressing: mix garlic, lemon, olive oil.', 'Toss lettuce with dressing.', 'Top with parmesan shavings.', 'Add croutons if available.'] },
-    { id: 46, name: 'Club Sandwich', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 450, tags: ['high protein', 'lunch'], icon: '🥪', ingredients: [{name: 'Bread', amount: '3 slices'}, {name: 'Chicken', amount: '100g'}, {name: 'Bacon', amount: '2 strips'}, {name: 'Lettuce', amount: '2 leaves'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Toast bread slices.', 'Cook bacon until crispy.', 'Layer chicken, bacon, lettuce, tomato.', 'Stack layers with bread between.', 'Cut into quarters, secure with toothpicks.'] },
-    { id: 47, name: 'Grilled Cheese & Tomato Soup', type: 'meal', cuisine: 'American', time: 25, difficulty: 'Easy', calories: 480, tags: ['comfort food', 'vegetarian'], icon: '🍲', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Cheese', amount: '2 slices'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Tomato', amount: '4'}, {name: 'Garlic', amount: '2 cloves'}], substitutions: [], steps: ['Make grilled cheese sandwich.', 'Blend tomatoes with garlic.', 'Simmer tomato soup 10 minutes.', 'Season soup with salt and pepper.', 'Serve soup with sandwich.'] },
-    { id: 48, name: 'Egg Salad Sandwich', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 320, tags: ['quick', 'lunch', 'vegetarian'], icon: '🥪', ingredients: [{name: 'Egg', amount: '4'}, {name: 'Bread', amount: '2 slices'}, {name: 'Onion', amount: '2 tbsp'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Boil eggs, cool, and chop.', 'Mix eggs with mayo and onion.', 'Season with salt and pepper.', 'Spread on bread.', 'Close and serve.'] },
-    { id: 49, name: 'Philly Cheesesteak', type: 'meal', cuisine: 'American', time: 25, difficulty: 'Medium', calories: 520, tags: ['high protein', 'comfort food'], icon: '🥖', ingredients: [{name: 'Beef', amount: '200g'}, {name: 'Cheese', amount: '2 slices'}, {name: 'Onion', amount: '1'}, {name: 'Pepper', amount: '1'}, {name: 'Bread', amount: '1 hoagie'}], substitutions: [], steps: ['Slice beef thinly.', 'Sauté onions and peppers.', 'Cook beef with vegetables.', 'Melt cheese on top.', 'Spoon into hoagie roll.'] },
-    { id: 50, name: 'Hot Dogs', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 350, tags: ['quick', 'kid friendly'], icon: '🌭', ingredients: [{name: 'Bread', amount: '2 hot dog buns'}, {name: 'Beef', amount: '2 hot dogs'}, {name: 'Onion', amount: '1/4'}], substitutions: [], steps: ['Boil or grill hot dogs.', 'Place in buns.', 'Add mustard and ketchup.', 'Top with onions if desired.'] },
+    { id: 41, name: 'Pancakes', type: 'meal', cuisine: 'American', time: 20, difficulty: 'Easy', calories: 350, tags: ['breakfast', 'sweet', 'comfort'], icon: '≡ƒÑ₧', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Milk', amount: '1 cup'}, {name: 'Egg', amount: '1'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Butter', amount: '2 tbsp'}], substitutions: [], steps: ['Mix flour and sugar in a bowl.', 'Add milk and egg, mix until smooth.', 'Heat butter in pan over medium.', 'Pour 1/4 cup batter per pancake.', 'Cook until bubbles form, flip.', 'Cook other side until golden.', 'Serve with syrup.'] },
+    { id: 42, name: 'Waffles', type: 'meal', cuisine: 'American', time: 25, difficulty: 'Easy', calories: 400, tags: ['breakfast', 'sweet'], icon: '≡ƒºç', ingredients: [{name: 'Flour', amount: '1.5 cups'}, {name: 'Milk', amount: '1 cup'}, {name: 'Egg', amount: '2'}, {name: 'Butter', amount: '4 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}], substitutions: [], steps: ['Mix dry ingredients.', 'Add wet ingredients, stir until combined.', 'Pour batter into hot waffle iron.', 'Cook until golden and crisp.', 'Serve with butter and syrup.'] },
+    { id: 43, name: 'Bacon & Eggs', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 380, tags: ['breakfast', 'high protein', 'quick'], icon: '≡ƒÑô', ingredients: [{name: 'Egg', amount: '2'}, {name: 'Bacon', amount: '4 strips'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Cook bacon in pan until crispy.', 'Remove bacon, keep some fat.', 'Fry eggs in bacon fat.', 'Season with salt.', 'Serve with bacon strips.'] },
+    { id: 44, name: 'BLT Sandwich', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 320, tags: ['quick', 'lunch'], icon: '≡ƒÑ¬', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Bacon', amount: '4 strips'}, {name: 'Lettuce', amount: '2 leaves'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Toast bread slices.', 'Spread mayo if desired.', 'Layer lettuce and sliced tomato.', 'Add bacon strips.', 'Close sandwich, cut diagonal.'] },
+    { id: 45, name: 'Caesar Salad', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 250, tags: ['healthy', 'salad', 'quick'], icon: '≡ƒÑù', ingredients: [{name: 'Lettuce', amount: '1 head'}, {name: 'Cheese', amount: '1/4 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Lemon', amount: '1'}], substitutions: [], steps: ['Chop lettuce into bite-sized pieces.', 'Make dressing: mix garlic, lemon, olive oil.', 'Toss lettuce with dressing.', 'Top with parmesan shavings.', 'Add croutons if available.'] },
+    { id: 46, name: 'Club Sandwich', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 450, tags: ['high protein', 'lunch'], icon: '≡ƒÑ¬', ingredients: [{name: 'Bread', amount: '3 slices'}, {name: 'Chicken', amount: '100g'}, {name: 'Bacon', amount: '2 strips'}, {name: 'Lettuce', amount: '2 leaves'}, {name: 'Tomato', amount: '1'}], substitutions: [], steps: ['Toast bread slices.', 'Cook bacon until crispy.', 'Layer chicken, bacon, lettuce, tomato.', 'Stack layers with bread between.', 'Cut into quarters, secure with toothpicks.'] },
+    { id: 47, name: 'Grilled Cheese & Tomato Soup', type: 'meal', cuisine: 'American', time: 25, difficulty: 'Easy', calories: 480, tags: ['comfort food', 'vegetarian'], icon: '≡ƒì▓', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Cheese', amount: '2 slices'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Tomato', amount: '4'}, {name: 'Garlic', amount: '2 cloves'}], substitutions: [], steps: ['Make grilled cheese sandwich.', 'Blend tomatoes with garlic.', 'Simmer tomato soup 10 minutes.', 'Season soup with salt and pepper.', 'Serve soup with sandwich.'] },
+    { id: 48, name: 'Egg Salad Sandwich', type: 'meal', cuisine: 'American', time: 15, difficulty: 'Easy', calories: 320, tags: ['quick', 'lunch', 'vegetarian'], icon: '≡ƒÑ¬', ingredients: [{name: 'Egg', amount: '4'}, {name: 'Bread', amount: '2 slices'}, {name: 'Onion', amount: '2 tbsp'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Boil eggs, cool, and chop.', 'Mix eggs with mayo and onion.', 'Season with salt and pepper.', 'Spread on bread.', 'Close and serve.'] },
+    { id: 49, name: 'Philly Cheesesteak', type: 'meal', cuisine: 'American', time: 25, difficulty: 'Medium', calories: 520, tags: ['high protein', 'comfort food'], icon: '≡ƒÑû', ingredients: [{name: 'Beef', amount: '200g'}, {name: 'Cheese', amount: '2 slices'}, {name: 'Onion', amount: '1'}, {name: 'Pepper', amount: '1'}, {name: 'Bread', amount: '1 hoagie'}], substitutions: [], steps: ['Slice beef thinly.', 'Saut├⌐ onions and peppers.', 'Cook beef with vegetables.', 'Melt cheese on top.', 'Spoon into hoagie roll.'] },
+    { id: 50, name: 'Hot Dogs', type: 'meal', cuisine: 'American', time: 10, difficulty: 'Easy', calories: 350, tags: ['quick', 'kid friendly'], icon: '≡ƒî¡', ingredients: [{name: 'Bread', amount: '2 hot dog buns'}, {name: 'Beef', amount: '2 hot dogs'}, {name: 'Onion', amount: '1/4'}], substitutions: [], steps: ['Boil or grill hot dogs.', 'Place in buns.', 'Add mustard and ketchup.', 'Top with onions if desired.'] },
 
     // ===== MORE ITALIAN =====
-    { id: 51, name: 'Carbonara', type: 'meal', cuisine: 'Italian', time: 25, difficulty: 'Medium', calories: 550, tags: ['classic', 'creamy'], icon: '🍝', ingredients: [{name: 'Pasta', amount: '250g'}, {name: 'Egg', amount: '2'}, {name: 'Cheese', amount: '1/2 cup'}, {name: 'Bacon', amount: '100g'}, {name: 'Garlic', amount: '2 cloves'}], substitutions: [{from: 'Bacon', to: 'Pancetta'}], steps: ['Cook pasta al dente.', 'Fry bacon until crispy.', 'Mix eggs with cheese.', 'Toss hot pasta with egg mixture off heat.', 'Add bacon, serve immediately.'] },
-    { id: 52, name: 'Pesto Pasta', type: 'meal', cuisine: 'Italian', time: 20, difficulty: 'Easy', calories: 480, tags: ['quick', 'vegetarian', 'herby'], icon: '🍝', ingredients: [{name: 'Pasta', amount: '250g'}, {name: 'Basil', amount: '1 cup'}, {name: 'Cheese', amount: '1/4 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Olive Oil', amount: '1/3 cup'}], substitutions: [], steps: ['Cook pasta.', 'Blend basil, garlic, cheese, oil.', 'Toss hot pasta with pesto.', 'Add pasta water if needed.', 'Serve with extra cheese.'] },
-    { id: 53, name: 'Lasagna', type: 'meal', cuisine: 'Italian', time: 60, difficulty: 'Medium', calories: 620, tags: ['comfort food', 'high protein'], icon: '🍝', ingredients: [{name: 'Pasta', amount: '12 sheets'}, {name: 'Beef', amount: '300g'}, {name: 'Cheese', amount: '2 cups'}, {name: 'Tomato Sauce', amount: '2 cups'}, {name: 'Onion', amount: '1'}], substitutions: [], steps: ['Brown beef with onion.', 'Add tomato sauce, simmer.', 'Layer pasta, meat sauce, cheese.', 'Repeat layers.', 'Bake at 375°F for 30 minutes.', 'Rest 10 minutes before serving.'] },
-    { id: 54, name: 'Risotto', type: 'meal', cuisine: 'Italian', time: 35, difficulty: 'Medium', calories: 420, tags: ['creamy', 'comfort food'], icon: '🍚', ingredients: [{name: 'Rice', amount: '1.5 cups'}, {name: 'Broth', amount: '4 cups'}, {name: 'Cheese', amount: '1/2 cup'}, {name: 'Onion', amount: '1'}, {name: 'Butter', amount: '2 tbsp'}], substitutions: [], steps: ['Sauté onion in butter.', 'Add rice, toast 2 minutes.', 'Add broth one ladle at a time.', 'Stir constantly until absorbed.', 'Finish with cheese.', 'Serve immediately.'] },
-    { id: 55, name: 'Bruschetta', type: 'meal', cuisine: 'Italian', time: 15, difficulty: 'Easy', calories: 180, tags: ['quick', 'vegetarian', 'fresh'], icon: '🍅', ingredients: [{name: 'Bread', amount: '1 baguette'}, {name: 'Tomato', amount: '3'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Basil', amount: '1/4 cup'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Slice and toast baguette.', 'Rub toast with garlic.', 'Dice tomatoes, mix with basil and oil.', 'Season with salt.', 'Spoon onto toast, serve.'] },
-    { id: 56, name: 'Pizza Toast', type: 'meal', cuisine: 'Italian', time: 10, difficulty: 'Easy', calories: 280, tags: ['quick', 'kid friendly'], icon: '🍕', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Cheese', amount: '1/2 cup'}, {name: 'Tomato Sauce', amount: '2 tbsp'}, {name: 'Oregano', amount: 'pinch'}], substitutions: [], steps: ['Toast bread lightly.', 'Spread tomato sauce.', 'Top with cheese.', 'Broil until cheese melts.', 'Sprinkle oregano, serve.'] },
+    { id: 51, name: 'Carbonara', type: 'meal', cuisine: 'Italian', time: 25, difficulty: 'Medium', calories: 550, tags: ['classic', 'creamy'], icon: '≡ƒì¥', ingredients: [{name: 'Pasta', amount: '250g'}, {name: 'Egg', amount: '2'}, {name: 'Cheese', amount: '1/2 cup'}, {name: 'Bacon', amount: '100g'}, {name: 'Garlic', amount: '2 cloves'}], substitutions: [{from: 'Bacon', to: 'Pancetta'}], steps: ['Cook pasta al dente.', 'Fry bacon until crispy.', 'Mix eggs with cheese.', 'Toss hot pasta with egg mixture off heat.', 'Add bacon, serve immediately.'] },
+    { id: 52, name: 'Pesto Pasta', type: 'meal', cuisine: 'Italian', time: 20, difficulty: 'Easy', calories: 480, tags: ['quick', 'vegetarian', 'herby'], icon: '≡ƒì¥', ingredients: [{name: 'Pasta', amount: '250g'}, {name: 'Basil', amount: '1 cup'}, {name: 'Cheese', amount: '1/4 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Olive Oil', amount: '1/3 cup'}], substitutions: [], steps: ['Cook pasta.', 'Blend basil, garlic, cheese, oil.', 'Toss hot pasta with pesto.', 'Add pasta water if needed.', 'Serve with extra cheese.'] },
+    { id: 53, name: 'Lasagna', type: 'meal', cuisine: 'Italian', time: 60, difficulty: 'Medium', calories: 620, tags: ['comfort food', 'high protein'], icon: '≡ƒì¥', ingredients: [{name: 'Pasta', amount: '12 sheets'}, {name: 'Beef', amount: '300g'}, {name: 'Cheese', amount: '2 cups'}, {name: 'Tomato Sauce', amount: '2 cups'}, {name: 'Onion', amount: '1'}], substitutions: [], steps: ['Brown beef with onion.', 'Add tomato sauce, simmer.', 'Layer pasta, meat sauce, cheese.', 'Repeat layers.', 'Bake at 375┬░F for 30 minutes.', 'Rest 10 minutes before serving.'] },
+    { id: 54, name: 'Risotto', type: 'meal', cuisine: 'Italian', time: 35, difficulty: 'Medium', calories: 420, tags: ['creamy', 'comfort food'], icon: '≡ƒìÜ', ingredients: [{name: 'Rice', amount: '1.5 cups'}, {name: 'Broth', amount: '4 cups'}, {name: 'Cheese', amount: '1/2 cup'}, {name: 'Onion', amount: '1'}, {name: 'Butter', amount: '2 tbsp'}], substitutions: [], steps: ['Saut├⌐ onion in butter.', 'Add rice, toast 2 minutes.', 'Add broth one ladle at a time.', 'Stir constantly until absorbed.', 'Finish with cheese.', 'Serve immediately.'] },
+    { id: 55, name: 'Bruschetta', type: 'meal', cuisine: 'Italian', time: 15, difficulty: 'Easy', calories: 180, tags: ['quick', 'vegetarian', 'fresh'], icon: '≡ƒìà', ingredients: [{name: 'Bread', amount: '1 baguette'}, {name: 'Tomato', amount: '3'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Basil', amount: '1/4 cup'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Slice and toast baguette.', 'Rub toast with garlic.', 'Dice tomatoes, mix with basil and oil.', 'Season with salt.', 'Spoon onto toast, serve.'] },
+    { id: 56, name: 'Pizza Toast', type: 'meal', cuisine: 'Italian', time: 10, difficulty: 'Easy', calories: 280, tags: ['quick', 'kid friendly'], icon: '≡ƒìò', ingredients: [{name: 'Bread', amount: '2 slices'}, {name: 'Cheese', amount: '1/2 cup'}, {name: 'Tomato Sauce', amount: '2 tbsp'}, {name: 'Oregano', amount: 'pinch'}], substitutions: [], steps: ['Toast bread lightly.', 'Spread tomato sauce.', 'Top with cheese.', 'Broil until cheese melts.', 'Sprinkle oregano, serve.'] },
 
     // ===== MORE CHINESE =====
-    { id: 57, name: 'Sweet & Sour Pork', type: 'meal', cuisine: 'Chinese', time: 35, difficulty: 'Medium', calories: 480, tags: ['sweet', 'tangy', 'classic'], icon: '🥡', ingredients: [{name: 'Pork', amount: '200g'}, {name: 'Pepper', amount: '2'}, {name: 'Onion', amount: '1'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}], substitutions: [], steps: ['Cut pork into chunks.', 'Fry until golden, set aside.', 'Sauté peppers and onion.', 'Make sauce: soy sauce, vinegar, sugar.', 'Add pork to sauce, toss.'] },
-    { id: 58, name: 'Kung Pao Chicken', type: 'meal', cuisine: 'Chinese', time: 30, difficulty: 'Medium', calories: 420, tags: ['spicy', 'high protein'], icon: '🌶️', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Peanuts', amount: '1/4 cup'}, {name: 'Chili', amount: '2 tbsp'}, {name: 'Soy Sauce', amount: '2 tbsp'}, {name: 'Garlic', amount: '3 cloves'}], substitutions: [], steps: ['Cut chicken into cubes.', 'Stir fry chicken until cooked.', 'Add garlic and chili.', 'Add soy sauce and sugar.', 'Toss with peanuts.', 'Serve over rice.'] },
-    { id: 59, name: 'Dumplings', type: 'meal', cuisine: 'Chinese', time: 45, difficulty: 'Hard', calories: 350, tags: ['traditional', 'fun'], icon: '🥟', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Beef', amount: '200g'}, {name: 'Cabbage', amount: '1 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Make dough, let rest.', 'Mix filling ingredients.', 'Roll dough into circles.', 'Fill and fold dumplings.', 'Steam 15 minutes or boil.', 'Serve with dipping sauce.'] },
-    { id: 60, name: 'Chow Mein', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Easy', calories: 400, tags: ['quick', 'noodles'], icon: '🍜', ingredients: [{name: 'Noodles', amount: '250g'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Onion', amount: '1'}, {name: 'Cabbage', amount: '1 cup'}, {name: 'Garlic', amount: '2 cloves'}], substitutions: [], steps: ['Cook noodles.', 'Stir fry vegetables.', 'Add noodles and soy sauce.', 'Toss everything together.', 'Serve hot.'] },
+    { id: 57, name: 'Sweet & Sour Pork', type: 'meal', cuisine: 'Chinese', time: 35, difficulty: 'Medium', calories: 480, tags: ['sweet', 'tangy', 'classic'], icon: '≡ƒÑí', ingredients: [{name: 'Pork', amount: '200g'}, {name: 'Pepper', amount: '2'}, {name: 'Onion', amount: '1'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}], substitutions: [], steps: ['Cut pork into chunks.', 'Fry until golden, set aside.', 'Saut├⌐ peppers and onion.', 'Make sauce: soy sauce, vinegar, sugar.', 'Add pork to sauce, toss.'] },
+    { id: 58, name: 'Kung Pao Chicken', type: 'meal', cuisine: 'Chinese', time: 30, difficulty: 'Medium', calories: 420, tags: ['spicy', 'high protein'], icon: '≡ƒî╢∩╕Å', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Peanuts', amount: '1/4 cup'}, {name: 'Chili', amount: '2 tbsp'}, {name: 'Soy Sauce', amount: '2 tbsp'}, {name: 'Garlic', amount: '3 cloves'}], substitutions: [], steps: ['Cut chicken into cubes.', 'Stir fry chicken until cooked.', 'Add garlic and chili.', 'Add soy sauce and sugar.', 'Toss with peanuts.', 'Serve over rice.'] },
+    { id: 59, name: 'Dumplings', type: 'meal', cuisine: 'Chinese', time: 45, difficulty: 'Hard', calories: 350, tags: ['traditional', 'fun'], icon: '≡ƒÑƒ', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Beef', amount: '200g'}, {name: 'Cabbage', amount: '1 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Make dough, let rest.', 'Mix filling ingredients.', 'Roll dough into circles.', 'Fill and fold dumplings.', 'Steam 15 minutes or boil.', 'Serve with dipping sauce.'] },
+    { id: 60, name: 'Chow Mein', type: 'meal', cuisine: 'Chinese', time: 25, difficulty: 'Easy', calories: 400, tags: ['quick', 'noodles'], icon: '≡ƒì£', ingredients: [{name: 'Noodles', amount: '250g'}, {name: 'Soy Sauce', amount: '3 tbsp'}, {name: 'Onion', amount: '1'}, {name: 'Cabbage', amount: '1 cup'}, {name: 'Garlic', amount: '2 cloves'}], substitutions: [], steps: ['Cook noodles.', 'Stir fry vegetables.', 'Add noodles and soy sauce.', 'Toss everything together.', 'Serve hot.'] },
 
     // ===== MORE MEXICAN =====
-    { id: 61, name: 'Guacamole', type: 'meal', cuisine: 'Mexican', time: 10, difficulty: 'Easy', calories: 180, tags: ['healthy', 'fresh', 'dip'], icon: '🥑', ingredients: [{name: 'Avocado', amount: '2'}, {name: 'Lime', amount: '1'}, {name: 'Onion', amount: '1/4'}, {name: 'Tomato', amount: '1'}, {name: 'Chili', amount: '1'}], substitutions: [], steps: ['Mash avocados.', 'Add lime juice.', 'Dice onion, tomato, and chili.', 'Mix everything together.', 'Season with salt.', 'Serve with tortilla chips.'] },
-    { id: 62, name: 'Churros', type: 'meal', cuisine: 'Mexican', time: 30, difficulty: 'Medium', calories: 320, tags: ['sweet', 'dessert', 'fun'], icon: '🥖', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Cinnamon', amount: '1 tbsp'}], substitutions: [], steps: ['Boil water with butter.', 'Add flour, stir until smooth.', 'Pipe into strips.', 'Fry until golden.', 'Roll in cinnamon sugar.', 'Serve with chocolate sauce.'] },
-    { id: 63, name: 'Tamales', type: 'meal', cuisine: 'Mexican', time: 90, difficulty: 'Hard', calories: 280, tags: ['traditional', 'time consuming'], icon: '🌽', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Chicken', amount: '200g'}, {name: 'Corn', amount: '1 cup'}, {name: 'Onion', amount: '1'}, {name: 'Chili', amount: '2 tbsp'}], substitutions: [], steps: ['Make masa dough.', 'Prepare filling with chicken.', 'Spread dough on corn husks.', 'Add filling, fold husks.', 'Steam for 1 hour.', 'Serve with salsa.'] },
-    { id: 64, name: 'Mexican Pizza', type: 'meal', cuisine: 'Mexican', time: 20, difficulty: 'Easy', calories: 380, tags: ['quick', 'kid friendly'], icon: '🍕', ingredients: [{name: 'Tortilla', amount: '2'}, {name: 'Beans', amount: '1/2 cup'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Tomato', amount: '1'}, {name: 'Onion', amount: '1/4'}], substitutions: [], steps: ['Place tortilla as base.', 'Spread beans.', 'Top with cheese.', 'Add diced tomatoes and onion.', 'Top with second tortilla.', 'Bake at 400°F for 10 minutes.'] },
+    { id: 61, name: 'Guacamole', type: 'meal', cuisine: 'Mexican', time: 10, difficulty: 'Easy', calories: 180, tags: ['healthy', 'fresh', 'dip'], icon: '≡ƒÑæ', ingredients: [{name: 'Avocado', amount: '2'}, {name: 'Lime', amount: '1'}, {name: 'Onion', amount: '1/4'}, {name: 'Tomato', amount: '1'}, {name: 'Chili', amount: '1'}], substitutions: [], steps: ['Mash avocados.', 'Add lime juice.', 'Dice onion, tomato, and chili.', 'Mix everything together.', 'Season with salt.', 'Serve with tortilla chips.'] },
+    { id: 62, name: 'Churros', type: 'meal', cuisine: 'Mexican', time: 30, difficulty: 'Medium', calories: 320, tags: ['sweet', 'dessert', 'fun'], icon: '≡ƒÑû', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Cinnamon', amount: '1 tbsp'}], substitutions: [], steps: ['Boil water with butter.', 'Add flour, stir until smooth.', 'Pipe into strips.', 'Fry until golden.', 'Roll in cinnamon sugar.', 'Serve with chocolate sauce.'] },
+    { id: 63, name: 'Tamales', type: 'meal', cuisine: 'Mexican', time: 90, difficulty: 'Hard', calories: 280, tags: ['traditional', 'time consuming'], icon: '≡ƒî╜', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Chicken', amount: '200g'}, {name: 'Corn', amount: '1 cup'}, {name: 'Onion', amount: '1'}, {name: 'Chili', amount: '2 tbsp'}], substitutions: [], steps: ['Make masa dough.', 'Prepare filling with chicken.', 'Spread dough on corn husks.', 'Add filling, fold husks.', 'Steam for 1 hour.', 'Serve with salsa.'] },
+    { id: 64, name: 'Mexican Pizza', type: 'meal', cuisine: 'Mexican', time: 20, difficulty: 'Easy', calories: 380, tags: ['quick', 'kid friendly'], icon: '≡ƒìò', ingredients: [{name: 'Tortilla', amount: '2'}, {name: 'Beans', amount: '1/2 cup'}, {name: 'Cheese', amount: '1 cup'}, {name: 'Tomato', amount: '1'}, {name: 'Onion', amount: '1/4'}], substitutions: [], steps: ['Place tortilla as base.', 'Spread beans.', 'Top with cheese.', 'Add diced tomatoes and onion.', 'Top with second tortilla.', 'Bake at 400┬░F for 10 minutes.'] },
 
     // ===== MORE INDIAN =====
-    { id: 65, name: 'Aloo Gobi', type: 'meal', cuisine: 'Indian', time: 30, difficulty: 'Easy', calories: 220, tags: ['vegetarian', 'spiced'], icon: '🥔', ingredients: [{name: 'Potato', amount: '2'}, {name: 'Cauliflower', amount: '1 cup'}, {name: 'Turmeric', amount: '1 tsp'}, {name: 'Cumin', amount: '1 tsp'}, {name: 'Onion', amount: '1'}], substitutions: [], steps: ['Dice potatoes and cauliflower.', 'Sauté onion with spices.', 'Add vegetables.', 'Cover and cook 20 minutes.', 'Season with salt.', 'Serve with roti.'] },
-    { id: 66, name: 'Samosa', type: 'meal', cuisine: 'Indian', time: 45, difficulty: 'Medium', calories: 280, tags: ['snack', 'vegetarian', 'spiced'], icon: '🥟', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Potato', amount: '2'}, {name: 'Peas', amount: '1/2 cup'}, {name: 'Cumin', amount: '1 tsp'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Make dough, let rest.', 'Boil and mash potatoes.', 'Mix with peas and spices.', 'Fill dough triangles.', 'Fry until golden.', 'Serve with chutney.'] },
-    { id: 67, name: 'Chana Masala', type: 'meal', cuisine: 'Indian', time: 30, difficulty: 'Easy', calories: 280, tags: ['vegetarian', 'high protein'], icon: '🫘', ingredients: [{name: 'Chickpeas', amount: '2 cans'}, {name: 'Tomato', amount: '2'}, {name: 'Onion', amount: '1'}, {name: 'Turmeric', amount: '1 tsp'}, {name: 'Cumin', amount: '1 tsp'}], substitutions: [], steps: ['Sauté onion until golden.', 'Add spices and tomatoes.', 'Add chickpeas.', 'Simmer 15 minutes.', 'Finish with garam masala.', 'Serve with rice or naan.'] },
-    { id: 68, name: 'Palak Paneer', type: 'meal', cuisine: 'Indian', time: 35, difficulty: 'Medium', calories: 350, tags: ['vegetarian', 'creamy'], icon: '🥬', ingredients: [{name: 'Spinach', amount: '2 cups'}, {name: 'Tofu', amount: '200g'}, {name: 'Onion', amount: '1'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Cumin', amount: '1 tsp'}], substitutions: [], steps: ['Blanch spinach, blend smooth.', 'Cube and fry paneer.', 'Sauté onion and garlic.', 'Add spices and spinach puree.', 'Simmer 10 minutes.', 'Add paneer, serve.'] },
+    { id: 65, name: 'Aloo Gobi', type: 'meal', cuisine: 'Indian', time: 30, difficulty: 'Easy', calories: 220, tags: ['vegetarian', 'spiced'], icon: '≡ƒÑö', ingredients: [{name: 'Potato', amount: '2'}, {name: 'Cauliflower', amount: '1 cup'}, {name: 'Turmeric', amount: '1 tsp'}, {name: 'Cumin', amount: '1 tsp'}, {name: 'Onion', amount: '1'}], substitutions: [], steps: ['Dice potatoes and cauliflower.', 'Saut├⌐ onion with spices.', 'Add vegetables.', 'Cover and cook 20 minutes.', 'Season with salt.', 'Serve with roti.'] },
+    { id: 66, name: 'Samosa', type: 'meal', cuisine: 'Indian', time: 45, difficulty: 'Medium', calories: 280, tags: ['snack', 'vegetarian', 'spiced'], icon: '≡ƒÑƒ', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Potato', amount: '2'}, {name: 'Peas', amount: '1/2 cup'}, {name: 'Cumin', amount: '1 tsp'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Make dough, let rest.', 'Boil and mash potatoes.', 'Mix with peas and spices.', 'Fill dough triangles.', 'Fry until golden.', 'Serve with chutney.'] },
+    { id: 67, name: 'Chana Masala', type: 'meal', cuisine: 'Indian', time: 30, difficulty: 'Easy', calories: 280, tags: ['vegetarian', 'high protein'], icon: '≡ƒ½ÿ', ingredients: [{name: 'Chickpeas', amount: '2 cans'}, {name: 'Tomato', amount: '2'}, {name: 'Onion', amount: '1'}, {name: 'Turmeric', amount: '1 tsp'}, {name: 'Cumin', amount: '1 tsp'}], substitutions: [], steps: ['Saut├⌐ onion until golden.', 'Add spices and tomatoes.', 'Add chickpeas.', 'Simmer 15 minutes.', 'Finish with garam masala.', 'Serve with rice or naan.'] },
+    { id: 68, name: 'Palak Paneer', type: 'meal', cuisine: 'Indian', time: 35, difficulty: 'Medium', calories: 350, tags: ['vegetarian', 'creamy'], icon: '≡ƒÑ¼', ingredients: [{name: 'Spinach', amount: '2 cups'}, {name: 'Tofu', amount: '200g'}, {name: 'Onion', amount: '1'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Cumin', amount: '1 tsp'}], substitutions: [], steps: ['Blanch spinach, blend smooth.', 'Cube and fry paneer.', 'Saut├⌐ onion and garlic.', 'Add spices and spinach puree.', 'Simmer 10 minutes.', 'Add paneer, serve.'] },
 
     // ===== MORE MEDITERRANEAN =====
-    { id: 69, name: 'Chicken Souvlaki', type: 'meal', cuisine: 'Mediterranean', time: 30, difficulty: 'Easy', calories: 380, tags: ['grilled', 'healthy'], icon: '🍢', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Lemon', amount: '1'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Oregano', amount: '1 tbsp'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Marinate chicken in lemon, garlic, oregano.', 'Thread onto skewers.', 'Grill 5-6 minutes per side.', 'Serve in pita with tzatziki.', 'Add vegetables.'] },
-    { id: 70, name: 'Lamb Kofta', type: 'meal', cuisine: 'Mediterranean', time: 30, difficulty: 'Medium', calories: 420, tags: ['grilled', 'spiced'], icon: '🍢', ingredients: [{name: 'Lamb', amount: '300g'}, {name: 'Onion', amount: '1/2'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Cumin', amount: '1 tsp'}, {name: 'Mint', amount: '1/4 cup'}], substitutions: [], steps: ['Grind lamb with onion and garlic.', 'Add spices and mint.', 'Form into oval shapes.', 'Grill or pan-fry.', 'Serve with pita and salad.'] },
+    { id: 69, name: 'Chicken Souvlaki', type: 'meal', cuisine: 'Mediterranean', time: 30, difficulty: 'Easy', calories: 380, tags: ['grilled', 'healthy'], icon: '≡ƒìó', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Lemon', amount: '1'}, {name: 'Garlic', amount: '3 cloves'}, {name: 'Oregano', amount: '1 tbsp'}, {name: 'Olive Oil', amount: '2 tbsp'}], substitutions: [], steps: ['Marinate chicken in lemon, garlic, oregano.', 'Thread onto skewers.', 'Grill 5-6 minutes per side.', 'Serve in pita with tzatziki.', 'Add vegetables.'] },
+    { id: 70, name: 'Lamb Kofta', type: 'meal', cuisine: 'Mediterranean', time: 30, difficulty: 'Medium', calories: 420, tags: ['grilled', 'spiced'], icon: '≡ƒìó', ingredients: [{name: 'Lamb', amount: '300g'}, {name: 'Onion', amount: '1/2'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Cumin', amount: '1 tsp'}, {name: 'Mint', amount: '1/4 cup'}], substitutions: [], steps: ['Grind lamb with onion and garlic.', 'Add spices and mint.', 'Form into oval shapes.', 'Grill or pan-fry.', 'Serve with pita and salad.'] },
 
     // ===== JAPANESE =====
-    { id: 71, name: 'Teriyaki Chicken', type: 'meal', cuisine: 'Japanese', time: 30, difficulty: 'Easy', calories: 380, tags: ['sweet', 'savory', 'classic'], icon: '🍗', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Soy Sauce', amount: '1/4 cup'}, {name: 'Honey', amount: '2 tbsp'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Mix soy sauce, honey, garlic, ginger.', 'Marinate chicken 15 minutes.', 'Pan-fry or bake chicken.', 'Brush with remaining sauce.', 'Serve over rice.'] },
-    { id: 72, name: 'Ramen', type: 'meal', cuisine: 'Japanese', time: 30, difficulty: 'Medium', calories: 450, tags: ['noodles', 'soup', 'comfort'], icon: '🍜', ingredients: [{name: 'Noodles', amount: '200g'}, {name: 'Broth', amount: '4 cups'}, {name: 'Egg', amount: '1'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Soy Sauce', amount: '2 tbsp'}], substitutions: [], steps: ['Heat broth with garlic.', 'Add soy sauce.', 'Cook noodles separately.', 'Add noodles to broth.', 'Top with soft-boiled egg.', 'Garnish with green onions.'] },
-    { id: 73, name: 'Gyoza', type: 'meal', cuisine: 'Japanese', time: 40, difficulty: 'Medium', calories: 320, tags: ['dumplings', 'pan-fried'], icon: '🥟', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Pork', amount: '200g'}, {name: 'Cabbage', amount: '1 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Make dough.', 'Mix filling.', 'Fill and fold wrappers.', 'Pan-fry until crispy on bottom.', 'Add water, steam covered.', 'Serve with ponzu.'] },
-    { id: 74, name: 'Katsu Curry', type: 'meal', cuisine: 'Japanese', time: 40, difficulty: 'Medium', calories: 580, tags: ['comfort food', 'crispy'], icon: '🍛', ingredients: [{name: 'Chicken', amount: '200g'}, {name: 'Flour', amount: '1 cup'}, {name: 'Rice', amount: '1 cup'}, {name: 'Potato', amount: '1'}, {name: 'Carrot', amount: '1'}], substitutions: [], steps: ['Bread chicken cutlets.', 'Fry until golden.', 'Make curry: boil vegetables, add roux.', 'Cook rice.', 'Serve katsu over rice with curry.'] },
+    { id: 71, name: 'Teriyaki Chicken', type: 'meal', cuisine: 'Japanese', time: 30, difficulty: 'Easy', calories: 380, tags: ['sweet', 'savory', 'classic'], icon: '≡ƒìù', ingredients: [{name: 'Chicken', amount: '300g'}, {name: 'Soy Sauce', amount: '1/4 cup'}, {name: 'Honey', amount: '2 tbsp'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Mix soy sauce, honey, garlic, ginger.', 'Marinate chicken 15 minutes.', 'Pan-fry or bake chicken.', 'Brush with remaining sauce.', 'Serve over rice.'] },
+    { id: 72, name: 'Ramen', type: 'meal', cuisine: 'Japanese', time: 30, difficulty: 'Medium', calories: 450, tags: ['noodles', 'soup', 'comfort'], icon: '≡ƒì£', ingredients: [{name: 'Noodles', amount: '200g'}, {name: 'Broth', amount: '4 cups'}, {name: 'Egg', amount: '1'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Soy Sauce', amount: '2 tbsp'}], substitutions: [], steps: ['Heat broth with garlic.', 'Add soy sauce.', 'Cook noodles separately.', 'Add noodles to broth.', 'Top with soft-boiled egg.', 'Garnish with green onions.'] },
+    { id: 73, name: 'Gyoza', type: 'meal', cuisine: 'Japanese', time: 40, difficulty: 'Medium', calories: 320, tags: ['dumplings', 'pan-fried'], icon: '≡ƒÑƒ', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Pork', amount: '200g'}, {name: 'Cabbage', amount: '1 cup'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Ginger', amount: '1 inch'}], substitutions: [], steps: ['Make dough.', 'Mix filling.', 'Fill and fold wrappers.', 'Pan-fry until crispy on bottom.', 'Add water, steam covered.', 'Serve with ponzu.'] },
+    { id: 74, name: 'Katsu Curry', type: 'meal', cuisine: 'Japanese', time: 40, difficulty: 'Medium', calories: 580, tags: ['comfort food', 'crispy'], icon: '≡ƒì¢', ingredients: [{name: 'Chicken', amount: '200g'}, {name: 'Flour', amount: '1 cup'}, {name: 'Rice', amount: '1 cup'}, {name: 'Potato', amount: '1'}, {name: 'Carrot', amount: '1'}], substitutions: [], steps: ['Bread chicken cutlets.', 'Fry until golden.', 'Make curry: boil vegetables, add roux.', 'Cook rice.', 'Serve katsu over rice with curry.'] },
 
     // ===== MORE DRINKS =====
-    { id: 109, name: 'Matcha Latte', type: 'drink', cuisine: 'Japanese', time: 10, difficulty: 'Easy', calories: 150, tags: ['trendy', 'healthy'], icon: '🍵', ingredients: [{name: 'Milk', amount: '1 cup'}, {name: 'Honey', amount: '1 tbsp'}, {name: 'Sugar', amount: '1 tsp'}], substitutions: [], steps: ['Heat milk.', 'Add matcha powder.', 'Whisk until smooth.', 'Sweeten to taste.', 'Serve hot or iced.'] },
-    { id: 110, name: 'Berry Smoothie', type: 'drink', cuisine: 'American', time: 5, difficulty: 'Easy', calories: 160, tags: ['healthy', 'refreshing'], icon: '🫐', ingredients: [{name: 'Milk', amount: '1 cup'}, {name: 'Yogurt', amount: '1/2 cup'}, {name: 'Honey', amount: '1 tbsp'}], substitutions: [], steps: ['Add all ingredients to blender.', 'Blend until smooth.', 'Pour into glass.', 'Serve immediately.'] },
-    { id: 111, name: 'Chai Latte', type: 'drink', cuisine: 'Indian', time: 15, difficulty: 'Easy', calories: 180, tags: ['spiced', 'warming'], icon: '☕', ingredients: [{name: 'Milk', amount: '1 cup'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Cinnamon', amount: '1/2 stick'}, {name: 'Honey', amount: '1 tbsp'}], substitutions: [], steps: ['Heat milk with spices.', 'Simmer 5 minutes.', 'Strain if desired.', 'Sweeten with honey.', 'Serve warm.'] },
-    { id: 112, name: 'Passion Fruit Drink', type: 'drink', cuisine: 'Fusion', time: 5, difficulty: 'Easy', calories: 100, tags: ['tropical', 'refreshing'], icon: '🍹', ingredients: [{name: 'Lime', amount: '2'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Water', amount: '2 cups'}, {name: 'Honey', amount: '1 tbsp'}], substitutions: [], steps: ['Scoop passion fruit pulp.', 'Mix with water and sugar.', 'Add lime juice.', 'Strain if desired.', 'Serve over ice.'] },
+    { id: 109, name: 'Matcha Latte', type: 'drink', cuisine: 'Japanese', time: 10, difficulty: 'Easy', calories: 150, tags: ['trendy', 'healthy'], icon: '≡ƒì╡', ingredients: [{name: 'Milk', amount: '1 cup'}, {name: 'Honey', amount: '1 tbsp'}, {name: 'Sugar', amount: '1 tsp'}], substitutions: [], steps: ['Heat milk.', 'Add matcha powder.', 'Whisk until smooth.', 'Sweeten to taste.', 'Serve hot or iced.'] },
+    { id: 110, name: 'Berry Smoothie', type: 'drink', cuisine: 'American', time: 5, difficulty: 'Easy', calories: 160, tags: ['healthy', 'refreshing'], icon: '≡ƒ½É', ingredients: [{name: 'Milk', amount: '1 cup'}, {name: 'Yogurt', amount: '1/2 cup'}, {name: 'Honey', amount: '1 tbsp'}], substitutions: [], steps: ['Add all ingredients to blender.', 'Blend until smooth.', 'Pour into glass.', 'Serve immediately.'] },
+    { id: 111, name: 'Chai Latte', type: 'drink', cuisine: 'Indian', time: 15, difficulty: 'Easy', calories: 180, tags: ['spiced', 'warming'], icon: 'Γÿò', ingredients: [{name: 'Milk', amount: '1 cup'}, {name: 'Ginger', amount: '1 inch'}, {name: 'Cinnamon', amount: '1/2 stick'}, {name: 'Honey', amount: '1 tbsp'}], substitutions: [], steps: ['Heat milk with spices.', 'Simmer 5 minutes.', 'Strain if desired.', 'Sweeten with honey.', 'Serve warm.'] },
+    { id: 112, name: 'Passion Fruit Drink', type: 'drink', cuisine: 'Fusion', time: 5, difficulty: 'Easy', calories: 100, tags: ['tropical', 'refreshing'], icon: '≡ƒì╣', ingredients: [{name: 'Lime', amount: '2'}, {name: 'Sugar', amount: '2 tbsp'}, {name: 'Water', amount: '2 cups'}, {name: 'Honey', amount: '1 tbsp'}], substitutions: [], steps: ['Scoop passion fruit pulp.', 'Mix with water and sugar.', 'Add lime juice.', 'Strain if desired.', 'Serve over ice.'] },
 
     // ===== MORE SAUCES =====
-    { id: 209, name: 'Hollandaise', type: 'sauce', cuisine: 'American', time: 15, difficulty: 'Medium', calories: 120, tags: ['creamy', 'classic'], icon: '🥚', ingredients: [{name: 'Egg', amount: '3'}, {name: 'Butter', amount: '1/2 cup'}, {name: 'Lemon', amount: '1'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Whisk yolks over double boiler.', 'Slowly drizzle in melted butter.', 'Add lemon juice.', 'Season with salt.', 'Serve warm.'] },
-    { id: 210, name: 'Béchamel', type: 'sauce', cuisine: 'Italian', time: 15, difficulty: 'Easy', calories: 100, tags: ['creamy', 'base sauce'], icon: '🥛', ingredients: [{name: 'Milk', amount: '2 cups'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Flour', amount: '2 tbsp'}, {name: 'Cheese', amount: '1/4 cup'}], substitutions: [], steps: ['Melt butter, add flour.', 'Cook 1 minute.', 'Gradually add milk, stirring.', 'Simmer until thickened.', 'Add cheese, season.'] },
-    { id: 211, name: 'Guajillo Salsa', type: 'sauce', cuisine: 'Mexican', time: 20, difficulty: 'Easy', calories: 50, tags: ['spicy', 'traditional'], icon: '🌶️', ingredients: [{name: 'Tomato', amount: '3'}, {name: 'Chili', amount: '3 dried'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Onion', amount: '1/4'}], substitutions: [], steps: ['Toast chiles until fragrant.', 'Blend with tomatoes and aromatics.', 'Simmer 10 minutes.', 'Season with salt.', 'Serve with chips.'] },
-    { id: 212, name: 'Tzatziki', type: 'sauce', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 60, tags: ['creamy', 'garlic', 'healthy'], icon: '🥒', ingredients: [{name: 'Yogurt', amount: '1 cup'}, {name: 'Cucumber', amount: '1/2'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Lemon', amount: '1'}], substitutions: [], steps: ['Grate cucumber, squeeze dry.', 'Mix with yogurt.', 'Add minced garlic.', 'Season with lemon and salt.', 'Chill before serving.'] },
+    { id: 209, name: 'Hollandaise', type: 'sauce', cuisine: 'American', time: 15, difficulty: 'Medium', calories: 120, tags: ['creamy', 'classic'], icon: '≡ƒÑÜ', ingredients: [{name: 'Egg', amount: '3'}, {name: 'Butter', amount: '1/2 cup'}, {name: 'Lemon', amount: '1'}, {name: 'Salt', amount: 'pinch'}], substitutions: [], steps: ['Whisk yolks over double boiler.', 'Slowly drizzle in melted butter.', 'Add lemon juice.', 'Season with salt.', 'Serve warm.'] },
+    { id: 210, name: 'B├⌐chamel', type: 'sauce', cuisine: 'Italian', time: 15, difficulty: 'Easy', calories: 100, tags: ['creamy', 'base sauce'], icon: '≡ƒÑ¢', ingredients: [{name: 'Milk', amount: '2 cups'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Flour', amount: '2 tbsp'}, {name: 'Cheese', amount: '1/4 cup'}], substitutions: [], steps: ['Melt butter, add flour.', 'Cook 1 minute.', 'Gradually add milk, stirring.', 'Simmer until thickened.', 'Add cheese, season.'] },
+    { id: 211, name: 'Guajillo Salsa', type: 'sauce', cuisine: 'Mexican', time: 20, difficulty: 'Easy', calories: 50, tags: ['spicy', 'traditional'], icon: '≡ƒî╢∩╕Å', ingredients: [{name: 'Tomato', amount: '3'}, {name: 'Chili', amount: '3 dried'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Onion', amount: '1/4'}], substitutions: [], steps: ['Toast chiles until fragrant.', 'Blend with tomatoes and aromatics.', 'Simmer 10 minutes.', 'Season with salt.', 'Serve with chips.'] },
+    { id: 212, name: 'Tzatziki', type: 'sauce', cuisine: 'Mediterranean', time: 10, difficulty: 'Easy', calories: 60, tags: ['creamy', 'garlic', 'healthy'], icon: '≡ƒÑÆ', ingredients: [{name: 'Yogurt', amount: '1 cup'}, {name: 'Cucumber', amount: '1/2'}, {name: 'Garlic', amount: '2 cloves'}, {name: 'Lemon', amount: '1'}], substitutions: [], steps: ['Grate cucumber, squeeze dry.', 'Mix with yogurt.', 'Add minced garlic.', 'Season with lemon and salt.', 'Chill before serving.'] },
 
     // ===== MORE DESSERTS =====
-    { id: 309, name: 'Brownies', type: 'dessert', cuisine: 'American', time: 35, difficulty: 'Easy', calories: 280, tags: ['chocolate', 'fudgy', 'classic'], icon: '🍫', ingredients: [{name: 'Flour', amount: '1/2 cup'}, {name: 'Cocoa', amount: '1/3 cup'}, {name: 'Sugar', amount: '1 cup'}, {name: 'Butter', amount: '1/4 cup'}, {name: 'Egg', amount: '2'}], substitutions: [], steps: ['Melt butter with cocoa.', 'Mix in sugar and eggs.', 'Fold in flour.', 'Pour into pan.', 'Bake at 350°F for 25 minutes.', 'Cool before cutting.'] },
-    { id: 310, name: 'Cheesecake', type: 'dessert', cuisine: 'American', time: 60, difficulty: 'Medium', calories: 350, tags: ['creamy', 'rich', 'elegant'], icon: '🍰', ingredients: [{name: 'Cream', amount: '8 oz'}, {name: 'Sugar', amount: '1/2 cup'}, {name: 'Egg', amount: '3'}, {name: 'Vanilla', amount: '1 tsp'}, {name: 'Butter', amount: '2 tbsp'}], substitutions: [], steps: ['Mix cream cheese and sugar.', 'Add eggs and vanilla.', 'Pour over graham crust.', 'Bake at 325°F for 50 minutes.', 'Chill overnight.', 'Top with fruit.'] },
-    { id: 311, name: 'Chocolate Chip Cookies', type: 'dessert', cuisine: 'American', time: 25, difficulty: 'Easy', calories: 220, tags: ['sweet', 'classic', 'chewy'], icon: '🍪', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Sugar', amount: '1/2 cup'}, {name: 'Butter', amount: '1 cup'}, {name: 'Egg', amount: '2'}, {name: 'Chocolate', amount: '1 cup'}], substitutions: [], steps: ['Cream butter and sugar.', 'Add eggs and vanilla.', 'Mix in flour.', 'Fold in chocolate chips.', 'Drop spoonfuls on baking sheet.', 'Bake at 375°F for 10 minutes.'] },
-    { id: 312, name: 'Apple Pie', type: 'dessert', cuisine: 'American', time: 60, difficulty: 'Medium', calories: 320, tags: ['classic', 'spiced', 'comfort'], icon: '🥧', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Apple', amount: '4'}, {name: 'Sugar', amount: '1/2 cup'}, {name: 'Butter', amount: '4 tbsp'}, {name: 'Cinnamon', amount: '1 tbsp'}], substitutions: [], steps: ['Make pie dough.', 'Slice apples thin.', 'Mix with sugar and cinnamon.', 'Fill crust, top with dough.', 'Bake at 375°F for 45 minutes.', 'Cool before serving.'] },
-    { id: 313, name: 'Panna Cotta', type: 'dessert', cuisine: 'Italian', time: 30, difficulty: 'Easy', calories: 250, tags: ['creamy', 'elegant', 'light'], icon: '🍮', ingredients: [{name: 'Cream', amount: '2 cups'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Vanilla', amount: '1 pod'}, {name: 'Gelatin', amount: '2 sheets'}], substitutions: [], steps: ['Bloom gelatin in cold water.', 'Heat cream with sugar and vanilla.', 'Dissolve gelatin in cream.', 'Pour into molds.', 'Chill 4 hours.', 'Serve with berry sauce.'] },
-    { id: 314, name: 'Tiramisu', type: 'dessert', cuisine: 'Italian', time: 30, difficulty: 'Medium', calories: 300, tags: ['coffee', 'creamy', 'classic'], icon: '☕', ingredients: [{name: 'Cream', amount: '8 oz'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Coffee', amount: '1 cup'}, {name: 'Cocoa', amount: '2 tbsp'}], substitutions: [], steps: ['Whip cream with sugar.', 'Dip ladyfingers in coffee.', 'Layer cream and cookies.', 'Dust with cocoa.', 'Chill overnight.'] },
-    { id: 315, name: 'Gelato', type: 'dessert', cuisine: 'Italian', time: 30, difficulty: 'Medium', calories: 180, tags: ['creamy', 'frozen', 'Italian'], icon: '🍨', ingredients: [{name: 'Milk', amount: '2 cups'}, {name: 'Cream', amount: '1 cup'}, {name: 'Sugar', amount: '3/4 cup'}, {name: 'Vanilla', amount: '1 pod'}], substitutions: [], steps: ['Heat milk, cream, and sugar.', 'Add vanilla.', 'Chill mixture.', 'Churn in ice cream maker.', 'Freeze until firm.'] },
-    { id: 316, name: 'Crepes', type: 'dessert', cuisine: 'French', time: 30, difficulty: 'Easy', calories: 200, tags: ['thin', 'versatile', 'classic'], icon: '🥞', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Milk', amount: '1 cup'}, {name: 'Egg', amount: '2'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Sugar', amount: '1 tbsp'}], substitutions: [], steps: ['Blend all ingredients.', 'Rest batter 30 minutes.', 'Pour thin layer in pan.', 'Cook until edges lift.', 'Fill with Nutella or fruit.', 'Fold and serve.'] },
-    { id: 317, name: 'Baklava', type: 'dessert', cuisine: 'Mediterranean', time: 60, difficulty: 'Medium', calories: 280, tags: ['sweet', 'nutty', 'layered'], icon: '🥜', ingredients: [{name: 'Flour', amount: '1 lb phyllo'}, {name: 'Butter', amount: '1 cup'}, {name: 'Walnuts', amount: '2 cups'}, {name: 'Honey', amount: '1 cup'}, {name: 'Sugar', amount: '1 cup'}], substitutions: [], steps: ['Layer phyllo with butter.', 'Add chopped nuts between layers.', 'Cut into diamond shapes.', 'Bake at 350°F for 30 minutes.', 'Pour honey syrup over hot baklava.'] },
-    { id: 318, name: 'Mochi Ice Cream', type: 'dessert', cuisine: 'Japanese', time: 45, difficulty: 'Medium', calories: 200, tags: ['chewy', 'fun', 'Japanese'], icon: '🍡', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Milk', amount: '3/4 cup'}, {name: 'Ice Cream', amount: '1 cup'}], substitutions: [], steps: ['Mix flour, sugar, milk.', 'Steam or microwave until dough forms.', 'Cool, then flatten.', 'Wrap small ice cream scoops.', 'Freeze until firm.'] },
-    { id: 319, name: 'Tres Leches', type: 'dessert', cuisine: 'Mexican', time: 60, difficulty: 'Medium', calories: 320, tags: ['moist', 'sweet', 'milky'], icon: '🥛', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Milk', amount: '3 cups'}, {name: 'Cream', amount: '1 cup'}, {name: 'Sugar', amount: '3/4 cup'}, {name: 'Egg', amount: '4'}], substitutions: [], steps: ['Bake sponge cake.', 'Mix three milks together.', 'Poke holes in cake.', 'Pour milk mixture over.', 'Chill overnight.', 'Top with whipped cream.'] },
-    { id: 320, name: 'Gulab Jamun', type: 'dessert', cuisine: 'Indian', time: 45, difficulty: 'Medium', calories: 250, tags: ['sweet', 'fried', 'syrupy'], icon: '🍯', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Milk', amount: '1/4 cup'}, {name: 'Sugar', amount: '2 cups'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Honey', amount: '1/4 cup'}], substitutions: [], steps: ['Make dough with milk and butter.', 'Form into balls.', 'Fry until golden brown.', 'Make sugar syrup.', 'Soak balls in warm syrup.', 'Serve warm.'] },
+    { id: 309, name: 'Brownies', type: 'dessert', cuisine: 'American', time: 35, difficulty: 'Easy', calories: 280, tags: ['chocolate', 'fudgy', 'classic'], icon: '≡ƒì½', ingredients: [{name: 'Flour', amount: '1/2 cup'}, {name: 'Cocoa', amount: '1/3 cup'}, {name: 'Sugar', amount: '1 cup'}, {name: 'Butter', amount: '1/4 cup'}, {name: 'Egg', amount: '2'}], substitutions: [], steps: ['Melt butter with cocoa.', 'Mix in sugar and eggs.', 'Fold in flour.', 'Pour into pan.', 'Bake at 350┬░F for 25 minutes.', 'Cool before cutting.'] },
+    { id: 310, name: 'Cheesecake', type: 'dessert', cuisine: 'American', time: 60, difficulty: 'Medium', calories: 350, tags: ['creamy', 'rich', 'elegant'], icon: '≡ƒì░', ingredients: [{name: 'Cream', amount: '8 oz'}, {name: 'Sugar', amount: '1/2 cup'}, {name: 'Egg', amount: '3'}, {name: 'Vanilla', amount: '1 tsp'}, {name: 'Butter', amount: '2 tbsp'}], substitutions: [], steps: ['Mix cream cheese and sugar.', 'Add eggs and vanilla.', 'Pour over graham crust.', 'Bake at 325┬░F for 50 minutes.', 'Chill overnight.', 'Top with fruit.'] },
+    { id: 311, name: 'Chocolate Chip Cookies', type: 'dessert', cuisine: 'American', time: 25, difficulty: 'Easy', calories: 220, tags: ['sweet', 'classic', 'chewy'], icon: '≡ƒì¬', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Sugar', amount: '1/2 cup'}, {name: 'Butter', amount: '1 cup'}, {name: 'Egg', amount: '2'}, {name: 'Chocolate', amount: '1 cup'}], substitutions: [], steps: ['Cream butter and sugar.', 'Add eggs and vanilla.', 'Mix in flour.', 'Fold in chocolate chips.', 'Drop spoonfuls on baking sheet.', 'Bake at 375┬░F for 10 minutes.'] },
+    { id: 312, name: 'Apple Pie', type: 'dessert', cuisine: 'American', time: 60, difficulty: 'Medium', calories: 320, tags: ['classic', 'spiced', 'comfort'], icon: '≡ƒÑº', ingredients: [{name: 'Flour', amount: '2 cups'}, {name: 'Apple', amount: '4'}, {name: 'Sugar', amount: '1/2 cup'}, {name: 'Butter', amount: '4 tbsp'}, {name: 'Cinnamon', amount: '1 tbsp'}], substitutions: [], steps: ['Make pie dough.', 'Slice apples thin.', 'Mix with sugar and cinnamon.', 'Fill crust, top with dough.', 'Bake at 375┬░F for 45 minutes.', 'Cool before serving.'] },
+    { id: 313, name: 'Panna Cotta', type: 'dessert', cuisine: 'Italian', time: 30, difficulty: 'Easy', calories: 250, tags: ['creamy', 'elegant', 'light'], icon: '≡ƒì«', ingredients: [{name: 'Cream', amount: '2 cups'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Vanilla', amount: '1 pod'}, {name: 'Gelatin', amount: '2 sheets'}], substitutions: [], steps: ['Bloom gelatin in cold water.', 'Heat cream with sugar and vanilla.', 'Dissolve gelatin in cream.', 'Pour into molds.', 'Chill 4 hours.', 'Serve with berry sauce.'] },
+    { id: 314, name: 'Tiramisu', type: 'dessert', cuisine: 'Italian', time: 30, difficulty: 'Medium', calories: 300, tags: ['coffee', 'creamy', 'classic'], icon: 'Γÿò', ingredients: [{name: 'Cream', amount: '8 oz'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Coffee', amount: '1 cup'}, {name: 'Cocoa', amount: '2 tbsp'}], substitutions: [], steps: ['Whip cream with sugar.', 'Dip ladyfingers in coffee.', 'Layer cream and cookies.', 'Dust with cocoa.', 'Chill overnight.'] },
+    { id: 315, name: 'Gelato', type: 'dessert', cuisine: 'Italian', time: 30, difficulty: 'Medium', calories: 180, tags: ['creamy', 'frozen', 'Italian'], icon: '≡ƒì¿', ingredients: [{name: 'Milk', amount: '2 cups'}, {name: 'Cream', amount: '1 cup'}, {name: 'Sugar', amount: '3/4 cup'}, {name: 'Vanilla', amount: '1 pod'}], substitutions: [], steps: ['Heat milk, cream, and sugar.', 'Add vanilla.', 'Chill mixture.', 'Churn in ice cream maker.', 'Freeze until firm.'] },
+    { id: 316, name: 'Crepes', type: 'dessert', cuisine: 'French', time: 30, difficulty: 'Easy', calories: 200, tags: ['thin', 'versatile', 'classic'], icon: '≡ƒÑ₧', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Milk', amount: '1 cup'}, {name: 'Egg', amount: '2'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Sugar', amount: '1 tbsp'}], substitutions: [], steps: ['Blend all ingredients.', 'Rest batter 30 minutes.', 'Pour thin layer in pan.', 'Cook until edges lift.', 'Fill with Nutella or fruit.', 'Fold and serve.'] },
+    { id: 317, name: 'Baklava', type: 'dessert', cuisine: 'Mediterranean', time: 60, difficulty: 'Medium', calories: 280, tags: ['sweet', 'nutty', 'layered'], icon: '≡ƒÑ£', ingredients: [{name: 'Flour', amount: '1 lb phyllo'}, {name: 'Butter', amount: '1 cup'}, {name: 'Walnuts', amount: '2 cups'}, {name: 'Honey', amount: '1 cup'}, {name: 'Sugar', amount: '1 cup'}], substitutions: [], steps: ['Layer phyllo with butter.', 'Add chopped nuts between layers.', 'Cut into diamond shapes.', 'Bake at 350┬░F for 30 minutes.', 'Pour honey syrup over hot baklava.'] },
+    { id: 318, name: 'Mochi Ice Cream', type: 'dessert', cuisine: 'Japanese', time: 45, difficulty: 'Medium', calories: 200, tags: ['chewy', 'fun', 'Japanese'], icon: '≡ƒìí', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Sugar', amount: '1/4 cup'}, {name: 'Milk', amount: '3/4 cup'}, {name: 'Ice Cream', amount: '1 cup'}], substitutions: [], steps: ['Mix flour, sugar, milk.', 'Steam or microwave until dough forms.', 'Cool, then flatten.', 'Wrap small ice cream scoops.', 'Freeze until firm.'] },
+    { id: 319, name: 'Tres Leches', type: 'dessert', cuisine: 'Mexican', time: 60, difficulty: 'Medium', calories: 320, tags: ['moist', 'sweet', 'milky'], icon: '≡ƒÑ¢', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Milk', amount: '3 cups'}, {name: 'Cream', amount: '1 cup'}, {name: 'Sugar', amount: '3/4 cup'}, {name: 'Egg', amount: '4'}], substitutions: [], steps: ['Bake sponge cake.', 'Mix three milks together.', 'Poke holes in cake.', 'Pour milk mixture over.', 'Chill overnight.', 'Top with whipped cream.'] },
+    { id: 320, name: 'Gulab Jamun', type: 'dessert', cuisine: 'Indian', time: 45, difficulty: 'Medium', calories: 250, tags: ['sweet', 'fried', 'syrupy'], icon: '≡ƒì»', ingredients: [{name: 'Flour', amount: '1 cup'}, {name: 'Milk', amount: '1/4 cup'}, {name: 'Sugar', amount: '2 cups'}, {name: 'Butter', amount: '2 tbsp'}, {name: 'Honey', amount: '1/4 cup'}], substitutions: [], steps: ['Make dough with milk and butter.', 'Form into balls.', 'Fry until golden brown.', 'Make sugar syrup.', 'Soak balls in warm syrup.', 'Serve warm.'] },
 ];
 
 // ===== STATE =====
@@ -258,7 +258,7 @@ let blogPosts = JSON.parse(localStorage.getItem('mealGenieBlog') || '[]');
 // ===== LANGUAGE SYSTEM =====
 const languages = [
     { code: 'en', name: 'English', native: 'English', dir: 'ltr' },
-    { code: 'ur', name: 'Urdu', native: 'اردو', dir: 'rtl' }
+    { code: 'ur', name: 'Urdu', native: '╪º╪▒╪»┘ê', dir: 'rtl' }
 ];
 
 const translations = {
@@ -314,11 +314,11 @@ const translations = {
         letsCook: "Let's cook {recipe}! I'll guide you step by step.",
         sayNext: 'Say "next" to continue, "repeat" to hear again, "pause" to stop.',
         step: 'Step {num}: {text}',
-        allDone: "🎉 That's all the steps! Your dish should be ready. Enjoy your meal!",
+        allDone: "≡ƒÄë That's all the steps! Your dish should be ready. Enjoy your meal!",
         paused: "Cooking guide paused. Say 'next' anytime to resume!",
         repeatStep: "Step {num}: {text}",
-        cookingComplete: "Done! Your meal is ready! 🍽️",
-        langTitle: '🌐 Language',
+        cookingComplete: "Done! Your meal is ready! ≡ƒì╜∩╕Å",
+        langTitle: '≡ƒîÉ Language',
         shareTab: 'Share',
         bugTab: 'Bug',
         chatTab: 'Chat',
@@ -333,76 +333,76 @@ const translations = {
         recipeSteps: 'Steps',
         recipeSubs: 'Substitutions',
         servingsLabel: 'Servings:',
-        startLiveMentor: '🤖 Start Live Mentor',
+        startLiveMentor: '≡ƒñû Start Live Mentor',
         chefMentor: 'Chef Mentor',
         liveGuide: 'Live cooking guide',
         liveReady: 'Ready when you are, chef.',
-        liveHelp: '🆘 I made a mistake / need help',
+        liveHelp: '≡ƒåÿ I made a mistake / need help',
         liveStepOf: 'Step {cur} / {total}',
-        fridgeScan: '🧊 Fridge Scan',
-        fridgeIntro: 'Snap your fridge — AI detects ingredients, matches authentic recipes & chef videos.',
-        openCamera: '📷 Open Camera',
-        uploadPhoto: '🖼️ Upload Photo',
-        scanFridge: '✨ Scan Fridge',
-        scanning: '🔍 Scanning...',
-        detectedHint: 'Detected items appear here — tap to confirm.',
-        detectedTitle: '✅ {count} items detected',
+        fridgeScan: '≡ƒºè Fridge Scan',
+        fridgeIntro: 'Snap your fridge ΓÇö AI detects ingredients, matches authentic recipes & chef videos.',
+        openCamera: '≡ƒô╖ Open Camera',
+        uploadPhoto: '≡ƒû╝∩╕Å Upload Photo',
+        scanFridge: 'Γ£¿ Scan Fridge',
+        scanning: '≡ƒöì Scanning...',
+        detectedHint: 'Detected items appear here ΓÇö tap to confirm.',
+        detectedTitle: 'Γ£à {count} items detected',
         detectedEdit: 'Tap to remove wrong items. Add more from kitchen below.',
-        nextCustomize: 'Next: Customize →',
-        fridgeIntroPrefs: "Set your vibe — we'll pick meals, drinks & sauces that fit.",
-        moodLabel: '😊 Mood',
-        budgetLabel: '💰 Budget',
-        usageLabel: '👥 Usage',
-        servingsFridge: '🍽️ Servings',
-        moodComfort: '🛋️ Comfort',
-        moodHealthy: '💪 Healthy',
-        moodQuick: '⚡ Quick',
-        moodCozy: '☕ Cozy',
-        moodAdventurous: '🌍 Adventurous',
-        budgetBudget: '💵 Budget',
-        budgetModerate: '💳 Moderate',
-        budgetAny: '✨ Any',
-        usageSolo: '1️⃣ Solo',
-        usageCouple: '👫 Couple',
-        usageFamily: '👨‍👩‍👧 Family',
-        usagePrep: '📦 Meal Prep',
-        generateMenu: '🍳 Generate My Menu',
-        customizeAgain: '← Customize Again',
-        useInKitchen: '✅ Use in Kitchen',
-        buildingMenu: '🧊 Building your custom menu...',
-        sectionMeals: '🍽️ Meals',
-        sectionDrinks: '🥤 Drinks',
-        sectionSauces: '🫙 Sauces',
-        sectionDesserts: '🍰 Desserts',
+        nextCustomize: 'Next: Customize ΓåÆ',
+        fridgeIntroPrefs: "Set your vibe ΓÇö we'll pick meals, drinks & sauces that fit.",
+        moodLabel: '≡ƒÿè Mood',
+        budgetLabel: '≡ƒÆ░ Budget',
+        usageLabel: '≡ƒæÑ Usage',
+        servingsFridge: '≡ƒì╜∩╕Å Servings',
+        moodComfort: '≡ƒ¢ï∩╕Å Comfort',
+        moodHealthy: '≡ƒÆ¬ Healthy',
+        moodQuick: 'ΓÜí Quick',
+        moodCozy: 'Γÿò Cozy',
+        moodAdventurous: '≡ƒîì Adventurous',
+        budgetBudget: '≡ƒÆ╡ Budget',
+        budgetModerate: '≡ƒÆ│ Moderate',
+        budgetAny: 'Γ£¿ Any',
+        usageSolo: '1∩╕ÅΓâú Solo',
+        usageCouple: '≡ƒæ½ Couple',
+        usageFamily: '≡ƒæ¿ΓÇì≡ƒæ⌐ΓÇì≡ƒæº Family',
+        usagePrep: '≡ƒôª Meal Prep',
+        generateMenu: '≡ƒì│ Generate My Menu',
+        customizeAgain: 'ΓåÉ Customize Again',
+        useInKitchen: 'Γ£à Use in Kitchen',
+        buildingMenu: '≡ƒºè Building your custom menu...',
+        sectionMeals: '≡ƒì╜∩╕Å Meals',
+        sectionDrinks: '≡ƒÑñ Drinks',
+        sectionSauces: '≡ƒ½Ö Sauces',
+        sectionDesserts: '≡ƒì░ Desserts',
         generateWithAI: 'Generate custom recipes with AI',
-        customMeals: '🧠 Custom Meals',
-        customDrinks: '🧠 Custom Drinks',
-        customSauces: '🧠 Custom Sauces',
-        customDesserts: '🧠 Custom Desserts',
+        customMeals: '≡ƒºá Custom Meals',
+        customDrinks: '≡ƒºá Custom Drinks',
+        customSauces: '≡ƒºá Custom Sauces',
+        customDesserts: '≡ƒºá Custom Desserts',
         noExactMatch: 'No exact matches found, but you can:',
         customBadge: 'Custom',
         cal: 'cal',
         min: 'm',
-        aiGeneratedNote: '🤖 AI generated - ingredients are suggestions',
+        aiGeneratedNote: '≡ƒñû AI generated - ingredients are suggestions',
         noRecipesFound: 'No recipes found for this combination.',
-        generateRecipe: '✨ Generate a Recipe',
+        generateRecipe: 'Γ£¿ Generate a Recipe',
         recipesFound: '{count} recipes found',
-        allCourse: '🍽️ All',
-        allCuisine: '🌍 All',
+        allCourse: '≡ƒì╜∩╕Å All',
+        allCuisine: '≡ƒîì All',
         noPosts: 'No posts yet. Be the first to share!',
         selectIngFirst: 'Please select some ingredients first!',
         noFavorites: 'You have no saved recipes yet!',
-        savedRecipes: '❤️ Saved Recipes',
+        savedRecipes: 'Γ¥ñ∩╕Å Saved Recipes',
         fillPost: 'Please fill in both title and content!',
         cameraDenied: 'Camera access denied. Upload a photo of your fridge instead.',
         takePhotoFirst: 'Take or upload a fridge photo first.',
         openRecipeFirst: 'Open a recipe first, then start Live Mentor.',
-        generateAnother: '✨ Generate Another Idea',
+        generateAnother: 'Γ£¿ Generate Another Idea',
         selectFirst: '0 selected',
         selectedCount: '{count} selected',
-        leftoverMatch: '🔄 {match}/{total} ingredients',
+        leftoverMatch: '≡ƒöä {match}/{total} ingredients',
         voiceNotSupported: 'Voice input not supported in this browser. Please type your question.',
-        apiKeySavedChat: '✅ API key saved! You can now use the AI cooking assistant.',
+        apiKeySavedChat: 'Γ£à API key saved! You can now use the AI cooking assistant.',
         aiConnectError: "I'm having trouble connecting. Try again or check your API key in Settings.",
         cookOnlyError: 'I can only help with cooking questions. Ask about food or recipes!',
         voiceNext: 'next',
@@ -412,215 +412,215 @@ const translations = {
         difficultyEasy: 'Easy',
         difficultyMedium: 'Medium',
         difficultyHard: 'Hard',
-        yourMenu: '🍽️ Your Menu',
-        alsoMatches: '📋 Also matches your fridge',
+        yourMenu: '≡ƒì╜∩╕Å Your Menu',
+        alsoMatches: '≡ƒôï Also matches your fridge',
         viewRecipe: 'View Recipe',
-        watchYoutube: '▶️ Watch authentic chefs on YouTube',
+        watchYoutube: 'Γû╢∩╕Å Watch authentic chefs on YouTube',
         budgetWord: 'budget',
         apiKeySavedMsg: 'API key saved successfully!',
-        catProteins: '🥩 Proteins',
-        catVegetables: '🥬 Vegetables',
-        catDairy: '🧀 Dairy',
-        catGrains: '🍞 Grains',
-        catSpices: '🌿 Spices',
-        catPantry: '🫙 Pantry',
+        catProteins: '≡ƒÑ⌐ Proteins',
+        catVegetables: '≡ƒÑ¼ Vegetables',
+        catDairy: '≡ƒºÇ Dairy',
+        catGrains: '≡ƒì₧ Grains',
+        catSpices: '≡ƒî┐ Spices',
+        catPantry: '≡ƒ½Ö Pantry',
         clearAll: 'Clear All',
         courseLabel: 'Course:',
         voiceInputFailed: 'Voice input failed. Please try again or type your question.',
         matchedFridge: 'Matched from your fridge',
         liveIntro: "Hey chef! I'm your robotic mentor for {recipe}. I'll guide you step by step. Say next when you're ready, or tap the microphone if you need help.",
-        liveAllDone: 'All steps complete — great job, chef!'
+        liveAllDone: 'All steps complete ΓÇö great job, chef!'
     },
     ur: {
-        appTitle: 'میل جنی',
-        searchIng: 'اجناس تلاش کریں...',
-        cuisine: 'کھانا',
-        any: 'کوئی',
-        useLeftovers: 'بچا ہوا کھانا',
-        viewAll: 'تمام ترکیبیں دیکھیں',
-        selected: 'منتخب',
-        ingredients: 'اجناس',
-        recipes: 'ترکیبیں',
-        browse: 'دیکھیں',
-        whatCooking: 'ہم کیا پکا رہے ہیں؟',
-        selectIng: 'ترکیبیں دریافت کرنے کے لیے اجناس چنیں',
-        meals: 'کھانے',
-        drinks: 'پینے کی چیزیں',
-        sauces: 'ساس',
-        desserts: 'مٹھائی',
-        needIdeas: 'مزید خیال چاہیے؟',
-        generateMeal: 'کھانا بنائیں',
-        generateDrink: 'پینے کی چیز بنائیں',
-        generateSauce: 'ساس بنائیں',
-        generateDessert: 'مٹھائی بنائیں',
-        servings: 'کھانے کی تعداد',
-        missing: 'گم ہے',
-        allHave: 'آپ کے پاس سارے اجناس ہیں!',
-        steps: 'اقدام',
-        substitutions: 'متبادل',
-        noSubs: 'کوئی متبادل نہیں',
-        saveRecipe: 'ترکیب محفوظ کریں',
-        saved: 'محفوظ',
-        back: 'واپس',
-        course: 'قسم',
-        community: 'برادری',
-        share: 'شیئر',
-        bug: 'بگ',
-        chat: 'چیٹ',
-        postTitle: 'عنوان...',
-        postContent: 'اپنی ترکیب شیئر کریں، بگ رپورٹ کریں، یا صرف ہیلو کہیں!',
-        post: 'پوسٹ',
-        settings: 'ترتیبات',
-        bgColor: 'پس منظر کا رنگ',
-        apiKey: 'AI API کی (OpenRouter)',
-        apiHint: 'openrouter.ai سے مفت API کی لیں',
-        cookingAssistant: 'کھانے کا معاون',
-        voicePowered: 'آواز سے چلنے والا',
-        askCooking: 'کھانے کے بارے میں پوچھیں...',
-        hiCooking: "ہیلو! میں آپ کا کھانے کا معاون ہوں۔ میں آپ کو قدم بقدم پکانے میں مدد کر سکتا ہوں۔",
-        tryQuestion: 'آزمائیں: "سکریمڈ انگ کیسے بنائیں؟"',
-        thinking: 'سوچ رہا ہوں...',
-        letsCook: "چلو {recipe} پکاتے ہیں! میں آپ کو قدم بقدم بتاؤں گا۔",
-        sayNext: '"اگلا" کہیں جاری رکھنے، "دہرائیں" دوبارہ سننے، "روکیں" روکنے کے لیے۔',
-        step: 'اقدام {num}: {text}',
-        allDone: '🎉 سارے اقدام مکمل! آپ کا کھانا تیار ہے!',
-        paused: 'رہنما روک دیا۔ جاری رکھنے "اگلا" کہیں!',
-        repeatStep: 'اقدام {num}: {text}',
-        cookingComplete: "ہو گیا! آپ کا کھانا تیار ہے! 🍽️",
-        langTitle: '🌐 زبان',
-        shareTab: 'شیئر',
-        bugTab: 'بگ',
-        chatTab: 'چیٹ',
-        submitPost: 'پوسٹ',
-        saveApiKey: 'API کی محفوظ کریں',
-        apiKeySaved: 'API کی محفوظ ہو گئی!',
-        apiKeyInvalid: 'براہ کرم درست API کی درج کریں۔',
-        emptyTitle: 'ہم کیا پکا رہے ہیں؟',
-        emptySub: 'ترکیبیں دریافت کرنے کے لیے اجناس چنیں',
-        recipeIngredients: 'اجناس',
-        recipeNeed: 'آپ کو چاہیے',
-        recipeSteps: 'اقدام',
-        recipeSubs: 'متبادل',
-        servingsLabel: 'افراد:',
-        startLiveMentor: '🤖 لائیو مینٹر شروع کریں',
-        chefMentor: 'شیف مینٹر',
-        liveGuide: 'لائیو پکانے کی رہنمائی',
-        liveReady: 'تیار ہیں؟ میں یہاں ہوں، شیف!',
-        liveHelp: '🆘 غلطی ہوگئی / مدد چاہیے',
-        liveStepOf: 'اقدام {cur} / {total}',
-        fridgeScan: '🧊 فریج اسکین',
-        fridgeIntro: 'فریج کی تصویر لیں — AI اجناس پہچانے گا، اصل ترکیبیں اور شیف ویڈیوز ملائیں گے۔',
-        openCamera: '📷 کیمرہ کھولیں',
-        uploadPhoto: '🖼️ تصویر اپ لوڈ',
-        scanFridge: '✨ فریج اسکین',
-        scanning: '🔍 اسکین ہو رہا ہے...',
-        detectedHint: 'پہچانی گئی اجناس یہاں — تصدیق کے لیے ٹیپ کریں۔',
-        detectedTitle: '✅ {count} اجناس ملیں',
-        detectedEdit: 'غلط ہٹانے کے لیے ٹیپ کریں۔ نیچے سے مزید شامل کریں۔',
-        nextCustomize: 'اگلا: ترتیب →',
-        fridgeIntroPrefs: 'اپنا موڈ بتائیں — ہم کھانا، مشروب اور ساس چنیں گے۔',
-        moodLabel: '😊 موڈ',
-        budgetLabel: '💰 بجٹ',
-        usageLabel: '👥 استعمال',
-        servingsFridge: '🍽️ افاد',
-        moodComfort: '🛋️ آرام',
-        moodHealthy: '💪 صحت مند',
-        moodQuick: '⚡ جلدی',
-        moodCozy: '☕ گرم',
-        moodAdventurous: '🌍 مہم جو',
-        budgetBudget: '💵 سستا',
-        budgetModerate: '💳 درمیانہ',
-        budgetAny: '✨ کوئی بھی',
-        usageSolo: '1️⃣ اکیلے',
-        usageCouple: '👫 جوڑا',
-        usageFamily: '👨‍👩‍👧 خاندان',
-        usagePrep: '📦 تیاری',
-        generateMenu: '🍳 میرا مینو بنائیں',
-        customizeAgain: '← دوبارہ ترتیب',
-        useInKitchen: '✅ باورچی خانے میں استعمال',
-        buildingMenu: '🧊 آپ کا مینو تیار ہو رہا ہے...',
-        sectionMeals: '🍽️ کھانے',
-        sectionDrinks: '🥤 مشروبات',
-        sectionSauces: '🫙 ساس',
-        sectionDesserts: '🍰 مٹھائیاں',
-        needMoreIdeas: '✨ مزید خیال چاہیے؟',
-        generateWithAI: 'AI سے اپنی ترکیب بنائیں',
-        customMeals: '🧠 اپنی کھانے',
-        customDrinks: '🧠 اپنے مشروبات',
-        customSauces: '🧠 اپنی ساس',
-        customDesserts: '🧠 اپنی مٹھائیاں',
-        noExactMatch: 'بالکل میل نہیں ملا، لیکن آپ:',
-        customBadge: 'اپنی',
-        cal: 'کیل',
-        min: 'منٹ',
-        aiGeneratedNote: '🤖 AI سے بنایا — اجناس تجویز ہیں',
-        noRecipesFound: 'اس امتزاج کے لیے کوئی ترکیب نہیں۔',
-        generateRecipe: '✨ ترکیب بنائیں',
-        recipesFound: '{count} ترکیبیں ملیں',
-        allCourse: '🍽️ سب',
-        allCuisine: '🌍 سب',
-        noPosts: 'ابھی کوئی پوسٹ نہیں۔ پہلے شیئر کریں!',
-        selectIngFirst: 'پہلے کچھ اجناس چنیں!',
-        noFavorites: 'ابھی کوئی محفوظ ترکیب نہیں!',
-        savedRecipes: '❤️ محفوظ ترکیبیں',
-        fillPost: 'عنوان اور مواد دونوں بھریں!',
-        cameraDenied: 'کیمرہ کی اجازت نہیں۔ فریج کی تصویر اپ لوڈ کریں۔',
-        takePhotoFirst: 'پہلے فریج کی تصویر لیں یا اپ لوڈ کریں۔',
-        openRecipeFirst: 'پہلے ترکیب کھولیں، پھر لائیو مینٹر۔',
-        generateAnother: '✨ ایک اور خیال',
-        selectFirst: '0 منتخب',
-        selectedCount: '{count} منتخب',
-        leftoverMatch: '🔄 {match}/{total} اجناس',
-        voiceNotSupported: 'اس براؤزر میں آواز سپورٹ نہیں۔ ٹائپ کریں۔',
-        apiKeySavedChat: '✅ API کی محفوظ! اب AI معاون استعمال کریں۔',
-        aiConnectError: 'کنکشن مسئلہ۔ دوبارہ کوشش کریں یا Settings میں API کی چیک کریں۔',
-        cookOnlyError: 'میں صرف کھانے کے سوالات میں مدد کرتا ہوں!',
-        voiceNext: 'اگلا',
-        voiceRepeat: 'دہرائیں',
-        voicePause: 'روکیں',
-        voiceStop: 'بند',
-        difficultyEasy: 'آسان',
-        difficultyMedium: 'درمیانہ',
-        difficultyHard: 'مشکل',
-        yourMenu: '🍽️ آپ کا مینو',
-        alsoMatches: '📋 آپ کے فریج سے میل',
-        viewRecipe: 'ترکیب دیکھیں',
-        watchYoutube: '▶️ YouTube پر اصل شیف دیکھیں',
-        budgetWord: 'بجٹ',
-        apiKeySavedMsg: 'API کی محفوظ ہو گئی!',
-        catProteins: '🥩 گوشت و انڈے',
-        catVegetables: '🥬 سبزیاں',
-        catDairy: '🧀 دودھ کی اشیاء',
-        catGrains: '🍞 اناج',
-        catSpices: '🌿 مسالے',
-        catPantry: '🫙 پینٹری',
-        clearAll: 'سب ہٹائیں',
-        courseLabel: 'قسم:',
-        voiceInputFailed: 'آواز نہیں چلی۔ دوبارہ کوشش کریں یا ٹائپ کریں۔',
-        matchedFridge: 'آپ کے فریج سے میل',
-        liveIntro: 'سلام شیف! میں {recipe} کے لیے آپ کا روبوٹ مینٹر ہوں۔ قدم بقدم رہنمائی کروں گا۔ تیار ہوں تو "اگلا" کہیں یا مائیک دبائیں۔',
-        liveAllDone: 'سارے اقدام مکمل — شاباش شیف!'
+        appTitle: '┘à█î┘ä ╪¼┘å█î',
+        searchIng: '╪º╪¼┘å╪º╪│ ╪¬┘ä╪º╪┤ ┌⌐╪▒█î┌║...',
+        cuisine: '┌⌐┌╛╪º┘å╪º',
+        any: '┌⌐┘ê╪ª█î',
+        useLeftovers: '╪¿┌å╪º █ü┘ê╪º ┌⌐┌╛╪º┘å╪º',
+        viewAll: '╪¬┘à╪º┘à ╪¬╪▒┌⌐█î╪¿█î┌║ ╪»█î┌⌐┌╛█î┌║',
+        selected: '┘à┘å╪¬╪«╪¿',
+        ingredients: '╪º╪¼┘å╪º╪│',
+        recipes: '╪¬╪▒┌⌐█î╪¿█î┌║',
+        browse: '╪»█î┌⌐┌╛█î┌║',
+        whatCooking: '█ü┘à ┌⌐█î╪º ┘╛┌⌐╪º ╪▒█ü█Æ █ü█î┌║╪ƒ',
+        selectIng: '╪¬╪▒┌⌐█î╪¿█î┌║ ╪»╪▒█î╪º┘ü╪¬ ┌⌐╪▒┘å█Æ ┌⌐█Æ ┘ä█î█Æ ╪º╪¼┘å╪º╪│ ┌å┘å█î┌║',
+        meals: '┌⌐┌╛╪º┘å█Æ',
+        drinks: '┘╛█î┘å█Æ ┌⌐█î ┌å█î╪▓█î┌║',
+        sauces: '╪│╪º╪│',
+        desserts: '┘à┘╣┌╛╪º╪ª█î',
+        needIdeas: '┘à╪▓█î╪» ╪«█î╪º┘ä ┌å╪º█ü█î█Æ╪ƒ',
+        generateMeal: '┌⌐┌╛╪º┘å╪º ╪¿┘å╪º╪ª█î┌║',
+        generateDrink: '┘╛█î┘å█Æ ┌⌐█î ┌å█î╪▓ ╪¿┘å╪º╪ª█î┌║',
+        generateSauce: '╪│╪º╪│ ╪¿┘å╪º╪ª█î┌║',
+        generateDessert: '┘à┘╣┌╛╪º╪ª█î ╪¿┘å╪º╪ª█î┌║',
+        servings: '┌⌐┌╛╪º┘å█Æ ┌⌐█î ╪¬╪╣╪»╪º╪»',
+        missing: '┌»┘à █ü█Æ',
+        allHave: '╪ó┘╛ ┌⌐█Æ ┘╛╪º╪│ ╪│╪º╪▒█Æ ╪º╪¼┘å╪º╪│ █ü█î┌║!',
+        steps: '╪º┘é╪»╪º┘à',
+        substitutions: '┘à╪¬╪¿╪º╪»┘ä',
+        noSubs: '┌⌐┘ê╪ª█î ┘à╪¬╪¿╪º╪»┘ä ┘å█ü█î┌║',
+        saveRecipe: '╪¬╪▒┌⌐█î╪¿ ┘à╪¡┘ü┘ê╪╕ ┌⌐╪▒█î┌║',
+        saved: '┘à╪¡┘ü┘ê╪╕',
+        back: '┘ê╪º┘╛╪│',
+        course: '┘é╪│┘à',
+        community: '╪¿╪▒╪º╪»╪▒█î',
+        share: '╪┤█î╪ª╪▒',
+        bug: '╪¿┌»',
+        chat: '┌å█î┘╣',
+        postTitle: '╪╣┘å┘ê╪º┘å...',
+        postContent: '╪º┘╛┘å█î ╪¬╪▒┌⌐█î╪¿ ╪┤█î╪ª╪▒ ┌⌐╪▒█î┌║╪î ╪¿┌» ╪▒┘╛┘ê╪▒┘╣ ┌⌐╪▒█î┌║╪î █î╪º ╪╡╪▒┘ü █ü█î┘ä┘ê ┌⌐█ü█î┌║!',
+        post: '┘╛┘ê╪│┘╣',
+        settings: '╪¬╪▒╪¬█î╪¿╪º╪¬',
+        bgColor: '┘╛╪│ ┘à┘å╪╕╪▒ ┌⌐╪º ╪▒┘å┌»',
+        apiKey: 'AI API ┌⌐█î (OpenRouter)',
+        apiHint: 'openrouter.ai ╪│█Æ ┘à┘ü╪¬ API ┌⌐█î ┘ä█î┌║',
+        cookingAssistant: '┌⌐┌╛╪º┘å█Æ ┌⌐╪º ┘à╪╣╪º┘ê┘å',
+        voicePowered: '╪ó┘ê╪º╪▓ ╪│█Æ ┌å┘ä┘å█Æ ┘ê╪º┘ä╪º',
+        askCooking: '┌⌐┌╛╪º┘å█Æ ┌⌐█Æ ╪¿╪º╪▒█Æ ┘à█î┌║ ┘╛┘ê┌å┌╛█î┌║...',
+        hiCooking: "█ü█î┘ä┘ê! ┘à█î┌║ ╪ó┘╛ ┌⌐╪º ┌⌐┌╛╪º┘å█Æ ┌⌐╪º ┘à╪╣╪º┘ê┘å █ü┘ê┌║█ö ┘à█î┌║ ╪ó┘╛ ┌⌐┘ê ┘é╪»┘à ╪¿┘é╪»┘à ┘╛┌⌐╪º┘å█Æ ┘à█î┌║ ┘à╪»╪» ┌⌐╪▒ ╪│┌⌐╪¬╪º █ü┘ê┌║█ö",
+        tryQuestion: '╪ó╪▓┘à╪º╪ª█î┌║: "╪│┌⌐╪▒█î┘à┌ê ╪º┘å┌» ┌⌐█î╪│█Æ ╪¿┘å╪º╪ª█î┌║╪ƒ"',
+        thinking: '╪│┘ê┌å ╪▒█ü╪º █ü┘ê┌║...',
+        letsCook: "┌å┘ä┘ê {recipe} ┘╛┌⌐╪º╪¬█Æ █ü█î┌║! ┘à█î┌║ ╪ó┘╛ ┌⌐┘ê ┘é╪»┘à ╪¿┘é╪»┘à ╪¿╪¬╪º╪ñ┌║ ┌»╪º█ö",
+        sayNext: '"╪º┌»┘ä╪º" ┌⌐█ü█î┌║ ╪¼╪º╪▒█î ╪▒┌⌐┌╛┘å█Æ╪î "╪»█ü╪▒╪º╪ª█î┌║" ╪»┘ê╪¿╪º╪▒█ü ╪│┘å┘å█Æ╪î "╪▒┘ê┌⌐█î┌║" ╪▒┘ê┌⌐┘å█Æ ┌⌐█Æ ┘ä█î█Æ█ö',
+        step: '╪º┘é╪»╪º┘à {num}: {text}',
+        allDone: '≡ƒÄë ╪│╪º╪▒█Æ ╪º┘é╪»╪º┘à ┘à┌⌐┘à┘ä! ╪ó┘╛ ┌⌐╪º ┌⌐┌╛╪º┘å╪º ╪¬█î╪º╪▒ █ü█Æ!',
+        paused: '╪▒█ü┘å┘à╪º ╪▒┘ê┌⌐ ╪»█î╪º█ö ╪¼╪º╪▒█î ╪▒┌⌐┌╛┘å█Æ "╪º┌»┘ä╪º" ┌⌐█ü█î┌║!',
+        repeatStep: '╪º┘é╪»╪º┘à {num}: {text}',
+        cookingComplete: "█ü┘ê ┌»█î╪º! ╪ó┘╛ ┌⌐╪º ┌⌐┌╛╪º┘å╪º ╪¬█î╪º╪▒ █ü█Æ! ≡ƒì╜∩╕Å",
+        langTitle: '≡ƒîÉ ╪▓╪¿╪º┘å',
+        shareTab: '╪┤█î╪ª╪▒',
+        bugTab: '╪¿┌»',
+        chatTab: '┌å█î┘╣',
+        submitPost: '┘╛┘ê╪│┘╣',
+        saveApiKey: 'API ┌⌐█î ┘à╪¡┘ü┘ê╪╕ ┌⌐╪▒█î┌║',
+        apiKeySaved: 'API ┌⌐█î ┘à╪¡┘ü┘ê╪╕ █ü┘ê ┌»╪ª█î!',
+        apiKeyInvalid: '╪¿╪▒╪º█ü ┌⌐╪▒┘à ╪»╪▒╪│╪¬ API ┌⌐█î ╪»╪▒╪¼ ┌⌐╪▒█î┌║█ö',
+        emptyTitle: '█ü┘à ┌⌐█î╪º ┘╛┌⌐╪º ╪▒█ü█Æ █ü█î┌║╪ƒ',
+        emptySub: '╪¬╪▒┌⌐█î╪¿█î┌║ ╪»╪▒█î╪º┘ü╪¬ ┌⌐╪▒┘å█Æ ┌⌐█Æ ┘ä█î█Æ ╪º╪¼┘å╪º╪│ ┌å┘å█î┌║',
+        recipeIngredients: '╪º╪¼┘å╪º╪│',
+        recipeNeed: '╪ó┘╛ ┌⌐┘ê ┌å╪º█ü█î█Æ',
+        recipeSteps: '╪º┘é╪»╪º┘à',
+        recipeSubs: '┘à╪¬╪¿╪º╪»┘ä',
+        servingsLabel: '╪º┘ü╪▒╪º╪»:',
+        startLiveMentor: '≡ƒñû ┘ä╪º╪ª█î┘ê ┘à█î┘å┘╣╪▒ ╪┤╪▒┘ê╪╣ ┌⌐╪▒█î┌║',
+        chefMentor: '╪┤█î┘ü ┘à█î┘å┘╣╪▒',
+        liveGuide: '┘ä╪º╪ª█î┘ê ┘╛┌⌐╪º┘å█Æ ┌⌐█î ╪▒█ü┘å┘à╪º╪ª█î',
+        liveReady: '╪¬█î╪º╪▒ █ü█î┌║╪ƒ ┘à█î┌║ █î█ü╪º┌║ █ü┘ê┌║╪î ╪┤█î┘ü!',
+        liveHelp: '≡ƒåÿ ╪║┘ä╪╖█î █ü┘ê┌»╪ª█î / ┘à╪»╪» ┌å╪º█ü█î█Æ',
+        liveStepOf: '╪º┘é╪»╪º┘à {cur} / {total}',
+        fridgeScan: '≡ƒºè ┘ü╪▒█î╪¼ ╪º╪│┌⌐█î┘å',
+        fridgeIntro: '┘ü╪▒█î╪¼ ┌⌐█î ╪¬╪╡┘ê█î╪▒ ┘ä█î┌║ ΓÇö AI ╪º╪¼┘å╪º╪│ ┘╛█ü┌å╪º┘å█Æ ┌»╪º╪î ╪º╪╡┘ä ╪¬╪▒┌⌐█î╪¿█î┌║ ╪º┘ê╪▒ ╪┤█î┘ü ┘ê█î┌ê█î┘ê╪▓ ┘à┘ä╪º╪ª█î┌║ ┌»█Æ█ö',
+        openCamera: '≡ƒô╖ ┌⌐█î┘à╪▒█ü ┌⌐┌╛┘ê┘ä█î┌║',
+        uploadPhoto: '≡ƒû╝∩╕Å ╪¬╪╡┘ê█î╪▒ ╪º┘╛ ┘ä┘ê┌ê',
+        scanFridge: 'Γ£¿ ┘ü╪▒█î╪¼ ╪º╪│┌⌐█î┘å',
+        scanning: '≡ƒöì ╪º╪│┌⌐█î┘å █ü┘ê ╪▒█ü╪º █ü█Æ...',
+        detectedHint: '┘╛█ü┌å╪º┘å█î ┌»╪ª█î ╪º╪¼┘å╪º╪│ █î█ü╪º┌║ ΓÇö ╪¬╪╡╪»█î┘é ┌⌐█Æ ┘ä█î█Æ ┘╣█î┘╛ ┌⌐╪▒█î┌║█ö',
+        detectedTitle: 'Γ£à {count} ╪º╪¼┘å╪º╪│ ┘à┘ä█î┌║',
+        detectedEdit: '╪║┘ä╪╖ █ü┘╣╪º┘å█Æ ┌⌐█Æ ┘ä█î█Æ ┘╣█î┘╛ ┌⌐╪▒█î┌║█ö ┘å█î┌å█Æ ╪│█Æ ┘à╪▓█î╪» ╪┤╪º┘à┘ä ┌⌐╪▒█î┌║█ö',
+        nextCustomize: '╪º┌»┘ä╪º: ╪¬╪▒╪¬█î╪¿ ΓåÆ',
+        fridgeIntroPrefs: '╪º┘╛┘å╪º ┘à┘ê┌ê ╪¿╪¬╪º╪ª█î┌║ ΓÇö █ü┘à ┌⌐┌╛╪º┘å╪º╪î ┘à╪┤╪▒┘ê╪¿ ╪º┘ê╪▒ ╪│╪º╪│ ┌å┘å█î┌║ ┌»█Æ█ö',
+        moodLabel: '≡ƒÿè ┘à┘ê┌ê',
+        budgetLabel: '≡ƒÆ░ ╪¿╪¼┘╣',
+        usageLabel: '≡ƒæÑ ╪º╪│╪¬╪╣┘à╪º┘ä',
+        servingsFridge: '≡ƒì╜∩╕Å ╪º┘ü╪º╪»',
+        moodComfort: '≡ƒ¢ï∩╕Å ╪ó╪▒╪º┘à',
+        moodHealthy: '≡ƒÆ¬ ╪╡╪¡╪¬ ┘à┘å╪»',
+        moodQuick: 'ΓÜí ╪¼┘ä╪»█î',
+        moodCozy: 'Γÿò ┌»╪▒┘à',
+        moodAdventurous: '≡ƒîì ┘à█ü┘à ╪¼┘ê',
+        budgetBudget: '≡ƒÆ╡ ╪│╪│╪¬╪º',
+        budgetModerate: '≡ƒÆ│ ╪»╪▒┘à█î╪º┘å█ü',
+        budgetAny: 'Γ£¿ ┌⌐┘ê╪ª█î ╪¿┌╛█î',
+        usageSolo: '1∩╕ÅΓâú ╪º┌⌐█î┘ä█Æ',
+        usageCouple: '≡ƒæ½ ╪¼┘ê┌æ╪º',
+        usageFamily: '≡ƒæ¿ΓÇì≡ƒæ⌐ΓÇì≡ƒæº ╪«╪º┘å╪»╪º┘å',
+        usagePrep: '≡ƒôª ╪¬█î╪º╪▒█î',
+        generateMenu: '≡ƒì│ ┘à█î╪▒╪º ┘à█î┘å┘ê ╪¿┘å╪º╪ª█î┌║',
+        customizeAgain: 'ΓåÉ ╪»┘ê╪¿╪º╪▒█ü ╪¬╪▒╪¬█î╪¿',
+        useInKitchen: 'Γ£à ╪¿╪º┘ê╪▒┌å█î ╪«╪º┘å█Æ ┘à█î┌║ ╪º╪│╪¬╪╣┘à╪º┘ä',
+        buildingMenu: '≡ƒºè ╪ó┘╛ ┌⌐╪º ┘à█î┘å┘ê ╪¬█î╪º╪▒ █ü┘ê ╪▒█ü╪º █ü█Æ...',
+        sectionMeals: '≡ƒì╜∩╕Å ┌⌐┌╛╪º┘å█Æ',
+        sectionDrinks: '≡ƒÑñ ┘à╪┤╪▒┘ê╪¿╪º╪¬',
+        sectionSauces: '≡ƒ½Ö ╪│╪º╪│',
+        sectionDesserts: '≡ƒì░ ┘à┘╣┌╛╪º╪ª█î╪º┌║',
+        needMoreIdeas: 'Γ£¿ ┘à╪▓█î╪» ╪«█î╪º┘ä ┌å╪º█ü█î█Æ╪ƒ',
+        generateWithAI: 'AI ╪│█Æ ╪º┘╛┘å█î ╪¬╪▒┌⌐█î╪¿ ╪¿┘å╪º╪ª█î┌║',
+        customMeals: '≡ƒºá ╪º┘╛┘å█î ┌⌐┌╛╪º┘å█Æ',
+        customDrinks: '≡ƒºá ╪º┘╛┘å█Æ ┘à╪┤╪▒┘ê╪¿╪º╪¬',
+        customSauces: '≡ƒºá ╪º┘╛┘å█î ╪│╪º╪│',
+        customDesserts: '≡ƒºá ╪º┘╛┘å█î ┘à┘╣┌╛╪º╪ª█î╪º┌║',
+        noExactMatch: '╪¿╪º┘ä┌⌐┘ä ┘à█î┘ä ┘å█ü█î┌║ ┘à┘ä╪º╪î ┘ä█î┌⌐┘å ╪ó┘╛:',
+        customBadge: '╪º┘╛┘å█î',
+        cal: '┌⌐█î┘ä',
+        min: '┘à┘å┘╣',
+        aiGeneratedNote: '≡ƒñû AI ╪│█Æ ╪¿┘å╪º█î╪º ΓÇö ╪º╪¼┘å╪º╪│ ╪¬╪¼┘ê█î╪▓ █ü█î┌║',
+        noRecipesFound: '╪º╪│ ╪º┘à╪¬╪▓╪º╪¼ ┌⌐█Æ ┘ä█î█Æ ┌⌐┘ê╪ª█î ╪¬╪▒┌⌐█î╪¿ ┘å█ü█î┌║█ö',
+        generateRecipe: 'Γ£¿ ╪¬╪▒┌⌐█î╪¿ ╪¿┘å╪º╪ª█î┌║',
+        recipesFound: '{count} ╪¬╪▒┌⌐█î╪¿█î┌║ ┘à┘ä█î┌║',
+        allCourse: '≡ƒì╜∩╕Å ╪│╪¿',
+        allCuisine: '≡ƒîì ╪│╪¿',
+        noPosts: '╪º╪¿┌╛█î ┌⌐┘ê╪ª█î ┘╛┘ê╪│┘╣ ┘å█ü█î┌║█ö ┘╛█ü┘ä█Æ ╪┤█î╪ª╪▒ ┌⌐╪▒█î┌║!',
+        selectIngFirst: '┘╛█ü┘ä█Æ ┌⌐┌å┌╛ ╪º╪¼┘å╪º╪│ ┌å┘å█î┌║!',
+        noFavorites: '╪º╪¿┌╛█î ┌⌐┘ê╪ª█î ┘à╪¡┘ü┘ê╪╕ ╪¬╪▒┌⌐█î╪¿ ┘å█ü█î┌║!',
+        savedRecipes: 'Γ¥ñ∩╕Å ┘à╪¡┘ü┘ê╪╕ ╪¬╪▒┌⌐█î╪¿█î┌║',
+        fillPost: '╪╣┘å┘ê╪º┘å ╪º┘ê╪▒ ┘à┘ê╪º╪» ╪»┘ê┘å┘ê┌║ ╪¿┌╛╪▒█î┌║!',
+        cameraDenied: '┌⌐█î┘à╪▒█ü ┌⌐█î ╪º╪¼╪º╪▓╪¬ ┘å█ü█î┌║█ö ┘ü╪▒█î╪¼ ┌⌐█î ╪¬╪╡┘ê█î╪▒ ╪º┘╛ ┘ä┘ê┌ê ┌⌐╪▒█î┌║█ö',
+        takePhotoFirst: '┘╛█ü┘ä█Æ ┘ü╪▒█î╪¼ ┌⌐█î ╪¬╪╡┘ê█î╪▒ ┘ä█î┌║ █î╪º ╪º┘╛ ┘ä┘ê┌ê ┌⌐╪▒█î┌║█ö',
+        openRecipeFirst: '┘╛█ü┘ä█Æ ╪¬╪▒┌⌐█î╪¿ ┌⌐┌╛┘ê┘ä█î┌║╪î ┘╛┌╛╪▒ ┘ä╪º╪ª█î┘ê ┘à█î┘å┘╣╪▒█ö',
+        generateAnother: 'Γ£¿ ╪º█î┌⌐ ╪º┘ê╪▒ ╪«█î╪º┘ä',
+        selectFirst: '0 ┘à┘å╪¬╪«╪¿',
+        selectedCount: '{count} ┘à┘å╪¬╪«╪¿',
+        leftoverMatch: '≡ƒöä {match}/{total} ╪º╪¼┘å╪º╪│',
+        voiceNotSupported: '╪º╪│ ╪¿╪▒╪º╪ñ╪▓╪▒ ┘à█î┌║ ╪ó┘ê╪º╪▓ ╪│┘╛┘ê╪▒┘╣ ┘å█ü█î┌║█ö ┘╣╪º╪ª┘╛ ┌⌐╪▒█î┌║█ö',
+        apiKeySavedChat: 'Γ£à API ┌⌐█î ┘à╪¡┘ü┘ê╪╕! ╪º╪¿ AI ┘à╪╣╪º┘ê┘å ╪º╪│╪¬╪╣┘à╪º┘ä ┌⌐╪▒█î┌║█ö',
+        aiConnectError: '┌⌐┘å┌⌐╪┤┘å ┘à╪│╪ª┘ä█ü█ö ╪»┘ê╪¿╪º╪▒█ü ┌⌐┘ê╪┤╪┤ ┌⌐╪▒█î┌║ █î╪º Settings ┘à█î┌║ API ┌⌐█î ┌å█î┌⌐ ┌⌐╪▒█î┌║█ö',
+        cookOnlyError: '┘à█î┌║ ╪╡╪▒┘ü ┌⌐┌╛╪º┘å█Æ ┌⌐█Æ ╪│┘ê╪º┘ä╪º╪¬ ┘à█î┌║ ┘à╪»╪» ┌⌐╪▒╪¬╪º █ü┘ê┌║!',
+        voiceNext: '╪º┌»┘ä╪º',
+        voiceRepeat: '╪»█ü╪▒╪º╪ª█î┌║',
+        voicePause: '╪▒┘ê┌⌐█î┌║',
+        voiceStop: '╪¿┘å╪»',
+        difficultyEasy: '╪ó╪│╪º┘å',
+        difficultyMedium: '╪»╪▒┘à█î╪º┘å█ü',
+        difficultyHard: '┘à╪┤┌⌐┘ä',
+        yourMenu: '≡ƒì╜∩╕Å ╪ó┘╛ ┌⌐╪º ┘à█î┘å┘ê',
+        alsoMatches: '≡ƒôï ╪ó┘╛ ┌⌐█Æ ┘ü╪▒█î╪¼ ╪│█Æ ┘à█î┘ä',
+        viewRecipe: '╪¬╪▒┌⌐█î╪¿ ╪»█î┌⌐┌╛█î┌║',
+        watchYoutube: 'Γû╢∩╕Å YouTube ┘╛╪▒ ╪º╪╡┘ä ╪┤█î┘ü ╪»█î┌⌐┌╛█î┌║',
+        budgetWord: '╪¿╪¼┘╣',
+        apiKeySavedMsg: 'API ┌⌐█î ┘à╪¡┘ü┘ê╪╕ █ü┘ê ┌»╪ª█î!',
+        catProteins: '≡ƒÑ⌐ ┌»┘ê╪┤╪¬ ┘ê ╪º┘å┌ê█Æ',
+        catVegetables: '≡ƒÑ¼ ╪│╪¿╪▓█î╪º┌║',
+        catDairy: '≡ƒºÇ ╪»┘ê╪»┌╛ ┌⌐█î ╪º╪┤█î╪º╪í',
+        catGrains: '≡ƒì₧ ╪º┘å╪º╪¼',
+        catSpices: '≡ƒî┐ ┘à╪│╪º┘ä█Æ',
+        catPantry: '≡ƒ½Ö ┘╛█î┘å┘╣╪▒█î',
+        clearAll: '╪│╪¿ █ü┘╣╪º╪ª█î┌║',
+        courseLabel: '┘é╪│┘à:',
+        voiceInputFailed: '╪ó┘ê╪º╪▓ ┘å█ü█î┌║ ┌å┘ä█î█ö ╪»┘ê╪¿╪º╪▒█ü ┌⌐┘ê╪┤╪┤ ┌⌐╪▒█î┌║ █î╪º ┘╣╪º╪ª┘╛ ┌⌐╪▒█î┌║█ö',
+        matchedFridge: '╪ó┘╛ ┌⌐█Æ ┘ü╪▒█î╪¼ ╪│█Æ ┘à█î┘ä',
+        liveIntro: '╪│┘ä╪º┘à ╪┤█î┘ü! ┘à█î┌║ {recipe} ┌⌐█Æ ┘ä█î█Æ ╪ó┘╛ ┌⌐╪º ╪▒┘ê╪¿┘ê┘╣ ┘à█î┘å┘╣╪▒ █ü┘ê┌║█ö ┘é╪»┘à ╪¿┘é╪»┘à ╪▒█ü┘å┘à╪º╪ª█î ┌⌐╪▒┘ê┌║ ┌»╪º█ö ╪¬█î╪º╪▒ █ü┘ê┌║ ╪¬┘ê "╪º┌»┘ä╪º" ┌⌐█ü█î┌║ █î╪º ┘à╪º╪ª█î┌⌐ ╪»╪¿╪º╪ª█î┌║█ö',
+        liveAllDone: '╪│╪º╪▒█Æ ╪º┘é╪»╪º┘à ┘à┌⌐┘à┘ä ΓÇö ╪┤╪º╪¿╪º╪┤ ╪┤█î┘ü!'
     }
 };
 
 const urIngredientNames = {
-    chicken: 'مرغی', beef: 'گوشت', pork: 'سور کا گوشت', fish: 'مچھلی', shrimp: 'جhinga',
-    egg: 'انڈا', tofu: 'ٹوفو', turkey: 'ٹرکی', lamb: 'برہ کا گوشت', bacon: 'بیکن',
-    tomato: 'ٹماٹر', onion: 'پیاز', garlic: 'لہسن', potato: 'آلو', carrot: 'گاجر',
-    pepper: 'شملہ مرچ', spinach: 'پالک', mushroom: 'کھمبی', corn: 'مکئی', broccoli: 'بروکلی',
-    zucchini: 'زucchini', cucumber: 'کھیرا', lettuce: 'سلاد پatta', celery: 'اجوائن',
-    peas: 'مٹر', cabbage: 'بند گوبھی', avocado: 'ایووکاڈو', cauliflower: 'پھول گوبھی', apple: 'سیب',
-    cheese: 'پنیر', milk: 'دودھ', butter: 'مکھن', cream: 'ملائی', yogurt: 'دہی',
-    parmesan: 'پarmesan', mozzarella: 'موزاریلا', feta: 'فیٹا',
-    bread: 'روٹی', rice: 'چاول', pasta: 'پasta', flour: 'آٹا', noodles: 'نوڈلز',
-    tortilla: 'ٹورٹilla', couscous: 'کسکس', quinoa: 'کinoa',
-    salt: 'نمک', pepper_spice: 'کالی مرچ', chili: 'مرچ', cumin: 'زیرہ', basil: 'تلسی',
-    oregano: 'اوریgano', paprika: 'paprika', turmeric: 'ہلدی', cinnamon: 'دار چینی', ginger: 'ادرک',
-    olive_oil: 'زیتون کا تیل', soy_sauce: 'سویا ساس', sugar: 'چینی', honey: 'شہد',
-    beans: 'پhلی', chickpeas: 'چنا', lentils: 'دال', lemon: 'لیموں', lime: 'کagzi نimbu',
-    tomato_sauce: 'ٹماٹر ساس', broth: 'یakhni', vinegar: 'سرکہ', pine_nuts: 'چلغوزے',
-    water: 'پانی', mint: 'پudina', vanilla: 'ونilla', cocoa: 'کoko', chocolate: 'چاکلیٹ',
-    walnuts: 'اخروٹ', peanuts: 'مونگ پhلی'
+    chicken: '┘à╪▒╪║█î', beef: '┌»┘ê╪┤╪¬', pork: '╪│┘ê╪▒ ┌⌐╪º ┌»┘ê╪┤╪¬', fish: '┘à┌å┌╛┘ä█î', shrimp: '╪¼hinga',
+    egg: '╪º┘å┌ê╪º', tofu: '┘╣┘ê┘ü┘ê', turkey: '┘╣╪▒┌⌐█î', lamb: '╪¿╪▒█ü ┌⌐╪º ┌»┘ê╪┤╪¬', bacon: '╪¿█î┌⌐┘å',
+    tomato: '┘╣┘à╪º┘╣╪▒', onion: '┘╛█î╪º╪▓', garlic: '┘ä█ü╪│┘å', potato: '╪ó┘ä┘ê', carrot: '┌»╪º╪¼╪▒',
+    pepper: '╪┤┘à┘ä█ü ┘à╪▒┌å', spinach: '┘╛╪º┘ä┌⌐', mushroom: '┌⌐┌╛┘à╪¿█î', corn: '┘à┌⌐╪ª█î', broccoli: '╪¿╪▒┘ê┌⌐┘ä█î',
+    zucchini: '╪▓ucchini', cucumber: '┌⌐┌╛█î╪▒╪º', lettuce: '╪│┘ä╪º╪» ┘╛atta', celery: '╪º╪¼┘ê╪º╪ª┘å',
+    peas: '┘à┘╣╪▒', cabbage: '╪¿┘å╪» ┌»┘ê╪¿┌╛█î', avocado: '╪º█î┘ê┘ê┌⌐╪º┌ê┘ê', cauliflower: '┘╛┌╛┘ê┘ä ┌»┘ê╪¿┌╛█î', apple: '╪│█î╪¿',
+    cheese: '┘╛┘å█î╪▒', milk: '╪»┘ê╪»┌╛', butter: '┘à┌⌐┌╛┘å', cream: '┘à┘ä╪º╪ª█î', yogurt: '╪»█ü█î',
+    parmesan: '┘╛armesan', mozzarella: '┘à┘ê╪▓╪º╪▒█î┘ä╪º', feta: '┘ü█î┘╣╪º',
+    bread: '╪▒┘ê┘╣█î', rice: '┌å╪º┘ê┘ä', pasta: '┘╛asta', flour: '╪ó┘╣╪º', noodles: '┘å┘ê┌ê┘ä╪▓',
+    tortilla: '┘╣┘ê╪▒┘╣illa', couscous: '┌⌐╪│┌⌐╪│', quinoa: '┌⌐inoa',
+    salt: '┘å┘à┌⌐', pepper_spice: '┌⌐╪º┘ä█î ┘à╪▒┌å', chili: '┘à╪▒┌å', cumin: '╪▓█î╪▒█ü', basil: '╪¬┘ä╪│█î',
+    oregano: '╪º┘ê╪▒█îgano', paprika: 'paprika', turmeric: '█ü┘ä╪»█î', cinnamon: '╪»╪º╪▒ ┌å█î┘å█î', ginger: '╪º╪»╪▒┌⌐',
+    olive_oil: '╪▓█î╪¬┘ê┘å ┌⌐╪º ╪¬█î┘ä', soy_sauce: '╪│┘ê█î╪º ╪│╪º╪│', sugar: '┌å█î┘å█î', honey: '╪┤█ü╪»',
+    beans: '┘╛h┘ä█î', chickpeas: '┌å┘å╪º', lentils: '╪»╪º┘ä', lemon: '┘ä█î┘à┘ê┌║', lime: '┌⌐agzi ┘åimbu',
+    tomato_sauce: '┘╣┘à╪º┘╣╪▒ ╪│╪º╪│', broth: '█îakhni', vinegar: '╪│╪▒┌⌐█ü', pine_nuts: '┌å┘ä╪║┘ê╪▓█Æ',
+    water: '┘╛╪º┘å█î', mint: '┘╛udina', vanilla: '┘ê┘åilla', cocoa: '┌⌐oko', chocolate: '┌å╪º┌⌐┘ä█î┘╣',
+    walnuts: '╪º╪«╪▒┘ê┘╣', peanuts: '┘à┘ê┘å┌» ┘╛h┘ä█î'
 };
 
 function tr(key, vars = {}) {
@@ -691,9 +691,9 @@ function applyLanguage() {
     document.title = tr('appTitle');
     document.getElementById('ingSearch').placeholder = tr('searchIng');
     document.querySelector('.filter-label').textContent = tr('cuisine');
-    document.getElementById('leftoverBtn').textContent = '🔄 ' + tr('useLeftovers');
+    document.getElementById('leftoverBtn').textContent = '≡ƒöä ' + tr('useLeftovers');
     const viewAllBtn = document.getElementById('viewAllBtn');
-    if (viewAllBtn) viewAllBtn.textContent = '📖 ' + tr('viewAll');
+    if (viewAllBtn) viewAllBtn.textContent = '≡ƒôû ' + tr('viewAll');
     document.getElementById('navIngredients').querySelector('.nav-item-label').textContent = tr('ingredients');
     document.getElementById('navResults').querySelector('.nav-item-label').textContent = tr('recipes');
     document.getElementById('navAll').querySelector('.nav-item-label').textContent = tr('browse');
@@ -710,11 +710,11 @@ function applyLanguage() {
     }
     
     const blogTitle = document.querySelector('.blog-title');
-    if (blogTitle) blogTitle.textContent = '💬 ' + tr('community');
+    if (blogTitle) blogTitle.textContent = '≡ƒÆ¼ ' + tr('community');
     const blogTabs = document.querySelectorAll('.blog-tab');
-    if (blogTabs[0]) blogTabs[0].textContent = '📝 ' + tr('shareTab');
-    if (blogTabs[1]) blogTabs[1].textContent = '🐛 ' + tr('bugTab');
-    if (blogTabs[2]) blogTabs[2].textContent = '💬 ' + tr('chatTab');
+    if (blogTabs[0]) blogTabs[0].textContent = '≡ƒô¥ ' + tr('shareTab');
+    if (blogTabs[1]) blogTabs[1].textContent = '≡ƒÉ¢ ' + tr('bugTab');
+    if (blogTabs[2]) blogTabs[2].textContent = '≡ƒÆ¼ ' + tr('chatTab');
     const postTitle = document.getElementById('postTitle');
     const postContent = document.getElementById('postContent');
     if (postTitle) postTitle.placeholder = tr('postTitle');
@@ -771,7 +771,7 @@ function applyLanguage() {
     if (liveMentorBtn) liveMentorBtn.textContent = tr('startLiveMentor');
     
     const recipeBack = document.querySelector('#recipeView .back-btn');
-    if (recipeBack) recipeBack.textContent = '← ' + tr('back');
+    if (recipeBack) recipeBack.textContent = 'ΓåÉ ' + tr('back');
     const servLabel = document.querySelector('.servings-section > span');
     if (servLabel) servLabel.textContent = tr('servingsLabel');
     const sections = document.querySelectorAll('#recipeView .section h3');
@@ -781,7 +781,7 @@ function applyLanguage() {
     if (sections[3]) sections[3].textContent = tr('recipeSubs');
     
     const anyChip = document.querySelector('.cuisine-chip[data-cuisine="Any"]');
-    if (anyChip) anyChip.textContent = '🌍 ' + tr('any');
+    if (anyChip) anyChip.textContent = '≡ƒîì ' + tr('any');
     
     updateSelectedCountLabel();
     renderIngredients();
@@ -816,7 +816,7 @@ function applyFridgePrefLabels() {
     });
     const backBtn = document.querySelector('#fridgeStepPrefs .fridge-action-btn:not(.primary)');
     const genBtn = document.querySelector('#fridgeStepPrefs .fridge-action-btn.primary');
-    if (backBtn) backBtn.textContent = '← ' + tr('back');
+    if (backBtn) backBtn.textContent = 'ΓåÉ ' + tr('back');
     if (genBtn) genBtn.textContent = tr('generateMenu');
     const cAgain = document.querySelector('#fridgeStepResults .fridge-action-btn:not(.primary)');
     const useKit = document.querySelector('#fridgeStepResults .fridge-action-btn.primary');
@@ -841,7 +841,7 @@ let voiceMuted = localStorage.getItem('mealGenieMuted') === 'true';
 function toggleMute() {
     voiceMuted = !voiceMuted;
     localStorage.setItem('mealGenieMuted', voiceMuted);
-    document.getElementById('muteBtn').textContent = voiceMuted ? '🔇' : '🔊';
+    document.getElementById('muteBtn').textContent = voiceMuted ? '≡ƒöç' : '≡ƒöè';
 }
 
 // ===== CHATBOT FUNCTIONS =====
@@ -849,8 +849,7 @@ function toggleChatbot() {
     const panel = document.getElementById('chatbotPanel');
     panel.classList.toggle('open');
     if (panel.classList.contains('open')) {
-        document.getElementById('blogPanel').classList.remove('open');
-        document.getElementById('settingsPanel').classList.remove('open');
+        closeOverlayPanels('chatbot');
     }
 }
 
@@ -880,9 +879,9 @@ function sendChatbotMessage() {
 
 async function processChatbotMessage(message) {
     const lowerMsg = message.toLowerCase();
-    const nextWords = [tr('voiceNext'), 'next', 'اگلا', 'agla'];
-    const repeatWords = [tr('voiceRepeat'), 'repeat', 'دہرائیں', 'dohrain'];
-    const pauseWords = [tr('voicePause'), tr('voiceStop'), 'pause', 'stop', 'روکیں', 'rokain', 'بند'];
+    const nextWords = [tr('voiceNext'), 'next', '╪º┌»┘ä╪º', 'agla'];
+    const repeatWords = [tr('voiceRepeat'), 'repeat', '╪»█ü╪▒╪º╪ª█î┌║', 'dohrain'];
+    const pauseWords = [tr('voicePause'), tr('voiceStop'), 'pause', 'stop', '╪▒┘ê┌⌐█î┌║', 'rokain', '╪¿┘å╪»'];
     
     if (nextWords.some(w => lowerMsg.includes(w)) && cookingState.isGuiding) {
         provideNextStep();
@@ -900,7 +899,7 @@ async function processChatbotMessage(message) {
     try {
         await getAIResponse(message);
     } catch (error) {
-        addChatbotMessage(currentLang === 'ur' ? 'معذرت، سمجھ نہیں آیا۔ دوبارہ کوشش کریں!' : "Sorry, I couldn't process that. Please try again!");
+        addChatbotMessage(currentLang === 'ur' ? '┘à╪╣╪░╪▒╪¬╪î ╪│┘à╪¼┌╛ ┘å█ü█î┌║ ╪ó█î╪º█ö ╪»┘ê╪¿╪º╪▒█ü ┌⌐┘ê╪┤╪┤ ┌⌐╪▒█î┌║!' : "Sorry, I couldn't process that. Please try again!");
     }
 }
 
@@ -919,24 +918,24 @@ function getLocalResponse(message) {
     let response = null;
     
     const localKnowledge = currentLang === 'ur' ? [
-        { keywords: ['کیسے', 'ترکیب', 'بنائیں', 'پکانا', 'پکائیں', 'طریقہ'], 
-          response: 'مدد کرتا ہوں! ایپ میں اجناس چنیں تو ترکیبیں ملیں گی۔ یا کوئی مخصوص سوال پوچھیں!' },
-        { keywords: ['انڈا', 'سکریم', 'انڈے'], 
-          response: '۳ انڈے نمک کے ساتھ پھینٹیں۔ پین میں مکھن گرم کریں۔ آہستہ ہلائیں، نرم بنائیں۔ فوراً پیش کریں!' },
-        { keywords: ['مرغی', 'چکن'], 
-          response: 'مرغی پر نمک کالی مرچ لگائیں۔ ۵-۶ منٹ ہر طرف پکائیں۔ ۵ منٹ آرام دیں پھر کاٹیں۔' },
-        { keywords: ['پasta', 'پاستا', 'سپaghetti'], 
-          response: 'نمکین پانی میں پasta پکائیں۔ ۱ کپ پani محفوظ رکھیں۔ ساس میں ملائیں۔' },
-        { keywords: ['چاول', 'rice', 'بری'], 
-          response: 'چاول دھوئیں۔ ۱:۱.۵ پانی۔ ابلنے پر دم دیں ۱۸ منٹ۔ ۵ منٹ چھوڑ کر fluff کریں۔' },
-        { keywords: ['متبادل', 'بدل', 'بجائے'], 
-          response: 'مکھن → زیتون کا تیل۔ دودھ → پانی۔ انڈا → flax egg۔ چینی → شہد۔' },
-        { keywords: ['شکریہ', 'thanks', 'thank'], 
-          response: 'خوش آمدید! خوش رہیں! 🍳 اور مدد چاہیے تو پوچھیں!' },
-        { keywords: ['سلام', 'ہیلو', 'hello', 'hi', 'مدد', 'help'], 
-          response: 'السلام! 👋 میں آپ کا کھانے کا معاون ہوں۔ ترکیب، طریقہ، متبادل — سب میں مدد!' },
-        { keywords: ['پکائیں', 'بنائیں', 'cook', 'make'], 
-          response: 'اجناس چنیں تو ترکیبیں ملیں گی! یا مخصوص سوال پوچھیں۔' }
+        { keywords: ['┌⌐█î╪│█Æ', '╪¬╪▒┌⌐█î╪¿', '╪¿┘å╪º╪ª█î┌║', '┘╛┌⌐╪º┘å╪º', '┘╛┌⌐╪º╪ª█î┌║', '╪╖╪▒█î┘é█ü'], 
+          response: '┘à╪»╪» ┌⌐╪▒╪¬╪º █ü┘ê┌║! ╪º█î┘╛ ┘à█î┌║ ╪º╪¼┘å╪º╪│ ┌å┘å█î┌║ ╪¬┘ê ╪¬╪▒┌⌐█î╪¿█î┌║ ┘à┘ä█î┌║ ┌»█î█ö █î╪º ┌⌐┘ê╪ª█î ┘à╪«╪╡┘ê╪╡ ╪│┘ê╪º┘ä ┘╛┘ê┌å┌╛█î┌║!' },
+        { keywords: ['╪º┘å┌ê╪º', '╪│┌⌐╪▒█î┘à', '╪º┘å┌ê█Æ'], 
+          response: '█│ ╪º┘å┌ê█Æ ┘å┘à┌⌐ ┌⌐█Æ ╪│╪º╪¬┌╛ ┘╛┌╛█î┘å┘╣█î┌║█ö ┘╛█î┘å ┘à█î┌║ ┘à┌⌐┌╛┘å ┌»╪▒┘à ┌⌐╪▒█î┌║█ö ╪ó█ü╪│╪¬█ü █ü┘ä╪º╪ª█î┌║╪î ┘å╪▒┘à ╪¿┘å╪º╪ª█î┌║█ö ┘ü┘ê╪▒╪º┘ï ┘╛█î╪┤ ┌⌐╪▒█î┌║!' },
+        { keywords: ['┘à╪▒╪║█î', '┌å┌⌐┘å'], 
+          response: '┘à╪▒╪║█î ┘╛╪▒ ┘å┘à┌⌐ ┌⌐╪º┘ä█î ┘à╪▒┌å ┘ä┌»╪º╪ª█î┌║█ö █╡-█╢ ┘à┘å┘╣ █ü╪▒ ╪╖╪▒┘ü ┘╛┌⌐╪º╪ª█î┌║█ö █╡ ┘à┘å┘╣ ╪ó╪▒╪º┘à ╪»█î┌║ ┘╛┌╛╪▒ ┌⌐╪º┘╣█î┌║█ö' },
+        { keywords: ['┘╛asta', '┘╛╪º╪│╪¬╪º', '╪│┘╛aghetti'], 
+          response: '┘å┘à┌⌐█î┘å ┘╛╪º┘å█î ┘à█î┌║ ┘╛asta ┘╛┌⌐╪º╪ª█î┌║█ö █▒ ┌⌐┘╛ ┘╛ani ┘à╪¡┘ü┘ê╪╕ ╪▒┌⌐┌╛█î┌║█ö ╪│╪º╪│ ┘à█î┌║ ┘à┘ä╪º╪ª█î┌║█ö' },
+        { keywords: ['┌å╪º┘ê┘ä', 'rice', '╪¿╪▒█î'], 
+          response: '┌å╪º┘ê┘ä ╪»┌╛┘ê╪ª█î┌║█ö █▒:█▒.█╡ ┘╛╪º┘å█î█ö ╪º╪¿┘ä┘å█Æ ┘╛╪▒ ╪»┘à ╪»█î┌║ █▒█╕ ┘à┘å┘╣█ö █╡ ┘à┘å┘╣ ┌å┌╛┘ê┌æ ┌⌐╪▒ fluff ┌⌐╪▒█î┌║█ö' },
+        { keywords: ['┘à╪¬╪¿╪º╪»┘ä', '╪¿╪»┘ä', '╪¿╪¼╪º╪ª█Æ'], 
+          response: '┘à┌⌐┌╛┘å ΓåÆ ╪▓█î╪¬┘ê┘å ┌⌐╪º ╪¬█î┘ä█ö ╪»┘ê╪»┌╛ ΓåÆ ┘╛╪º┘å█î█ö ╪º┘å┌ê╪º ΓåÆ flax egg█ö ┌å█î┘å█î ΓåÆ ╪┤█ü╪»█ö' },
+        { keywords: ['╪┤┌⌐╪▒█î█ü', 'thanks', 'thank'], 
+          response: '╪«┘ê╪┤ ╪ó┘à╪»█î╪»! ╪«┘ê╪┤ ╪▒█ü█î┌║! ≡ƒì│ ╪º┘ê╪▒ ┘à╪»╪» ┌å╪º█ü█î█Æ ╪¬┘ê ┘╛┘ê┌å┌╛█î┌║!' },
+        { keywords: ['╪│┘ä╪º┘à', '█ü█î┘ä┘ê', 'hello', 'hi', '┘à╪»╪»', 'help'], 
+          response: '╪º┘ä╪│┘ä╪º┘à! ≡ƒæï ┘à█î┌║ ╪ó┘╛ ┌⌐╪º ┌⌐┌╛╪º┘å█Æ ┌⌐╪º ┘à╪╣╪º┘ê┘å █ü┘ê┌║█ö ╪¬╪▒┌⌐█î╪¿╪î ╪╖╪▒█î┘é█ü╪î ┘à╪¬╪¿╪º╪»┘ä ΓÇö ╪│╪¿ ┘à█î┌║ ┘à╪»╪»!' },
+        { keywords: ['┘╛┌⌐╪º╪ª█î┌║', '╪¿┘å╪º╪ª█î┌║', 'cook', 'make'], 
+          response: '╪º╪¼┘å╪º╪│ ┌å┘å█î┌║ ╪¬┘ê ╪¬╪▒┌⌐█î╪¿█î┌║ ┘à┘ä█î┌║ ┌»█î! █î╪º ┘à╪«╪╡┘ê╪╡ ╪│┘ê╪º┘ä ┘╛┘ê┌å┌╛█î┌║█ö' }
     ] : [
         { keywords: ['how to make', 'how do i', 'how to cook', 'how to prepare', 'recipe for', 'instructions'], 
           response: "I can help! Select ingredients from the app to see matching recipes. Or ask me a specific cooking question and I'll do my best to help from my cooking knowledge." },
@@ -945,13 +944,13 @@ function getLocalResponse(message) {
         { keywords: ['grilled cheese', 'grill cheese'], 
           response: "Butter one side of each bread slice. Place bread butter-side down in a non-stick pan over medium heat. Layer cheese slices on top. Top with second bread, butter-side up. Cook 3-4 min until golden, flip carefully, cook other side 3 min. Slice diagonal and serve hot!" },
         { keywords: ['chicken'], 
-          response: "Season chicken with salt and pepper. Pan-fry 5-6 minutes per side over medium-high heat until internal temp reaches 165°F. Let rest 5 minutes before slicing. Tip: Pound chicken thin for faster, even cooking!" },
+          response: "Season chicken with salt and pepper. Pan-fry 5-6 minutes per side over medium-high heat until internal temp reaches 165┬░F. Let rest 5 minutes before slicing. Tip: Pound chicken thin for faster, even cooking!" },
         { keywords: ['pasta', 'spaghetti'], 
           response: "Boil a large pot of salted water (should taste like the sea). Cook pasta according to package time minus 1 minute for al dente. Reserve 1 cup pasta water before draining. Toss with your sauce and add pasta water to loosen if needed." },
         { keywords: ['rice', 'cook rice'], 
           response: "Rinse rice until water runs clear. Use a 1:1.5 ratio (rice to water). Bring to boil, reduce heat to low, cover and cook 18 minutes. Let rest covered 5 minutes, then fluff with fork. Day-old rice is best for fried rice!" },
         { keywords: ['substitute', 'replacement', 'instead of', 'swap'], 
-          response: "Common swaps: Butter → Olive oil or Mayo. Milk → Water or plant milk. Eggs → Flax eggs (1 tbsp ground flax + 3 tbsp water per egg). Sugar → Honey or maple syrup. Flour → Gluten-free flour blend." },
+          response: "Common swaps: Butter ΓåÆ Olive oil or Mayo. Milk ΓåÆ Water or plant milk. Eggs ΓåÆ Flax eggs (1 tbsp ground flax + 3 tbsp water per egg). Sugar ΓåÆ Honey or maple syrup. Flour ΓåÆ Gluten-free flour blend." },
         { keywords: ['egg'], 
           response: "Egg basics: Room temp eggs crack easier. To hard boil: Place in cold water, bring to boil, remove from heat and cover 12 min. To soft boil: 6-7 minutes. To fry: heat oil in pan, crack egg carefully, cook 2-3 min for runny yolk." },
         { keywords: ['chop', 'cut', 'dice', 'slice'], 
@@ -959,15 +958,15 @@ function getLocalResponse(message) {
         { keywords: ['season', 'flavor', 'spice'], 
           response: "Basic seasoning: Salt enhances flavor. Pepper adds heat. cumin = earthy, for Mexican/Indian. Paprika = sweet/smoky. Oregano = Italian. Turmeric = earthy, turns food yellow. Taste as you go!" },
         { keywords: ['oven', 'bake', 'temperature'], 
-          response: "Common temps: 325°F = slow bake (cheesecake). 350°F = standard bake (cakes, cookies). 375°F = slightly hotter. 400°F = hot bake (pies, pizza). 425°F+ = very hot (roasted veggies). Always preheat!" },
+          response: "Common temps: 325┬░F = slow bake (cheesecake). 350┬░F = standard bake (cakes, cookies). 375┬░F = slightly hotter. 400┬░F = hot bake (pies, pizza). 425┬░F+ = very hot (roasted veggies). Always preheat!" },
         { keywords: ['thank', 'thanks'], 
-          response: "You're welcome! Happy cooking! 🍳 If you need help with anything else, just ask!" },
+          response: "You're welcome! Happy cooking! ≡ƒì│ If you need help with anything else, just ask!" },
         { keywords: ['hello', 'hi', 'hey', 'help'], 
-          response: "Hi there! 👋 I'm your cooking assistant. I can help with recipes, cooking techniques, ingredient substitutions, or step-by-step guidance. What are you cooking today?" },
+          response: "Hi there! ≡ƒæï I'm your cooking assistant. I can help with recipes, cooking techniques, ingredient substitutions, or step-by-step guidance. What are you cooking today?" },
         { keywords: ['stir fry', 'stir-fry', 'wok'], 
           response: "Stir fry tips: Cut everything same size for even cooking. Heat wok until smoking, add oil then food. Keep food moving - don't overcrowd. High heat, short time = crispy veggies! Have all ingredients ready before you start (mise en place)." },
         { keywords: ['soup', 'stew'], 
-          response: "Soup tip: Sauté aromatics (onion, garlic, celery) first. Add liquids, bring to simmer. Most soups taste better the next day - flavors meld! For thicken, make a roux or blend and add back." },
+          response: "Soup tip: Saut├⌐ aromatics (onion, garlic, celery) first. Add liquids, bring to simmer. Most soups taste better the next day - flavors meld! For thicken, make a roux or blend and add back." },
         { keywords: ['salad', 'dressing'], 
           response: "Salad tip: Wash and dry lettuce in a salad spinner. For dressing: oil + acid (vinegar/lemon) + salt + pepper = basic vinaigrette. Toss salad just before serving, not in the bowl you'll store it in!" },
         { keywords: ['cook', 'prepare', 'make'], 
@@ -983,8 +982,8 @@ function getLocalResponse(message) {
     
     if (!response) {
         response = currentLang === 'ur'
-            ? 'کھانے کا سوال! تازہ اجناس، آہستہ آہستہ نمک، ہمت کریں! 😊 ایپ میں اجناس چنیں یا مخصوص سوال پوچھیں۔'
-            : "That's a cooking question! From my knowledge: start with fresh ingredients, season as you go, and don't be afraid to experiment. 😊 Select ingredients in the app for matching recipes, or ask a more specific cooking question!";
+            ? '┌⌐┌╛╪º┘å█Æ ┌⌐╪º ╪│┘ê╪º┘ä! ╪¬╪º╪▓█ü ╪º╪¼┘å╪º╪│╪î ╪ó█ü╪│╪¬█ü ╪ó█ü╪│╪¬█ü ┘å┘à┌⌐╪î █ü┘à╪¬ ┌⌐╪▒█î┌║! ≡ƒÿè ╪º█î┘╛ ┘à█î┌║ ╪º╪¼┘å╪º╪│ ┌å┘å█î┌║ █î╪º ┘à╪«╪╡┘ê╪╡ ╪│┘ê╪º┘ä ┘╛┘ê┌å┌╛█î┌║█ö'
+            : "That's a cooking question! From my knowledge: start with fresh ingredients, season as you go, and don't be afraid to experiment. ≡ƒÿè Select ingredients in the app for matching recipes, or ask a more specific cooking question!";
     }
     
     addChatbotMessage(response);
@@ -994,7 +993,7 @@ async function getAIResponseOnline(message) {
     addChatbotMessage(tr('thinking'));
     
     const langInstruction = currentLang === 'ur'
-        ? '7. ALWAYS respond in Urdu (اردو script). Use simple spoken Urdu. Keep cooking terms clear.'
+        ? '7. ALWAYS respond in Urdu (╪º╪▒╪»┘ê script). Use simple spoken Urdu. Keep cooking terms clear.'
         : currentLang !== 'en'
             ? `7. Respond in the user's language (${currentLang}).`
             : '';
@@ -1289,39 +1288,39 @@ function hasStrongMatch() {
 // ===== AI GENERATION (Template-based) =====
 const recipeTemplates = {
     meal: [
-        { name: '{ing1} & {ing2} Bowl', icon: '🥣', time: 20, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: 'Crispy {ing1} with {ing2}', icon: '🍳', time: 25, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: '{ing1} {ing2} Stir-Fry', icon: '🥡', time: 20, difficulty: 'Easy', cuisine: 'Chinese' },
-        { name: 'Creamy {ing1} {ing2}', icon: '🍲', time: 30, difficulty: 'Medium', cuisine: 'Italian' },
-        { name: '{ing1} {ing2} Curry', icon: '🍛', time: 35, difficulty: 'Medium', cuisine: 'Indian' },
-        { name: 'Mediterranean {ing1} Wrap', icon: '🥙', time: 15, difficulty: 'Easy', cuisine: 'Mediterranean' },
-        { name: '{ing1} {ing2} Soup', icon: '🍲', time: 30, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: 'Grilled {ing1} with {ing2}', icon: '🍽️', time: 25, difficulty: 'Medium', cuisine: 'American' },
+        { name: '{ing1} & {ing2} Bowl', icon: '≡ƒÑú', time: 20, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: 'Crispy {ing1} with {ing2}', icon: '≡ƒì│', time: 25, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: '{ing1} {ing2} Stir-Fry', icon: '≡ƒÑí', time: 20, difficulty: 'Easy', cuisine: 'Chinese' },
+        { name: 'Creamy {ing1} {ing2}', icon: '≡ƒì▓', time: 30, difficulty: 'Medium', cuisine: 'Italian' },
+        { name: '{ing1} {ing2} Curry', icon: '≡ƒì¢', time: 35, difficulty: 'Medium', cuisine: 'Indian' },
+        { name: 'Mediterranean {ing1} Wrap', icon: '≡ƒÑÖ', time: 15, difficulty: 'Easy', cuisine: 'Mediterranean' },
+        { name: '{ing1} {ing2} Soup', icon: '≡ƒì▓', time: 30, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: 'Grilled {ing1} with {ing2}', icon: '≡ƒì╜∩╕Å', time: 25, difficulty: 'Medium', cuisine: 'American' },
     ],
     drink: [
-        { name: 'Refreshing {ing1} Water', icon: '💧', time: 5, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: '{ing1} {ing2} Smoothie', icon: '🥤', time: 5, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: 'Sparkling {ing1} Spritzer', icon: '🍹', time: 5, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: '{ing1} Mint Infusion', icon: '🌿', time: 10, difficulty: 'Easy', cuisine: 'Mediterranean' },
-        { name: 'Creamy {ing1} Shake', icon: '🥛', time: 5, difficulty: 'Easy', cuisine: 'American' },
-        { name: 'Golden {ing1} Latte', icon: '☕', time: 10, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: '{ing1} {ing2} cooler', icon: '🍹', time: 5, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: 'Refreshing {ing1} Water', icon: '≡ƒÆº', time: 5, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: '{ing1} {ing2} Smoothie', icon: '≡ƒÑñ', time: 5, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: 'Sparkling {ing1} Spritzer', icon: '≡ƒì╣', time: 5, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: '{ing1} Mint Infusion', icon: '≡ƒî┐', time: 10, difficulty: 'Easy', cuisine: 'Mediterranean' },
+        { name: 'Creamy {ing1} Shake', icon: '≡ƒÑ¢', time: 5, difficulty: 'Easy', cuisine: 'American' },
+        { name: 'Golden {ing1} Latte', icon: 'Γÿò', time: 10, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: '{ing1} {ing2} cooler', icon: '≡ƒì╣', time: 5, difficulty: 'Easy', cuisine: 'Fusion' },
     ],
     sauce: [
-        { name: 'Quick {ing1} Glaze', icon: '🥫', time: 10, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: '{ing1} {ing2} Spread', icon: '🫙', time: 10, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: 'Fresh {ing1} {ing2} Dip', icon: '🥣', time: 5, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: '{ing1} Infused Oil', icon: '🫒', time: 10, difficulty: 'Easy', cuisine: 'Mediterranean' },
-        { name: '{ing1} {ing2} Chutney', icon: '🫙', time: 15, difficulty: 'Easy', cuisine: 'Indian' },
-        { name: 'Roasted {ing1} Puree', icon: '🫕', time: 20, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: 'Quick {ing1} Glaze', icon: '≡ƒÑ½', time: 10, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: '{ing1} {ing2} Spread', icon: '≡ƒ½Ö', time: 10, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: 'Fresh {ing1} {ing2} Dip', icon: '≡ƒÑú', time: 5, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: '{ing1} Infused Oil', icon: '≡ƒ½Æ', time: 10, difficulty: 'Easy', cuisine: 'Mediterranean' },
+        { name: '{ing1} {ing2} Chutney', icon: '≡ƒ½Ö', time: 15, difficulty: 'Easy', cuisine: 'Indian' },
+        { name: 'Roasted {ing1} Puree', icon: '≡ƒ½ò', time: 20, difficulty: 'Easy', cuisine: 'Fusion' },
     ],
     dessert: [
-        { name: '{ing1} Sweet Treat', icon: '🍰', time: 15, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: 'Fluffy {ing1} Pancakes', icon: '🥞', time: 20, difficulty: 'Easy', cuisine: 'American' },
-        { name: '{ing1} {ing2} Parfait', icon: '🍨', time: 10, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: 'Creamy {ing1} Pudding', icon: '🍮', time: 25, difficulty: 'Medium', cuisine: 'Fusion' },
-        { name: '{ing1} Frozen Bites', icon: '🍧', time: 15, difficulty: 'Easy', cuisine: 'Fusion' },
-        { name: '{ing1} Drizzled Toast', icon: '🍞', time: 10, difficulty: 'Easy', cuisine: 'American' },
+        { name: '{ing1} Sweet Treat', icon: '≡ƒì░', time: 15, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: 'Fluffy {ing1} Pancakes', icon: '≡ƒÑ₧', time: 20, difficulty: 'Easy', cuisine: 'American' },
+        { name: '{ing1} {ing2} Parfait', icon: '≡ƒì¿', time: 10, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: 'Creamy {ing1} Pudding', icon: '≡ƒì«', time: 25, difficulty: 'Medium', cuisine: 'Fusion' },
+        { name: '{ing1} Frozen Bites', icon: '≡ƒìº', time: 15, difficulty: 'Easy', cuisine: 'Fusion' },
+        { name: '{ing1} Drizzled Toast', icon: '≡ƒì₧', time: 10, difficulty: 'Easy', cuisine: 'American' },
     ]
 };
 
@@ -1352,7 +1351,7 @@ const stepTemplates = {
         'Serve or store in airtight container.',
     ],
     dessert: [
-        'Preheat oven to 350°F if needed.',
+        'Preheat oven to 350┬░F if needed.',
         'Mix dry ingredients in one bowl.',
         'Combine wet ingredients in another.',
         'Fold wet into dry until just combined.',
@@ -1629,10 +1628,10 @@ function updateResults(autoShowRecipe = true) {
                     <p>${tr('generateWithAI')}</p>
                 </div>
                 <div class="ai-buttons">
-                    <button class="ai-generate-btn" onclick="generateAndShow('meal')">🍽️ ${tr('generateMeal')}</button>
-                    <button class="ai-generate-btn drink" onclick="generateAndShow('drink')">🥤 ${tr('generateDrink')}</button>
-                    <button class="ai-generate-btn sauce" onclick="generateAndShow('sauce')">🫙 ${tr('generateSauce')}</button>
-                    <button class="ai-generate-btn dessert" onclick="generateAndShow('dessert')">🍰 ${tr('generateDessert')}</button>
+                    <button class="ai-generate-btn" onclick="generateAndShow('meal')">≡ƒì╜∩╕Å ${tr('generateMeal')}</button>
+                    <button class="ai-generate-btn drink" onclick="generateAndShow('drink')">≡ƒÑñ ${tr('generateDrink')}</button>
+                    <button class="ai-generate-btn sauce" onclick="generateAndShow('sauce')">≡ƒ½Ö ${tr('generateSauce')}</button>
+                    <button class="ai-generate-btn dessert" onclick="generateAndShow('dessert')">≡ƒì░ ${tr('generateDessert')}</button>
                 </div>
             </div>
         `;
@@ -1676,10 +1675,10 @@ function renderSection(title, items, isCustom = false) {
                         <div class="result-icon">${r.icon}</div>
                         <div class="result-name">${r.name}</div>
                         <div class="result-meta">
-                            <span>⏱️ ${r.time}${tr('min')}</span>
+                            <span>ΓÅ▒∩╕Å ${r.time}${tr('min')}</span>
                             <span class="diff-${r.difficulty.toLowerCase()}">${translateDifficulty(r.difficulty)}</span>
                         </div>
-                        <div class="result-cal">🔥 ${r.calories} ${tr('cal')}</div>
+                        <div class="result-cal">≡ƒöÑ ${r.calories} ${tr('cal')}</div>
                         <div class="result-cuisine">${r.cuisine}</div>
                         ${isCustom ? `<span class="custom-badge">${tr('customBadge')}</span>` : ''}
                     </div>
@@ -1719,11 +1718,11 @@ function showRecipe(id) {
         `<span class="leftover-badge">${tr('leftoverMatch', { match: matchCount, total: recipe.ingredients.length })}</span>` : '';
     
     heroMeta.innerHTML = `
-        <span>⏱️ ${recipe.time} ${tr('min')}</span>
+        <span>ΓÅ▒∩╕Å ${recipe.time} ${tr('min')}</span>
         <span class="diff-${recipe.difficulty.toLowerCase()}">${translateDifficulty(recipe.difficulty)}</span>
-        <span class="cal-badge">🔥 ${scaledCalories(recipe.calories)} ${tr('cal')}</span>
+        <span class="cal-badge">≡ƒöÑ ${scaledCalories(recipe.calories)} ${tr('cal')}</span>
         <span class="type-badge type-${recipe.type}">${recipe.type}</span>
-        <span class="serv-badge">🍽️ ${currentServings}</span>
+        <span class="serv-badge">≡ƒì╜∩╕Å ${currentServings}</span>
         ${leftoverBadge}
     `;
     
@@ -1742,13 +1741,13 @@ function showRecipe(id) {
     );
     const missingList = document.getElementById('missingList');
     if (missing.length === 0 && !recipe.isGenerated) {
-        missingList.innerHTML = `<p class="all-have">✓ ${tr('allHave')}</p>`;
+        missingList.innerHTML = `<p class="all-have">Γ£ô ${tr('allHave')}</p>`;
     } else if (recipe.isGenerated) {
         missingList.innerHTML = `<p class="ai-note">${tr('aiGeneratedNote')}</p>`;
     } else {
         missingList.innerHTML = missing.map(ing => `
             <div class="missing-item">
-                <span>✗</span>
+                <span>Γ£ù</span>
                 <span>${escapeHtml(getRecipeIngDisplayName(ing.name))}</span>
             </div>
         `).join('');
@@ -1769,7 +1768,7 @@ function showRecipe(id) {
         subsList.innerHTML = recipe.substitutions.map(s => `
             <div class="sub-row">
                 <span>${escapeHtml(getRecipeIngDisplayName(s.from))}</span>
-                <span class="arrow">→</span>
+                <span class="arrow">ΓåÆ</span>
                 <span>${escapeHtml(getRecipeIngDisplayName(s.to))}</span>
             </div>
         `).join('');
@@ -1781,7 +1780,7 @@ function showRecipe(id) {
     
     const isFav = favorites.includes(recipe.id);
     const saveBtn = document.getElementById('favBtn');
-    saveBtn.textContent = isFav ? '❤️ ' + tr('saved') : '🤍 ' + tr('saveRecipe');
+    saveBtn.textContent = isFav ? 'Γ¥ñ∩╕Å ' + tr('saved') : '≡ƒñì ' + tr('saveRecipe');
     saveBtn.onclick = () => toggleFav(recipe.id);
     
     if (recipe.isGenerated) {
@@ -1811,7 +1810,7 @@ function toggleFav(id) {
     localStorage.setItem('mealGenieFav', JSON.stringify(favorites));
     
     const btn = document.getElementById('favBtn');
-    btn.textContent = favorites.includes(id) ? '❤️ ' + tr('saved') : '🤍 ' + tr('saveRecipe');
+    btn.textContent = favorites.includes(id) ? 'Γ¥ñ∩╕Å ' + tr('saved') : '≡ƒñì ' + tr('saveRecipe');
     updateFavCount();
 }
 
@@ -1981,7 +1980,7 @@ function renderAllMealsView() {
     const container = document.getElementById('cuisineGroups');
     
     container.innerHTML = `
-        <button class="back-btn" onclick="backFromAll()">← ${tr('back')}</button>
+        <button class="back-btn" onclick="backFromAll()">ΓåÉ ${tr('back')}</button>
         <div class="all-meals-header">
             <div class="filter-section">
                 <span class="filter-label">${tr('courseLabel')}</span>
@@ -2011,8 +2010,8 @@ function renderAllMealsView() {
                     <div class="meal-card ${r.isGenerated ? 'generated' : ''}" onclick="showRecipe(${r.id})">
                         <div class="meal-card-icon">${r.icon}</div>
                         <div class="meal-card-name">${r.name}</div>
-                        <div class="meal-card-meta">⏱️ ${r.time}${tr('min')} • ${translateDifficulty(r.difficulty)}</div>
-                        <div class="meal-card-cal">🔥 ${r.calories} ${tr('cal')}</div>
+                        <div class="meal-card-meta">ΓÅ▒∩╕Å ${r.time}${tr('min')} ΓÇó ${translateDifficulty(r.difficulty)}</div>
+                        <div class="meal-card-cal">≡ƒöÑ ${r.calories} ${tr('cal')}</div>
                         <div class="meal-card-type">${r.type}</div>
                     </div>
                 `).join('')}
@@ -2046,7 +2045,7 @@ function renderBlogPosts() {
         container.innerHTML = blogPosts.map((post, index) => `
             <div class="blog-post">
                 <div class="post-header">
-                    <span class="post-type ${post.type}">${post.type === 'share' ? '📝 ' + tr('shareTab') : post.type === 'bug' ? '🐛 ' + tr('bugTab') : '💬 ' + tr('chatTab')}</span>
+                    <span class="post-type ${post.type}">${post.type === 'share' ? '≡ƒô¥ ' + tr('shareTab') : post.type === 'bug' ? '≡ƒÉ¢ ' + tr('bugTab') : '≡ƒÆ¼ ' + tr('chatTab')}</span>
                     <span class="post-date">${new Date(post.date).toLocaleDateString()}</span>
                 </div>
                 <h4 class="post-title">${escapeHtml(post.title)}</h4>
@@ -2139,7 +2138,7 @@ function closeOverlayPanels(except) {
         blog: ['blogPanel', '.blog-btn'],
         settings: ['settingsPanel', '.settings-btn'],
         lang: ['langPanel', '.lang-btn'],
-        chatbot: ['chatbotPanel', null],
+        chatbot: ['chatbotPanel', '.chatbot-btn'],
         fridge: ['fridgePanel', '.fridge-btn']
     };
     Object.entries(map).forEach(([key, [id]]) => {
@@ -2431,9 +2430,9 @@ function renderFridgeResults(menu) {
     results.innerHTML = `
         <div class="fridge-menu-card">
             <h4>${tr('yourMenu')}</h4>
-            <p class="fridge-menu-meta">${menu.mood} · ${menu.budget} ${tr('budgetWord')}</p>
+            <p class="fridge-menu-meta">${menu.mood} ┬╖ ${menu.budget} ${tr('budgetWord')}</p>
             <div class="fridge-menu-item main">
-                <span>🍳</span>
+                <span>≡ƒì│</span>
                 <div>
                     <strong>${escapeHtml(menu.meal.name)}</strong>
                     <p>${escapeHtml(menu.meal.tip || tr('matchedFridge'))}</p>
@@ -2441,7 +2440,7 @@ function renderFridgeResults(menu) {
                 </div>
             </div>
             <div class="fridge-menu-item">
-                <span>🥤</span>
+                <span>≡ƒÑñ</span>
                 <div>
                     <strong>${escapeHtml(menu.drink.name)}</strong>
                     ${menu.drink.id ? `<button class="fridge-link-btn" onclick="openFridgeRecipe(${menu.drink.id})">${tr('viewRecipe')}</button>` : ''}
@@ -2449,7 +2448,7 @@ function renderFridgeResults(menu) {
             </div>
             ${menu.sauce ? `
             <div class="fridge-menu-item">
-                <span>🫙</span>
+                <span>≡ƒ½Ö</span>
                 <div><strong>${escapeHtml(menu.sauce.name)}</strong></div>
             </div>` : ''}
             <a class="fridge-yt-btn" href="${menu.youtube}" target="_blank" rel="noopener">${tr('watchYoutube')}</a>
@@ -2578,7 +2577,7 @@ function liveMentorPrev() {
 
 function liveMentorAskHelp() {
     liveMentorListen(true);
-    liveMentorSpeak("Tell me what happened — burned, too salty, wrong step? I'm listening.");
+    liveMentorSpeak("Tell me what happened ΓÇö burned, too salty, wrong step? I'm listening.");
 }
 
 function liveMentorListen(forceHelp) {
@@ -2681,14 +2680,14 @@ async function liveMentorFix(problem) {
             }
         } catch (_) {}
     }
-    liveMentorSpeak(localFix || "No worries chef — taste, adjust seasoning, and lower the heat. You’ve got this!");
+    liveMentorSpeak(localFix || "No worries chef ΓÇö taste, adjust seasoning, and lower the heat. YouΓÇÖve got this!");
 }
 
 function getLocalMentorFix(problem, step) {
     const p = problem.toLowerCase();
     if (p.includes('burn') || p.includes('burnt')) return "Turn off the heat now. If only the bottom burned, transfer to a new pan without scraping the char. Add a splash of liquid and continue gently.";
-    if (p.includes('salt')) return "Dilute with unsalted liquid — water, stock, or cream. Add acid like lemon to balance. Serve with plain rice or bread on the side.";
-    if (p.includes('raw') || p.includes('undercook')) return "Keep cooking on medium heat until done. Cover the pan to trap steam — that speeds things up without burning.";
+    if (p.includes('salt')) return "Dilute with unsalted liquid ΓÇö water, stock, or cream. Add acid like lemon to balance. Serve with plain rice or bread on the side.";
+    if (p.includes('raw') || p.includes('undercook')) return "Keep cooking on medium heat until done. Cover the pan to trap steam ΓÇö that speeds things up without burning.";
     if (p.includes('watery') || p.includes('soggy')) return "Simmer uncovered to reduce liquid, or mix a teaspoon of cornstarch with cold water and stir in.";
     if (p.includes('dry')) return "Add butter, olive oil, or a splash of broth. Cover briefly so moisture returns.";
     if (step) return `For this step: take your time with "${step.slice(0, 60)}...". Lower heat, re-read amounts, and adjust as you go.`;
@@ -2858,7 +2857,7 @@ window.addEventListener('DOMContentLoaded', () => {
     applyMobileLayout();
     applyLanguage();
     loadFridgeInventory();
-    document.getElementById('muteBtn').textContent = voiceMuted ? '🔇' : '🔊';
+    document.getElementById('muteBtn').textContent = voiceMuted ? '≡ƒöç' : '≡ƒöè';
     
     // Close panels when clicking outside
     document.addEventListener('click', (e) => {
@@ -2866,10 +2865,12 @@ window.addEventListener('DOMContentLoaded', () => {
         const settingsPanel = document.getElementById('settingsPanel');
         const langPanel = document.getElementById('langPanel');
         const fridgePanel = document.getElementById('fridgePanel');
+        const chatbotPanel = document.getElementById('chatbotPanel');
         const blogBtn = document.querySelector('.blog-btn');
         const settingsBtn = document.querySelector('.settings-btn');
         const langBtn = document.querySelector('.lang-btn');
         const fridgeBtn = document.querySelector('.fridge-btn');
+        const chatbotBtn = document.querySelector('.chatbot-btn');
         
         if (blogPanel.classList.contains('open') && 
             !blogPanel.contains(e.target) && 
@@ -2894,6 +2895,12 @@ window.addEventListener('DOMContentLoaded', () => {
             fridgeBtn && !fridgeBtn.contains(e.target)) {
             fridgePanel.classList.remove('open');
             stopFridgeCamera();
+        }
+
+        if (chatbotPanel?.classList.contains('open') &&
+            !chatbotPanel.contains(e.target) &&
+            chatbotBtn && !chatbotBtn.contains(e.target)) {
+            chatbotPanel.classList.remove('open');
         }
     });
     
