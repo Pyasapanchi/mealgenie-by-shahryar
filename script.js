@@ -317,7 +317,119 @@ const translations = {
         allDone: "🎉 That's all the steps! Your dish should be ready. Enjoy your meal!",
         paused: "Cooking guide paused. Say 'next' anytime to resume!",
         repeatStep: "Step {num}: {text}",
-        cookingComplete: "Done! Your meal is ready! 🍽️"
+        cookingComplete: "Done! Your meal is ready! 🍽️",
+        langTitle: '🌐 Language',
+        shareTab: 'Share',
+        bugTab: 'Bug',
+        chatTab: 'Chat',
+        submitPost: 'Post',
+        saveApiKey: 'Save API Key',
+        apiKeySaved: 'API key saved successfully!',
+        apiKeyInvalid: 'Please enter a valid API key.',
+        emptyTitle: 'What are we cooking?',
+        emptySub: 'Select ingredients to discover recipes',
+        recipeIngredients: 'Ingredients',
+        recipeNeed: 'You May Need',
+        recipeSteps: 'Steps',
+        recipeSubs: 'Substitutions',
+        servingsLabel: 'Servings:',
+        startLiveMentor: '🤖 Start Live Mentor',
+        chefMentor: 'Chef Mentor',
+        liveGuide: 'Live cooking guide',
+        liveReady: 'Ready when you are, chef.',
+        liveHelp: '🆘 I made a mistake / need help',
+        liveStepOf: 'Step {cur} / {total}',
+        fridgeScan: '🧊 Fridge Scan',
+        fridgeIntro: 'Snap your fridge — AI detects ingredients, matches authentic recipes & chef videos.',
+        openCamera: '📷 Open Camera',
+        uploadPhoto: '🖼️ Upload Photo',
+        scanFridge: '✨ Scan Fridge',
+        scanning: '🔍 Scanning...',
+        detectedHint: 'Detected items appear here — tap to confirm.',
+        detectedTitle: '✅ {count} items detected',
+        detectedEdit: 'Tap to remove wrong items. Add more from kitchen below.',
+        nextCustomize: 'Next: Customize →',
+        fridgeIntroPrefs: "Set your vibe — we'll pick meals, drinks & sauces that fit.",
+        moodLabel: '😊 Mood',
+        budgetLabel: '💰 Budget',
+        usageLabel: '👥 Usage',
+        servingsFridge: '🍽️ Servings',
+        moodComfort: '🛋️ Comfort',
+        moodHealthy: '💪 Healthy',
+        moodQuick: '⚡ Quick',
+        moodCozy: '☕ Cozy',
+        moodAdventurous: '🌍 Adventurous',
+        budgetBudget: '💵 Budget',
+        budgetModerate: '💳 Moderate',
+        budgetAny: '✨ Any',
+        usageSolo: '1️⃣ Solo',
+        usageCouple: '👫 Couple',
+        usageFamily: '👨‍👩‍👧 Family',
+        usagePrep: '📦 Meal Prep',
+        generateMenu: '🍳 Generate My Menu',
+        customizeAgain: '← Customize Again',
+        useInKitchen: '✅ Use in Kitchen',
+        buildingMenu: '🧊 Building your custom menu...',
+        sectionMeals: '🍽️ Meals',
+        sectionDrinks: '🥤 Drinks',
+        sectionSauces: '🫙 Sauces',
+        sectionDesserts: '🍰 Desserts',
+        generateWithAI: 'Generate custom recipes with AI',
+        customMeals: '🧠 Custom Meals',
+        customDrinks: '🧠 Custom Drinks',
+        customSauces: '🧠 Custom Sauces',
+        customDesserts: '🧠 Custom Desserts',
+        noExactMatch: 'No exact matches found, but you can:',
+        customBadge: 'Custom',
+        cal: 'cal',
+        min: 'm',
+        aiGeneratedNote: '🤖 AI generated - ingredients are suggestions',
+        noRecipesFound: 'No recipes found for this combination.',
+        generateRecipe: '✨ Generate a Recipe',
+        recipesFound: '{count} recipes found',
+        allCourse: '🍽️ All',
+        allCuisine: '🌍 All',
+        noPosts: 'No posts yet. Be the first to share!',
+        selectIngFirst: 'Please select some ingredients first!',
+        noFavorites: 'You have no saved recipes yet!',
+        savedRecipes: '❤️ Saved Recipes',
+        fillPost: 'Please fill in both title and content!',
+        cameraDenied: 'Camera access denied. Upload a photo of your fridge instead.',
+        takePhotoFirst: 'Take or upload a fridge photo first.',
+        openRecipeFirst: 'Open a recipe first, then start Live Mentor.',
+        generateAnother: '✨ Generate Another Idea',
+        selectFirst: '0 selected',
+        selectedCount: '{count} selected',
+        leftoverMatch: '🔄 {match}/{total} ingredients',
+        voiceNotSupported: 'Voice input not supported in this browser. Please type your question.',
+        apiKeySavedChat: '✅ API key saved! You can now use the AI cooking assistant.',
+        aiConnectError: "I'm having trouble connecting. Try again or check your API key in Settings.",
+        cookOnlyError: 'I can only help with cooking questions. Ask about food or recipes!',
+        voiceNext: 'next',
+        voiceRepeat: 'repeat',
+        voicePause: 'pause',
+        voiceStop: 'stop',
+        difficultyEasy: 'Easy',
+        difficultyMedium: 'Medium',
+        difficultyHard: 'Hard',
+        yourMenu: '🍽️ Your Menu',
+        alsoMatches: '📋 Also matches your fridge',
+        viewRecipe: 'View Recipe',
+        watchYoutube: '▶️ Watch authentic chefs on YouTube',
+        budgetWord: 'budget',
+        apiKeySavedMsg: 'API key saved successfully!',
+        catProteins: '🥩 Proteins',
+        catVegetables: '🥬 Vegetables',
+        catDairy: '🧀 Dairy',
+        catGrains: '🍞 Grains',
+        catSpices: '🌿 Spices',
+        catPantry: '🫙 Pantry',
+        clearAll: 'Clear All',
+        courseLabel: 'Course:',
+        voiceInputFailed: 'Voice input failed. Please try again or type your question.',
+        matchedFridge: 'Matched from your fridge',
+        liveIntro: "Hey chef! I'm your robotic mentor for {recipe}. I'll guide you step by step. Say next when you're ready, or tap the microphone if you need help.",
+        liveAllDone: 'All steps complete — great job, chef!'
     },
     ur: {
         appTitle: 'میل جنی',
@@ -369,14 +481,177 @@ const translations = {
         tryQuestion: 'آزمائیں: "سکریمڈ انگ کیسے بنائیں؟"',
         thinking: 'سوچ رہا ہوں...',
         letsCook: "چلو {recipe} پکاتے ہیں! میں آپ کو قدم بقدم بتاؤں گا۔",
-        sayNext: '"next" کہیں جاری رکھنے کے لیے، "repeat" دوبارہ سننے کے لیے، "pause" روکنے کے لیے۔',
+        sayNext: '"اگلا" کہیں جاری رکھنے، "دہرائیں" دوبارہ سننے، "روکیں" روکنے کے لیے۔',
         step: 'اقدام {num}: {text}',
-        allDone: "🎉 سارے steps ختم ہو گئے! آپ کا کھانا تیار ہے!",
-        paused: "کھانے کا رہنما روک دیا گیا۔ کبھی بھی 'next' کہیں جاری کرنے کے لیے!",
+        allDone: '🎉 سارے اقدام مکمل! آپ کا کھانا تیار ہے!',
+        paused: 'رہنما روک دیا۔ جاری رکھنے "اگلا" کہیں!',
         repeatStep: 'اقدام {num}: {text}',
-        cookingComplete: "ہو گیا! آپ کا کھانا تیار ہے! 🍽️"
+        cookingComplete: "ہو گیا! آپ کا کھانا تیار ہے! 🍽️",
+        langTitle: '🌐 زبان',
+        shareTab: 'شیئر',
+        bugTab: 'بگ',
+        chatTab: 'چیٹ',
+        submitPost: 'پوسٹ',
+        saveApiKey: 'API کی محفوظ کریں',
+        apiKeySaved: 'API کی محفوظ ہو گئی!',
+        apiKeyInvalid: 'براہ کرم درست API کی درج کریں۔',
+        emptyTitle: 'ہم کیا پکا رہے ہیں؟',
+        emptySub: 'ترکیبیں دریافت کرنے کے لیے اجناس چنیں',
+        recipeIngredients: 'اجناس',
+        recipeNeed: 'آپ کو چاہیے',
+        recipeSteps: 'اقدام',
+        recipeSubs: 'متبادل',
+        servingsLabel: 'افراد:',
+        startLiveMentor: '🤖 لائیو مینٹر شروع کریں',
+        chefMentor: 'شیف مینٹر',
+        liveGuide: 'لائیو پکانے کی رہنمائی',
+        liveReady: 'تیار ہیں؟ میں یہاں ہوں، شیف!',
+        liveHelp: '🆘 غلطی ہوگئی / مدد چاہیے',
+        liveStepOf: 'اقدام {cur} / {total}',
+        fridgeScan: '🧊 فریج اسکین',
+        fridgeIntro: 'فریج کی تصویر لیں — AI اجناس پہچانے گا، اصل ترکیبیں اور شیف ویڈیوز ملائیں گے۔',
+        openCamera: '📷 کیمرہ کھولیں',
+        uploadPhoto: '🖼️ تصویر اپ لوڈ',
+        scanFridge: '✨ فریج اسکین',
+        scanning: '🔍 اسکین ہو رہا ہے...',
+        detectedHint: 'پہچانی گئی اجناس یہاں — تصدیق کے لیے ٹیپ کریں۔',
+        detectedTitle: '✅ {count} اجناس ملیں',
+        detectedEdit: 'غلط ہٹانے کے لیے ٹیپ کریں۔ نیچے سے مزید شامل کریں۔',
+        nextCustomize: 'اگلا: ترتیب →',
+        fridgeIntroPrefs: 'اپنا موڈ بتائیں — ہم کھانا، مشروب اور ساس چنیں گے۔',
+        moodLabel: '😊 موڈ',
+        budgetLabel: '💰 بجٹ',
+        usageLabel: '👥 استعمال',
+        servingsFridge: '🍽️ افاد',
+        moodComfort: '🛋️ آرام',
+        moodHealthy: '💪 صحت مند',
+        moodQuick: '⚡ جلدی',
+        moodCozy: '☕ گرم',
+        moodAdventurous: '🌍 مہم جو',
+        budgetBudget: '💵 سستا',
+        budgetModerate: '💳 درمیانہ',
+        budgetAny: '✨ کوئی بھی',
+        usageSolo: '1️⃣ اکیلے',
+        usageCouple: '👫 جوڑا',
+        usageFamily: '👨‍👩‍👧 خاندان',
+        usagePrep: '📦 تیاری',
+        generateMenu: '🍳 میرا مینو بنائیں',
+        customizeAgain: '← دوبارہ ترتیب',
+        useInKitchen: '✅ باورچی خانے میں استعمال',
+        buildingMenu: '🧊 آپ کا مینو تیار ہو رہا ہے...',
+        sectionMeals: '🍽️ کھانے',
+        sectionDrinks: '🥤 مشروبات',
+        sectionSauces: '🫙 ساس',
+        sectionDesserts: '🍰 مٹھائیاں',
+        needMoreIdeas: '✨ مزید خیال چاہیے؟',
+        generateWithAI: 'AI سے اپنی ترکیب بنائیں',
+        customMeals: '🧠 اپنی کھانے',
+        customDrinks: '🧠 اپنے مشروبات',
+        customSauces: '🧠 اپنی ساس',
+        customDesserts: '🧠 اپنی مٹھائیاں',
+        noExactMatch: 'بالکل میل نہیں ملا، لیکن آپ:',
+        customBadge: 'اپنی',
+        cal: 'کیل',
+        min: 'منٹ',
+        aiGeneratedNote: '🤖 AI سے بنایا — اجناس تجویز ہیں',
+        noRecipesFound: 'اس امتزاج کے لیے کوئی ترکیب نہیں۔',
+        generateRecipe: '✨ ترکیب بنائیں',
+        recipesFound: '{count} ترکیبیں ملیں',
+        allCourse: '🍽️ سب',
+        allCuisine: '🌍 سب',
+        noPosts: 'ابھی کوئی پوسٹ نہیں۔ پہلے شیئر کریں!',
+        selectIngFirst: 'پہلے کچھ اجناس چنیں!',
+        noFavorites: 'ابھی کوئی محفوظ ترکیب نہیں!',
+        savedRecipes: '❤️ محفوظ ترکیبیں',
+        fillPost: 'عنوان اور مواد دونوں بھریں!',
+        cameraDenied: 'کیمرہ کی اجازت نہیں۔ فریج کی تصویر اپ لوڈ کریں۔',
+        takePhotoFirst: 'پہلے فریج کی تصویر لیں یا اپ لوڈ کریں۔',
+        openRecipeFirst: 'پہلے ترکیب کھولیں، پھر لائیو مینٹر۔',
+        generateAnother: '✨ ایک اور خیال',
+        selectFirst: '0 منتخب',
+        selectedCount: '{count} منتخب',
+        leftoverMatch: '🔄 {match}/{total} اجناس',
+        voiceNotSupported: 'اس براؤزر میں آواز سپورٹ نہیں۔ ٹائپ کریں۔',
+        apiKeySavedChat: '✅ API کی محفوظ! اب AI معاون استعمال کریں۔',
+        aiConnectError: 'کنکشن مسئلہ۔ دوبارہ کوشش کریں یا Settings میں API کی چیک کریں۔',
+        cookOnlyError: 'میں صرف کھانے کے سوالات میں مدد کرتا ہوں!',
+        voiceNext: 'اگلا',
+        voiceRepeat: 'دہرائیں',
+        voicePause: 'روکیں',
+        voiceStop: 'بند',
+        difficultyEasy: 'آسان',
+        difficultyMedium: 'درمیانہ',
+        difficultyHard: 'مشکل',
+        yourMenu: '🍽️ آپ کا مینو',
+        alsoMatches: '📋 آپ کے فریج سے میل',
+        viewRecipe: 'ترکیب دیکھیں',
+        watchYoutube: '▶️ YouTube پر اصل شیف دیکھیں',
+        budgetWord: 'بجٹ',
+        apiKeySavedMsg: 'API کی محفوظ ہو گئی!',
+        catProteins: '🥩 گوشت و انڈے',
+        catVegetables: '🥬 سبزیاں',
+        catDairy: '🧀 دودھ کی اشیاء',
+        catGrains: '🍞 اناج',
+        catSpices: '🌿 مسالے',
+        catPantry: '🫙 پینٹری',
+        clearAll: 'سب ہٹائیں',
+        courseLabel: 'قسم:',
+        voiceInputFailed: 'آواز نہیں چلی۔ دوبارہ کوشش کریں یا ٹائپ کریں۔',
+        matchedFridge: 'آپ کے فریج سے میل',
+        liveIntro: 'سلام شیف! میں {recipe} کے لیے آپ کا روبوٹ مینٹر ہوں۔ قدم بقدم رہنمائی کروں گا۔ تیار ہوں تو "اگلا" کہیں یا مائیک دبائیں۔',
+        liveAllDone: 'سارے اقدام مکمل — شاباش شیف!'
     }
 };
+
+const urIngredientNames = {
+    chicken: 'مرغی', beef: 'گوشت', pork: 'سور کا گوشت', fish: 'مچھلی', shrimp: 'جhinga',
+    egg: 'انڈا', tofu: 'ٹوفو', turkey: 'ٹرکی', lamb: 'برہ کا گوشت', bacon: 'بیکن',
+    tomato: 'ٹماٹر', onion: 'پیاز', garlic: 'لہسن', potato: 'آلو', carrot: 'گاجر',
+    pepper: 'شملہ مرچ', spinach: 'پالک', mushroom: 'کھمبی', corn: 'مکئی', broccoli: 'بروکلی',
+    zucchini: 'زucchini', cucumber: 'کھیرا', lettuce: 'سلاد پatta', celery: 'اجوائن',
+    peas: 'مٹر', cabbage: 'بند گوبھی', avocado: 'ایووکاڈو', cauliflower: 'پھول گوبھی', apple: 'سیب',
+    cheese: 'پنیر', milk: 'دودھ', butter: 'مکھن', cream: 'ملائی', yogurt: 'دہی',
+    parmesan: 'پarmesan', mozzarella: 'موزاریلا', feta: 'فیٹا',
+    bread: 'روٹی', rice: 'چاول', pasta: 'پasta', flour: 'آٹا', noodles: 'نوڈلز',
+    tortilla: 'ٹورٹilla', couscous: 'کسکس', quinoa: 'کinoa',
+    salt: 'نمک', pepper_spice: 'کالی مرچ', chili: 'مرچ', cumin: 'زیرہ', basil: 'تلسی',
+    oregano: 'اوریgano', paprika: 'paprika', turmeric: 'ہلدی', cinnamon: 'دار چینی', ginger: 'ادرک',
+    olive_oil: 'زیتون کا تیل', soy_sauce: 'سویا ساس', sugar: 'چینی', honey: 'شہد',
+    beans: 'پhلی', chickpeas: 'چنا', lentils: 'دال', lemon: 'لیموں', lime: 'کagzi نimbu',
+    tomato_sauce: 'ٹماٹر ساس', broth: 'یakhni', vinegar: 'سرکہ', pine_nuts: 'چلغوزے',
+    water: 'پانی', mint: 'پudina', vanilla: 'ونilla', cocoa: 'کoko', chocolate: 'چاکلیٹ',
+    walnuts: 'اخروٹ', peanuts: 'مونگ پhلی'
+};
+
+function tr(key, vars = {}) {
+    const pack = translations[currentLang] || translations.en;
+    let text = pack[key] ?? translations.en[key] ?? key;
+    Object.entries(vars).forEach(([k, v]) => {
+        text = text.replace(new RegExp(`\\{${k}\\}`, 'g'), String(v));
+    });
+    return text;
+}
+
+function getIngDisplayName(ing) {
+    if (!ing) return '';
+    if (currentLang === 'ur' && urIngredientNames[ing.id]) return urIngredientNames[ing.id];
+    return ing.name;
+}
+
+function getRecipeIngDisplayName(name) {
+    const ing = getIngredientByName(name);
+    return ing ? getIngDisplayName(ing) : name;
+}
+
+function translateDifficulty(d) {
+    const map = { Easy: tr('difficultyEasy'), Medium: tr('difficultyMedium'), Hard: tr('difficultyHard') };
+    return map[d] || d;
+}
+
+function getIngSearchText(ing) {
+    const ur = urIngredientNames[ing.id] || '';
+    return (ing.name + ' ' + ur).toLowerCase();
+}
 let currentLang = localStorage.getItem('mealGenieLang') || 'en';
 
 function toggleLangMenu() {
@@ -407,31 +682,153 @@ function setLanguage(code) {
 }
 
 function applyLanguage() {
-    const t = translations[currentLang];
     const lang = languages.find(l => l.code === currentLang);
-    
+    document.documentElement.lang = currentLang;
     document.documentElement.dir = lang ? lang.dir : 'ltr';
+    document.body.classList.toggle('lang-ur', currentLang === 'ur');
     
-    document.querySelector('.logo-text').textContent = t.appTitle;
-    document.getElementById('ingSearch').placeholder = t.searchIng;
-    document.querySelector('.filter-label').textContent = t.cuisine;
-    document.getElementById('leftoverBtn').textContent = '🔄 ' + t.useLeftovers;
+    document.querySelector('.logo-text').textContent = tr('appTitle');
+    document.title = tr('appTitle');
+    document.getElementById('ingSearch').placeholder = tr('searchIng');
+    document.querySelector('.filter-label').textContent = tr('cuisine');
+    document.getElementById('leftoverBtn').textContent = '🔄 ' + tr('useLeftovers');
     const viewAllBtn = document.getElementById('viewAllBtn');
-    if (viewAllBtn) viewAllBtn.textContent = '📖 ' + t.viewAll;
-    document.getElementById('navIngredients').querySelector('.nav-item-label').textContent = t.ingredients;
-    document.getElementById('navResults').querySelector('.nav-item-label').textContent = t.recipes;
-    document.getElementById('navAll').querySelector('.nav-item-label').textContent = t.browse;
+    if (viewAllBtn) viewAllBtn.textContent = '📖 ' + tr('viewAll');
+    document.getElementById('navIngredients').querySelector('.nav-item-label').textContent = tr('ingredients');
+    document.getElementById('navResults').querySelector('.nav-item-label').textContent = tr('recipes');
+    document.getElementById('navAll').querySelector('.nav-item-label').textContent = tr('browse');
     
-    // Update chatbot welcome
-    const welcomeMsg = document.querySelector('.chatbot-welcome');
-    if (welcomeMsg) {
-        welcomeMsg.innerHTML = `<p>${t.hiCooking}</p><p class="chatbot-hint">${t.tryQuestion}</p>`;
+    const emptyTitle = document.getElementById('emptyTitle');
+    const emptySub = document.getElementById('emptySub');
+    if (emptyTitle) emptyTitle.textContent = tr('emptyTitle');
+    if (emptySub) emptySub.textContent = tr('emptySub');
+    else {
+        const es = document.querySelector('.empty-state h2');
+        const ep = document.querySelector('.empty-state p');
+        if (es) es.textContent = tr('emptyTitle');
+        if (ep) ep.textContent = tr('emptySub');
     }
     
-    // Update chatbot header
-    document.querySelector('.chatbot-title').textContent = t.cookingAssistant;
-    document.querySelector('.chatbot-subtitle').textContent = t.voicePowered;
-    document.getElementById('chatbotInput').placeholder = t.askCooking;
+    const blogTitle = document.querySelector('.blog-title');
+    if (blogTitle) blogTitle.textContent = '💬 ' + tr('community');
+    const blogTabs = document.querySelectorAll('.blog-tab');
+    if (blogTabs[0]) blogTabs[0].textContent = '📝 ' + tr('shareTab');
+    if (blogTabs[1]) blogTabs[1].textContent = '🐛 ' + tr('bugTab');
+    if (blogTabs[2]) blogTabs[2].textContent = '💬 ' + tr('chatTab');
+    const postTitle = document.getElementById('postTitle');
+    const postContent = document.getElementById('postContent');
+    if (postTitle) postTitle.placeholder = tr('postTitle');
+    if (postContent) postContent.placeholder = tr('postContent');
+    const submitPost = document.querySelector('.submit-post-btn');
+    if (submitPost) submitPost.textContent = tr('submitPost');
+    
+    const langTitle = document.querySelector('.lang-title');
+    if (langTitle) langTitle.textContent = tr('langTitle');
+    
+    const settingsTitle = document.querySelector('.settings-title');
+    if (settingsTitle) settingsTitle.textContent = tr('settings');
+    document.querySelectorAll('.settings-section-title').forEach((el, i) => {
+        el.textContent = i === 0 ? tr('bgColor') : tr('apiKey');
+    });
+    const apiHint = document.querySelector('.settings-hint');
+    if (apiHint) apiHint.textContent = tr('apiHint');
+    const saveApiBtn = document.querySelector('.save-api-key-btn');
+    if (saveApiBtn) saveApiBtn.textContent = tr('saveApiKey');
+    
+    const welcomeMsg = document.querySelector('.chatbot-welcome');
+    if (welcomeMsg) {
+        welcomeMsg.innerHTML = `<p>${tr('hiCooking')}</p><p class="chatbot-hint">${tr('tryQuestion')}</p>`;
+    }
+    document.querySelector('.chatbot-title').textContent = tr('cookingAssistant');
+    document.querySelector('.chatbot-subtitle').textContent = tr('voicePowered');
+    document.getElementById('chatbotInput').placeholder = tr('askCooking');
+    
+    const fridgeTitle = document.querySelector('.fridge-title');
+    if (fridgeTitle) fridgeTitle.textContent = tr('fridgeScan');
+    const fi = document.querySelector('#fridgeStepScan .fridge-intro');
+    if (fi) fi.textContent = tr('fridgeIntro');
+    const fip = document.querySelector('#fridgeStepPrefs .fridge-intro');
+    if (fip) fip.textContent = tr('fridgeIntroPrefs');
+    const fCam = document.querySelector('#fridgeStepScan .fridge-scan-actions .fridge-action-btn.primary');
+    if (fCam) fCam.textContent = tr('openCamera');
+    const fUpload = document.querySelector('#fridgeStepScan label.fridge-action-btn');
+    if (fUpload) fUpload.childNodes[0].textContent = tr('uploadPhoto') + ' ';
+    const fScan = document.getElementById('fridgeScanBtn');
+    if (fScan && !fScan.disabled) fScan.textContent = tr('scanFridge');
+    const fNext = document.getElementById('fridgeNextPrefs');
+    if (fNext) fNext.textContent = tr('nextCustomize');
+    applyFridgePrefLabels();
+    
+    const liveTitle = document.querySelector('.live-title');
+    if (liveTitle) liveTitle.textContent = tr('chefMentor');
+    const liveSub = document.getElementById('liveRecipeName');
+    if (liveSub && !liveAssistantState?.active) liveSub.textContent = tr('liveGuide');
+    const liveStepText = document.getElementById('liveStepText');
+    if (liveStepText && !liveAssistantState?.active) liveStepText.textContent = tr('liveReady');
+    const liveHelp = document.querySelector('.live-ctrl-btn.wide');
+    if (liveHelp) liveHelp.textContent = tr('liveHelp');
+    const liveMentorBtn = document.getElementById('liveMentorBtn');
+    if (liveMentorBtn) liveMentorBtn.textContent = tr('startLiveMentor');
+    
+    const recipeBack = document.querySelector('#recipeView .back-btn');
+    if (recipeBack) recipeBack.textContent = '← ' + tr('back');
+    const servLabel = document.querySelector('.servings-section > span');
+    if (servLabel) servLabel.textContent = tr('servingsLabel');
+    const sections = document.querySelectorAll('#recipeView .section h3');
+    if (sections[0]) sections[0].textContent = tr('recipeIngredients');
+    if (sections[1]) sections[1].textContent = tr('recipeNeed');
+    if (sections[2]) sections[2].textContent = tr('recipeSteps');
+    if (sections[3]) sections[3].textContent = tr('recipeSubs');
+    
+    const anyChip = document.querySelector('.cuisine-chip[data-cuisine="Any"]');
+    if (anyChip) anyChip.textContent = '🌍 ' + tr('any');
+    
+    updateSelectedCountLabel();
+    renderIngredients();
+    if (document.getElementById('resultsContainer').innerHTML) updateResults();
+    if (document.getElementById('allMealsView').classList.contains('show')) renderAllMealsView();
+    if (activeRecipeId) showRecipe(activeRecipeId);
+    renderBlogPosts();
+}
+
+function applyFridgePrefLabels() {
+    const map = [
+        ['#fridgeStepPrefs .fridge-pref-block:nth-child(2) .fridge-pref-label', 'moodLabel'],
+        ['#fridgeStepPrefs .fridge-pref-block:nth-child(3) .fridge-pref-label', 'budgetLabel'],
+        ['#fridgeStepPrefs .fridge-pref-block:nth-child(4) .fridge-pref-label', 'usageLabel'],
+        ['#fridgeStepPrefs .fridge-pref-block:nth-child(5) .fridge-pref-label', 'servingsFridge']
+    ];
+    map.forEach(([sel, key]) => {
+        const el = document.querySelector(sel);
+        if (el) el.textContent = tr(key);
+    });
+    const moodChips = ['moodComfort','moodHealthy','moodQuick','moodCozy','moodAdventurous'];
+    document.querySelectorAll('#fridgeMoodChips .fridge-chip').forEach((btn, i) => {
+        if (moodChips[i]) btn.textContent = tr(moodChips[i]);
+    });
+    ['budgetBudget','budgetModerate','budgetAny'].forEach((k, i) => {
+        const btn = document.querySelectorAll('#fridgeBudgetChips .fridge-chip')[i];
+        if (btn) btn.textContent = tr(k);
+    });
+    ['usageSolo','usageCouple','usageFamily','usagePrep'].forEach((k, i) => {
+        const btn = document.querySelectorAll('#fridgeUsageChips .fridge-chip')[i];
+        if (btn) btn.textContent = tr(k);
+    });
+    const backBtn = document.querySelector('#fridgeStepPrefs .fridge-action-btn:not(.primary)');
+    const genBtn = document.querySelector('#fridgeStepPrefs .fridge-action-btn.primary');
+    if (backBtn) backBtn.textContent = '← ' + tr('back');
+    if (genBtn) genBtn.textContent = tr('generateMenu');
+    const cAgain = document.querySelector('#fridgeStepResults .fridge-action-btn:not(.primary)');
+    const useKit = document.querySelector('#fridgeStepResults .fridge-action-btn.primary');
+    if (cAgain) cAgain.textContent = tr('customizeAgain');
+    if (useKit) useKit.textContent = tr('useInKitchen');
+}
+
+function updateSelectedCountLabel() {
+    const el = document.getElementById('selectedCount');
+    if (el) el.textContent = selectedIngredients.length
+        ? tr('selectedCount', { count: selectedIngredients.length })
+        : tr('selectFirst');
 }
 let cookingState = {
     currentRecipe: null,
@@ -483,16 +880,19 @@ function sendChatbotMessage() {
 
 async function processChatbotMessage(message) {
     const lowerMsg = message.toLowerCase();
+    const nextWords = [tr('voiceNext'), 'next', 'اگلا', 'agla'];
+    const repeatWords = [tr('voiceRepeat'), 'repeat', 'دہرائیں', 'dohrain'];
+    const pauseWords = [tr('voicePause'), tr('voiceStop'), 'pause', 'stop', 'روکیں', 'rokain', 'بند'];
     
-    if (lowerMsg.includes('next') && cookingState.isGuiding) {
+    if (nextWords.some(w => lowerMsg.includes(w)) && cookingState.isGuiding) {
         provideNextStep();
         return;
     }
-    if (lowerMsg.includes('repeat') && cookingState.isGuiding) {
+    if (repeatWords.some(w => lowerMsg.includes(w)) && cookingState.isGuiding) {
         repeatCurrentStep();
         return;
     }
-    if (lowerMsg.includes('pause') || lowerMsg.includes('stop')) {
+    if (pauseWords.some(w => lowerMsg.includes(w))) {
         stopCookingGuide();
         return;
     }
@@ -500,7 +900,7 @@ async function processChatbotMessage(message) {
     try {
         await getAIResponse(message);
     } catch (error) {
-        addChatbotMessage("Sorry, I couldn't process that. Please try again!");
+        addChatbotMessage(currentLang === 'ur' ? 'معذرت، سمجھ نہیں آیا۔ دوبارہ کوشش کریں!' : "Sorry, I couldn't process that. Please try again!");
     }
 }
 
@@ -518,7 +918,26 @@ function getLocalResponse(message) {
     const lowerMsg = message.toLowerCase();
     let response = null;
     
-    const localKnowledge = [
+    const localKnowledge = currentLang === 'ur' ? [
+        { keywords: ['کیسے', 'ترکیب', 'بنائیں', 'پکانا', 'پکائیں', 'طریقہ'], 
+          response: 'مدد کرتا ہوں! ایپ میں اجناس چنیں تو ترکیبیں ملیں گی۔ یا کوئی مخصوص سوال پوچھیں!' },
+        { keywords: ['انڈا', 'سکریم', 'انڈے'], 
+          response: '۳ انڈے نمک کے ساتھ پھینٹیں۔ پین میں مکھن گرم کریں۔ آہستہ ہلائیں، نرم بنائیں۔ فوراً پیش کریں!' },
+        { keywords: ['مرغی', 'چکن'], 
+          response: 'مرغی پر نمک کالی مرچ لگائیں۔ ۵-۶ منٹ ہر طرف پکائیں۔ ۵ منٹ آرام دیں پھر کاٹیں۔' },
+        { keywords: ['پasta', 'پاستا', 'سپaghetti'], 
+          response: 'نمکین پانی میں پasta پکائیں۔ ۱ کپ پani محفوظ رکھیں۔ ساس میں ملائیں۔' },
+        { keywords: ['چاول', 'rice', 'بری'], 
+          response: 'چاول دھوئیں۔ ۱:۱.۵ پانی۔ ابلنے پر دم دیں ۱۸ منٹ۔ ۵ منٹ چھوڑ کر fluff کریں۔' },
+        { keywords: ['متبادل', 'بدل', 'بجائے'], 
+          response: 'مکھن → زیتون کا تیل۔ دودھ → پانی۔ انڈا → flax egg۔ چینی → شہد۔' },
+        { keywords: ['شکریہ', 'thanks', 'thank'], 
+          response: 'خوش آمدید! خوش رہیں! 🍳 اور مدد چاہیے تو پوچھیں!' },
+        { keywords: ['سلام', 'ہیلو', 'hello', 'hi', 'مدد', 'help'], 
+          response: 'السلام! 👋 میں آپ کا کھانے کا معاون ہوں۔ ترکیب، طریقہ، متبادل — سب میں مدد!' },
+        { keywords: ['پکائیں', 'بنائیں', 'cook', 'make'], 
+          response: 'اجناس چنیں تو ترکیبیں ملیں گی! یا مخصوص سوال پوچھیں۔' }
+    ] : [
         { keywords: ['how to make', 'how do i', 'how to cook', 'how to prepare', 'recipe for', 'instructions'], 
           response: "I can help! Select ingredients from the app to see matching recipes. Or ask me a specific cooking question and I'll do my best to help from my cooking knowledge." },
         { keywords: ['scrambled eggs', 'scramble egg'], 
@@ -563,22 +982,31 @@ function getLocalResponse(message) {
     }
     
     if (!response) {
-        response = "That's a cooking question! From my knowledge: start with fresh ingredients, season as you go, and don't be afraid to experiment. 😊 Select ingredients in the app for matching recipes, or ask a more specific cooking question!";
+        response = currentLang === 'ur'
+            ? 'کھانے کا سوال! تازہ اجناس، آہستہ آہستہ نمک، ہمت کریں! 😊 ایپ میں اجناس چنیں یا مخصوص سوال پوچھیں۔'
+            : "That's a cooking question! From my knowledge: start with fresh ingredients, season as you go, and don't be afraid to experiment. 😊 Select ingredients in the app for matching recipes, or ask a more specific cooking question!";
     }
     
     addChatbotMessage(response);
 }
 
 async function getAIResponseOnline(message) {
-    addChatbotMessage("Thinking...");
+    addChatbotMessage(tr('thinking'));
+    
+    const langInstruction = currentLang === 'ur'
+        ? '7. ALWAYS respond in Urdu (اردو script). Use simple spoken Urdu. Keep cooking terms clear.'
+        : currentLang !== 'en'
+            ? `7. Respond in the user's language (${currentLang}).`
+            : '';
     
     const systemPrompt = `You are a friendly voice cooking assistant inside the MealGenie app. Your rules:
 1. ONLY respond to cooking-related topics (recipes, ingredients, kitchen tasks, food preparation)
-2. If asked anything outside cooking, say: "Oops! I can only help with cooking-related questions. Please ask something about food, recipes, or cooking."
+2. If asked anything outside cooking, say: "${tr('cookOnlyError')}"
 3. Keep responses SHORT and CONCISE - max 2-3 sentences for voice optimization
 4. When guiding cooking steps, give ONE step at a time and wait for "next" command
 5. Be friendly, practical, and beginner-friendly
-6. Suggest simple ingredient substitutions when relevant`;
+6. Suggest simple ingredient substitutions when relevant
+${langInstruction}`;
 
     try {
         const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
@@ -613,7 +1041,7 @@ async function getAIResponseOnline(message) {
         }
     } catch (error) {
         document.querySelector('#chatbotMessages .chat-msg-bot:last-child')?.remove();
-        addChatbotMessage("I'm having trouble connecting. Your question has been saved - try again or check your API key in Settings.");
+        addChatbotMessage(tr('aiConnectError'));
     }
 }
 
@@ -638,40 +1066,36 @@ function startCookingGuide(recipeId) {
     cookingState.currentStep = 0;
     cookingState.isGuiding = true;
     
-    const t = translations[currentLang];
-    addChatbotMessage(t.letsCook.replace('{recipe}', recipe.name) + ' ' + t.sayNext);
+    addChatbotMessage(tr('letsCook', { recipe: recipe.name }) + ' ' + tr('sayNext'));
     provideNextStep();
 }
 
 function provideNextStep() {
     if (!cookingState.currentRecipe) return;
     
-    const t = translations[currentLang];
     const step = cookingState.currentRecipe.steps[cookingState.currentStep];
     if (!step) {
-        addChatbotMessage(t.allDone);
+        addChatbotMessage(tr('allDone'));
         cookingState.isGuiding = false;
         return;
     }
     
     const stepNum = cookingState.currentStep + 1;
-    addChatbotMessage(t.step.replace('{num}', stepNum).replace('{text}', step));
+    addChatbotMessage(tr('step', { num: stepNum, text: step }));
     cookingState.currentStep++;
 }
 
 function repeatCurrentStep() {
     if (!cookingState.currentRecipe || cookingState.currentStep === 0) return;
-    const t = translations[currentLang];
     const step = cookingState.currentRecipe.steps[cookingState.currentStep - 1];
-    addChatbotMessage(t.repeatStep.replace('{num}', cookingState.currentStep).replace('{text}', step));
+    addChatbotMessage(tr('repeatStep', { num: cookingState.currentStep, text: step }));
 }
 
 function stopCookingGuide() {
-    const t = translations[currentLang];
     cookingState.isGuiding = false;
     cookingState.currentRecipe = null;
     cookingState.currentStep = 0;
-    addChatbotMessage(t.paused);
+    addChatbotMessage(tr('paused'));
 }
 
 function getOpenRouterKey() {
@@ -680,7 +1104,7 @@ function getOpenRouterKey() {
 
 function setOpenRouterKey(key) {
     localStorage.setItem('mealGenieOpenRouterKey', key);
-    addChatbotMessage("✅ API key saved! You can now use the AI cooking assistant.");
+    addChatbotMessage(tr('apiKeySavedChat'));
 }
 
 function saveApiKey() {
@@ -688,15 +1112,15 @@ function saveApiKey() {
     if (key) {
         setOpenRouterKey(key);
         document.getElementById('apiKeyInput').value = '';
-        alert('API key saved successfully!');
+        alert(tr('apiKeySavedMsg'));
     } else {
-        alert('Please enter a valid API key.');
+        alert(tr('apiKeyInvalid'));
     }
 }
 
 function startVoiceInput() {
     if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-        addChatbotMessage("Voice input not supported in this browser. Please type your question.");
+        addChatbotMessage(tr('voiceNotSupported'));
         return;
     }
     
@@ -717,7 +1141,7 @@ function startVoiceInput() {
     
     recognition.onerror = () => {
         document.getElementById('voiceBtn').classList.remove('recording');
-        addChatbotMessage("Voice input failed. Please try again or type your question.");
+        addChatbotMessage(tr('voiceInputFailed'));
     };
     
     recognition.start();
@@ -735,8 +1159,8 @@ function speakText(text, options = {}) {
         'es': 'es-ES', 'fr': 'fr-FR', 'de': 'de-DE', 'tr': 'tr-TR', 'zh': 'zh-CN'
     };
     utterance.lang = langMap[currentLang] || 'en-US';
-    utterance.rate = options.rate ?? 0.92;
-    utterance.pitch = options.pitch ?? 1.05;
+    utterance.rate = options.rate ?? (currentLang === 'ur' ? 0.82 : 0.92);
+    utterance.pitch = options.pitch ?? (currentLang === 'ur' ? 1.0 : 1.05);
     
     const voice = getBestVoice(utterance.lang);
     if (voice) utterance.voice = voice;
@@ -761,18 +1185,34 @@ function getBestVoice(preferredLang) {
     const voices = window.speechSynthesis.getVoices();
     if (!voices.length) return null;
     const langPrefix = (preferredLang || 'en-US').split('-')[0];
-    const preferredNames = [
-        'Google UK English Female', 'Google US English', 'Microsoft Zira',
-        'Microsoft Jenny', 'Samantha', 'Karen', 'Daniel', 'Moira', 'Tessa',
-        'Google UK English Male', 'Microsoft David'
-    ];
-    for (const name of preferredNames) {
-        const match = voices.find(v => v.name.includes(name));
+
+    const preferredByLang = {
+        ur: ['Microsoft Gul', 'Google Urdu', 'Urdu', 'Pakistan', 'ur-PK'],
+        en: ['Google UK English Female', 'Microsoft Zira', 'Microsoft Jenny', 'Samantha', 'Karen', 'Daniel'],
+        hi: ['Microsoft Hemant', 'Google Hindi', 'hi-IN'],
+        ar: ['Microsoft Hoda', 'Google Arabic', 'ar-SA']
+    };
+
+    const preferred = preferredByLang[langPrefix] || preferredByLang.en;
+    for (const name of preferred) {
+        const match = voices.find(v =>
+            (v.lang.startsWith(langPrefix) || v.lang.replace('_', '-').startsWith(langPrefix)) &&
+            (v.name.includes(name) || v.lang.includes(name))
+        );
         if (match) return match;
     }
-    const localMatch = voices.find(v => v.lang.startsWith(langPrefix) && v.localService);
-    if (localMatch) return localMatch;
-    return voices.find(v => v.lang.startsWith(langPrefix)) || voices[0];
+
+    const langVoice = voices.find(v =>
+        v.lang === preferredLang ||
+        v.lang.startsWith(langPrefix + '-') ||
+        v.lang === langPrefix
+    );
+    if (langVoice) return langVoice;
+
+    if (langPrefix !== 'en') {
+        return voices.find(v => v.lang.startsWith('en')) || voices[0];
+    }
+    return voices[0];
 }
 
 // ===== RECIPE MATCHING =====
@@ -788,15 +1228,28 @@ function getIngredientByName(name) {
 function isRecipeIngredientSelected(recipeIngredientName) {
     const ing = getIngredientByName(recipeIngredientName);
     if (ing) return selectedIngredients.includes(ing.id);
-    return selectedIngredients.includes(recipeIngredientName.toLowerCase());
+    const norm = recipeIngredientName.toLowerCase().trim();
+    const aliases = {
+        'salt': 'salt', 'black pepper': 'pepper_spice', 'pepper': 'pepper',
+        'tomato sauce': 'tomato_sauce', 'soy sauce': 'soy_sauce', 'olive oil': 'olive_oil',
+        'pine nuts': 'pine_nuts'
+    };
+    if (aliases[norm] && selectedIngredients.includes(aliases[norm])) return true;
+    return selectedIngredients.some(id => {
+        const item = getIngredientById(id);
+        if (!item) return false;
+        const name = item.name.toLowerCase();
+        return name === norm || norm.includes(name) || name.includes(norm);
+    });
 }
 
 function recipeMatchesSelection(recipe) {
     const matchCount = recipe.ingredients.filter(i => isRecipeIngredientSelected(i.name)).length;
     if (matchCount === 0) return false;
     const coverage = matchCount / recipe.ingredients.length;
-    if (recipe.ingredients.length <= 3) return true;
-    return matchCount >= 2 || coverage >= 0.34;
+    if (recipe.ingredients.length <= 4) return true;
+    if (matchCount >= 2) return true;
+    return coverage >= 0.25;
 }
 
 function getMatchingRecipes() {
@@ -914,22 +1367,59 @@ function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-function scaleAmount(amount, multiplier) {
-    if (multiplier === 1) return amount;
-    const trimmed = String(amount).trim();
-    const numMatch = trimmed.match(/^([\d./]+)\s*(.*)$/);
-    if (!numMatch) return amount;
-    let value;
-    if (numMatch[1].includes('/')) {
-        const [a, b] = numMatch[1].split('/').map(Number);
-        value = a / b;
-    } else {
-        value = parseFloat(numMatch[1]);
+function formatScaledNumber(n) {
+    if (Number.isInteger(n) || Math.abs(n - Math.round(n)) < 0.05) return String(Math.round(n));
+    if (Math.abs(n - 0.25) < 0.02) return '1/4';
+    if (Math.abs(n - 0.5) < 0.02) return '1/2';
+    if (Math.abs(n - 0.75) < 0.02) return '3/4';
+    if (Math.abs(n - 1.5) < 0.02) return '1 1/2';
+    return String(Math.round(n * 100) / 100);
+}
+
+function parseAmountNumber(str) {
+    const s = String(str).trim();
+    if (s.includes(' ')) {
+        const parts = s.split(/\s+/);
+        return parts.reduce((sum, part) => sum + parseAmountNumber(part), 0);
     }
+    if (s.includes('/')) {
+        const [a, b] = s.split('/').map(Number);
+        return b ? a / b : NaN;
+    }
+    return parseFloat(s);
+}
+
+function scaleAmount(amount, multiplier) {
+    if (!amount || multiplier === 1) return amount;
+    const trimmed = String(amount).trim();
+
+    const rangeMatch = trimmed.match(/^([\d./\s]+)\s*-\s*([\d./\s]+)\s*(.*)$/i);
+    if (rangeMatch) {
+        const v1 = parseAmountNumber(rangeMatch[1]) * multiplier;
+        const v2 = parseAmountNumber(rangeMatch[2]) * multiplier;
+        if (isNaN(v1) || isNaN(v2)) return amount;
+        const unit = rangeMatch[3] ? ` ${rangeMatch[3]}` : '';
+        return `${formatScaledNumber(v1)}-${formatScaledNumber(v2)}${unit}`.trim();
+    }
+
+    const numMatch = trimmed.match(/^([\d./\s]+)\s*(.*)$/);
+    if (!numMatch) return amount;
+    const value = parseAmountNumber(numMatch[1]);
     if (isNaN(value)) return amount;
     const scaled = value * multiplier;
-    const formatted = Number.isInteger(scaled) ? scaled : Math.round(scaled * 100) / 100;
-    return numMatch[2] ? `${formatted} ${numMatch[2]}` : String(formatted);
+    const unit = numMatch[2] ? ` ${numMatch[2]}` : '';
+    return `${formatScaledNumber(scaled)}${unit}`.trim();
+}
+
+function syncServingsUI() {
+    document.querySelectorAll('.serv-btn').forEach(btn => {
+        const n = parseInt(btn.textContent, 10);
+        btn.classList.toggle('active', n === currentServings);
+    });
+}
+
+function scaledCalories(baseCalories) {
+    return Math.round(baseCalories * (currentServings / 2));
 }
 
 function escapeHtml(text) {
@@ -940,7 +1430,7 @@ function escapeHtml(text) {
 
 function generateAIRecipe(type = 'meal') {
     if (selectedIngredients.length === 0) {
-        alert('Please select some ingredients first!');
+        alert(tr('selectIngFirst'));
         return null;
     }
     
@@ -984,11 +1474,126 @@ function generateAIRecipe(type = 'meal') {
     return recipe;
 }
 
-function generateAnotherAI(type = 'meal') {
-    const recipe = generateAIRecipe(type);
+function buildRecipeFromCatalog(source, type) {
+    return {
+        ...source,
+        id: Date.now() + Math.floor(Math.random() * 1000),
+        type: type || source.type,
+        ingredients: source.ingredients.map(i => ({ ...i })),
+        steps: [...source.steps],
+        substitutions: source.substitutions ? [...source.substitutions] : [],
+        isGenerated: true,
+        tags: [...(source.tags || []), 'Suggested']
+    };
+}
+
+function findSuggestedRealRecipe(type) {
+    const pool = recipes.filter(r => r.type === type);
+    const ranked = pool
+        .map(r => ({
+            recipe: r,
+            matches: r.ingredients.filter(i => isRecipeIngredientSelected(i.name)).length
+        }))
+        .filter(x => x.matches > 0)
+        .sort((a, b) => b.matches - a.matches || a.recipe.ingredients.length - b.recipe.ingredients.length);
+
+    if (ranked.length > 0) return buildRecipeFromCatalog(ranked[0].recipe, type);
+    const fallback = pool[Math.floor(Math.random() * pool.length)];
+    return fallback ? buildRecipeFromCatalog(fallback, type) : null;
+}
+
+async function fetchAIRecipe(type) {
+    const names = selectedIngredients.map(id => getIngredientById(id)?.name).filter(Boolean);
+    const systemPrompt = `You are a professional chef writing accurate home recipes for MealGenie.
+Rules:
+- Use ONLY the provided pantry ingredients plus salt, pepper, and water if needed.
+- Write real, practical recipes (no fantasy names, no made-up techniques).
+- Standard serving base: 2 people.
+- Return valid JSON only, no markdown.`;
+    const userPrompt = `Create one ${type} recipe using these ingredients: ${names.join(', ')}.
+JSON shape:
+{"name":"string","icon":"single emoji","time":number,"difficulty":"Easy|Medium|Hard","calories":number,"cuisine":"string","ingredients":[{"name":"string","amount":"string"}],"steps":["string"],"substitutions":[{"from":"string","to":"string"}]}`;
+
+    try {
+        const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + getOpenRouterKey(),
+                'HTTP-Referer': window.location.href,
+                'X-Title': 'MealGenie Recipe Generator'
+            },
+            body: JSON.stringify({
+                model: 'anthropic/claude-3-haiku',
+                messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: userPrompt }
+                ],
+                max_tokens: 900,
+                temperature: 0.4
+            })
+        });
+        if (!response.ok) return null;
+        const data = await response.json();
+        const raw = data.choices?.[0]?.message?.content || '';
+        const match = raw.match(/\{[\s\S]*\}/);
+        if (!match) return null;
+        const parsed = JSON.parse(match[0]);
+        if (!parsed.name || !Array.isArray(parsed.steps) || parsed.steps.length < 3) return null;
+
+        return {
+            id: Date.now() + Math.floor(Math.random() * 1000),
+            name: parsed.name,
+            type,
+            cuisine: parsed.cuisine || (selectedCuisine !== 'Any' ? selectedCuisine : 'Fusion'),
+            time: Number(parsed.time) || 25,
+            difficulty: parsed.difficulty || 'Easy',
+            calories: Number(parsed.calories) || 300,
+            tags: ['AI Verified', type],
+            icon: parsed.icon || recipeTemplates[type][0].icon,
+            ingredients: (parsed.ingredients || []).map(i => ({
+                name: i.name || 'Ingredient',
+                amount: i.amount || 'as needed'
+            })),
+            steps: parsed.steps,
+            substitutions: Array.isArray(parsed.substitutions) ? parsed.substitutions : [],
+            isGenerated: true
+        };
+    } catch (_) {
+        return null;
+    }
+}
+
+async function generateSmartRecipe(type = 'meal') {
+    if (selectedIngredients.length === 0) {
+        alert(tr('selectIngFirst'));
+        return null;
+    }
+
+    if (getOpenRouterKey()) {
+        const online = await fetchAIRecipe(type);
+        if (online) {
+            generatedRecipes.push(online);
+            localStorage.setItem('mealGenieGenerated', JSON.stringify(generatedRecipes));
+            return online;
+        }
+    }
+
+    const suggested = findSuggestedRealRecipe(type);
+    if (suggested) {
+        generatedRecipes.push(suggested);
+        localStorage.setItem('mealGenieGenerated', JSON.stringify(generatedRecipes));
+        return suggested;
+    }
+
+    return generateAIRecipe(type);
+}
+
+async function generateAnotherAI(type = 'meal') {
+    const recipe = await generateSmartRecipe(type);
     if (recipe) {
         showRecipe(recipe.id);
-        updateResults();
+        updateResults(false);
     }
 }
 
@@ -1004,42 +1609,30 @@ function updateResults(autoShowRecipe = true) {
     const strongMatch = hasStrongMatch();
     
     let html = '';
+
+    if (!hasMatch && selectedIngredients.length > 0) {
+        html += `<div class="no-match-msg"><p>${tr('noExactMatch')}</p></div>`;
+    }
     
     if (hasMatch) {
-        if (meals.length > 0) {
-            html += renderSection('🍽️ Meals', meals);
-        }
-        if (drinks.length > 0) {
-            html += renderSection('🥤 Drinks', drinks);
-        }
-        if (sauces.length > 0) {
-            html += renderSection('🫙 Sauces', sauces);
-        }
-        if (desserts.length > 0) {
-            html += renderSection('🍰 Desserts', desserts);
-        }
+        if (meals.length > 0) html += renderSection(tr('sectionMeals'), meals);
+        if (drinks.length > 0) html += renderSection(tr('sectionDrinks'), drinks);
+        if (sauces.length > 0) html += renderSection(tr('sectionSauces'), sauces);
+        if (desserts.length > 0) html += renderSection(tr('sectionDesserts'), desserts);
     }
     
     if (!strongMatch && selectedIngredients.length > 0) {
         html += `
             <div class="ai-section">
                 <div class="ai-header">
-                    <h3>✨ Need More Ideas?</h3>
-                    <p>Generate custom recipes with AI</p>
+                    <h3>${tr('needMoreIdeas')}</h3>
+                    <p>${tr('generateWithAI')}</p>
                 </div>
                 <div class="ai-buttons">
-                    <button class="ai-generate-btn" onclick="generateAndShow('meal')">
-                        🍽️ Generate Meal
-                    </button>
-                    <button class="ai-generate-btn drink" onclick="generateAndShow('drink')">
-                        🥤 Generate Drink
-                    </button>
-                    <button class="ai-generate-btn sauce" onclick="generateAndShow('sauce')">
-                        🫙 Generate Sauce
-                    </button>
-                    <button class="ai-generate-btn dessert" onclick="generateAndShow('dessert')">
-                        🍰 Generate Dessert
-                    </button>
+                    <button class="ai-generate-btn" onclick="generateAndShow('meal')">🍽️ ${tr('generateMeal')}</button>
+                    <button class="ai-generate-btn drink" onclick="generateAndShow('drink')">🥤 ${tr('generateDrink')}</button>
+                    <button class="ai-generate-btn sauce" onclick="generateAndShow('sauce')">🫙 ${tr('generateSauce')}</button>
+                    <button class="ai-generate-btn dessert" onclick="generateAndShow('dessert')">🍰 ${tr('generateDessert')}</button>
                 </div>
             </div>
         `;
@@ -1051,36 +1644,14 @@ function updateResults(autoShowRecipe = true) {
         const customSauces = generatedRecipes.filter(r => r.type === 'sauce');
         const customDesserts = generatedRecipes.filter(r => r.type === 'dessert');
         
-        if (customMeals.length > 0) {
-            html += renderSection('🧠 Custom Meals', customMeals, true);
-        }
-        if (customDrinks.length > 0) {
-            html += renderSection('🧠 Custom Drinks', customDrinks, true);
-        }
-        if (customSauces.length > 0) {
-            html += renderSection('🧠 Custom Sauces', customSauces, true);
-        }
-        if (customDesserts.length > 0) {
-            html += renderSection('🧠 Custom Desserts', customDesserts, true);
-        }
+        if (customMeals.length > 0) html += renderSection(tr('customMeals'), customMeals, true);
+        if (customDrinks.length > 0) html += renderSection(tr('customDrinks'), customDrinks, true);
+        if (customSauces.length > 0) html += renderSection(tr('customSauces'), customSauces, true);
+        if (customDesserts.length > 0) html += renderSection(tr('customDesserts'), customDesserts, true);
     }
-    
-    if (!hasMatch && selectedIngredients.length > 0 && !strongMatch) {
-        html = `
-            <div class="no-match-msg">
-                <p>No exact matches found, but you can:</p>
-            </div>
-            <div class="ai-section">
-                <div class="ai-buttons">
-                    <button class="ai-generate-btn" onclick="generateAndShow('meal')">
-                        🍽️ Generate Meal
-                    </button>
-                    <button class="ai-generate-btn drink" onclick="generateAndShow('drink')">
-                        🥤 Generate Drink
-                    </button>
-                </div>
-            </div>
-        `;
+
+    if (!html && selectedIngredients.length > 0) {
+        html = `<div class="no-match-msg"><p>${tr('noExactMatch')}</p></div>`;
     }
     
     document.getElementById('resultsContainer').innerHTML = html;
@@ -1105,12 +1676,12 @@ function renderSection(title, items, isCustom = false) {
                         <div class="result-icon">${r.icon}</div>
                         <div class="result-name">${r.name}</div>
                         <div class="result-meta">
-                            <span>⏱️ ${r.time}m</span>
-                            <span class="diff-${r.difficulty.toLowerCase()}">${r.difficulty}</span>
+                            <span>⏱️ ${r.time}${tr('min')}</span>
+                            <span class="diff-${r.difficulty.toLowerCase()}">${translateDifficulty(r.difficulty)}</span>
                         </div>
-                        <div class="result-cal">🔥 ${r.calories} cal</div>
+                        <div class="result-cal">🔥 ${r.calories} ${tr('cal')}</div>
                         <div class="result-cuisine">${r.cuisine}</div>
-                        ${isCustom ? '<span class="custom-badge">Custom</span>' : ''}
+                        ${isCustom ? `<span class="custom-badge">${tr('customBadge')}</span>` : ''}
                     </div>
                 `).join('')}
             </div>
@@ -1118,11 +1689,12 @@ function renderSection(title, items, isCustom = false) {
     `;
 }
 
-function generateAndShow(type) {
-    const recipe = generateAIRecipe(type);
+async function generateAndShow(type) {
+    const recipe = await generateSmartRecipe(type);
     if (recipe) {
+        showResults();
         showRecipe(recipe.id);
-        updateResults();
+        updateResults(false);
     }
 }
 
@@ -1137,29 +1709,30 @@ function showRecipe(id) {
     document.getElementById('emptyState').style.display = 'none';
     document.getElementById('recipeView').classList.add('show');
     document.getElementById('recipeView').style.display = 'block';
-    
     document.getElementById('heroIcon').textContent = recipe.icon;
     document.getElementById('cuisineBadge').textContent = recipe.cuisine;
     document.getElementById('recipeName').textContent = recipe.name;
     
     const heroMeta = document.getElementById('heroMeta');
     const matchCount = recipe.ingredients.filter(i => isRecipeIngredientSelected(i.name)).length;
-    const leftoverBadge = leftoverMode && !recipe.isGenerated ? 
-        `<span class="leftover-badge">🔄 ${matchCount}/${recipe.ingredients.length} ingredients</span>` : '';
+    const leftoverBadge = leftoverMode && !recipe.isGenerated ?
+        `<span class="leftover-badge">${tr('leftoverMatch', { match: matchCount, total: recipe.ingredients.length })}</span>` : '';
     
     heroMeta.innerHTML = `
-        <span>⏱️ ${recipe.time} min</span>
-        <span class="diff-${recipe.difficulty.toLowerCase()}">${recipe.difficulty}</span>
-        <span class="cal-badge">🔥 ${recipe.calories} cal</span>
+        <span>⏱️ ${recipe.time} ${tr('min')}</span>
+        <span class="diff-${recipe.difficulty.toLowerCase()}">${translateDifficulty(recipe.difficulty)}</span>
+        <span class="cal-badge">🔥 ${scaledCalories(recipe.calories)} ${tr('cal')}</span>
         <span class="type-badge type-${recipe.type}">${recipe.type}</span>
+        <span class="serv-badge">🍽️ ${currentServings}</span>
         ${leftoverBadge}
     `;
     
     const multiplier = currentServings / 2;
+    syncServingsUI();
     const ingredientsDisplay = document.getElementById('ingredientsDisplay');
     ingredientsDisplay.innerHTML = recipe.ingredients.map(ing => `
         <div class="ing-row">
-            <span class="ing-text">${escapeHtml(ing.name)}</span>
+            <span class="ing-text">${escapeHtml(getRecipeIngDisplayName(ing.name))}</span>
             <span class="ing-qty">${escapeHtml(scaleAmount(ing.amount, multiplier))}</span>
         </div>
     `).join('');
@@ -1169,14 +1742,14 @@ function showRecipe(id) {
     );
     const missingList = document.getElementById('missingList');
     if (missing.length === 0 && !recipe.isGenerated) {
-        missingList.innerHTML = '<p class="all-have">✓ You have all ingredients!</p>';
+        missingList.innerHTML = `<p class="all-have">✓ ${tr('allHave')}</p>`;
     } else if (recipe.isGenerated) {
-        missingList.innerHTML = '<p class="ai-note">🤖 AI generated - ingredients are suggestions</p>';
+        missingList.innerHTML = `<p class="ai-note">${tr('aiGeneratedNote')}</p>`;
     } else {
         missingList.innerHTML = missing.map(ing => `
             <div class="missing-item">
                 <span>✗</span>
-                <span>${ing.name}</span>
+                <span>${escapeHtml(getRecipeIngDisplayName(ing.name))}</span>
             </div>
         `).join('');
     }
@@ -1191,13 +1764,13 @@ function showRecipe(id) {
     
     const subsList = document.getElementById('subsList');
     if (recipe.substitutions.length === 0) {
-        subsList.innerHTML = '<p class="no-subs">No substitutions available</p>';
+        subsList.innerHTML = `<p class="no-subs">${tr('noSubs')}</p>`;
     } else {
         subsList.innerHTML = recipe.substitutions.map(s => `
             <div class="sub-row">
-                <span>${s.from}</span>
+                <span>${escapeHtml(getRecipeIngDisplayName(s.from))}</span>
                 <span class="arrow">→</span>
-                <span>${s.to}</span>
+                <span>${escapeHtml(getRecipeIngDisplayName(s.to))}</span>
             </div>
         `).join('');
     }
@@ -1208,7 +1781,7 @@ function showRecipe(id) {
     
     const isFav = favorites.includes(recipe.id);
     const saveBtn = document.getElementById('favBtn');
-    saveBtn.textContent = isFav ? '❤️ Saved' : '🤍 Save Recipe';
+    saveBtn.textContent = isFav ? '❤️ ' + tr('saved') : '🤍 ' + tr('saveRecipe');
     saveBtn.onclick = () => toggleFav(recipe.id);
     
     if (recipe.isGenerated) {
@@ -1216,7 +1789,7 @@ function showRecipe(id) {
         if (existingMoreBtn) existingMoreBtn.remove();
         const moreBtn = document.createElement('button');
         moreBtn.className = 'generate-more-btn';
-        moreBtn.textContent = '✨ Generate Another Idea';
+        moreBtn.textContent = tr('generateAnother');
         moreBtn.onclick = () => generateAnotherAI(recipe.type);
         saveBtn.parentNode.insertBefore(moreBtn, saveBtn.nextSibling);
     } else {
@@ -1238,13 +1811,13 @@ function toggleFav(id) {
     localStorage.setItem('mealGenieFav', JSON.stringify(favorites));
     
     const btn = document.getElementById('favBtn');
-    btn.textContent = favorites.includes(id) ? '❤️ Saved' : '🤍 Save Recipe';
+    btn.textContent = favorites.includes(id) ? '❤️ ' + tr('saved') : '🤍 ' + tr('saveRecipe');
     updateFavCount();
 }
 
 function setServings(n) {
     currentServings = n;
-    document.querySelectorAll('.serv-btn').forEach((b, i) => b.classList.toggle('active', i === n - 1));
+    syncServingsUI();
     if (activeRecipeId) showRecipe(activeRecipeId);
 }
 
@@ -1260,11 +1833,11 @@ function updateSelectedTags() {
             <div class="selected-tags-list">
                 ${selectedIngs.map(ing => `
                     <span class="selected-tag" onclick="toggleIngredient('${ing.id}')">
-                        ${ing.icon} ${ing.name}
+                        ${ing.icon} ${getIngDisplayName(ing)}
                     </span>
                 `).join('')}
             </div>
-            <button class="clear-selection" onclick="clearSelection()">Clear All</button>
+            <button class="clear-selection" onclick="clearSelection()">${tr('clearAll')}</button>
         `;
     } else {
         tagsContainer.innerHTML = '';
@@ -1276,20 +1849,19 @@ function clearSelection() {
     leftoverMode = false;
     document.getElementById('leftoverBtn')?.classList.remove('active');
     renderIngredients();
-    document.getElementById('selectedCount').textContent = '0 selected';
+    updateSelectedCountLabel();
     updateSelectedTags();
     updateResults();
 }
 
 // ===== INGREDIENT GRID =====
-const categoryLabels = {
-    'proteins': '🥩 Proteins',
-    'vegetables': '🥬 Vegetables',
-    'dairy': '🧀 Dairy',
-    'grains': '🍞 Grains',
-    'spices': '🌿 Spices',
-    'pantry': '🫙 Pantry'
-};
+function getCategoryLabel(cat) {
+    const keys = {
+        proteins: 'catProteins', vegetables: 'catVegetables', dairy: 'catDairy',
+        grains: 'catGrains', spices: 'catSpices', pantry: 'catPantry'
+    };
+    return tr(keys[cat] || cat);
+}
 
 function renderIngredients() {
     const grid = document.getElementById('ingredientsGrid');
@@ -1299,11 +1871,11 @@ function renderIngredients() {
     categories.forEach(cat => {
         const catIngredients = ingredients.filter(i => i.cat === cat);
         if (catIngredients.length > 0) {
-            html += `<div class="ing-category-header">${categoryLabels[cat]}</div>`;
+            html += `<div class="ing-category-header">${getCategoryLabel(cat)}</div>`;
             html += catIngredients.map(i => `
                 <div class="ing-chip ${selectedIngredients.includes(i.id) ? 'selected' : ''}" onclick="toggleIngredient('${i.id}')">
                     <span class="ing-icon">${i.icon}</span>
-                    <span class="ing-name">${i.name}</span>
+                    <span class="ing-name">${getIngDisplayName(i)}</span>
                 </div>
             `).join('');
         }
@@ -1316,11 +1888,11 @@ function filterIngredients() {
     const search = document.getElementById('ingSearch').value.toLowerCase();
     const grid = document.getElementById('ingredientsGrid');
     grid.innerHTML = ingredients
-        .filter(i => i.name.toLowerCase().includes(search))
+        .filter(i => getIngSearchText(i).includes(search))
         .map(i => `
             <div class="ing-chip ${selectedIngredients.includes(i.id) ? 'selected' : ''}" onclick="toggleIngredient('${i.id}')">
                 <span class="ing-icon">${i.icon}</span>
-                <span class="ing-name">${i.name}</span>
+                <span class="ing-name">${getIngDisplayName(i)}</span>
             </div>
         `).join('');
 }
@@ -1333,9 +1905,12 @@ function toggleIngredient(id) {
     }
     
     renderIngredients();
-    document.getElementById('selectedCount').textContent = selectedIngredients.length + ' selected';
+    updateSelectedCountLabel();
     updateSelectedTags();
-    updateResults();
+    updateResults(false);
+    if (selectedIngredients.length > 0 && currentMobileView === 'ingredients') {
+        showResults();
+    }
 }
 
 // ===== CUISINE FILTER =====
@@ -1386,11 +1961,11 @@ function filterType(type) {
 function renderAllMealsView() {
     const allCuisines = ['all', 'Italian', 'Mexican', 'Indian', 'Chinese', 'Japanese', 'Mediterranean', 'American', 'Fusion', 'French'];
     const allTypes = [
-        { id: 'all', name: '🍽️ All', icon: '🍽️' },
-        { id: 'meal', name: '🍽️ Meals', icon: '🍽️' },
-        { id: 'drink', name: '🥤 Drinks', icon: '🥤' },
-        { id: 'sauce', name: '🫙 Sauces', icon: '🫙' },
-        { id: 'dessert', name: '🍰 Desserts', icon: '🍰' }
+        { id: 'all', name: tr('allCourse') },
+        { id: 'meal', name: tr('sectionMeals') },
+        { id: 'drink', name: tr('sectionDrinks') },
+        { id: 'sauce', name: tr('sectionSauces') },
+        { id: 'dessert', name: tr('sectionDesserts') }
     ];
     
     let filteredRecipes = [...recipes, ...generatedRecipes];
@@ -1406,10 +1981,10 @@ function renderAllMealsView() {
     const container = document.getElementById('cuisineGroups');
     
     container.innerHTML = `
-        <button class="back-btn" onclick="backFromAll()">← Back</button>
+        <button class="back-btn" onclick="backFromAll()">← ${tr('back')}</button>
         <div class="all-meals-header">
             <div class="filter-section">
-                <span class="filter-label">Course:</span>
+                <span class="filter-label">${tr('courseLabel')}</span>
                 <div class="type-filter">
                     ${allTypes.map(t => `
                         <button class="type-filter-btn ${selectedTypeFilter === t.id ? 'active' : ''}" onclick="filterType('${t.id}')">
@@ -1419,34 +1994,34 @@ function renderAllMealsView() {
                 </div>
             </div>
             <div class="filter-section">
-                <span class="filter-label">Cuisine:</span>
+                <span class="filter-label">${tr('cuisine')}:</span>
                 <div class="cuisine-filter">
                     ${allCuisines.map(c => `
                         <button class="cuisine-filter-btn ${selectedCuisineFilter === c ? 'active' : ''}" onclick="filterCuisine('${c}')">
-                            ${c === 'all' ? '🌍 All' : c}
+                            ${c === 'all' ? tr('allCuisine') : c}
                         </button>
                     `).join('')}
                 </div>
             </div>
         </div>
             ${filteredRecipes.length > 0 ? `
-            <div class="all-results-count">${filteredRecipes.length} recipes found</div>
+            <div class="all-results-count">${tr('recipesFound', { count: filteredRecipes.length })}</div>
             <div class="meals-grid">
                 ${filteredRecipes.map(r => `
                     <div class="meal-card ${r.isGenerated ? 'generated' : ''}" onclick="showRecipe(${r.id})">
                         <div class="meal-card-icon">${r.icon}</div>
                         <div class="meal-card-name">${r.name}</div>
-                        <div class="meal-card-meta">⏱️ ${r.time}m • ${r.difficulty}</div>
-                        <div class="meal-card-cal">🔥 ${r.calories} cal</div>
+                        <div class="meal-card-meta">⏱️ ${r.time}${tr('min')} • ${translateDifficulty(r.difficulty)}</div>
+                        <div class="meal-card-cal">🔥 ${r.calories} ${tr('cal')}</div>
                         <div class="meal-card-type">${r.type}</div>
                     </div>
                 `).join('')}
             </div>
         ` : `
             <div class="no-results">
-                <p>No recipes found for this combination.</p>
+                <p>${tr('noRecipesFound')}</p>
                 <button class="ai-generate-btn" onclick="generateAndShow('${selectedTypeFilter === 'all' ? 'meal' : selectedTypeFilter}')">
-                    ✨ Generate a Recipe
+                    ${tr('generateRecipe')}
                 </button>
             </div>
         `}
@@ -1466,12 +2041,12 @@ function toggleBlog() {
 function renderBlogPosts() {
     const container = document.getElementById('blogPosts');
     if (blogPosts.length === 0) {
-        container.innerHTML = '<p class="no-posts">No posts yet. Be the first to share!</p>';
+        container.innerHTML = `<p class="no-posts">${tr('noPosts')}</p>`;
     } else {
         container.innerHTML = blogPosts.map((post, index) => `
             <div class="blog-post">
                 <div class="post-header">
-                    <span class="post-type ${post.type}">${post.type === 'share' ? '📝 Share' : post.type === 'bug' ? '🐛 Bug' : '💬 Hangout'}</span>
+                    <span class="post-type ${post.type}">${post.type === 'share' ? '📝 ' + tr('shareTab') : post.type === 'bug' ? '🐛 ' + tr('bugTab') : '💬 ' + tr('chatTab')}</span>
                     <span class="post-date">${new Date(post.date).toLocaleDateString()}</span>
                 </div>
                 <h4 class="post-title">${escapeHtml(post.title)}</h4>
@@ -1486,7 +2061,7 @@ function submitBlogPost(type) {
     const content = document.getElementById('postContent').value.trim();
     
     if (!title || !content) {
-        alert('Please fill in both title and content!');
+        alert(tr('fillPost'));
         return;
     }
     
@@ -1605,7 +2180,7 @@ async function openFridgeCamera() {
         await video.play();
         document.getElementById('fridgeScanBtn').disabled = false;
     } catch (_) {
-        alert('Camera access denied. Upload a photo of your fridge instead.');
+        alert(tr('cameraDenied'));
     }
 }
 
@@ -1665,12 +2240,12 @@ async function scanFridgeImage() {
         fridgeState.imageData = captureFridgeFrame();
     }
     if (!fridgeState.imageData) {
-        alert('Take or upload a fridge photo first.');
+        alert(tr('takePhotoFirst'));
         return;
     }
     ring?.classList.add('scanning');
     btn.disabled = true;
-    btn.textContent = '🔍 Scanning...';
+    btn.textContent = tr('scanning');
 
     try {
         const detected = await detectFridgeIngredients(fridgeState.imageData);
@@ -1686,7 +2261,7 @@ async function scanFridgeImage() {
     } finally {
         ring?.classList.remove('scanning');
         btn.disabled = false;
-        btn.textContent = '✨ Scan Fridge';
+        btn.textContent = tr('scanFridge');
         stopFridgeCamera();
     }
 }
@@ -1729,18 +2304,18 @@ function renderFridgeDetected() {
     const wrap = document.getElementById('fridgeDetected');
     if (!wrap) return;
     if (!fridgeState.detectedIds.length) {
-        wrap.innerHTML = '<p class="fridge-detected-hint">Detected items appear here — tap to confirm.</p>';
+        wrap.innerHTML = `<p class="fridge-detected-hint">${tr('detectedHint')}</p>`;
         return;
     }
     wrap.innerHTML = `
-        <p class="fridge-detected-title">✅ ${fridgeState.detectedIds.length} items detected</p>
+        <p class="fridge-detected-title">${tr('detectedTitle', { count: fridgeState.detectedIds.length })}</p>
         <div class="fridge-detected-chips">
             ${fridgeState.detectedIds.map(id => {
                 const ing = getIngredientById(id);
-                return ing ? `<button class="fridge-ing-chip selected" onclick="toggleFridgeIng('${id}', this)">${ing.icon} ${escapeHtml(ing.name)}</button>` : '';
+                return ing ? `<button class="fridge-ing-chip selected" onclick="toggleFridgeIng('${id}', this)">${ing.icon} ${escapeHtml(getIngDisplayName(ing))}</button>` : '';
             }).join('')}
         </div>
-        <p class="fridge-detected-hint">Tap to remove wrong items. Add more from kitchen below.</p>
+        <p class="fridge-detected-hint">${tr('detectedEdit')}</p>
         <div class="fridge-add-grid">
             ${ingredients.slice(0, 16).map(ing => `
                 <button class="fridge-add-chip ${fridgeState.detectedIds.includes(ing.id) ? 'on' : ''}" onclick="toggleFridgeIng('${ing.id}')">${ing.icon}</button>
@@ -1780,7 +2355,7 @@ function getFridgeRecipeMatches() {
 
 async function generateFridgeMenu() {
     const results = document.getElementById('fridgeResults');
-    results.innerHTML = '<div class="fridge-loading">🧊 Building your custom menu...</div>';
+    results.innerHTML = `<div class="fridge-loading">${tr('buildingMenu')}</div>`;
     goFridgeStep(3);
 
     const matches = getFridgeRecipeMatches();
@@ -1855,21 +2430,21 @@ function renderFridgeResults(menu) {
     const results = document.getElementById('fridgeResults');
     results.innerHTML = `
         <div class="fridge-menu-card">
-            <h4>🍽️ Your Menu</h4>
-            <p class="fridge-menu-meta">${menu.mood} · ${menu.budget} budget</p>
+            <h4>${tr('yourMenu')}</h4>
+            <p class="fridge-menu-meta">${menu.mood} · ${menu.budget} ${tr('budgetWord')}</p>
             <div class="fridge-menu-item main">
                 <span>🍳</span>
                 <div>
                     <strong>${escapeHtml(menu.meal.name)}</strong>
-                    <p>${escapeHtml(menu.meal.tip || 'Matched from your fridge')}</p>
-                    ${menu.meal.id ? `<button class="fridge-link-btn" onclick="openFridgeRecipe(${menu.meal.id})">View Recipe</button>` : ''}
+                    <p>${escapeHtml(menu.meal.tip || tr('matchedFridge'))}</p>
+                    ${menu.meal.id ? `<button class="fridge-link-btn" onclick="openFridgeRecipe(${menu.meal.id})">${tr('viewRecipe')}</button>` : ''}
                 </div>
             </div>
             <div class="fridge-menu-item">
                 <span>🥤</span>
                 <div>
                     <strong>${escapeHtml(menu.drink.name)}</strong>
-                    ${menu.drink.id ? `<button class="fridge-link-btn" onclick="openFridgeRecipe(${menu.drink.id})">View Recipe</button>` : ''}
+                    ${menu.drink.id ? `<button class="fridge-link-btn" onclick="openFridgeRecipe(${menu.drink.id})">${tr('viewRecipe')}</button>` : ''}
                 </div>
             </div>
             ${menu.sauce ? `
@@ -1877,10 +2452,10 @@ function renderFridgeResults(menu) {
                 <span>🫙</span>
                 <div><strong>${escapeHtml(menu.sauce.name)}</strong></div>
             </div>` : ''}
-            <a class="fridge-yt-btn" href="${menu.youtube}" target="_blank" rel="noopener">▶️ Watch authentic chefs on YouTube</a>
+            <a class="fridge-yt-btn" href="${menu.youtube}" target="_blank" rel="noopener">${tr('watchYoutube')}</a>
         </div>
         <div class="fridge-matches">
-            <h4>📋 Also matches your fridge</h4>
+            <h4>${tr('alsoMatches')}</h4>
             ${getFridgeRecipeMatches().map(m => `
                 <button class="fridge-match-row" onclick="openFridgeRecipe(${m.recipe.id})">
                     <span>${m.recipe.icon}</span>
@@ -1918,7 +2493,7 @@ function startLiveAssistant() {
     const allRecipes = [...recipes, ...generatedRecipes];
     const recipe = allRecipes.find(r => r.id === activeRecipeId);
     if (!recipe) {
-        alert('Open a recipe first, then start Live Mentor.');
+        alert(tr('openRecipeFirst'));
         return;
     }
     liveAssistantState.recipe = recipe;
@@ -1929,7 +2504,7 @@ function startLiveAssistant() {
     document.getElementById('liveRecipeName').textContent = recipe.name;
     document.getElementById('liveTranscript').innerHTML = '';
     updateLiveStepUI();
-    liveMentorSpeak(`Hey chef! I'm your robotic mentor for ${recipe.name}. I'll guide you step by step. Say next when you're ready, or tap the microphone if you need help.`);
+    liveMentorSpeak(tr('liveIntro', { recipe: recipe.name }));
 }
 
 function stopLiveAssistant() {
@@ -1946,11 +2521,14 @@ function updateLiveStepUI() {
     if (!recipe) return;
     const total = recipe.steps.length;
     const idx = liveAssistantState.stepIndex;
-    const stepText = recipe.steps[idx] || 'All steps complete — great job, chef!';
+    const stepText = recipe.steps[idx] || tr('liveAllDone');
 
     document.getElementById('liveStepNum').textContent = Math.min(idx + 1, total);
     document.getElementById('liveStepText').textContent = stepText;
-    document.getElementById('liveStepCount').textContent = `Step ${Math.min(idx + 1, total)} / ${total}`;
+    document.getElementById('liveStepCount').textContent = tr('liveStepOf', {
+        cur: Math.min(idx + 1, total),
+        total
+    });
     document.getElementById('liveProgressBar').style.width = `${total ? (idx / total) * 100 : 100}%`;
 
     document.querySelectorAll('#stepsList .step-item').forEach((el, i) => {
@@ -2148,7 +2726,7 @@ function showFavorites() {
     const allRecipes = [...recipes, ...generatedRecipes];
     const saved = favorites.map(id => allRecipes.find(r => r.id === id)).filter(Boolean);
     if (saved.length === 0) {
-        alert('You have no saved recipes yet!');
+        alert(tr('noFavorites'));
         return;
     }
     if (saved.length === 1) {
@@ -2160,7 +2738,7 @@ function showFavorites() {
     document.getElementById('allMealsView').style.display = 'none';
     document.getElementById('recipeView').classList.remove('show');
     document.getElementById('recipeView').style.display = 'none';
-    document.getElementById('resultsContainer').innerHTML = renderSection('❤️ Saved Recipes', saved);
+    document.getElementById('resultsContainer').innerHTML = renderSection(tr('savedRecipes'), saved);
     document.getElementById('resultsContainer').classList.add('show');
     document.getElementById('resultsContainer').style.display = 'block';
     currentMobileView = 'results';
@@ -2192,15 +2770,19 @@ function showResults() {
     activeRecipeId = null;
     const matching = getMatchingRecipes();
     if (matching.length === 0 && selectedIngredients.length === 0) {
-        alert('Please select some ingredients first!');
+        alert(tr('selectIngFirst'));
         return;
     }
 
     document.getElementById('leftPanel').style.display = 'none';
     document.getElementById('rightPanel').style.display = 'block';
+    document.getElementById('emptyState').style.display = 'none';
     document.getElementById('resultsContainer').classList.add('show');
+    document.getElementById('resultsContainer').style.display = 'block';
     document.getElementById('allMealsView').classList.remove('show');
+    document.getElementById('allMealsView').style.display = 'none';
     document.getElementById('recipeView').classList.remove('show');
+    document.getElementById('recipeView').style.display = 'none';
     updateNavItems('navResults');
     updateResults();
     document.getElementById('mainContent').scrollTop = 0;
