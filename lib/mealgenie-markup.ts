@@ -14,6 +14,7 @@ export const MEALGENIE_APP_INNER_HTML = `
                 <button class="settings-btn" onclick="toggleSettings()" aria-label="Settings">🎨</button>
                 <button class="lang-btn" onclick="toggleLangMenu()" aria-label="Language">🌐</button>
                 <button class="chatbot-btn" onclick="toggleChatbot()" aria-label="Cooking Assistant">🎙️</button>
+                <span id="headerAuthSlot" class="header-auth-slot"></span>
             </div>
         </header>
 

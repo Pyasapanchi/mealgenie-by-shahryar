@@ -354,6 +354,22 @@ body.mobile-app .header-btn {
     min-width: 44px;
 }
 
+.header-auth-slot {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.header-auth-slot .auth-btn {
+    line-height: 1;
+}
+
+.header-auth-slot .cl-userButtonTrigger {
+    min-height: 44px;
+    min-width: 44px;
+}
+
 .blog-btn {
     padding: 10px 14px;
     background: linear-gradient(135deg, #4F46E5, #4338CA);

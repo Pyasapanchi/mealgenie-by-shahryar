@@ -27,10 +27,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProviderWrapper>
-      <html lang="en">
-        <body className="mobile-app">{children}</body>
-      </html>
-    </ClerkProviderWrapper>
+    <html lang="en">
+      <body className="mobile-app">
+        <ClerkProviderWrapper>{children}</ClerkProviderWrapper>
+      </body>
+    </html>
   );
 }
