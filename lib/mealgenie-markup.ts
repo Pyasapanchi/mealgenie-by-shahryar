@@ -1,35 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#22C55E">
-    <title>Meal Genie</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500;600&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap');
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
-        body.lang-ur, html[lang="ur"] body {
-            font-family: 'Noto Nastaliq Urdu', 'Segoe UI', 'Urdu Typesetting', 'Jameel Noori Nastaleeq', sans-serif;
-        }
-        .logo-text, .chatbot-title, .empty-state h2, .result-section .section-title, .block-title, .settings-title, .blog-title { font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, cursive, sans-serif; }
-        .hero-text h1 { font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, cursive, sans-serif; }
-        .settings-section-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 12px; }
-        .settings-hint { font-size: 12px; color: var(--text-light); margin-bottom: 8px; }
-        .api-key-input { width: 100%; padding: 12px 16px; border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 14px; margin-bottom: 12px; background: #fff; }
-        .api-key-input:focus { outline: none; border-color: var(--green); }
-        .save-api-key-btn { width: 100%; padding: 12px 16px; background: var(--green); border: none; border-radius: var(--radius-sm); color: white; font-size: 14px; font-weight: 600; cursor: pointer; min-height: 44px; }
-        .settings-section { margin-bottom: 16px; }
-        .settings-section-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 12px; }
-    </style>
-</head>
-<body class="mobile-app">
-    
-
-    <div class="app">
+/** Inner HTML of `.app` from the original index.html — preserved verbatim for parity. */
+export const MEALGENIE_APP_INNER_HTML = `
         <!-- Header -->
         <header class="app-header">
             <div class="logo">
@@ -246,8 +216,4 @@
         </nav>
 
         <button class="generate-recipe-fab" id="generateRecipeFab" onclick="generateRecipesFromSelection()" hidden>✨ Generate Recipes</button>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+`;
