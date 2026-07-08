@@ -7,10 +7,13 @@ This repo is set up so the app can be deployed on Cloudflare first and still sta
 
 Cloudflare:
 - Install dependencies with `npm install`.
-- Run `npm run cf:preview` to test locally in the Cloudflare runtime.
-- Run `npm run cf:deploy` to deploy.
+- In the Cloudflare dashboard, set the build command to `npm run cf:build`.
+- In the Cloudflare dashboard, set the deploy command to `npm run cf:deploy`.
+- Run `npm run cf:preview` locally to test in the Cloudflare runtime.
 - Use the same Clerk env vars from `.env.example` in Cloudflare.
 - If you are not using the Prisma database yet, no database env is required for install/build.
+
+The error you pasted happens when Cloudflare runs a plain `next build` and then calls `wrangler deploy` without the compiled OpenNext output. The `cf:build` step creates the `.open-next` bundle that `cf:deploy` needs.
 
 Hostinger VPS:
 - Use `npm install`, `npm run build`, then `npm run start`.
