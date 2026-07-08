@@ -7,8 +7,13 @@ import {
   UserButton,
 } from '@clerk/nextjs';
 import { clerkAppearance } from '@/lib/clerk-appearance';
+import { canRenderClerkComponents } from '@/lib/clerk-enabled';
 
 export function HeaderAuthControls() {
+  if (!canRenderClerkComponents()) {
+    return null;
+  }
+
   return (
     <>
       <Show when="signed-out">
