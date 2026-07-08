@@ -2,25 +2,26 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import * as clerkEnabled from '../lib/clerk-enabled.ts';
 
-function withPublishableKey(
+function withEnvVar(
+  name: 'NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY' | 'CLERK_SECRET_KEY',
   value: string | undefined,
   run: () => void,
 ) {
-  const previous = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  const previous = process.env[name];
 
   if (value === undefined) {
-    delete process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+    delete process.env[name];
   } else {
-    process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = value;
+    process.env[name] = value;
   }
 
   try {
     run();
   } finally {
     if (previous === undefined) {
-      delete process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+      delete process.env[name];
     } else {
-      process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = previous;
+      process.env[name] = previous;
     }
   }
 }
@@ -28,7 +29,7 @@ function withPublishableKey(
 test('disables Clerk UI components when no publishable key is configured', () => {
   assert.equal(typeof clerkEnabled.canRenderClerkComponents, 'function');
 
-  withPublishableKey(undefined, () => {
+  withEnvVar('NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY', undefined, () => {
     assert.equal(clerkEnabled.canRenderClerkComponents(), false);
   });
 });
@@ -36,7 +37,27 @@ test('disables Clerk UI components when no publishable key is configured', () =>
 test('enables Clerk UI components when a publishable key is configured', () => {
   assert.equal(typeof clerkEnabled.canRenderClerkComponents, 'function');
 
-  withPublishableKey('pk_test_example', () => {
+  withEnvVar('NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY', 'pk_test_example', () => {
     assert.equal(clerkEnabled.canRenderClerkComponents(), true);
+  });
+});
+
+test('disables Clerk middleware when server auth keys are incomplete', () => {
+  assert.equal(typeof clerkEnabled.canUseClerkMiddleware, 'function');
+
+  withEnvVar('NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY', undefined, () => {
+    withEnvVar('CLERK_SECRET_KEY', 'sk_test_example', () => {
+      assert.equal(clerkEnabled.canUseClerkMiddleware(), false);
+    });
+  });
+});
+
+test('enables Clerk middleware only when both auth keys are configured', () => {
+  assert.equal(typeof clerkEnabled.canUseClerkMiddleware, 'function');
+
+  withEnvVar('NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY', 'pk_test_example', () => {
+    withEnvVar('CLERK_SECRET_KEY', 'sk_test_example', () => {
+      assert.equal(clerkEnabled.canUseClerkMiddleware(), true);
+    });
   });
 });
